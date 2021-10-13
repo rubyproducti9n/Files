@@ -1,0 +1,839 @@
+.video-player {
+    max-width: 1200px;
+    min-width: 360px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .video {
+    width: 625px;
+    height: 353px;
+    background-color: #000;
+    transition: 0.5s;
+  }
+
+  .player-controls {
+    display: flex;
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    transform: translateY(100%) translateY(-5px);
+    transition: 0.1s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.0);
+  }
+
+  .video-player:hover .player-controls {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 7px;
+    transition: 0.3s;
+  }
+
+  .play-button {
+    width: 10%;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button2 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button3 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button4 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 5px;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button5 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 490px;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+
+  .play-button:focus {
+    outline: none;
+  }
+
+  .time {
+    font-size: 1em;
+    margin-left: -25px;
+    color: white;
+    width: 15%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.0s;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    width: 10%;
+    padding: 0 10px;
+    transition: 1.0s;
+  }
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: black;
+    overflow: hidden;
+    transition: 1.0s;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    height: 16px;
+    width: 10px;
+    border-radius: 0px;
+    /* background: rgb(255, 0, 0); */
+    background: linear-gradient(180deg, #7200a7, #5e008a);
+    box-shadow: -300px 0 0 290px #ae00ff;
+    /* box-shadow: -300px 0 0 290px rgb(180, 0, 0); */
+    cursor: pointer;
+    transition: 1.0s;
+  }
+
+  .video-progress {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  .video-progress-filled {
+    width: 0;
+    /* background: rgb(185, 0, 0); */
+    background: linear-gradient(45deg, #5e008a, #ae00ff);
+    transition: 1.0s;
+  }
+
+  .video-player:hover .video-progress {
+    height: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 768px)
+  {
+
+    .video-player {
+      max-width: 768px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .video {
+      width: 100%;
+      height: 282px;
+      margin-left: 0px;
+      margin-right: -60px;
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .player-controls {
+      display: flex;
+      position: absolute;
+      bottom: 6px;
+      width: 100%;
+      transform: translateY(100%) translateY(-5px);
+      transition: 0.1s;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.0);
+    }
+
+    .video-player:hover .player-controls {
+      transform: translateY(0);
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 6px;
+      transition: 0.3s;
+    }
+
+    .play-button {
+      width: 10%;
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 10px 10px;
+      font-size: 11px;
+      transition: 1.0s;
+    }
+
+    .button2 {
+      visibility: hidden;
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 6px 10px;
+      font-size: 13px;
+      transition: 1.0s;
+    }
+    .button3 {
+      visibility: hidden;
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 6px 10px;
+      font-size: 13px;
+      transition: 1.0s;
+    }
+    .button4 {
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      margin-left: 5px;
+      padding: 10px 10px;
+      font-size: 13px;
+      transition: 1.0s;
+    }
+    .button5 {
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      margin-left: 190px;
+      padding: 10px 10px;
+      font-size: 13px;
+      transition: 1.0s;
+    }
+
+    .play-button:focus {
+      outline: none;
+    }
+
+    .time {
+      margin-left: -105px;
+      color: white;
+      width: 15%;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1.0s;
+      font-size: 13px;
+    }
+
+    input[type="range"] {
+      visibility: hidden;
+      -webkit-appearance: none;
+      background: transparent;
+      margin: 0;
+      width: 10%;
+      padding: 0 10px;
+      transition: 1.0s;
+    }
+    input[type="range"]:focus {
+      outline: none;
+      transition: 1.0s;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 10px;
+      cursor: pointer;
+      background: black;
+      overflow: hidden;
+      transition: 1.0s;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      margin-top: -3px;
+      height: 16px;
+      width: 10px;
+      border-radius: 0px;
+      /* background: rgb(255, 0, 0); */
+    background: linear-gradient(45deg, #5e008a, #ae00ff);
+    box-shadow: -300px 0 0 290px #ae00ff;
+      /* box-shadow: -300px 0 0 290px #b40000; */
+      cursor: pointer;
+      transition: 1.0s;
+    }
+
+    .video-progress {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 5px;
+      transition: 0.3s;
+      background: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+
+    .video-progress-filled {
+      width: 0;
+      /* background: rgb(185, 0, 0); */
+    background: linear-gradient(45deg, #5e008a, #ae00ff);
+      transition: 1.0s;
+    }
+
+    .video-player:hover .video-progress {
+      height: 10px;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* @media screen and (max-width: 683px)
+  {
+
+    .video-player {
+      max-width: 750px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .video {
+      width: 683px;
+      height: 282px;
+      margin-left: -1px;
+      margin-right: -60px;
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .player-controls {
+      display: flex;
+      position: absolute;
+      bottom: 7px;
+      width: 683px;
+      transform: translateY(100%) translateY(-5px);
+      transition: 0.1s;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.0);
+    }
+
+    .video-player:hover .player-controls {
+      transform: translateY(0);
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 7px;
+      transition: 0.3s;
+    }
+
+    .play-button {
+      width: 10%;
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 10px 2px;
+      font-size: 11px;
+      transition: 1.0s;
+    }
+    .button2 {
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 10px 10px;
+      font-size: 11px;
+      transition: 1.0s;
+    }
+    .button3 {
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 10px 10px;
+      font-size: 11px;
+      transition: 1.0s;
+    }
+    .button4 {
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      margin-left: 5px;
+      padding: 10px 10px;
+      font-size: 11px;
+      transition: 1.0s;
+    }
+    .button5 {
+      border: none;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      margin-left: 350px;
+      padding: 10px 10px;
+      font-size: 11px;
+      transition: 1.0s;
+    }
+
+    .play-button:focus {
+      outline: none;
+    }
+
+    .time {
+      font-size: 1em;
+      margin-left: -25px;
+      color: white;
+      width: 15%;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1.0s;
+      font-size: 9px;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      background: transparent;
+      margin: 0;
+      width: 10%;
+      padding: 0 10px;
+      transition: 1.0s;
+    }
+    input[type="range"]:focus {
+      outline: none;
+      transition: 1.0s;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 10px;
+      cursor: pointer;
+      background: black;
+      overflow: hidden;
+      transition: 1.0s;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      margin-top: -3px;
+      height: 16px;
+      width: 10px;
+      border-radius: 0px;
+      background: rgb(255, 0, 0);
+      box-shadow: -300px 0 0 290px rgb(180, 0, 0);
+      cursor: pointer;
+      transition: 1.0s;
+    }
+
+    .video-progress {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 5px;
+      transition: 0.3s;
+      background: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+
+    .video-progress-filled {
+      width: 0;
+      background: rgb(185, 0, 0);
+      transition: 1.0s;
+    }
+
+    .video-player:hover .video-progress {
+      height: 10px;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 620px)
+{
+
+  .video-player {
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .video {
+    width: 544px;
+    height: 282px;
+    margin-left: -1px;
+    margin-right: -60px;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .player-controls {
+    display: flex;
+    position: absolute;
+    bottom: 7px;
+    width: 640px;
+    transform: translateY(100%) translateY(-5px);
+    transition: 0.1s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.0);
+  }
+
+  .video-player:hover .player-controls {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 7px;
+    transition: 0.3s;
+  }
+
+  .play-button {
+    width: 10%;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 2px;
+    font-size: 11px;
+    transition: 1.0s;
+  }
+  .button2 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    font-size: 11px;
+    transition: 1.0s;
+  }
+  .button3 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    font-size: 11px;
+    transition: 1.0s;
+  }
+  .button4 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 5px;
+    padding: 10px 10px;
+    font-size: 11px;
+    transition: 1.0s;
+  }
+  .button5 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 190px;
+    padding: 10px 10px;
+    font-size: 11px;
+    transition: 1.0s;
+  }
+
+  .play-button:focus {
+    outline: none;
+  }
+
+  .time {
+    font-size: 1em;
+    margin-left: -25px;
+    color: white;
+    width: 15%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.0s;
+    font-size: 9px;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    width: 10%;
+    padding: 0 10px;
+    transition: 1.0s;
+  }
+  input[type="range"]:focus {
+    outline: none;
+    transition: 1.0s;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: black;
+    overflow: hidden;
+    transition: 1.0s;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    height: 16px;
+    width: 10px;
+    border-radius: 0px;
+    background: rgb(255, 0, 0);
+    box-shadow: -300px 0 0 290px rgb(180, 0, 0);
+    cursor: pointer;
+    transition: 1.0s;
+  }
+
+  .video-progress {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  .video-progress-filled {
+    width: 0;
+    background: rgb(185, 0, 0);
+    transition: 1.0s;
+  }
+
+  .video-player:hover .video-progress {
+    height: 10px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 360px)
+{
+
+  .video-player {
+    max-width: 750px;
+    position: relative;
+    overflow: hidden;
+    transition: 1.0s;
+  }
+
+  .video {
+    width: 360px;
+    height: 205px;
+    z-index: 1;
+    transition: 1.0s;
+  }
+
+  .player-controls {
+    display: flex;
+    position: absolute;
+    bottom: 7px;
+    width: 360px;
+    transform: translateY(100%) translateY(-5px);
+    transition: 0.1s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.0);
+  }
+
+  .video-player:hover .player-controls {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 7px;
+    transition: 0.3s;
+  }
+
+  .play-button {
+    width: 10%;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 2px;
+    transition: 1.0s;
+  }
+  .button2 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button3 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button4 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 5px;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+  .button5 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 80px;
+    padding: 10px 10px;
+    transition: 1.0s;
+  }
+
+  .play-button:focus {
+    outline: none;
+  }
+
+  .time {
+    font-size: 1em;
+    margin-left: -15px;
+    color: white;
+    width: 15%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.0s;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    width: 20%;
+    padding: 0 10px;
+    transition: 1.0s;
+  }
+  input[type="range"]:focus {
+    outline: none;
+    transition: 1.0s;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: black;
+    overflow: hidden;
+    transition: 1.0s;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    height: 16px;
+    width: 10px;
+    border-radius: 0px;
+    background: rgb(255, 0, 0);
+    box-shadow: -300px 0 0 290px rgb(180, 0, 0);
+    cursor: pointer;
+    transition: 1.0s;
+  }
+
+  .video-progress {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  .video-progress-filled {
+    width: 0;
+    background: rgb(185, 0, 0);
+    transition: 0.0s;
+  }
+
+  .video-player:hover .video-progress {
+    height: 10px;
+  }
+
+
+} */

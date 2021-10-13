@@ -1,0 +1,191 @@
+
+.play-tooltip {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .play-tooltip .play-tooltiptext {
+    visibility: hidden;
+    width: 75px;
+    height: 27px;
+    background-color: #000000c2;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    bottom: 100%;
+    left: 70px;
+    margin-left: -60px;
+  }
+  
+  .play-tooltip:hover .play-tooltiptext {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  
+  
+.pause-tooltip {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .pause-tooltip .pause-tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    height: 27px;
+    background-color: #000000c2;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    bottom: 100%;
+    left: 70px;
+    margin-left: -60px;
+  }
+  
+  .pause-tooltip:hover .pause-tooltiptext {
+    visibility: visible;
+    transition: 0.5s;
+  }
+
+.next-tooltip {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .next-tooltip .next-tooltiptext {
+    visibility: hidden;
+    width: 40px;
+    height: 27px;
+    background-color: #000000c2;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    bottom: 100%;
+    left: 60px;
+    margin-left: -60px;
+  }
+  
+  .next-tooltip:hover .next-tooltiptext {
+    visibility: visible;
+    transition: 0.5s;
+  }
+
+  
+.mute-tooltip {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .mute-tooltip .mute-tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    height: 27px;
+    background-color: #000000c2;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    bottom: 100%;
+    left: 50px;
+    margin-left: -60px;
+  }
+  
+  .mute-tooltip:hover .mute-tooltiptext {
+    visibility: visible;
+    transition: 0.5s;
+  }
+
+  
+.unmute-tooltip {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .unmute-tooltip .unmute-tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    height: 27px;
+    background-color: #000000c2;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    bottom: 100%;
+    left: 50px;
+    margin-left: -60px;
+  }
+  
+  .unmute-tooltip:hover .unmute-tooltiptext {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  
+.download-tooltip {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .download-tooltip .download-tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    height: 27px;
+    background-color: #000000c2;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    bottom: 100%;
+    left: 40px;
+    margin-left: -60px;
+  }
+  
+  .download-tooltip:hover .download-tooltiptext {
+    visibility: visible;
+    transition: 0.5s;
+  }
+
+  

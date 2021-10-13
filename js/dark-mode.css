@@ -1,0 +1,21 @@
+[data-theme="dark"] 
+{
+  transition: 0.5s;
+  background-color: rgb(32, 32, 32) !important;
+  color: rgb(255, 255, 255);
+}
+
+[data-theme="dark"] .bg-light {
+  transition: 0.5s;
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  transition: 0.5s;
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  transition: 0.5s;
+  background-color: #eee !important;
+}

@@ -1,0 +1,117 @@
+/* .recommend-timestamp{
+    position: absolute;
+    border: 2px rgb(94, 94, 94) solid;
+} */
+.control-time{
+    top: 55px;
+    left: 170px;
+    height: 17px;
+    width: 24px;
+    padding-left: 1px;
+    padding-right: 10px;
+    color: white;
+    font-size: 9px;
+    background: rgba(0, 0, 0, 0.87);
+    border: 2px #000 solid;
+    border-radius: 3px;
+    transition: 0.2s;
+
+}
+.rp-logo{
+   position: relative;
+   top: -820px;
+   left: 550px;
+   width: 6%;
+   transition: 0.3s;
+   opacity: 1;
+   z-index: 1;
+}
+.container9:hover .rp-logo{
+   position: relative;
+   opacity: 0;
+   transition: 0.2s;
+}
+.dark .rp-logo{
+   position: relative;
+   top: -690px;
+   left: 550px;
+   width: 6%;
+   transition: 0.3s;
+   z-index: 1;
+}
+.dark .container9:hover .rp-logo{
+   position: relative;
+   top: -740px;
+   left: 550px;
+   transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+
+   .control-time{
+      display: none;
+       top: 200px;
+       left: 280px;
+       height: 18px;
+       width: 32px;
+       padding-left: 4px;
+       padding-right: 10px;
+       color: white;
+       font-size: 13px;
+       background: rgba(0, 0, 0, 0.74);
+       border: 0px #000 solid;
+       border-radius: 3px;
+       z-index: 0;
+       transition: 0.2s;
+
+   }
+}
+
+ .boss-timestamp{
+    position: relative;
+}
+.jab-timestamp{
+   position: relative;
+}
+.aaj-timestamp{
+   position: relative;
+}
+.gulabi-timestamp{
+   position: relative;
+}
+.gora-timestamp{
+   position: relative;
+}
+.radha-timestamp{
+   position: relative;
+}
+.top-timestamp{
+   position: relative;
+}
+.qadar-timestamp{
+   position: relative;
+}
+.chhor-timestamp{
+   position: relative;
+}
+.lut-timestamp{
+   position: relative;
+}
+.aur-timestamp{
+   position: relative;
+}
+.dope-timestamp{
+   position: relative;
+}
+.lit-timestamp{
+   position: relative;
+}
+.fear-timestamp{
+   position: relative;
+}
+.love-timestamp{
+   position: relative;
+}
+.agust-timestamp{
+   position: relative;
+}

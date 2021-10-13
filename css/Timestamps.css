@@ -1,0 +1,77 @@
+/* .recommend-timestamp{
+    position: absolute;
+    border: 2px rgb(94, 94, 94) solid;
+} */
+.control-time{
+    top: 210px;      
+    left: 333px;
+    height: 27px;
+    width: 43px;
+    padding-left: 5px;
+    padding-right: 10px;
+    color: white;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.87);
+    border: 2px #000 solid;
+    border-radius: 3px;
+    z-index: 1;
+
+}
+.control-time-movies{
+    top: 530px;      
+    left: 300px;
+    height: 27px;
+    width: 70px;
+    padding-left: 5px;
+    padding-right: 10px;
+    color: white;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.87);
+    border: 2px #000 solid;
+    border-radius: 3px;
+    z-index: 1;
+
+}
+
+@media screen and (max-width: 620px) {
+    .control-time{
+        top: 215px;      
+        left: 353px;
+        height: 27px;
+        width: 43px;
+        padding-left: 5px;
+        padding-right: 10px;
+        color: white;
+        font-size: 15px;
+        background: rgba(0, 0, 0, 0.87);
+        border: 2px #000 solid;
+        border-radius: 3px;
+        z-index: 1;
+    
+    }
+    .control-time-movies{
+        top: 560px;      
+        left: 313px;
+        height: 27px;
+        width: 70px;
+        padding-left: 5px;
+        padding-right: 10px;
+        color: white;
+        font-size: 15px;
+        background: rgba(0, 0, 0, 0.87);
+        border: 2px #000 solid;
+        border-radius: 3px;
+        z-index: 1;
+    
+    }
+}
+
+.chhor-timestamp{
+    position: relative;
+}
+.lut-timestamp{
+    position: relative;
+}
+.top-timestamp{
+    position: relative;
+}
