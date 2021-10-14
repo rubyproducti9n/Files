@@ -2163,9 +2163,34 @@ transform: rotate(-135deg);
     background-color: #fff;
     /* background: linear-gradient(180deg, #363636, #000000); */
     /* background-size: 100% 200%; */
-    max-width: 1366px;
-    min-width: 360px;
+    /* max-width: 1366px;
+    min-width: 360px; */
   }
+  .home-container{
+    transition: 0.5s;
+    }
+    .navbar-custom{
+    backdrop-filter: blur(5px);
+    background-color: #800080;
+    color: white;
+    }
+    .maintain-container{
+    color: rgb(57, 0, 131);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    margin-top: 50px;
+    transition: 0.5s;
+    }
+    .maintain-img{
+    width: 50%;
+    margin-top: -50px;
+    transition: 0.5s;
+    }
+    .maintain-text{
+    color: #000;
+    font-size: 10px;
+    transition: 0.5s;
+    }
   a{
     color: #000;}
   a:hover{ color: #000}
