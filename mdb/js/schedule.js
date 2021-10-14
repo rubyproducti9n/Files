@@ -17,7 +17,7 @@
 //       }
 //   }, 0);
 
-var countDownstreaming = new Date("Oct 17, 2021 05:00:00").getTime();
+var countDownstreaming = new Date("Oct 19, 2021 05:00:00").getTime();
 
 var x = setInterval(function() {
 
@@ -44,8 +44,8 @@ window.setInterval(function() {
         // var player = document.getElementsByClassName(".player");
         // var notice = document.getElementsByClassName(".notice");
         var current = new Date();
-        var visible = new Date("Oct 17, 2021 05:00:04")
-        var expiry = new Date("Oct 17, 2021 09:00:03")
+        var visible = new Date("Oct 19, 2021 05:00:04")
+        var expiry = new Date("Oct 19, 2021 09:00:03")
 
         if (current.getTime() > visible.getTime()) {
                 // player.style.block = "none";
