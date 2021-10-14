@@ -43,13 +43,13 @@
         color: rgb(255, 255, 255);
       }
     a:active{color: #ffffff;}
-    .navbar{display: block;}
+    .navbar{display: none;}
     .timeago{color: black;}
 
     .container2{
     color: rgb(255, 255, 255);
     display: block;
-    margin-top: -20px;
+    margin-top: -50px;
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
@@ -89,7 +89,7 @@
       display: none;
     }
     .body{
-      margin-top: 100px;
+      margin-top: 0px;
     }
 .tools-bg{
 color: #800080;
@@ -99,14 +99,94 @@ height: 170px;
 padding: 70px 0;
 box-shadow: 2px 2px 20px #4b4b4b5b;
 }
+section{
+min-height: 100vh;
+width: 100vw;
+display: flex;
+align-items: flex-start;
+background: rgb(37, 37, 37);
+flex-direction: column;
+padding: 50px 0;
+}
+section h1{
+  color: rgb(255, 255, 253, 0.322);
+  text-align: center;
+  width: 100vw;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+section p{
+  text-align: center;
+  color: rgb(255, 255, 255, 0.322);
+  width: 100vw;
+  margin-bottom: 40px;
+}
+.container{
+  width: 90vw;
+  max-width: 500px;
+margin: 0 auto;
+justify-content: center;
+}
+.texts p{
+  color: #000;
+  text-align: left;
+  width: 100vw;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.texts p.replay{
+  text-align: right;
+}
     @media screen and (max-width: 768px){
     .container2{
     color: #000;
     display: block;
-    margin-top: 0px;
+    margin-top: -50px;
     /* margin: auto; */
     width: 100%;
-    padding: 30px 10px;}
+    padding: 0 0;}
+section{
+min-height: 100vh;
+width: 100vw;
+display: flex;
+align-items: flex-start;
+background: rgb(37, 37, 37);
+flex-direction: column;
+padding: 50px 0;
+}
+section h1{
+  color: rgb(255, 255, 253, 0.322);
+  text-align: center;
+  width: 100vw;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+section p{
+  text-align: center;
+  color: rgb(255, 255, 255, 0.322);
+  width: 100vw;
+  margin-bottom: 40px;
+}
+.eva-container{
+  width: 90vw;
+  max-width: 500px;
+margin: 0 auto;
+justify-content: center;
+}
+.texts p{
+  color: #000;
+  text-align: left;
+  width: 100vw;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.texts p.replay{
+  text-align: right;
+}
     .navbar{display: none;}}
     </style>
     <script>
@@ -288,6 +368,56 @@ Oops! we are currently working on it, please try again later.
       </footer>
       <!-- Footer -->
       <script>
+        const texts =document.querySelector(".texts");
+
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        const recognition = new SpeechRecognition();
+        recognition.interimResults  = true;
+
+        let p =document.createElement("p");
+
+        recognition.addEventListener("result", (e) => {
+          texts.appendChild(p);
+          const text = Array.from(e.results)
+          .map((result) => result [0])
+          .map((result) => result.transcript)
+          .join("");
+
+          p.innerText = text;
+          if (e.results[0].isFinal){
+            if(text.includes("how are you")){
+              p = document.createElement("p")
+              p.classList.add("replay");
+              p.innerText = "I am fine";
+              text.appendChild(p);
+            }
+            if (
+              text.includes("what's your name") ||
+              text.includes("what is your name")
+            ){
+              p = document.createElement("p");
+              p.classList.add("replay");
+              p.innerText = "My name is Eva";
+              texts.appendChild(p);
+            }
+            if (text.includes("open my youtube")){
+              p = document.createElement("p");
+              p.classList.add("replay");
+              p.innerText = "opening Youtube";
+              texts.appendChild(p);
+              console.log("Opening Youtube");
+              window.open("https://youtube.com/");
+            }
+            p = document.createElement("p");
+          }
+        });
+
+        recognition.addEventListener("ended", () => {
+          recognition.start();
+        });
+
+        recognitionstart();
 
         </script>
 
