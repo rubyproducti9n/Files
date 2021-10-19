@@ -26,10 +26,10 @@ let curr_track = document.createElement('audio');
 // Define the list of tracks that have to be played
 let track_list = [
   {
-    name: "TEA WITH BTS",
+    name: "BANGTAN NIGHTS",
     artist: "BTS",
     image: "../../album-cover.jpg",
-    path: "../../Exclusive/Audio/audio files/BTS JUKEBOX 3.mp3"
+    path: "../../Exclusive/Audio/audio files/demo.mp3"
   },
 ];
 
