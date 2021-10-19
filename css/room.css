@@ -137,7 +137,7 @@ transition: 0.5s;
   }
 }
 .notice{
-  display: block;
+  display: none;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -173,12 +173,12 @@ font-size: 13px;
 text-shadow: 0 0 10px #810585;
 }
 
-.streaming{display: block;background: #fff;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;}
+.streaming{background: #fff;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;}
 .strm-img{margin-top: 120px;width: 20%;}
 h1{color: #525252;font-weight: unset;font-family: Arial, Helvetica, sans-serif;}
 h2{color: #525252;font-weight: unset;font-family: Arial, Helvetica, sans-serif;}
 #timer{color: #525252;font-size: 14px;font-family: Arial, Helvetica, sans-serif;}
-.expired{display: block;background: #fff;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 9;}
+.expired{background: #fff;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 9;}
 .ex-img{margin-top: 120px;width: 20%;}
 .expired-text{font-family: Verdana, Geneva, Tahoma, sans-serif;}
 #ending{
@@ -199,6 +199,7 @@ backdrop-filter: blur(3px);
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  text-shadow: 0 0 6px #ffffffa2;
   }
   .details {
   display: flex;
@@ -214,8 +215,21 @@ backdrop-filter: blur(3px);
   background-image: URL("../../album cover.jpg");
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.548);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0);
   border-radius: 5%;
+  animation: pulse 8s ease 0s infinite normal forwards;
+  }
+  @keyframes pulse {
+    0%,
+    50%,
+    100% {
+      box-shadow: 0 0 16px #ffffff00;
+    }
+
+    25%,
+    75% {
+      box-shadow: 0 0 36px #fff;
+    }
   }
   .now-playing {
   font-size: 1rem;
@@ -310,7 +324,7 @@ backdrop-filter: blur(3px);
   .total-duration
   {padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 0 0 6px #fff;}
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.795);}
   i.fa-volume-down,i.fa-volume-up {padding: 10px;}
   i.fa-play-circle,i.fa-pause-circle,i.fa-step-forward,i.fa-step-backward {cursor: pointer;}
 
