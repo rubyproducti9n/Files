@@ -51,7 +51,7 @@ window.setInterval(function() {
                 // player.style.block = "none";
                 // notice.style.block = "none";
                 $('.player').hide();
-                $('.background').hide();
+                // $('.background').hide();
                 $('.live').show();
                 $('.notice').show();
                 $('.player').show();
