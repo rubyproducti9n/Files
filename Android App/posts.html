@@ -46,6 +46,19 @@
     <link rel="icon" href="../ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
 <style>
+  body{
+    user-select: none;
+  }
+  .container2{
+    margin: 0px;
+    width: 100vw;
+  }
+  .navbar{
+    display: none;
+  }
+  .bottom-nav{
+    display: none;
+  }
   a{
     color: black;
   }
@@ -57,208 +70,64 @@
   }
 
 
-.rubyproduction-tooltip {
-    color: rgb(0, 0, 0);
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-    transition: 0.5s;
-  }
 
-  .rubyproduction-tooltip .rubyproduction-tooltiptext {
-    visibility: hidden;
-    width: 150px;
-    height: 27px;
-    background-color: #000000c2;
-    color: #fff;
-    text-align: center;
-    font-size: 11px;
-    border-radius: 2px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -30px;
-    bottom: 100%;
-    left: 70px;
-    margin-left: -60px;
-  }
+  @media screen and (max-width: 768px){
 
-  .rubyproduction-tooltip:hover .rubyproduction-tooltiptext {
-    visibility: visible;
-    transition: 0.5s;
+    body{
+    user-select: none;
   }
-
-
-  .dark .rubyproduction-tooltip {
-    color: rgb(204, 204, 204);
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-    transition: 0.5s;
+  .container2{
+    margin: 0px;
+    width: 100vw;
   }
-
-  .dark .rubyproduction-tooltip .rubyproduction-tooltiptext {
-    visibility: hidden;
-    width: 150px;
-    height: 27px;
-    background-color: #000000c2;
-    color: #fff;
-    text-align: center;
-    font-size: 11px;
-    border-radius: 2px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -30px;
-    bottom: 100%;
-    left: 70px;
-    margin-left: -60px;
-  }
-
-  .dark .rubyproduction-tooltip:hover .rubyproduction-tooltiptext {
-    visibility: visible;
-    transition: 0.5s;
-  }
-
-
-  .timeago{
-    color: black;
-  }
-
-  .dark body{
-    color: white;
-    background: rgb(29, 29, 29);
-  }
-  .heading{
-    margin-top: -25px;
-  }
-  .img2{
-    width: 15%;
-  }
-  /* .container2{
-    margin: 20px;
-  } */
-  .container5{
-    width: 50%;
-  }
-  .container90{
-    width: 42%;
-  }
-            .tags{
-                margin-left: 0px;
-                margin-bottom: -20px;
-            }
-  .container{
-    display: block;
-  }
-  .dark .container{
-    display: none;
-  }
-  .container-dark{
-    display: none;
-  }
-  .dark .container-dark{
-    display: block;
-  }
-  .control{
-    margin-left: 0px;
-  }
-.post{
+.posts{
   overflow: hidden;
-  height: auto;
-  width: 625px;
+  width: 100vw;
   padding: 10px 0px;
   transition: 0.5s;
 }
-    .container2{
-      display: none;
-    }
-  @media screen and (max-width: 412px){
-
-    .body{
-      margin-top: -38px;
-    }
-    .tags{
-    margin-left: 5px;
-    }
-
-  .container2{
-      display: block;
-    margin-top: 20px;
-  }
-  .text{
-    font-size: 13px;
-  }
+.img-avatar{
+  width: 10%;
+  padding: 20x 20px;
+  margin-left: 20px;
+  border-radius: 50px;
+}
+.profile-name{
+margin-left: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 16px;
+}
+.location{
+margin-left: 10px;
+font-size: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-post{
+width: 100vw;
+overflow: hidden;
+}
+.social-count{
+color: #800080;
+padding: 10px 20px;
+}
+.heart{
+color: #800080 ;
+margin-left: 0;
+}
+.comment{
+color: #800080;
+margin-left: 10px;
+}
+.share{
+color: #800080;
+margin-left: 10px;
+}
+hr{
+  color: #800080;
+}
   .timeago{
       font-size: 13px;
     color: rgb(102, 102, 102);
-  }
-  .post{
-    overflow: hidden;
-    height: auto;
-    width: 412px;
-    padding: 10px 10px;
-    margin: 0px 0px;
-    transition: 0.5s;
-  }
-  .img-post{
-    width: 480px;
-    margin-left: -30px;
-  }
-  }
-
-
-
-
-
-
-
-  @media screen and (max-width: 360px){
-
-    .body{
-      margin-top: -38px;
-    }
-    .tags{
-    margin-left: 5px;
-    }
-
-  .container2{
-      display: block;
-    margin-top: 50px;
-  }
-  .text{
-    font-size: 13px;
-  }
-  .timeago{
-      font-size: 13px;
-    color: rgb(102, 102, 102);
-  }
-  .post{
-    overflow: hidden;
-    height: auto;
-    width: 360px;
-    padding: 10px 10px;
-    margin: 0px 0px;
-    transition: 0.5s;
-  }
-  .img-post{
-    width: 420px;
-    margin-left: -30px;
-  }
-  .social{
-    margin-top: -10px;
-  }
-  .heart{
-    color: rgb(255, 24, 55);
-    font-size: 18px;
-    margin-left: 10px;
-    margin-right: 1px;
-  }
-  .share{
-    color: rgb(54, 54, 54);
-    font-size: 18px;
-    margin-left: 10px;
-    margin-right: 1px;
   }
   }
 </style>
@@ -272,39 +141,79 @@
         <div class="loader-spinner"></div>
       </div>
 
-      <nav class="navbar fixed-top navbar-dark  indigo darken-2 navbar-expand-lg scrolling-navbar lighten-5 mb-4">
-        <a id="navbar" class="navbar-brand" href="RUBY PRODUCTION.html"> RUBY PRODUCTION </a>
-        <a id="notification" class="float-end" href="notifications.html"></a>
-      </nav>
 
-
-<center> <div class="banner-ad"></div></center>
-      <div class="bottom-nav indigo darken-2">
-        <a class="nav-tooltip" href="RUBY PRODUCTION.html"> <i class="fa fa-home btm-nav"></i> <span class="nav-tooltiptext">HOME</span> </a>
-        <a class="nav-tooltip disabled" href="#"> <i class="fa fa-search btm-nav"></i> <span class="nav-tooltiptext">SEARCH</span> </a>
-        <a class="nav-tooltip" href="posts.html"> <i class="fa fa-image btm-nav active"></i> <span class="nav-tooltiptext">POSTS</span> </a>
-        <a class="nav-tooltip" href="music.html">  <i class="fa fa-music btm-nav"></i> <span class="nav-tooltiptext">MUSIC</span> </a>
-        <a class="nav-tooltip" href="library.html"> <i class="fa fa-book btm-nav"></i> <span class="nav-tooltiptext">LIBRARY</span> </a>
-       </div>
-
- <center> <p class="err-msg"> Oops! something went wrong </p> </center>
+ <!-- <center> <p class="err-msg"> Oops! something went wrong </p> </center> -->
 
       <div class="container2">
 
+<div class="posts">
+<img class="img-avatar float-start" src="../ruby (1).png">
+<a class="profile-name" href="#">RUBY PRODUCTION</a><br>
+<a class="location" href="#">India</a><br>
+<img class="img-post" src="../posts/bts.jpg"><br>
+<div class="social-count">
+  <i class="fa fa-heart heart"></i> 1
+  <i class="fa fa-comment comment"></i> 4
+  <i class="fa fa-share-alt share"></i> 0
+</div><hr></div>
 
-          <h6 style="padding: 0px 5px;"><i class="fa fa-image" style="padding: 0px 5px;"></i> Posts</h6><hr>
+<div class="posts">
+  <img class="img-avatar float-start" src="../ruby (1).png">
+  <a class="profile-name" href="#">RUBY PRODUCTION</a><br>
+  <a class="location" href="#">India</a><br>
+  <img class="img-post" src="../posts/bts.jpg"><br>
+  <div class="social-count">
+    <i class="fa fa-heart heart"></i> 1
+    <i class="fa fa-comment comment"></i> 4
+    <i class="fa fa-share-alt share"></i> 0
+  </div><hr></div>
+
+  <div class="posts">
+    <img class="img-avatar float-start" src="../ruby (1).png">
+    <a class="profile-name" href="#">RUBY PRODUCTION</a><br>
+    <a class="location" href="#">India</a><br>
+    <img class="img-post" src="../posts/bts.jpg"><br>
+    <div class="social-count">
+      <i class="fa fa-heart heart"></i> 1
+      <i class="fa fa-comment comment"></i> 4
+      <i class="fa fa-share-alt share"></i> 0
+    </div><hr></div>
+
+    <div class="posts">
+      <img class="img-avatar float-start" src="../ruby (1).png">
+      <a class="profile-name" href="#">RUBY PRODUCTION</a><br>
+      <a class="location" href="#">India</a><br>
+      <img class="img-post" src="../posts/bts.jpg"><br>
+      <div class="social-count">
+        <i class="fa fa-heart heart"></i> 1
+        <i class="fa fa-comment comment"></i> 4
+        <i class="fa fa-share-alt share"></i> 0
+      </div><hr></div>
+
+      <div class="posts">
+        <img class="img-avatar float-start" src="../ruby (1).png">
+        <a class="profile-name" href="#">RUBY PRODUCTION</a><br>
+        <a class="location" href="#">India</a><br>
+        <img class="img-post" src="../posts/bts.jpg"><br>
+        <div class="social-count">
+          <i class="fa fa-heart heart"></i> 1
+          <i class="fa fa-comment comment"></i> 4
+          <i class="fa fa-share-alt share"></i> 0
+        </div><hr></div>
+
+          <!-- <h6 style="padding: 0px 5px;"><i class="fa fa-image" style="padding: 0px 5px;"></i> Posts</h6><hr> -->
 
 
 
-<div class="post">
+<!-- <div class="post">
 
 
-  <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
+  <img class="img-avatar float-start" src="../ruby (1).png" width="15%" style="border-radius: 30px; margin-left: 0px;">
   <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
   <time class="timeago " datetime="24 July 2021 12:10" style=" padding: 10px 10px;"></time>
   <br><br>
 
-  <a href="../Exclusive/posts/bts/bts.jpg" download="BTS Jimin"> <img class=" img-post" src="../Exclusive/posts/bts/bts.jpg"> </a>
+  <a href="../posts/bts.jpg" download="BTS Jimin"> <img class=" img-post" src="../posts/bts.jpg"> </a>
   <br><br>
   <div class="social">
     <i class="fa fa-heart heart"></i> 1
@@ -317,271 +226,7 @@
 
 <hr><br><hr>
 
-
-
-  <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-  <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-  <time class="timeago " datetime="23 July 2021 13:25" style=" padding: 10px 10px;"></time>
-  <br><br>
-
-  <a href="../Exclusive/posts/bts/jimin3.jpg" download="BTS Jimin"> <img class=" img-post" src="../Exclusive/posts/bts/jimin3.jpg"> </a>
-  <br><br>
-  <div class="social">
-    <i class="fa fa-heart heart"></i> 349
-    <i class="fa fa-comment comment"></i>
-    <i class="fa fa-share-alt share"></i> 69
-    <a class="" href="../Exclusive/posts/bts/jimin3.jpg" download="btsedits_rubyproducti9n"></a>
-    <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-  </div>
-
-
-<hr><br><hr>
-
-
-  <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-  <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-  <time class="timeago " datetime="20 July 2021 13:10" style=" padding: 10px 10px;"></time>
-  <br><br>
-  💜💜💜💜💜💜💜
-<br>#btsfanart #btsedits #btsarmy<br>
-
-  <a href="../Exclusive/posts/bts/bts-fanart.jpg" download="BTS 8th Anniversary"> <img class=" img-post" src="../Exclusive/posts/bts/bts-fanart.jpg"> </a>
-  <br><br>
-  <div class="social">
-    <i class="fa fa-heart heart"></i> 208
-    <i class="fas fa-comment comment"></i>
-    <i class="fa fa-share-alt share"></i> 76
-    <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-    <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-  </div>
-
-
-<hr><br><hr>
-
-
-  <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-  <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-  <time class="timeago " datetime="01 July 2021 17:16" style=" padding: 10px 10px;"></time>
-  <br><br>
-  💜 Celebrating 8th Anniversary of Bantan World!!!
-<br>#btsgroup #btsedits #btsarmy #btsconcert<br>
-
-  <a href="../Exclusive/posts/bts/bts group.jpg" download="BTS 8th Anniversary"> <img class=" img-post" src="../Exclusive/posts/bts/bts group.jpg"> </a>
-  <br><br>
-  <div class="social">
-    <i class="fa fa-heart heart"></i> 398
-    <i class="fas fa-comment comment"></i>
-    <i class="fa fa-share-alt share"></i> 184
-    <a class="" href="../Exclusive/posts/bts/bts group.jpg" download="btsedits_rubyproducti9n"></a>
-    <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-  </div>
-
-
-  <hr><br><hr>
-
-
-    <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-<a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-<time class="timeago " datetime="01 July 2021 17:16" style=" padding: 10px 10px;"></time>
-<br><br>#btsrm #btsedits #btsarmy #btsconcert<br>
-
-<a href="../Exclusive/posts/bts/rm 2.jpg" download="RM"> <img class=" img-post" src="../Exclusive/posts/bts/rm 2.jpg"> </a>
-<br><br>
-<div class="social">
-  <i class="fa fa-heart heart"></i> 135
-  <i class="fas fa-comment comment"></i>
-  <i class="fa fa-share-alt share"></i> 34
-  <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-  <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-</div>
-
-
-<hr><br><hr>
-
-
-  <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago " datetime="01 July 2021 17:16" style=" padding: 10px 10px;"></time>
-    <br><br>#btsv #btsedits #btsarmy #btsconcert<br>
-
-    <img class=" img-post" src="../Exclusive/posts/bts/v 2.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 729
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 375
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-   <hr><br>
-
-  <hr>
-
-  <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-  <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago" datetime="01 July 2021 17:16" style="padding: 10px 10px;"></time>
-    <br><br>#btsjimin #btsedits #btsarmy #btsconcert<br>
-
-    <img class=" img-post" src="../Exclusive/posts/bts/jimin 2.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 623
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 99
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-
-
-    <hr><br><hr>
-
-
-      <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-  <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago" datetime="01 July 2021 15:43" style="padding: 10px 10px;"></time>
-    <br><br>#btsjungkook #btsedits #btsarmy #btsconcert<br>
-
-    <img class=" img-post" src="../Exclusive/posts/bts/jungkook 2.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 1.1k
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 555
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-   <hr><br>
-  <hr>
-
-    <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-    <br><br>#btsv #btsedits #btsarmy #btsconcert<br>
-
-    <img class=" img-post" src="../Exclusive/posts/bts/v.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 2.5k
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 385
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-
-
-    <hr><br><hr>
-
-
-      <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-    <br><br>#btsjungkook #btsedits #btsarmy<br>
-    <img class="img-post" src="../Exclusive/posts/bts/jungkook.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 6.1k
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 1.2k
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-
-
-    <hr>
-
-    <br>
-    <hr>
-
-    <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-    <br><br>#btsjimin #btsedits #btsarmy #btsbutter<br>
-    <img class="img-post" src="../Exclusive/posts/bts/jimin.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 2.2k
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 982
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-
-
-    <hr><br><hr>
-
-
-      <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-    <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-    <br><br>#btsjin #btsedits #btsarmy #btsconcert<br>
-    <img class="img-post" src="../Exclusive/posts/bts/jin.jpg">
-    <br><br>
-    <div class="social">
-      <i class="fa fa-heart heart"></i> 778
-      <i class="fas fa-comment comment"></i>
-      <i class="fa fa-share-alt share"></i> 229
-      <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-      <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-    </div>
-
-
-    <hr><br><hr>
-
-
-      <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-  <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-  <br><br>#btssuga #btsedits #btsarmy #btsconcert<br>
-  <img class="img-post" src="../Exclusive/posts/bts/suga.jpg">
-  <br><br>
-  <div class="social">
-    <i class="fa fa-heart heart"></i> 983
-    <i class="fas fa-comment comment"></i>
-    <i class="fa fa-share-alt share"></i> 90
-    <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-    <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-  </div>
-
-
-  <hr><br><hr>
-
-
-    <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-  <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-  <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-  <br><br>#btsjhope #btsedits #btsarmy<br>
-  <img class="img-post" src="../Exclusive/posts/bts/j-hope.jpg">
-  <br><br>
-  <div class="social">
-    <i class="fa fa-heart heart"></i> 828
-    <i class="fas fa-comment comment"></i>
-    <i class="fa fa-share-alt share"></i> 246
-    <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-    <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-  </div>
-
-
-  <hr><br><hr>
-
-
-    <img class="img-avatar float-start" src="../Exclusive/avatar.jpg" width="15%" style="border-radius: 30px; margin-left: 0px;">
-    <a class="feed" style="margin-left: 10px;" href="https://www.instagram.com/rubyproducti9n/">RUBY PRODUCTION <i class="fas fa-check-circle"></i></a><br>
-  <time class="timeago" datetime="30 June 2021 15:14" style="padding: 10px 10px;"></time>
-  <br><br>#btsrm #btsedits #btsarmy #btskimnamjoon<br>
-  <img class="img-post" src="../Exclusive/posts/bts/rm.jpg">
-  <br><br>
-  <div class="social">
-    <i class="fa fa-heart heart"></i> 973
-    <i class="fas fa-comment comment"></i>
-    <i class="fa fa-share-alt share"></i> 123
-    <a class="" href="../Exclusive/posts/bts/bts-fanart.jpg" download="btsedits_rubyproducti9n"></a>
-    <i class="fa fa-download float-end" style="margin-right: 5px; margin-top: 5px;"> </i><a>
-  </div>
-
-
-  <hr>
-  <br>
-  </div>
+  </div> -->
 
   </div>
 
