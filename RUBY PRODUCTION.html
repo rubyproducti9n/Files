@@ -39,12 +39,18 @@ for relaxing at night or for energetic music in the morning, you are in the righ
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <link rel="icon" href="ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
   @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 body{
 color: rgb(255, 255, 255);
 background: #fff;
 background-size: 100% 300%;
+font-family: 'Comfortaa', cursive;
 user-select: none;
 overflow-x: hidden;}
 .home-container{display: block;}
@@ -56,6 +62,10 @@ a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);} */
 .container2{margin: 0px;}
 .container{display: block;}
+.modal-icon{margin-right: 5px;}
+.desktop{
+  display: block;
+}
 .live-container{
 margin: 0;
 border: 2px rgba(0, 0, 0, 0) solid;
@@ -221,24 +231,17 @@ width: 30%;
 transition: 0.5s ease;
 /* text-shadow: 2px 2px 20px #2b002b; */
 }
-.notification-svg:hover{
-transform: rotate(0deg);
-transform: scale(1.1);
-box-shadow: 12px 12px 30px #2b002b;
-transition: 0.5s ease;
-/* text-shadow: 2px 2px 20px #2b002b; */
-}
-.notification-svg:active{
-transform: rotate(0deg);
-transform: scale(0.9);
-transition: 0.5s ease;
-/* text-shadow: 2px 2px 20px #2b002b; */
+.premium-img{
+width: 100%;
 }
 @media screen and (max-width:768px) {
 body{font-size: 2vh;overflow-x: hidden;}
 .svg{margin-top: -20px;}
 svg:nth-child(1){margin-top: -10px;}
 .dashboard{border-radius: 200px 0 0 0;}
+.desktop{
+  display: none;
+}
 .upcoming{
   content: '';
 margin-top: 40px;
@@ -339,6 +342,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
 </head>
 <body>
 <div id="loading"></div>
+
  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -362,6 +366,9 @@ function learn(){window.location.href = "Android App/Help/room.html";}
             <li class="nav-item">
               <a class="nav-link" href="javascript:void(0)">LIBRARY</a>
             </li>
+            <li class="nav-item">
+              <a class="btn btn-secondary btn-sm disabled" href="javascript:void(0)">Notify Me</a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="javascript:void(0)">| </a>
             </li> -->
@@ -375,7 +382,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                 <li>
-                  <a class="dropdown-item" href="Android App/rooms/bts room.html"> • TEA WITH BTS | 19 Oct | Learn More</a>
+                  <a class="dropdown-item disabled" href="#"> BANGTAN IS LIVE | Silent Nights | RUBY PRODUCTION  </a>
                 </li>
               </ul>
             </li>
@@ -383,6 +390,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
         </div>
       </div>
     </nav>
+
 <div class="maintain-container">
 <center><br><br><br><br><img class="maintain-img" src="Maintenance/music.png"></center>
 <center><p class="maintain-text">
@@ -408,8 +416,8 @@ function learn(){window.location.href = "Android App/Help/room.html";}
                     </h4>
                   </li>
                   <li class="wow fadeIn" data-wow-delay="0.4s">
-                    <a class="btn btn-danger disabled" href="https://forms.gle/iAHG84dLQN1B6FnF9"><i class="fas fa-gem" aria-hidden="true"></i>  Buy Premium </a>
-                    <a class="btn btn-custom text-white disabled" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">
+                    <a class="btn btn-danger" data-mdb-toggle="modal" data-mdb-target="#premium-modal"><i class="fas fa-gem" aria-hidden="true"></i>  Buy Premium </a>
+                    <a class="btn btn-custom text-white" data-mdb-toggle="modal" data-mdb-target="#download-modal">
                       Free Download <i class="fa fa-download" aria-hidden="true"></i> </a>
                   </li>
                 </ul>
@@ -419,6 +427,156 @@ function learn(){window.location.href = "Android App/Help/room.html";}
         </div>
       </div>
     </div>
+
+
+
+      <!-- Modal Section -->
+
+<!-- Modal -->
+<div
+class="modal fade"
+id="premium-modal"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header btn-custom">
+      <h5 class="modal-title text-white" id="exampleModalLabel">Upgrade Plan</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-mdb-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body text-black-50">
+      <img class="premium-img" src="maintenance/premium.png"><br>
+      <center> Sorry, this service is unstable right now. Please try again later.
+      </center>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+        Close
+      </button>
+      <button type="button" class="btn btn-danger disabled">BUY</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div
+class="modal fade"
+id="download-modal"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header btn-custom">
+      <h5 class="modal-title text-white" id="exampleModalLabel">Download ConcertEra</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-mdb-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body text-black-50">
+      <img class="premium-img" src="maintenance/app.png"><br>
+      <center> Stay Tuned for it!
+      </center>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-custom text-white disabled">Download</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div
+class="modal fade"
+id="stream-modal"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header btn-custom">
+      <h5 class="modal-title text-white" id="exampleModalLabel">Stream Details</h5>
+      <!-- <a class="btn-close text-white"
+        data-mdb-dismiss="modal"
+        aria-label="Close"></a> -->
+    </div>
+    <div class="modal-body text-black-50">
+      <center>
+        <table class="table text-black table-borderless">
+          <tbody>
+            <tr>
+              <th> <center>  </center></th>
+              <th> </th>
+              </tr>
+              <tr class="">
+                <td>
+                  <a class="text-black user-select-none" style="font-family: 'Comfortaa', cursive;">
+                    <h5> Bangtan Nights | Rooms | Silent Nights </h5></a>
+                  <h6>
+                   <small class="text-black" style="font-family: 'Baloo 2', cursive;" translate="yes">
+
+                    Artist: BTS<br>
+                    Albums: Map Of Soul, Wings, Love Yourself Tear,<br> Map of The Soul:7, Love Yourself:Answer,
+                    Map Of The Soul : Persona and more<br>
+                    Medium: Audio (MP3) <br>
+                    Supported Devices: Smartphone, Tablet, Laptops<br>
+                    Streaming: 30 Oct at 11:00 P.M. - 03:00 A.M.<br>
+                    Music Label: Hybe Label<br>
+                    Produced by RUBY PRODUCTION<br>
+                    Announced <time class="timeago text-black" datetime="29 Oct 2021 14:51"></time><br>
+                    <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
+                    <br>
+                  <h5> Streaming 30 Oct onwards
+                    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/tclnsjgx.json"
+                        trigger="loop"
+                        colors="primary:#4f1091,secondary:#8930e8"
+                        style="width:50px;height:50px">
+                    </lord-icon>
+                  </h5>
+                  <hr class="text-black-50" width="70%">
+                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Join Stream" href="Android App/rooms/bts room.html"><i class="fas fa-rss modal-icon"></i> </a>
+                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Select Room" style="margin-left: 5px;" href="Android App/rooms/select.html"> <i class="fas fa-check-circle"></i> </a>
+                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Close" style="margin-left: 5px;" href="javascript:void(0)" data-mdb-dismiss="modal"><i class="fas fa-times modal-icon"></i> </a>
+                  </small>
+                  </h6> </a>
+                </td>
+                <td class="desktop"><center>
+                  <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "alb-png.png" alt="Unavailable" style="width: 250px;">
+                  </a></center></td>
+              </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+    <!-- <div class="modal-footer">
+      <a class="btn btn-custom text-white">JOIN STREAM </a>
+      <a class="btn btn-custom"> Browse </a>
+    </div> -->
+  </div>
+</div>
+</div>
+
+
+
+
 <div class="container2 feed wow fadeIn" data-wow-delay="0.3s">
 <div class="tags float-end visually-hidden">
 <a href="javascript:(0)"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-home"></i> Home</span></a>
@@ -490,7 +648,15 @@ function learn(){window.location.href = "Android App/Help/room.html";}
 <path fill="#800080" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,224C240,192,300,128,360,90.7C420,53,480,43,540,48C600,53,660,75,720,101.3C780,128,840,160,900,197.3C960,235,1020,277,1080,277.3C1140,277,1200,235,1260,234.7C1320,235,1380,277,1410,298.7L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
 </svg>
 <div class="live-container">
-  <h1 class="upcoming external">Upcoming Stream </h1>
+  <h1 class="upcoming"><a class="text-black">
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+<lord-icon
+src="https://cdn.lordicon.com/vieswnpa.json"
+    trigger="hover"
+    colors="primary:#4f1091,secondary:#8930e8"
+    style="width:80px;height:100px">
+</lord-icon>Upcoming Stream </a> </h1>
+  <!--  href="https://bit.ly/3jhs5m0" -->
   <br><br>
   <table class="table text-black table-borderless">
     <tbody>
@@ -500,29 +666,20 @@ function learn(){window.location.href = "Android App/Help/room.html";}
         </tr>
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "album-cover.jpg" alt="Unavailable" style="width: 250px;">
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "alb-png.png" alt="Unavailable" style="width: 250px;">
             </a></center></td>
           <td>
-            <a class="text-black" href="javascript:void(0)"><h4> BANGTAN NIGHTS | 19 Oct | Energatic Morning </h4></a>
-            <h5>
+            <a class="text-black" href="javascript:void(0)"><h4> BANGTAN NIGHTS | Room | Silent Nights </h4></a>
+            <h6>
              <small class="text-black">
             <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="19 Oct 2021 12:37"></time><br>
+
               Artist: BTS<br>
               Medium: Audio<br>
-              Music Label: Hybe Label<br>
+              Music Label: Hybe Label<br><br>
               <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
-            <b>Live in:</b><br>
-            <div id="timer"></div>
-            </small>
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">Silent Nights</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-            </h5> </a>
+              <a class="btn btn-custom btn-sm" data-mdb-toggle="modal" data-mdb-target="#stream-modal"> More Details <i class="fa fa-chevron-right"></i> </a>
+            </h6> </a>
           </td>
         </tr>
     </tbody>
@@ -534,7 +691,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
 </svg><br><br>
 <div class="subscribe float-end">
 <div class="">
-  <img class="notification-svg float-start" src="maintenance/happy_announcement.png">
+  <img class="notification-svg float-start" draggable="false" src="maintenance/happy_announcement.png">
 </div>
 <div class="float-end">
 <p style="font-size: 4vw; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Get Notified  </p>
@@ -664,7 +821,7 @@ All Copyright to Hybe Label. To know more visit our
 YT channel (about sec.) or scheduled streams page.
 
 <br><br>
-<center> Updated <time class="timeago text-white" datetime="15 October 2021 23:44"></time> </center>
+<center> Updated <time class="timeago text-white" datetime="29 October 2021 15:00"></time> </center>
 
       </p>
     </section>
@@ -684,6 +841,27 @@ function tools(){window.location.href = "Tools.html";}
 function settings(){alert ("Under development, try again later.");}
 function about(){window.location.href = "Android App/Help/room.html";}
 function logOut(){alert ("Unable to logout");}
+
+// var modal = document.getElementById("premium-modal");
+
+// var btn = document.getElementById("open-premium");
+
+// var span =document.getElementsByClassName("close")[0];
+
+// btn.onclick = function() {
+//   modal.style.display = "block";
+//   modal.style.top = "0px";
+//   modal.style.transition = "0.5s ease";
+// }
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+// window.onclick = function(event) {
+//   if (event.target == modal){
+//     modal.style.display = "none";
+//   }
+// }
+
 </script>
 
      <script type="text/javascript" src="mdb/js/jquery.min.js"></script>
