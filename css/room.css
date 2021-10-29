@@ -128,14 +128,14 @@ transition: 0.5s;
   text-shadow: 0 0 10px #ffffff;
   transition: 0.5s;
 }
-@keyframes notice {
+/* @keyframes notice {
   from{
     opacity: 0;
   }
   to{
-    opacity: 1;
+    opacity: 0;
   }
-}
+} */
 .notice{
   display: none;
   position: absolute;
@@ -146,10 +146,10 @@ transition: 0.5s;
   color: rgb(255, 255, 255);
   background-color: #0000008f;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  animation-name: notice;
+  /* animation-name: notice;
   animation-iteration-count: 1;
   animation-duration: 2s;
-  opacity: 1;
+  opacity: 1; */
 }
 progress[value]{
   -webkit-appearance: none;
@@ -216,20 +216,7 @@ backdrop-filter: blur(3px);
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 16px rgba(255, 255, 255, 0);
-  border-radius: 5%;
-  animation: pulse 8s ease 0s infinite normal forwards;
-  }
-  @keyframes pulse {
-    0%,
-    50%,
-    100% {
-      box-shadow: 0 0 16px #ffffff00;
-    }
-
-    25%,
-    75% {
-      box-shadow: 0 0 36px #fff;
-    }
+  border-radius: 5%/10%;
   }
   .now-playing {
   font-size: 1rem;
