@@ -19,6 +19,7 @@ for relaxing at night or for energetic music in the morning, you are in the righ
 <link rel="stylesheet" href="CSS/Timestamps.css">
 <link rel="stylesheet" href="mdb/css/mdb.min.css">
 <link rel="stylesheet" href="mdb/css/style.css">
+<link rel="stylesheet" href="css/room.css">
 <link rel="stylesheet" href="design/css/mdb.min.css">
 <link href="rubyproducti9n pro/css/bootstrap.min.css" rel="stylesheet">
 <link href="rubyproducti9n pro/css/mdb.min.css" rel="stylesheet">
@@ -53,10 +54,10 @@ background-size: 100% 300%;
 font-family: 'Comfortaa', cursive;
 user-select: none;
 overflow-x: hidden;}
-.home-container{display: block;}
-.navbar-custom{display: block;}
+/* .home-container{display: block;} */
+.navbar-custom{display: none;}
 footer{display: block;}
-.maintain-container{display: none;}
+/* .maintain-container{display: none;} */
 /* a{color: #fff;}
 a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);} */
@@ -109,8 +110,8 @@ border-radius: 20px;
 height: 120px;
 padding: 40px 0;
 cursor: pointer;
-box-shadow: -5px -5px 20px #333333a2,
-            5px 5px 20px #2b002ba2;
+box-shadow: -5px -5px 20px #33333321,
+            5px 5px 20px #2e002ebb;
 }
 .dashboard-clr{color: #800080;}
 .svg{margin-top: -20px;}
@@ -254,7 +255,7 @@ background: #fff;
 border-radius: 20px;
 height: 120px;
 padding: 40px 0;
-box-shadow: 2px 2px 20px #3636365b;}
+box-shadow: 2px 2px 20px #363636a2;}
 .maintain-container{
 width: 100vw;
 background-color: rgba(255, 0, 0, 0);
@@ -342,7 +343,6 @@ function learn(){window.location.href = "Android App/Help/room.html";}
 </head>
 <body>
 <div id="loading"></div>
-
  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -382,7 +382,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                 <li>
-                  <a class="dropdown-item disabled" href="#"> BANGTAN IS LIVE | Silent Nights | RUBY PRODUCTION  </a>
+                  <a class="dropdown-item" href="Android App/rooms/select.html"> Concert Nights | Live Concert | BTS LIVE CONCERT, LA   </a>
                 </li>
               </ul>
             </li>
@@ -392,7 +392,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
     </nav>
 
 <div class="maintain-container">
-<center><br><br><br><br><img class="maintain-img" src="Maintenance/music.png"></center>
+<center><br><br><br><br><img class="maintain-img" draggable="false" src="Maintenance/music.png"></center>
 <center><p class="maintain-text">
 <h6>Oops! Server under maintenance, try again later.</h6><br>
 </p></center></div>
@@ -488,11 +488,12 @@ aria-hidden="true"
     </div>
     <div class="modal-body text-black-50">
       <img class="premium-img" src="maintenance/app.png"><br>
-      <center> Stay Tuned for it!
+      <center> COMING SOON
       </center>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-custom text-white disabled">Download</button>
+      <button type="button" class="btn btn-custom btn-sm text-white disabled">Download</button>
+      <button type="button" class="btn btn-custom btn-sm text-white disabled">About</button>
     </div>
   </div>
 </div>
@@ -501,13 +502,7 @@ aria-hidden="true"
 
 
 
-<div
-class="modal fade"
-id="stream-modal"
-tabindex="-1"
-aria-labelledby="exampleModalLabel"
-aria-hidden="true"
->
+<div class="modal fade"id="stream-modal"tabindex="-1"aria-labelledby="exampleModalLabel"aria-hidden="true">
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
     <div class="modal-header btn-custom">
@@ -527,22 +522,21 @@ aria-hidden="true"
               <tr class="">
                 <td>
                   <a class="text-black user-select-none" style="font-family: 'Comfortaa', cursive;">
-                    <h5> Bangtan Nights | Rooms | Silent Nights </h5></a>
+                    <h5> Concert Nights | Live Concert | BTS LIVE CONCERT, LA </h5></a>
                   <h6>
                    <small class="text-black" style="font-family: 'Baloo 2', cursive;" translate="yes">
 
                     Artist: BTS<br>
-                    Albums: Map Of Soul, Wings, Love Yourself Tear,<br> Map of The Soul:7, Love Yourself:Answer,
-                    Map Of The Soul : Persona and more<br>
-                    Medium: Audio (MP3) <br>
+                    Albums: Unknown<br>
+                    Medium: Video (mp4) / Audio (MP3) <br>
                     Supported Devices: Smartphone, Tablet, Laptops<br>
-                    Streaming: 30 Oct at 11:00 P.M. - 03:00 A.M.<br>
-                    Music Label: Hybe Label<br>
-                    Produced by RUBY PRODUCTION<br>
-                    Announced <time class="timeago text-black" datetime="29 Oct 2021 14:51"></time><br>
+                    Streaming: 28 Nov <br>
+                    Music Label: Unknown<br>
+                    Presented by RUBY PRODUCTION<br>
+                    Announced <time class="timeago text-black" datetime="04 Nov 2021 14:51"></time><br>
                     <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
                     <br>
-                  <h5> Streaming 30 Oct onwards
+                  <h5> Streaming 28 Nov onwards
                     <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
                     <lord-icon
                         src="https://cdn.lordicon.com/tclnsjgx.json"
@@ -552,7 +546,7 @@ aria-hidden="true"
                     </lord-icon>
                   </h5>
                   <hr class="text-black-50" width="70%">
-                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Join Stream" href="Android App/rooms/bts room.html"><i class="fas fa-rss modal-icon"></i> </a>
+                  <a class="btn btn-custom btn-floating text-white modal-icon disabled" title="Join Stream" href="Android App/rooms/bts room.html"><i class="fas fa-rss modal-icon"></i> </a>
                   <a class="btn btn-custom btn-floating text-white modal-icon" title="Select Room" style="margin-left: 5px;" href="Android App/rooms/select.html"> <i class="fas fa-check-circle"></i> </a>
                   <a class="btn btn-custom btn-floating text-white modal-icon" title="Close" style="margin-left: 5px;" href="javascript:void(0)" data-mdb-dismiss="modal"><i class="fas fa-times modal-icon"></i> </a>
                   </small>
@@ -669,14 +663,14 @@ src="https://cdn.lordicon.com/vieswnpa.json"
             <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "alb-png.png" alt="Unavailable" style="width: 250px;">
             </a></center></td>
           <td>
-            <a class="text-black" href="javascript:void(0)"><h4> BANGTAN NIGHTS | Room | Silent Nights </h4></a>
+            <a class="text-black" href="javascript:void(0)"><h4> Concert Nights | Live Concert | BTS Live Concert, Los Angeles </h4></a>
             <h6>
              <small class="text-black">
             <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
 
               Artist: BTS<br>
-              Medium: Audio<br>
-              Music Label: Hybe Label<br><br>
+              Medium: Video (mp4) / Audio (mp3)<br>
+              Music Label: Unknown<br><br>
               <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
               <a class="btn btn-custom btn-sm" data-mdb-toggle="modal" data-mdb-target="#stream-modal"> More Details <i class="fa fa-chevron-right"></i> </a>
             </h6> </a>
@@ -838,30 +832,9 @@ YT channel (about sec.) or scheduled streams page.
 function streams(){window.location.href = "Android App/rooms/bts room.html";}
 function rooms(){window.location.href = "Android App/rooms/select.html";}
 function tools(){window.location.href = "Tools.html";}
-function settings(){alert ("Under development, try again later.");}
+function settings(){alert ("Something went wrong, try again later.");}
 function about(){window.location.href = "Android App/Help/room.html";}
 function logOut(){alert ("Unable to logout");}
-
-// var modal = document.getElementById("premium-modal");
-
-// var btn = document.getElementById("open-premium");
-
-// var span =document.getElementsByClassName("close")[0];
-
-// btn.onclick = function() {
-//   modal.style.display = "block";
-//   modal.style.top = "0px";
-//   modal.style.transition = "0.5s ease";
-// }
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-// window.onclick = function(event) {
-//   if (event.target == modal){
-//     modal.style.display = "none";
-//   }
-// }
-
 </script>
 
      <script type="text/javascript" src="mdb/js/jquery.min.js"></script>
