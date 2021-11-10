@@ -3,14 +3,10 @@
 // ==============================================================
 window.setInterval(function() {
 var audio = document.getElementById("audio");
-// var player = document.getElementsByClassName(".player");
-// var notice = document.getElementsByClassName(".notice");
 var current = new Date();
-var visible = new Date("Oct 30, 2021 23:00:02")
-var expiry = new Date("Oct 31, 2021 03:00:03")
+var visible = new Date("Nov 28, 2021 19:00:02")
+var expiry = new Date("Nov 29, 2021 03:00:03")
 if (current.getTime() > visible.getTime()) {
-// player.style.block = "none";
-// notice.style.block = "none";
 $('.player').hide();
 // $('.background').hide();
 $('.live').show();
@@ -20,8 +16,6 @@ $('.streaming').hide();
 $('.expired').hide();
 $('.join').show();
 } if (current.getTime() > expiry.getTime()) {
-// player.style.block = "none";
-// notice.style.block = "none";
 $('.notice').hide();
 $('.live').hide();
 $('.streaming').hide();
@@ -44,7 +38,7 @@ window.location.href = "select.html";}}, 0);
 // START/END COUNT CONTROL
 // ==============================================================
 // COUNT START CONTROL ==========================================
-var countDownstreaming = new Date("Oct 30, 2021 23:00:00").getTime();
+var countDownstreaming = new Date("Nov 28, 2021 19:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownstreaming - now;
@@ -58,7 +52,7 @@ document.getElementById("timer").innerHTML = days + "d " + hours + "h "
 clearInterval(x);
 document.getElementById("timer").innerHTML = "NOW STREAMING";}}, 1000);
 // COUNT END CONTROL ============================================
-var countDownEnd = new Date("Oct 31, 2021 03:00:00").getTime();
+var countDownEnd = new Date("Nov 29, 2021 03:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownEnd - now;
@@ -114,14 +108,14 @@ div.innerHTML += '<h5 class="ad">AD</h5>\
           <th>\
           Title</th>\
           <td>\
-            <a class="text-black" href="../Android App/rooms/bts room.html"><h6> BANGTAN NIGHTS | Room | Silent Nights </h6></a>\
+            <a class="text-black" href="../Android App/rooms/bts room.html"><h6> BTS LIVE CONCERT | LIVE CONCERT | STREAMING SOON </h6></a>\
           </td>\
           <tr>\
             <th>\
               Announced\
             </th>\
             <td>\
-              <time class="timeago text-black" datetime="29 Oct 2021 14:51"></time>\
+              <time class="timeago text-black" datetime="04 Nov 2021 14:51"></time>\
             </td>\
           </tr>\
           <tr>\
@@ -137,7 +131,7 @@ div.innerHTML += '<h5 class="ad">AD</h5>\
               Medium\
             </th>\
             <td>\
-              Audio\
+              Audio / Video\
             </td>\
           </tr>\
           <tr>\
