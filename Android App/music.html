@@ -59,105 +59,24 @@
       .container2{
         display: none;
       }
-      @media screen and (max-width: 640px){
-      .container2{
-        display: block;
-      }
-      .tags{
-      margin-left: 5px;
-      }
 
-    .container2{
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 80px;
-    }
-    .text{
-      font-size: 13px;
-    }
-    .timeago{
-      color: rgb(102, 102, 102);
-    }
 
-#audio{
-width: 600px;
-border-radius: 4px;
-border: 2px #e2e2e2b9 solid;
-background: rgb(255, 255, 255);
-box-shadow:  0px 0px 0px #2e2e2eb7;
-transition: 0.1s;
-}
-#audio:hover{
-width: 600px;
-border-radius: 4px;
-border: 2px #006effb7 solid;
-background: rgb(255, 255, 255);
-box-shadow:  -5px 0px 0px #006effb7;
-z-index: -1;
-transition: 0.1s;
 
-            }
-.custom-btn{
-  position: fixed;
-  /* top: 225px;
-  left: 140px; */
-  top: 250px;
-  left: 560px;
-  color: white;
-  background-color: #006eff;
-  border-radius: 500px;
-  height: 50px;
-  width: 50px;
-  padding-top: 13px;
-  padding-left: 17px;
-  /* padding: 13px 15px; */
-box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.568);
-  z-index: 1;
-}
-.custom-btn:active{
-  color: white;
-box-shadow:  -5px 5px 10px rgba(0, 0, 0, 0.568);
-}
-    }
-
-      @media screen and (max-width: 412px){
+    @media screen and (max-width: 768px){
       body{
         display: block;
-      }
-      .settings{
-        margin: 10px 10px;
+        color: #000;
+        overflow: hidden;
       }
       .tags{
       margin-left: 5px;
       }
 
     .container2{
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 20px;
-    }
-    .text{
-      font-size: 13px;
-    }
-    .timeago{
-      color: rgb(102, 102, 102);
-    }
-    }
-
-
-
-    @media screen and (max-width: 360px){
-      body{
         display: block;
-      }
-      .tags{
-      margin-left: 5px;
-      }
-
-    .container2{
       margin-left: 0px;
       margin-right: 10px;
-      margin-top: 80px;
+      margin-top: 30px;
     }
     .text{
       font-size: 13px;
@@ -165,7 +84,21 @@ box-shadow:  -5px 5px 10px rgba(0, 0, 0, 0.568);
     .timeago{
       color: rgb(102, 102, 102);
     }
-
+    .music{
+      color: #000;
+    }
+    hr{color: #000;}
+    h5, h6{color: #000;}
+    h6{
+      font-size: 14px;
+    }
+.desc{
+  color: #000;
+  margin-left: 30px;
+  margin-right: 0;
+  margin-top: 0;
+  font-size: 10px;
+}
 #audio{
 width: 300px;
 border-radius: 4px;
@@ -177,9 +110,9 @@ transition: 0.2s;
 #audio:hover{
 width: 300px;
 border-radius: 4px;
-border: 2px #006effb7 solid;
+border: 2px #800080 solid;
 background: rgb(255, 255, 255);
-box-shadow:  -5px 0px 0px #006effb7;
+box-shadow:  -5px 0px 0px #800080;
 z-index: -1;
 transition: 0.2s;
 
@@ -277,11 +210,11 @@ $(document).ready(function() {
       </head>
       <body>
 
-        <div id="loading">
+        <!-- <div id="loading">
           <div class="loader-spinner"></div>
-        </div>
+        </div> -->
 
-        <nav class="navbar fixed-top navbar-dark  indigo darken-2 navbar-expand-lg scrolling-navbar lighten-5 mb-4">
+        <nav class="navbar visually-hidden fixed-top navbar-dark  indigo darken-2 navbar-expand-lg scrolling-navbar lighten-5 mb-4">
           <a id="navbar" class="navbar-brand" href="RUBY PRODUCTION.html"> RUBY PRODUCTION </a>
           <a id="notification" class="float-end" href="notifications.html"></a>
         </nav>
@@ -297,7 +230,7 @@ $(document).ready(function() {
 
 
   <center> <div class="banner-ad"></div></center>
-  <div class="bottom-nav indigo darken-2">
+  <div class="bottom-nav indigo darken-2 visually-hidden">
     <a class="nav-tooltip" href="RUBY PRODUCTION.html"> <i class="fa fa-home btm-nav"></i> <span class="nav-tooltiptext">HOME</span> </a>
     <a class="nav-tooltip disabled" href="#"> <i class="fa fa-search btm-nav"></i> <span class="nav-tooltiptext">SEARCH</span> </a>
     <a class="nav-tooltip" href="posts.html"> <i class="fa fa-image btm-nav"></i> <span class="nav-tooltiptext">POSTS</span> </a>
@@ -309,284 +242,25 @@ $(document).ready(function() {
 
 
 
-          <p class="music">
-            <!-- <a class="btn btn-primary btn-floating create-room" href="rooms/select.html"><i class="fas fa-plus"></i></a> -->
-            <a class="custom-btn" href="rooms/select.html"><i class="fas fa-headphones-alt"></i></a>
+<p class="music">
+<!-- <a class="btn btn-primary btn-floating create-room" href="rooms/select.html"><i class="fas fa-plus"></i></a> -->
+<!-- <a class="custom-btn" href="rooms/select.html"><i class="fas fa-headphones-alt"></i></a> -->
 
-            <h5 style="margin-left: 10px;"> SONGS
+<h5><center> Artists </center></h5><br><hr>
+<h5 style="margin-left: 10px;"> <i class="fa fa-headphones" style=" padding: 0px 5px;"></i> BTS</h5><hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i> BTS 'Permission To Dance' Audio Song</h6>
 
-            </h5><hr>
-            <i class="fa fa-headphones" style="padding: 0px 5px;"></i> Sakhiyan 2.0 Full Aud...
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Neha Kakkar<br>
-            Music : Unknown<br>
-            Movie : Bellbotom<br>
-            Music Label : Saregama Music Ltd.
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-sakhiyan" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/sakhiyan-2.0.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-headphones" style="padding: 0px 5px;"></i> Jaago-Jaago Bakre Full Aud...
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Vishal Dhandhlani<br>
-            Music : DSP<br>
-            Music Label : Aditya Movies
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-jaago" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/jaago-jaago.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> Bachpan Ka Pyaar Full Aud...
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Badshah, Sahdev and Aastha Gill<br>
-            Music : Unknown<br>
-            Music Label : None
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-bachpan" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/bachpan-ka-pyaar.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> Guru Randhawa's Nain Bengali Full Aud...
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Guru Randhawa<br>
-            Music : Vee<br>
-            Music Label : T-Series
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-nain" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1nrYVpMUstowiE8RHpwvFHyirJ6Z9RI5m"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> Paani Paani Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Badshah & Astha Gill<br>
-            Music : Badshah<br>
-            Music Label : Saregama Music
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-paani" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=108P2OSBwJUvdPXjHY4Z7IwIZtAggcR43"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> Guru Randhawa's Doob Gaye Full Aud...
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Guru Randhawa<br>
-            Music : B Parak<br>
-            Music Label : T-Series
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-doob" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1fqOH6AHF_c6kJILqGbiknvVcRqG2YbpC"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <br><br>
-            <h5 style="margin-left: 10px;">BANGTAN SANYEODAN</h5><hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Permission to Dance' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Bangtan Sanyeodan<br>
-            Album : Butter<br>
-            Music Label : HYBE LABEL
-            </p>
-           <center>
-            <audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1eh-cLU_9sVJjFOmOIb-c2RAQetBtMGgj"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Butter' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Bangtan Sanyeodan<br>
-            Album : Butter<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1h0VACDoOhxa-KgUfyLYKe5i5AcfeYHyH"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Blood Sweat & Tears' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Bangtan Sanyeodan<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-blood" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1fb9nepcYF-H0M9v-bjdJe5DS_K6WpX4B"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Run Run' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Bangtan Sanyeodan<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-run" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1quAM7d03VJL67PLZVdeeUK61gzUjwHWH"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'I Need U' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Bangtan Sanyeodan<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-i-need-u" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1UIfFfOZ9eABVqJFcaaUQ5EXbZroE7X1w"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Euphoria' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Jungkook<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-euphoria" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1pWAyKyTFD_olpsBDDNTmuXwn0kueuQsF"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'FIRE' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : BTS<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-fire" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=18pnULYXdKjMqjJmhzO_SJw2fPj2Pi6Vx"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'NO' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : BTS<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-no" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1DV5TViAbQ0YOmbktzuFdDQEHzAQzNKya"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> Agust Daechwita Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : Suga<br>
-            Album : Unknown<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-agust" controls preload="none">
-                <source src="https://drive.google.com/uc?export=download&id=1jMoRlaO58xy1iJcP80qf_5m2RhET-Uc3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Home' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : BTS<br>
-            Album : Map of the Soul: Persona<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-home" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/bts home.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-headphones" style="padding: 0px 5px;"></i> BTS 'Magic Shop' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : BTS<br>
-            Album : Map of the Soul: Persona<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-magic" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/bts magic.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-headphones" style="padding: 0px 5px;"></i> BTS 'Mikrokosmos' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : BTS<br>
-            Album : Map of the Soul: Persona<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-mikrokosmos" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/bts mikrokosmos.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <i class="fa fa-music" style="padding: 0px 5px;"></i> BTS 'Spring Day' Full Audio Song
-            <p class="desc" style="margin-left: 30px;
-            margin-right: 0px;
-            margin-top: 0px;
-            font-size: 10px;">
-            Singer : BTS<br>
-            Album : Map of the Soul: Persona<br>
-            Music Label : HYBE LABEL
-            </p>
-            <center>
-            <audio id="audio" controlslist="nodownload" class="audio-spring" controls preload="none">
-                <source src="../Exclusive/Audio/audio files/bts spring.mp3"  type="audio/mpeg">
-            </audio></center>
-            <hr>
-            <center style="font-style: italic;"> Stay Tuned! </center>
-            <hr>
+<p class="desc">
+Album : Butter<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-sakhiyan" controls preload="none">
+<source src="https://drive.google.com/uc?export=download&id=1Dz8iINU_3AeU6lZwpBncNMyK-pbYIlBH"type="audio/mpeg">
+</audio></center>
+<hr>
+<center style="font-style: italic;"> Stay Tuned! </center>
+<hr>
 
   </p>
   <br>
