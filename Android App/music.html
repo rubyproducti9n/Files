@@ -66,7 +66,7 @@
       body{
         display: block;
         color: #000;
-        overflow: hidden;
+        overflow-x: hidden;
       }
       .tags{
       margin-left: 5px;
@@ -76,7 +76,7 @@
         display: block;
       margin-left: 0px;
       margin-right: 10px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .text{
       font-size: 13px;
@@ -91,6 +91,7 @@
     h5, h6{color: #000;}
     h6{
       font-size: 14px;
+      font-weight: unset;
     }
 .desc{
   color: #000;
@@ -100,7 +101,7 @@
   font-size: 10px;
 }
 #audio{
-width: 300px;
+width: 85vw;
 border-radius: 4px;
 border: 2px #e2e2e2b9 solid;
 background: rgb(255, 255, 255);
@@ -108,7 +109,7 @@ box-shadow:  0px 0px 0px #2e2e2eb7;
 transition: 0.2s;
 }
 #audio:hover{
-width: 300px;
+width: 85vw;
 border-radius: 4px;
 border: 2px #800080 solid;
 background: rgb(255, 255, 255);
@@ -246,20 +247,348 @@ $(document).ready(function() {
 <!-- <a class="btn btn-primary btn-floating create-room" href="rooms/select.html"><i class="fas fa-plus"></i></a> -->
 <!-- <a class="custom-btn" href="rooms/select.html"><i class="fas fa-headphones-alt"></i></a> -->
 
-<h5><center> Artists </center></h5><br><hr>
-<h5 style="margin-left: 10px;"> <i class="fa fa-headphones" style=" padding: 0px 5px;"></i> BTS</h5><hr>
-<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i> BTS 'Permission To Dance' Audio Song</h6>
+<h5><center> Artists </center></h5><hr>
+<h5 style="font-size: 16px; margin-left: 10px;"> <i class="fa fa-headphones" style=" padding: 0px 5px;"></i> BTS - <span class="badge badge-secondary"> KPOP </span> </h5><hr>
+
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'A Love Song' Audio Song</h6>
+
+<p class="desc">
+Album : Music Of Spheres<br>
+Music Label : Unknown<br>
+<span class="badge badge-danger">COMING SOON</span>
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'My Universe' Audio Song</h6>
+
+<p class="desc">
+Album : None<br>
+Released by : ColdPlay
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Permission to Dance' Audi...</h6>
 
 <p class="desc">
 Album : Butter<br>
 Music Label : Hybe Label
 </p>
  <center>
-<audio id="audio" controlslist="nodownload" class="audio-sakhiyan" controls preload="none">
+<audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
 <source src="https://drive.google.com/uc?export=download&id=1Dz8iINU_3AeU6lZwpBncNMyK-pbYIlBH"type="audio/mpeg">
 </audio></center>
 <hr>
-<center style="font-style: italic;"> Stay Tuned! </center>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Butter' Audio Song</h6>
+
+<p class="desc">
+Album : Butter<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Dynamite' Audio Song</h6>
+
+<p class="desc">
+Album : Unknwon<br>
+Music Label : Hybe Label<br>
+<span class="badge badge-warning">Popular</span>
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Life Goes On' Audio Song</h6>
+
+<p class="desc">
+Album : Unknwon<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'DOPE' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'N.O.' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Run' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Black Swan' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'DNA' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'FAKE LOVE' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'IDOL' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Louder Than Bombs' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Make It Right' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'MIC Drop' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Not Today' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'ON' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'SAVE ME' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Spring Day' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Boy With Luv' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Blood Sweat & Tears' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'BI Need U' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'FIRE' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Savage Love' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Mikrokosmos' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'Magic Shop' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<h6><i class="fa fa-headphones" style="visibility: hidden; padding: 0px 5px;"></i>
+  BTS (방탄소년단) 'COFFEE' Audio Song</h6>
+
+<p class="desc">
+Album : Unknown<br>
+Music Label : Hybe Label
+</p>
+ <center>
+<audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+<source src=""type="audio/mpeg">
+</audio></center>
+<hr>
+<center style="color: #000; font-style: italic;"> Stay Tuned! </center>
 <hr>
 
   </p>
