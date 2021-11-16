@@ -53,9 +53,10 @@ background: #fff;
 background-size: 100% 300%;
 font-family: 'Comfortaa', cursive;
 user-select: none;
-overflow-x: hidden;}
+overflow-x: hidden;
+}
 /* .home-container{display: block;} */
-.navbar-custom{display: none;}
+.navbar-custom{display: block;}
 footer{display: block;}
 /* .maintain-container{display: none;} */
 /* a{color: #fff;}
@@ -233,7 +234,7 @@ transition: 0.5s ease;
 /* text-shadow: 2px 2px 20px #2b002b; */
 }
 .premium-img{
-width: 100%;
+width: 80%;
 }
 @media screen and (max-width:768px) {
 body{font-size: 2vh;overflow-x: hidden;}
@@ -487,13 +488,14 @@ aria-hidden="true"
       ></button>
     </div>
     <div class="modal-body text-black-50">
-      <img class="premium-img" src="maintenance/app.png"><br>
-      <center> COMING SOON
-      </center>
+      <center>
+      <img class="premium-img" src="maintenance/teaser.jpg"><br>
+    </center>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-custom btn-sm text-white disabled">Download</button>
-      <button type="button" class="btn btn-custom btn-sm text-white disabled">About</button>
+      <button type="button" class="btn btn-custom btn-floating text-white disabled"> <i class="fas fa-download"></i> </button>
+      <button type="button" class="btn btn-custom btn-floating text-white disabled"> <i class="fas fa-star"></i> </button>
+      <a href="Android App/about.html" class="btn btn-custom btn-floating text-white"><i class="fas fa-info-circle"></i></a>
     </div>
   </div>
 </div>
@@ -648,11 +650,37 @@ aria-hidden="true"
 src="https://cdn.lordicon.com/vieswnpa.json"
     trigger="hover"
     colors="primary:#4f1091,secondary:#8930e8"
-    style="width:80px;height:100px">
-</lord-icon>Upcoming Stream </a> </h1>
+    style="width:80px;height:100px;">
+</lord-icon>ConcertEra</a> </h1>
   <!--  href="https://bit.ly/3jhs5m0" -->
   <br><br>
   <table class="table text-black table-borderless">
+    <tbody>
+      <tr>
+        <th> <center>  </center></th>
+        <th> </th>
+        </tr>
+        <tr class="">
+          <td><center>
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "maintenance/app_icon.jpg" alt="Unavailable" style="width: 250px;">
+            </a></center></td>
+          <td>
+            <a class="text-black" href="javascript:void(0)"><h4> Stay Tuned for our upcoming app for army.  </h4></a>
+            <h6>
+             <small class="text-black">
+            <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
+
+              Dev: Om Lokhande<br>
+              Produced by - RUBY PRODUCTION<br>
+              Releasing date: Unknown<br><br>
+              <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
+              <a class="btn btn-custom btn-sm disabled" data-mdb-toggle="modal" data-mdb-target="#stream-modal"> More Details <i class="fa fa-chevron-right"></i> </a>
+            </h6> </a>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  <table class="table text-black table-borderless visually-hidden">
     <tbody>
       <tr>
         <th> <center> Album Cover </center></th>
@@ -829,9 +857,9 @@ YT channel (about sec.) or scheduled streams page.
 </footer>
     </div>
 <script>
-function streams(){window.location.href = "Android App/rooms/bts room.html";}
+function streams(){alert ("Streaming on 28th Nov, Stay Tuned!");}
 function rooms(){window.location.href = "Android App/rooms/select.html";}
-function tools(){window.location.href = "Tools.html";}
+function tools(){alert ("Error 404");}
 function settings(){alert ("Something went wrong, try again later.");}
 function about(){window.location.href = "Android App/Help/room.html";}
 function logOut(){alert ("Unable to logout");}
