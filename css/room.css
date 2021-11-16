@@ -5,7 +5,7 @@ display: block;
 color: white;
 background-color: #000000;
 user-select: none;
-overflow: hidden;
+/* overflow: hidden; */
 }
 .background{
 position: absolute;
@@ -18,9 +18,9 @@ background-position: center center;
 background-size: cover;
 z-index: -1;
 }
-.home-container{display: none;}
-.container2{display: none;}
-.maintain-container{display: block;}
+.home-container{display: block;}
+.container2{display: block;}
+.maintain-container{display: none;}
 /* @keyframes poster {
   0%{
     transform: rotate(0deg) scale(0.9);
