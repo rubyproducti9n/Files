@@ -2160,7 +2160,7 @@ transform: rotate(-135deg);
 
   body{
     color: black;
-    background-color: #fff;
+    background-color: white;
     /* background: linear-gradient(180deg, #363636, #000000); */
     /* background-size: 100% 200%; */
     /* max-width: 1366px;
@@ -2170,8 +2170,8 @@ transform: rotate(-135deg);
     transition: 0.5s;
     }
     .navbar-custom{
-    backdrop-filter: blur(5px);
-    background-color: #800080;
+    backdrop-filter: blur(0px);
+    background-color: #4d0080;
     color: white;
     }
     .maintain-container{
