@@ -2327,7 +2327,7 @@ transform: rotate(-135deg);
   .drag{
     display: block;
     height: 4px;
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(112, 112, 112);
     border-radius: 10px;
     width: 50px;
   }
