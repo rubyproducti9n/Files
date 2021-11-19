@@ -45,6 +45,10 @@
       <link rel="icon" href="../ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
       <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
+    @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
+
     a{
       color: black;
     }
@@ -67,6 +71,7 @@
         display: block;
         color: #000;
         overflow-x: hidden;
+font-family: 'Comfortaa', cursive;
       }
       .tags{
       margin-left: 5px;
@@ -74,6 +79,7 @@
 
     .container2{
         display: block;
+        padding-left: 0px;
       margin-left: 0px;
       margin-right: 10px;
       margin-top: 30px;
@@ -90,30 +96,53 @@
     hr{color: #000;}
     h5, h6{color: #000;}
     h6{
-      font-size: 14px;
-      font-weight: unset;
+      font-size: 12px;
+  margin-left: 10px;
+      font-weight: 900;
     }
 .desc{
   color: #000;
-  margin-left: 0px;
+  margin-left: 20px;
   margin-right: 0;
   margin-top: 0;
   font-size: 10px;
 }
+.audio{
+  margin: 10px 10px;
+  padding: 0px 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border: 1px rgb(189, 189, 189) solid;
+  box-shadow: 0px 0px 16px #0000002f;
+  border-radius: 16px;
+  transition: 0.5s ease;
+}
+.audio:focus{
+  border: 1px #800080 solid;
+  transition: 0.5s ease;
+}
+.drag{
+  display: block;
+  height: 2px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 10px;
+  width: 50px;
+}
 #audio{
-width: 85vw;
-border-radius: 4px;
-border: 2px #e2e2e2b9 solid;
-background: rgb(255, 255, 255);
+width: 88vw;
+border-radius: 16px;
+border: 2px #fff solid;
+background: #fff;
 box-shadow:  0px 0px 0px #2e2e2eb7;
 transition: 0.2s;
 }
 #audio:hover{
-width: 85vw;
-border-radius: 4px;
-border: 2px #800080 solid;
+width: 88vw;
+border-radius: 16px;
+border: 2px #fff solid;
 background: rgb(255, 255, 255);
-box-shadow:  -5px 0px 0px #800080;
+box-shadow:  -5px 0px 0px #fff;
 z-index: -1;
 transition: 0.2s;
 
@@ -247,27 +276,9 @@ $(document).ready(function() {
 <!-- <a class="btn btn-primary btn-floating create-room" href="rooms/select.html"><i class="fas fa-plus"></i></a> -->
 <!-- <a class="custom-btn" href="rooms/select.html"><i class="fas fa-headphones-alt"></i></a> -->
 
-<h5><center> Artists </center></h5><br>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button
-        class="accordion-button"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#collapseOne"
-        aria-expanded="true"
-        aria-controls="collapseOne">  BTS - KPOP
-      </button>
-    </h2>
-    <div
-      id="collapseOne"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingOne"
-      data-mdb-parent="#accordionExample"
-    >
-      <div class="accordion-body">
+<h5><center> ConcertEra  </center></h5><br>
 
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'A Love Song' Audio Song</h6>
 
@@ -279,8 +290,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="disabled audio-butter" controls preload="none">
         <source src=""type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' (SUGA's REMIX)</h6>
 
@@ -291,8 +304,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1YJ_PDTdh2MQuJl-NreLjMmOH59okB6K4"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' Audio Song</h6>
 
@@ -303,8 +318,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1tnKcZ7PY8kIlyQlERaK0ML6zb2M1x1pl"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Permission to Dance' Audi...</h6>
 
@@ -315,8 +332,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Dz8iINU_3AeU6lZwpBncNMyK-pbYIlBH"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Butter' Audio Song</h6>
 
@@ -327,8 +346,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1mnLcDk0f2Dmw36awVjOMoBr6lpdjBGz7"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Dynamite' Audio Song</h6>
 
@@ -340,8 +361,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1DtyRWHH6LxFvc-BR3WJOkmmGRYofBUeg"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Life Goes On' Audio Song</h6>
 
@@ -352,8 +375,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src=""type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'DOPE' Audio Song</h6>
 
@@ -364,8 +389,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1zKpVuzGq5dK_uxlnlrMrH9VUukcJQa-x"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'N.O.' Audio Song</h6>
 
@@ -376,8 +403,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1UrPOBD7FUINZgQ9-jhKMXq9VoD3U3dnp"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Run' Audio Song</h6>
 
@@ -388,8 +417,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1eLugFek-PoB9gGNoQz8c-aJava81eUxM"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Black Swan' Audio Song</h6>
 
@@ -400,8 +431,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1VbTclw4pVSQHs1--7e1A-pk8qQmyWmKg"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'DNA' Audio Song</h6>
 
@@ -412,8 +445,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1PJjYo6NgXlP6wSQQyIYDMD1bChfZPh6c"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'FAKE LOVE' Audio Song</h6>
 
@@ -424,8 +459,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1_vU4M_90d21AW0tvKbqbJvAfqm60oL6D"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'IDOL' Audio Song</h6>
 
@@ -436,8 +473,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=19lbvQjXqRvkwAa3WL2vwxVJYfxSpYtje"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Louder Than Bombs' Audio Song</h6>
 
@@ -448,8 +487,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Wxx-jjc2MneeCPcnzYFhKqJikESC3fnD"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Make It Right' Audio Song</h6>
 
@@ -460,8 +501,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1QRqwnOlwhToJJ9vp5gDUvqB1HWWjxTAg"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'MIC Drop' Audio Song</h6>
 
@@ -472,8 +515,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1helb6H5hhYD-IgCWQJ19AniX9Rb0-gHI"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Not Today' Audio Song</h6>
 
@@ -484,8 +529,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1wTmcVejaRGNl2_0VT2H65FzM9qIXAJp0"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'ON' Audio Song</h6>
 
@@ -496,8 +543,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1fhsy_QxgXhK7b22u3JpX2OZVikGdqTQo"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'SAVE ME' Audio Song</h6>
 
@@ -508,8 +557,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1w3jZj6yHLhHzyPzq2LbyMDwP5GnJoZ1h"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Spring Day' Audio Song</h6>
 
@@ -520,8 +571,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1WzvufUjK0yplHdVGFIlr-uqLDtmOxGX8"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Boy With Luv' Audio Song</h6>
 
@@ -532,8 +585,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1alA0ZkolrtxpvoFaLenLVlvMCYXo_D80"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Blood Sweat & Tears' Audio Song</h6>
 
@@ -544,8 +599,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1YCz5phforlEni8ou4bBwbIXp0Ko_yBtQ"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'I Need U' Audio Song</h6>
 
@@ -556,8 +613,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Ocq4XX9VUTePDHlwPowMOL3Wlgq2Jwnb"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'FIRE' Audio Song</h6>
 
@@ -568,8 +627,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1jN4Z-iSczzg7KjYPe6CyzdrBSKwenA2L"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Savage Love' Audio Song</h6>
 
@@ -580,8 +641,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1S-60EHNuK-OeUP4rKriVoCNEPjhBE68D"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Mikrokosmos' Audio Song</h6>
 
@@ -592,8 +655,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1mKX-91IyfBRFZ5VzYPFZDTJcOoz7NZVu"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Magic Shop' Audio Song</h6>
 
@@ -604,8 +669,10 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1AJfG8Hi590m5vrZmKZpJ3qlChPGEMiFZ"type="audio/mpeg">
-        </audio></center>
-        <hr>
+        </audio></center></div>
+        <center> <div class="drag"></div></center>
+
+<div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'COFFEE' Audio Song</h6>
 
@@ -616,10 +683,7 @@ $(document).ready(function() {
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=11xn0dNEPocWoeqq75fHi3bGsk8Qstt6C"type="audio/mpeg">
-        </audio></center>
-      </div>
-    </div>
-  </div>
+        </audio></center></div>
 
   <!-- ============================================================================================================================ -->
 <!-- <br>
