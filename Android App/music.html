@@ -127,6 +127,16 @@ font-family: 'Comfortaa', cursive;
   border-radius: 16px;
   transition: 0.5s ease;
 }
+.audio-img{
+  margin: 0 -10px;
+  width: 94vw;
+}
+.details{
+  display: none;
+  background-color: #800080;
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
 .audio:hover{
   border: 1px #800080 solid;
 }
@@ -292,7 +302,7 @@ $(document).ready(function() {
 
 </script>
 <div class="list">
-<div class="audio">
+<div class="audio" onclick="details()">
         <h6>
           ♪ BTS (방탄소년단) 'A Love Song' Audio Song</h6>
 
@@ -306,15 +316,27 @@ $(document).ready(function() {
         <source src=""type="audio/mpeg">
         </audio></center>
         <center> <div class="drag"></div></center></div>
-
+        <div class="details">
+          <i class="fa fa-eye"></i> 1.1k
+        </div>
+<script>
+function details() {
+  var x = document.getElementById("details");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 <div class="audio">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' (SUGA's REMIX)</h6>
-
         <p class="desc">
         Album : None<br>
         Released by : ColdPlay
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/HwRozlhZeIU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1YJ_PDTdh2MQuJl-NreLjMmOH59okB6K4"type="audio/mpeg">
@@ -323,12 +345,13 @@ $(document).ready(function() {
 
 <div class="audio">
         <h6>
-          ♪ Coldplay x BTS (방탄소년단) 'My Universe' Audio Song</h6>
+          ♪ Coldplay x BTS (방탄소년단) 'My Universe' Au...</h6>
 
         <p class="desc">
         Album : None<br>
         Released by : ColdPlay
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1tnKcZ7PY8kIlyQlERaK0ML6zb2M1x1pl"type="audio/mpeg">
@@ -343,6 +366,7 @@ $(document).ready(function() {
         Album : Butter<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Dz8iINU_3AeU6lZwpBncNMyK-pbYIlBH"type="audio/mpeg">
@@ -357,6 +381,7 @@ $(document).ready(function() {
         Album : Butter<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1mnLcDk0f2Dmw36awVjOMoBr6lpdjBGz7"type="audio/mpeg">
@@ -372,6 +397,7 @@ $(document).ready(function() {
         Music Label : Hybe Label<br>
         <span class="badge badge-warning">Popular</span>
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1DtyRWHH6LxFvc-BR3WJOkmmGRYofBUeg"type="audio/mpeg">
@@ -386,6 +412,7 @@ $(document).ready(function() {
         Album : Unknwon<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src=""type="audio/mpeg">
@@ -400,6 +427,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1zKpVuzGq5dK_uxlnlrMrH9VUukcJQa-x"type="audio/mpeg">
@@ -414,6 +442,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1UrPOBD7FUINZgQ9-jhKMXq9VoD3U3dnp"type="audio/mpeg">
@@ -428,6 +457,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1eLugFek-PoB9gGNoQz8c-aJava81eUxM"type="audio/mpeg">
@@ -442,6 +472,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1VbTclw4pVSQHs1--7e1A-pk8qQmyWmKg"type="audio/mpeg">
@@ -456,6 +487,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1PJjYo6NgXlP6wSQQyIYDMD1bChfZPh6c"type="audio/mpeg">
@@ -470,6 +502,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1_vU4M_90d21AW0tvKbqbJvAfqm60oL6D"type="audio/mpeg">
@@ -484,6 +517,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=19lbvQjXqRvkwAa3WL2vwxVJYfxSpYtje"type="audio/mpeg">
@@ -498,6 +532,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Wxx-jjc2MneeCPcnzYFhKqJikESC3fnD"type="audio/mpeg">
@@ -512,6 +547,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1QRqwnOlwhToJJ9vp5gDUvqB1HWWjxTAg"type="audio/mpeg">
@@ -526,6 +562,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1helb6H5hhYD-IgCWQJ19AniX9Rb0-gHI"type="audio/mpeg">
@@ -540,6 +577,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1wTmcVejaRGNl2_0VT2H65FzM9qIXAJp0"type="audio/mpeg">
@@ -554,6 +592,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1fhsy_QxgXhK7b22u3JpX2OZVikGdqTQo"type="audio/mpeg">
@@ -568,6 +607,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1w3jZj6yHLhHzyPzq2LbyMDwP5GnJoZ1h"type="audio/mpeg">
@@ -582,6 +622,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1WzvufUjK0yplHdVGFIlr-uqLDtmOxGX8"type="audio/mpeg">
@@ -596,6 +637,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1alA0ZkolrtxpvoFaLenLVlvMCYXo_D80"type="audio/mpeg">
@@ -610,6 +652,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1YCz5phforlEni8ou4bBwbIXp0Ko_yBtQ"type="audio/mpeg">
@@ -624,6 +667,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Ocq4XX9VUTePDHlwPowMOL3Wlgq2Jwnb"type="audio/mpeg">
@@ -638,6 +682,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1jN4Z-iSczzg7KjYPe6CyzdrBSKwenA2L"type="audio/mpeg">
@@ -652,6 +697,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1S-60EHNuK-OeUP4rKriVoCNEPjhBE68D"type="audio/mpeg">
@@ -666,6 +712,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1mKX-91IyfBRFZ5VzYPFZDTJcOoz7NZVu"type="audio/mpeg">
@@ -680,6 +727,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1AJfG8Hi590m5vrZmKZpJ3qlChPGEMiFZ"type="audio/mpeg">
@@ -694,6 +742,7 @@ $(document).ready(function() {
         Album : Unknown<br>
         Music Label : Hybe Label
         </p>
+        <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=11xn0dNEPocWoeqq75fHi3bGsk8Qstt6C"type="audio/mpeg">
@@ -803,6 +852,7 @@ $(document).ready(function () {
     });
   });
 });
+
 
 
     </script>
