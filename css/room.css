@@ -66,7 +66,7 @@ top: 10px;
 right: 10px;
 margin: auto;
 width: 13%;
-font-family: "Verdana", Arial, serif;
+font-family: 'Comfortaa', cursive;
 font-size: 12px;
 color: rgb(255, 255, 255);
 text-shadow: 0 0 15px #f703ff3f;
@@ -223,7 +223,7 @@ backdrop-filter: blur(3px);
   }
   .now-playing {
   font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Comfortaa', cursive;
   text-shadow: 0 0 6px #fff;
   }
   .track-name {
@@ -231,7 +231,7 @@ backdrop-filter: blur(3px);
   padding: 0 8px;
   border-radius: 5px;
   font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Comfortaa', cursive;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.267);
   transition: 0.5s;
   }
@@ -241,7 +241,7 @@ backdrop-filter: blur(3px);
   }
   .track-artist {
   font-size: .8rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Comfortaa', cursive;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.267);
   }
   .track-artist:hover{
@@ -313,7 +313,7 @@ backdrop-filter: blur(3px);
   .current-time,
   .total-duration
   {padding: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Comfortaa', cursive;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.795);}
   i.fa-volume-down,i.fa-volume-up {padding: 10px;}
   i.fa-play-circle,i.fa-pause-circle,i.fa-step-forward,i.fa-step-backward {cursor: pointer;}
