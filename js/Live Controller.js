@@ -200,10 +200,10 @@ let curr_track = document.createElement('audio');
 // Define the list of tracks that have to be played
 let track_list = [
   {
-    name: "BANGTAN NIGHTS",
+    name: "Concert Nights",
     artist: "BTS",
-    image: "../../alb-jpg.png",
-    path: "../../Exclusive/Audio/audio files/demo.mp3"
+    image: "../../alb-concert.jpg",
+    path: "https://drive.google.com/uc?export=download&id=1keh5hyj3JbXBePgrXuDgnth0roDNJ-Fn"
   },
 ];
 
