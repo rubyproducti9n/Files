@@ -84,8 +84,8 @@ scroll-behavior: smooth;
 color: #470047;
 background-color: #fff;
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-/* border: 3px #2700491e solid; */
-box-shadow: 10px 10px 20px rgba(54, 54, 54, 0.356);
+border: 1px #eeeeee solid;
+box-shadow: 0px 0px 16px rgba(110, 110, 110, 0.336);
 border-radius: 6px;
 margin: 0 40px;
 float: left;
@@ -93,16 +93,20 @@ width: 360px;
 height: 88vh;
 padding: 20px 20px;
 }
+.drag{
+  display: none;
+}
 .schedule-container{
 display: absolute;
 right: 140px;
 margin: 20px 20px;
-padding: 20px 20px;
+padding: 0px 0px;
 color: #470047;
 background-color: #ffffff;
-box-shadow: 10px 10px 20px #3636365b;
+border: 1px #eeeeee solid;
+box-shadow: 0px 0px 16px rgba(110, 110, 110, 0.336);
 border-radius: 6px;
-width: 62vw;
+width: 64vw;
 height: 88vh;
 overflow: scroll;
 }
@@ -156,10 +160,16 @@ border: 0 #2700491e solid;
 margin: 0;
 border-radius: 0px;
 width: 100vw;
-/* height: 50vh; */
+height: 100vh;
 padding: 20px 20px;
 }
+.drag{
+  display: block;
+  margin-top: 25px;
+  background-color: #fff;
+}
 .schedule-container{
+  overflow: none;
 float: none;
 margin: 30px 0;
 padding: 20px 20px;
@@ -168,7 +178,7 @@ background-color: #ffffff;
 box-shadow: 10px 10px 20px #3636365b;
 border-radius: 0;
 width: 100vw;
-height: 100vh
+height: 100vh;
 }
 .fancy-border-radius {
 position: absolute;
@@ -215,7 +225,7 @@ z-index: -1;}
 
 
 <div class="live">
-<h5> Upcoming</h5>
+<h5 style="margin-bottom: 20px;"> Upcoming</h5>
 <a class="" onclick="error()"> <i class="fa fa-wifi" style="margin-left: 15px;"></i>
 <a class=" align" onclick="error()" style="margin-left: 13px;"> LIVE </a><br>
 <a style="display: block; margin-left: 54px; font-size: 10px;">
@@ -225,7 +235,7 @@ z-index: -1;}
  <a style="display: block; margin-left: 54px; font-size: 10px;">
   Concert Nights • 28 Nov - 11 p.m. onwards</a></a><hr><br></div>
 
-<h6>Artists</h6>
+<!-- <h6>Artists</h6>
 <a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
 <a class="align" href="javascript:void(0)" style="margin-left: 13px;"> BTS</a><br>
 <a style="display: block; margin-left: 50px; font-size: 10px;">
@@ -269,7 +279,7 @@ Error 404</a></a><hr>
 <a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
 <a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Indian Hits </a><br>
 <a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr><br>
+Error 404</a></a><hr><br> -->
 
 <h6>MOOD CHANGER</h6>
 <a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
@@ -290,10 +300,12 @@ Error 404</a></a><hr><br>
 </h6>
 <center>
  <!-- <a class="btn btn-sm text-white" style="background-color:#0099ff" onclick="schedule()"> Scheduled Streams <i class="fa fa-angle-right"></i></a> -->
-<a class="btn btn-sm text-white" style="background-color:#0099ff" onclick="learn()">Learn more <i class="fa fa-angle-right"></i></a><br>
+<a class="btn btn-sm text-white" style="background-color:#800080" onclick="learn()">Learn more <i class="fa fa-angle-right"></i></a><br>
 </center>
   </div>
-
+<center>
+<div class="drag"></div>
+</center>
 <div class="schedule-container">
   <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
   <div class="elfsight-app-a421d181-f88f-43e0-9392-12444ff29aaf disabled"></div> -->
