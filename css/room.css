@@ -1,5 +1,9 @@
 
 
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
+  @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
+
 body{
 display: block;
 color: white;
@@ -176,14 +180,14 @@ font-size: 13px;
 text-shadow: 0 0 10px #810585;
 }
 
-.streaming{background: #fff;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;}
-.strm-img{margin-top: 120px;width: 20%;}
-h1{color: #525252;font-weight: unset;font-family: Arial, Helvetica, sans-serif;}
-h2{color: #525252;font-weight: unset;font-family: Arial, Helvetica, sans-serif;}
-#timer{color: #525252;font-size: 14px;font-family: Arial, Helvetica, sans-serif;}
-.expired{background: #fff;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 9;}
-.ex-img{margin-top: 120px;width: 20%;}
-.expired-text{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.streaming{background: #fff;font-weight: 500; font-family: 'Comfortaa', cursive;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;}
+.strm-img{margin-top: 20vh;opacity: .5; width: 20%;}
+h6{color: #525252;font-size: 9px; font-weight: unset;font-family: 'Comfortaa', cursive;}
+h2{color: #525252;font-weight: unset;font-family: 'Comfortaa', cursive;}
+#timer{color: #525252; font-size: 14px;font-family: 'Comfortaa', cursive;}
+.expired{background: #fff;font-family: 'Comfortaa', cursive;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 9;}
+.ex-img{margin-top: 35vh;opacity: .5; width: 10%;}
+.expired-text{font-family: 'Comfortaa', cursive;}
 #ending{
 color: #ffffff;
 text-shadow: 0 0 16px #ffffff;
@@ -191,7 +195,7 @@ background-color: #810585a8;
 padding: 2px 10px;
 border-radius: 3px;
 font-size: .8rem;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: 'Comfortaa', cursive;
 backdrop-filter: blur(3px);
 }
 
