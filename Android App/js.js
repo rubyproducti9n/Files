@@ -25,5 +25,5 @@ $('.random').hide().eq(random).show();
 // });
 
 $(window).load(function() {
-  $('#loading').hide();
+  $('#loading').delay(10000).fadeOut(300);
 });
