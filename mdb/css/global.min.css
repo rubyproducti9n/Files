@@ -2278,7 +2278,7 @@ transform: rotate(-135deg);
       color: white;
     }
     #loading{
-      background-color: rgba(148, 182, 212, 0);
+      background-color: rgb(255, 255, 255);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
       display: block;
       position: fixed;
@@ -2287,7 +2287,12 @@ transform: rotate(-135deg);
       right: 0;
       bottom: 0;
       width: 100%;
-      z-index: 10;
+      z-index: 19;
+    }
+    .loading-img{
+      width: 10vw;
+      margin-top: 20%;
+      opacity: .5;
     }
     /* ========================================================= */
     /* | */ .error404{display: none; margin: 0px 200px;}
@@ -2323,6 +2328,11 @@ transform: rotate(-135deg);
     background-color: #000;
     /* background: linear-gradient(180deg, #363636, #000000); */
     /* background-size: 100% 400%; */
+  }
+  .app-theme{
+    color: #fff;
+    background-color: rgb(27, 27, 27);
+    box-shadow:  0px 2px 10px #444444b7;
   }
   .drag{
     display: block;
@@ -2433,7 +2443,7 @@ transform: rotate(-135deg);
     /* margin-left: -5px; */
     }
     #loading{
-      background-color: rgba(148, 182, 212, 0);
+      background-color: rgb(255, 255, 255);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
       display: block;
       position: absolute;
@@ -2442,7 +2452,12 @@ transform: rotate(-135deg);
       right: 0;
       bottom: 0;
       width: 100%;
-      z-index: 10;
+      z-index: 19;
+    }
+    .loading-img{
+      width: 35vw;
+      margin-top: 80%;
+      opacity: .5;
     }
 
 
