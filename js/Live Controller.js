@@ -4,11 +4,10 @@
 window.setInterval(function() {
 var audio = document.getElementById("audio");
 var current = new Date();
-var visible = new Date("Nov 28, 2021 19:00:02")
-var expiry = new Date("Nov 29, 2021 03:00:03")
+var visible = new Date("Nov 28, 2021 19:00:01")
+var expiry = new Date("Nov 29, 2021 03:00:02")
 if (current.getTime() > visible.getTime()) {
 $('.player').hide();
-// $('.background').hide();
 $('.live').show();
 $('.notice').show();
 $('.player').show();
@@ -16,6 +15,7 @@ $('.streaming').hide();
 $('.expired').hide();
 $('.join').show();
 } if (current.getTime() > expiry.getTime()) {
+  $('.player').show();
 $('.notice').hide();
 $('.live').hide();
 $('.streaming').hide();
@@ -71,9 +71,9 @@ document.getElementById("ending").innerHTML = "Loading...";}}, 1000);
 // ================================================================
 var div = document.getElementById("loading-starts");
 div.innerHTML += ' <div class="streaming">\
-<center> <img class="strm-img" src="../../alb-png.png"></center>\
+<center> <img class="strm-img" src="../../bts-logo.png" draggable="false"></center>\
   <p class="expired-text"><center>\
-  <h1>STREAMS IN</h1>\
+  <h6>STREAMS IN</h6>\
   <h6><div id="timer"></div></h6>\
     <br><br><br>\
   </center>\
@@ -81,17 +81,17 @@ div.innerHTML += ' <div class="streaming">\
 {/*  */}
 var div = document.getElementById("loading-ends");
 div.innerHTML += '<div class="expired">\
-<center> <img class="ex-img" src="../../army.gif"></center>\
-  <p class="expired-text"><center>\
+<center> <img class="ex-img" src="../../bts-logo.png" draggable="false"></center>\
+\
+</div>';
+
+{/* <p class="expired-text"><center>\
     <h2> LIVE STREAM HAS ENDED </h2>\
     <img src="../../loader.gif" width="10%">\
     <br><br><br></center>\
     <div class="fancy-border-radius"></div>\
     <div class="fancy-border-radius"></div>\
-    <div class="fancy-border-radius"></div></p>\
-</div>';
-
-
+    <div class="fancy-border-radius"></div></p>\ */}
 
 // =============================================================
 // AD CONTROL
