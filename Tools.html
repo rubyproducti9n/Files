@@ -36,9 +36,15 @@
     <link rel="icon" href="ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
+      @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
     body{color: rgb(0, 0, 0);
-      background: #ffffff;user-select: none;}
-    a{color: #ffffff;}
+      background: #ffffff;
+font-family: 'Comfortaa', cursive;
+user-select: none;
+overflow: hidden;}
+    a{color: #414141;}
       a:hover{
         color: rgb(255, 255, 255);
       }
@@ -47,18 +53,28 @@
     .timeago{color: black;}
 
     .container2{
-    color: rgb(255, 255, 255);
+    color: rgb(94, 94, 94);
     display: block;
-    margin-top: -20px;
+    margin-top: 0px;
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
-    text-shadow: 0 0 2px #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: 'Comfortaa', cursive;
+    }
+    .body{
+      overflow: scroll;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 1px rgb(233, 233, 233) solid;
+      box-shadow: 0px 0px 20px #49494921;
+      margin: 20px 20px;
+      padding: 20px 20px;
+      width: 97%;
+      height: 30%;
     }
     .header{
       display: none;
-    color: #ffffff;
+    color: #444444;
     background: #6b006b;
     padding: 130px 80px;
     }
@@ -73,7 +89,11 @@
     font-size: 42px;
     }
     svg{
-      display: none;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
     margin-top: -10px;
     z-index: -1;
     }
@@ -87,9 +107,25 @@
     }
     .tools-bg{
       margin-top: 40px;
-      background: #800080;
-      padding: 30px 0;
-      border-radius: 6px;
+      color: rgb(255, 255, 255);
+      background: linear-gradient(180deg, #a800a8, #800080);
+      padding: 60px 0;
+      border-radius: 16px;
+      border: 1px #800080 solid;
+      box-shadow: 0px 0px 6px #49494979;
+      transform: scale(1.0);
+      transition: 0.5s ease;
+    }
+    .tools-bg:hover{
+      background: linear-gradient(180deg, #7700ff, #5300b3);
+      border: 4px #7700ff, #5300b3 solid;
+      transform: scale(1.2);
+      transition: 0.5s ease;
+    }
+    .tools-bg:active{
+      background: linear-gradient(180deg, #7700ff, #5300b3);
+      transform: scale(0.5);
+      transition: 0.2s ease;
     }
     .err{
       display: none;
@@ -130,11 +166,11 @@
                   <i class="fas fa-bars"></i>
                 </button>
 
-                <a class="navbar-brand" href="RUBY PRODUCTION.html">  <i class="fa fa-arrow-left"></i></a>
+                <a class="navbar-brand" href="index.html">  <i class="fa fa-arrow-left"></i></a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="RUBY PRODUCTION.html">HOME</a>
+                      <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link disabled" href="javascript:void(0)">SEARCH</a>
