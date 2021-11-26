@@ -84,11 +84,6 @@
         overflow-x: hidden;
 font-family: 'Comfortaa', cursive;
       }
-      .app-theme{
-        color: #fff;
-        background-color: rgb(27, 27, 27);
-        box-shadow:  0px 2px 10px #292929b7;
-      }
       .tags{
       margin-left: 5px;
       }
@@ -119,7 +114,8 @@ font-family: 'Comfortaa', cursive;
       color: rgb(43, 43, 43);
     }
     hr{color: #000;}
-    h5, h6{color: #000;}
+    .artist{margin-left: 20px;margin-bottom: -20px;}
+    h5, h6{color: rgb(56, 56, 56);}
     h6{
       font-size: 12px;
   margin-left: 10px;
@@ -273,7 +269,7 @@ $(document).ready(function() {
         </div> -->
 
         <nav class="navbar fixed-top app-theme navbar-dark navbar-expand-lg scrolling-navbar lighten-5 mb-4">
-          <a id="navbar" class="navbar-brand" href="index.html"> ConcertEra Music </a>
+          <a id="navbar" class="navbar-brand"> ConcertEra Music </a>
         </nav>
 
             <!-- <center> <br>
@@ -328,42 +324,38 @@ square-unit
 </script> -->
 
 <div class="list">
+  <h5 class="artist">♪ BTS</h5>
 <div class="audio" onclick="details()">
         <h6>
           ♪ BTS (방탄소년단) 'A Love Song' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Unknown<br>
-        <span class="badge badge-danger">COMING SOON</span>
-        </p>
+          <p class="desc">
+             Producer : Unknown<br>
+            Lyrics : Unknown<br>
+          Artist : Unknown<br>
+          Album : Unknown<br>
+          Released : 	Unknown <br>
+          Music Label : Unknown<br>
+          Status : <span class="badge badge-danger"> COMING SOON </span></p>
         <img class="audio-img" src="https://drive.google.com/uc?export=download&id=1OHkS4WxMooOotmVqQayRRovahDiXZb5e">
         <center>
         <audio id="audio" controlslist="nodownload" class="disabled audio-butter" controls preload="none">
         <source src=""type="audio/mpeg">
         </audio></center>
         <center> <div class="drag"></div></center></div>
-        <div class="details">
+        <a class="details" onclick="details()">
           <i class="fa fa-eye"></i> 1.1k
-        </div>
-<script>
-function details() {
-  var x = document.getElementById("details");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+        </a>
 <div class="audio">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' (SU.. .</h6>
-        <p class="desc">
-        Album : Music Of Spheres<br>
-        Released by : ColdPlay<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Max Martin, Oscar Holter, Bill Rahko<br>
+            Lyrics : RM, J-hope, Suga and more<br>
+          Artist : BTS<br>
+          Album : Music of the Spheres<br>
+          Released : 	Sep 24, 2021 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/HwRozlhZeIU/maxresdefault.jpg">
         <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -374,12 +366,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' Au...</h6>
-
-        <p class="desc">
-        Album : Music Of Spheres<br>
-        Released by : ColdPlay<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Max Martin, Oscar Holter, Bill Rahko<br>
+            Lyrics : RM, J-hope, Suga and more<br>
+          Artist : BTS<br>
+          Album : Music of the Spheres<br>
+          Released : 	Sep 24, 2021 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/3YqPKLZF_WU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -390,12 +384,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Permission to Dance' Audi...</h6>
-
-        <p class="desc">
-        Album : Butter<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Steve Mac, Jenna Andrews, Stephen Kirk<br>
+            Lyrics : Ed Sheeran, Johnny McDaid, Steve Mac, Jenna Andrews<br>
+          Artist : BTS<br>
+          Album : Butter / Permission To Dance<br>
+          Released : 	July 9, 2021 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/CuklIb9d3fI/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
@@ -406,12 +402,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Butter' Audio Song</h6>
-
-        <p class="desc">
-        Album : Butter<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Grimaldi, Kirk, Perry<br>
+            Lyrics : RM and more<br>
+          Artist : BTS<br>
+          Album : Butter<br>
+          Released : May 21, 2021 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/WMweEpGlu_U/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -422,13 +420,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Dynamite' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknwon<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span> •
-        <span class="badge badge-warning">Popular</span>
-        </p>
+          <p class="desc">
+             Producer : David Stewart<br>
+            Lyrics : David Stewart, Jessica Agombar<br>
+          Artist : BTS<br>
+          Album : Dynamite<br>
+          Released : August 21, 2020 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/gdZLi9oWNZg/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -439,12 +438,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Life Goes On' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknwon<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-danger"> Unvailable <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM, Suga, J-hope and more<br>
+          Artist : BTS<br>
+          Album : BE<br>
+          Released : November 20, 2020 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-danger">  Unavailable </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/-5q5mZbe3V8/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -455,12 +456,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'DOPE' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Pdogg, "Hitman" Bang, RM, Suga, Supreme Boi<br>
+          Artist : BTS<br>
+          Album : The Most Beautiful Moment in Life, Part 1<br>
+          Released : 2015 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/BVwAVbKYYeM/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -471,12 +474,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'N.O.' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Pdogg, "Hitman" Bang, RM, Suga, Supreme Boi<br>
+          Artist : BTS<br>
+          Album : O!RUL8,2?<br>
+          Released : September 11, 2013 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/mmgxPLLLyVo/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -487,12 +492,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Run' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM, V, Jungkook, J-hope and more<br>
+          Artist : BTS<br>
+          Album : Unknown<br>
+          Released : November 30, 2015 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/5Wn85Ge22FQ/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -503,12 +510,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Black Swan' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM and more<br>
+          Artist : BTS<br>
+          Album : Unknown<br>
+          Released : 	January 17, 2020 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/0lapF4DQPKQ/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -519,12 +528,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'DNA' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM, Suga and more<br>
+          Artist : BTS<br>
+          Album : Love Yourself: Her<br>
+          Released : 	September 18, 2017 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/MBdVXkSdhwU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -535,12 +546,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'FAKE LOVE' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM and more<br>
+          Artist : BTS<br>
+          Album : Love Yourself: Tears<br>
+          Released : 	May 18, 2018 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/7C2z4GqqS5E/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -551,12 +564,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'IDOL' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM and more<br>
+          Artist : BTS<br>
+          Album : Love Yourself: Answer<br>
+          Released : 	August 24, 2018 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/pBuZEGYXA6E/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -567,12 +582,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Louder Than Bombs' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Unknown<br>
+            Lyrics : Unknown<br>
+          Artist : BTS<br>
+          Album : Map of the Soul: 7<br>
+          Released : 	2020 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/4ZSVbrV4-Xs/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -583,12 +600,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Make It Right' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Fred Gibson<br>
+            Lyrics : RM, Suga, J-hope and more<br>
+          Artist : BTS<br>
+          Album : MAP OF THE SOUL: PERSONA<br>
+          Released : 	October 18, 2019 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/F2mbAkat5n8/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -599,12 +618,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'MIC Drop' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM, Steve Aoki, J-hope and more<br>
+          Artist : BTS<br>
+          Album : Love Yourself: Her<br>
+          Released : 	November 24, 2017 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/kTlv5_Bs8aw/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -615,12 +636,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Not Today' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : RM and more<br>
+          Artist : BTS<br>
+          Album : You Never Walk Alone<br>
+          Released : 	February 20, 2017 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/9DwzBICPhdM/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -631,12 +654,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'ON' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Kim Nam-joon, Min Yoon-gi, J-Hope and more<br>
+          Artist : BTS<br>
+          Album : Map of the Soul: 7<br>
+          Released : Feb 21, 2020 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/mPVDGOVjRQ0/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -647,12 +672,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'SAVE ME' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Kim Nam-joon, Min Yoon-gi, Jung Ho-seok and more<br>
+          Artist : BTS<br>
+          Album : The Most Beautiful Moment in Life: Young Forever<br>
+          Released : Feb 13, 2017 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/ZssoXYmhX-U/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -663,12 +690,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Spring Day' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : "Hitman" Bang, Pdogg, RM, Suga, Adora, Arlissa Ruppert, Peter Ibsen<br>
+          Artist : BTS<br>
+          Album : You Never Walk Alone<br>
+          Released : Feb 13, 2017 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/xEeFrLSkMm8/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -679,12 +708,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Boy With Luv' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Pdogg, RM, Melanie Joy Fontana, Michel "Lindgren" Schulz, "Hitman" Bang, SugaEmily Weisband, J-Hope, Ashley Frangipane<br>
+          Artist : BTS<br>
+          Album : MAP OF THE SOUL: PERSONA<br>
+          Released : April 12, 2019 <br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/XsX3ATc3FbA/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -695,12 +726,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Blood Sweat & Tears' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Pdogg, RM, Suga, J-Hope, BangKim Do-hoon<br>
+          Artist : BTS<br>
+          Album : Wings<br>
+          Released : Oct 10, 2016<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/hmE9f-TEutc/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -711,12 +744,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'I Need U' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : "Hitman" BangRMSugaJ-HopeBrother Su<br>
+          Artist : BTS<br>
+          Album : Unknown<br>
+          Released : April 29, 2015<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/jjskoRh8GTE/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -727,12 +762,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'FIRE' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg<br>
+            Lyrics : Kang Hyo-wonBang Si-hyukKim Nam-joonMin Yoon-giJung Ho-seokIm Gwang-wuk<br>
+          Artist : BTS<br>
+          Album : Unknown<br>
+          Released : May 02, 2016<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/ALj5MKjy2BU/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -743,12 +780,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Savage Love' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Jawsh 685<br>
+            Lyrics : Jason Derulo, Jacob Kasher Hindlin, Joshua Nanai, Philippe Greiss, J-Hope, Suga<br>
+          Artist : BTS<br>
+          Album : Map Of The Soul: Peosona<br>
+          Released : Oct 02, 2020<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/aMPZN3hv0qg/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -759,12 +798,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Mikrokosmos' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Unknown<br>
+            Lyrics : Ryan Lawrie<br>
+          Artist : BTS<br>
+          Album : Map Of The Soul: Peosona<br>
+          Released : 2019<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/LXOJk2PFKgY/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -775,12 +816,14 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'Magic Shop' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Jungkook, Hiss Noise, ADORA<br>
+            Lyrics : Jungkook, Hiss Noise, RM, DJ Swivel, Candace Nicole Sosa, ADORA, J-Hope, Suga<br>
+          Artist : BTS<br>
+          Album : Love Yourself: Tears<br>
+          Released : May 18, 2018<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/hLf6yZPJyvM/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -791,18 +834,86 @@ function details() {
 <div class="audio">
         <h6>
           ♪ BTS (방탄소년단) 'COFFEE' Audio Song</h6>
-
-        <p class="desc">
-        Album : Unknown<br>
-        Music Label : Hybe Label<br>
-        <span class="badge badge-success"> Available <i class="fa fa-check-circle fa-1x"></i> </span>
-        </p>
+          <p class="desc">
+             Producer : Pdogg, Slow Rabbit<br>
+            Lyrics : Urban Zakapa, Pdogg, Slow Rabbit, RM, Suga, J-Hope<br>
+          Artist : BTS<br>
+          Album : O!RUL8,2?<br>
+          Released : Sep 11, 2013<br>
+          Music Label : Hybe Label<br>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/GiN5hPrZgw8/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=11xn0dNEPocWoeqq75fHi3bGsk8Qstt6C"type="audio/mpeg">
-        </audio></center></div>
-      </div>
+        </audio></center>
+        <center> <div class="drag"></div></center></div>
+<br>
+<center>
+<hr width="90%">
+</center><br>
+<h5 class="artist">♪ PARK JIMIN</h5>
+<div class="audio">
+  <h6>
+    ♪ JIMIN (방탄소년단) 'FILTER' Audio Song</h6>
+    <p class="desc">
+       Producer : Tom Wiklund<br>
+      Lyrics : Tom Wiklund, Hilda Stenmalm, "Hitman" Bang, Lee Seu-ran, Lutra, danke, Bobby Jung, Ahn Bok-jin, Fallin' Dild, Neon Boy<br>
+    Singer : Park Jimin<br>
+    From: BTS<br>
+    Album : Map Of The Soul: 7<br>
+    Released : Feb 21, 2020<br>
+    Music Label : Hybe Label<br>
+    Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
+  <img class="audio-img" src="https://img.youtube.com/vi/XhQAAdoTdgw/maxresdefault.jpg">
+   <center>
+  <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+  <source src="https://drive.google.com/uc?export=download&id=11xn0dNEPocWoeqq75fHi3bGsk8Qstt6C"type="audio/mpeg">
+  </audio></center>
+  <center> <div class="drag"></div></center></div>
+
+  <div class="audio">
+    <h6>
+      ♪ JIMIN (방탄소년단) 'LIE' Audio Song</h6>
+      <p class="desc">
+         Producer : Unknwon<br>
+        Lyrics : Ho Weon Kang / Ji Min Park / Si Hyuk Bang / Su Min Park / Sung Min Kim<br>
+      Singer : Park Jimin<br>
+      From: BTS<br>
+      Album : Wings<br>
+      Released : 2016<br>
+      Music Label : Hybe Label<br>
+      Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
+    <img class="audio-img" src="https://img.youtube.com/vi/WoJfrm4rMp4/maxresdefault.jpg">
+     <center>
+    <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+    <source src="https://drive.google.com/uc?export=download&id=11xn0dNEPocWoeqq75fHi3bGsk8Qstt6C"type="audio/mpeg">
+    </audio></center>
+    <center> <div class="drag"></div></center></div>
+    <br>
+    <center>
+    <hr width="90%">
+    </center><br>
+    <h5 class="artist">♪ JEON JUNGKOOK</h5>
+
+<div class="audio">
+ <h6>♪ JUNGKOOK (방탄소년단) 'Euphoria' Audio Song</h6>
+    <p class="desc">
+       Producer : Jordan "DJ Swivel" Young<br>
+      Lyrics :
+      Jordan "DJ Swivel" YoungCandace Nicole Sosa”Hitman” BangSupreme BoiAdoraMelanie FontanaRM<br>
+    Singer : Jeon Jungkook<br>
+    From: BTS<br>
+    Album : Love Yourself: Answer<br>
+    Released : Agust 24, 2018<br>
+    Music Label : Hybe Label<br>
+    Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
+    <img class="audio-img" src="https://img.youtube.com/vi/8mUOB1SBLmk/maxresdefault.jpg">
+     <center>
+    <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
+    <source src="https://drive.google.com/uc?export=download&id=11xn0dNEPocWoeqq75fHi3bGsk8Qstt6C"type="audio/mpeg">
+    </audio></center>
+    <center> <div class="drag"></div></center></div>
   <!-- ============================================================================================================================ -->
 <!-- <br>
   <div class="accordion-item">
@@ -862,7 +973,7 @@ function details() {
           <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <img class="img-thumbnail float-end" src="QR Codes/lost QR.png" alt="Unavailable" width="20%">
+            <img class="img-thumbnail float-end" src="QR Codes/lost QR.png" alt="U" width="20%">
 
             <div class="toggle form-check">
               <input type="checkbox" class="checkbox form-check-input" id="chk" />
