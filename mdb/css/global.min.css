@@ -2166,6 +2166,9 @@ transform: rotate(-135deg);
     /* max-width: 1366px;
     min-width: 360px; */
   }
+  .home-container{display: none;}
+  .container2{display: none;}
+  .maintain-container{display: block;}
   .home-container{
     transition: 0.5s;
     }
@@ -2239,7 +2242,7 @@ transform: rotate(-135deg);
   border-radius: 5px;
   }
   #navbar{
-  margin-left: 20px;
+  margin-left: 0px;
   }
   .navbar-custom{
     backdrop-filter: blur(5px);
