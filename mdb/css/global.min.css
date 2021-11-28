@@ -2166,9 +2166,10 @@ transform: rotate(-135deg);
     /* max-width: 1366px;
     min-width: 360px; */
   }
-  .home-container{display: none;}
-  .container2{display: none;}
-  .maintain-container{display: block;}
+  /* Also remove from media queries to display for android devices */
+  .home-container{display: block;}
+  .container2{display: block;}
+  .maintain-container{display: none;}
   .home-container{
     transition: 0.5s;
     }
