@@ -3,7 +3,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RUBY PRODUCTION - Tools</title>
+    <title>Chatbot</title>
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
@@ -36,8 +36,14 @@
     <link rel="icon" href="ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
+      @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
+
     body{color: rgb(0, 0, 0);
-      background: #ffffff;user-select: none;}
+      background: #ffffff;
+      overflow: hidden;
+font-family: 'Comfortaa', cursive;user-select: none;}
     a{color: #ffffff;}
       a:hover{
         color: rgb(255, 255, 255);
@@ -53,91 +59,219 @@
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
-    text-shadow: 0 0 2px #000000;
+    /* text-shadow: 0 0 2px #000000; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    .header{
-      display: none;
-    color: #ffffff;
-    background: #6b006b;
-    padding: 130px 80px;
-    }
-    .title{
-    float: left;
-    width: 40%;
-    font-size: 38px;
-    }
-    .help-icon{
-    float: right;
-    width: 5%;
-    font-size: 42px;
-    }
     svg{
-      display: none;
-    margin-top: -10px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
     z-index: -1;
-    }
-    .tools{
-    color: #000;
-    }
-    .tool-img{
-      margin-top: 40px;
-    content: url(maintenance/dev.png);
-    width: 60%;
     }
     .err{
       display: none;
     }
-    .body{
-      margin-top: 0px;
+    header{
+      color: rgb(77, 77, 77);
+      background: #ffffff;
+      padding: 20px 20px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.26);
     }
-.tools-bg{
-color: #800080;
-background: #fff;
-border-radius: 20px;
-height: 170px;
-padding: 70px 0;
-box-shadow: 2px 2px 20px #4b4b4b5b;
+    .chatbox{
+      background-image: url(../background/army-ocean.jpg);
+      filter: saturate(110px);
+      padding: 20px 20px;
+      border-radius: 0px 0px 0px 0px;
+    }
+    .replie{
+      float: left;
+      background: rgb(255, 255, 255);
+      padding: 10px 20px;
+      margin: 0 20px;
+      border-radius: 10px 10px 10px 0px;
+      width: fit-content;
+      font-size: 12px;
+    }
+    .chat{
+      float: right;
+      background: rgb(255, 255, 255);
+      padding: 10px 20px;
+      margin: 0 20px;
+      border-radius: 10px 10px 0px 10px;
+      width: fit-content;
+      font-size: 12px;
+    }
+
+
+
+    .chatbot-container{
+      display: block;
+      margin: 40px 40px;
+      /* border: 2px rgb(221, 221, 221) solid; */
+      border-radius: 20px;
+      background-color: #ebebeb;
+      color: #000;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.26);
+    }
+    .chat-bar-collapsible {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.26);
 }
-section{
-min-height: 100vh;
-width: 100vw;
-display: flex;
-align-items: flex-start;
-background: rgb(37, 37, 37);
-flex-direction: column;
-padding: 50px 0;
+
+.chat-timestamp{
+font-size: 5px;
 }
-section h1{
-  color: rgb(255, 255, 253, 0.322);
-  text-align: center;
-  width: 100vw;
-  font-size: 50px;
-  margin-bottom: 10px;
+.collapsible {
+    background-color: #8900b3;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 20px 20px 0px 0px;
+    border: none;
+font-family: 'Comfortaa', cursive;
 }
-section p{
-  text-align: center;
-  color: rgb(255, 255, 255, 0.322);
-  width: 100vw;
-  margin-bottom: 40px;
+
+.content {
+    height: 50vh;
+    overflow: scroll;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+font-family: 'Comfortaa', cursive;
 }
-.container{
-  width: 90vw;
-  max-width: 500px;
-margin: 0 auto;
-justify-content: center;
+
+.full-chat-block {
+  width: 100%;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
 }
-.texts p{
-  color: #000;
-  text-align: left;
-  width: 100vw;
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
 }
-.texts p.replay{
-  text-align: right;
+
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: #ebebeb;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    font-family: 'Comfortaa', cursive;
+    outline: none
+}
+
+.userText {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #800080;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    font-family: 'Comfortaa', cursive;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Comfortaa', cursive;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    font-family: 'Comfortaa', cursive;
+    animation: floatup .5s forwards
+}
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
     @media screen and (max-width: 768px){
     .container2{
@@ -145,49 +279,174 @@ justify-content: center;
     display: block;
     margin-top: -50px;
     /* margin: auto; */
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 0 0;}
-section{
-min-height: 100vh;
-width: 100vw;
-display: flex;
-align-items: flex-start;
-background: rgb(37, 37, 37);
-flex-direction: column;
-padding: 50px 0;
+    .navbar{display: none;}
+
+
+    .chatbot-container{
+      display: block;
+      margin: 0 0;
+      /* border: 2px rgb(221, 221, 221) solid; */
+      border-radius: 0;
+      height: 100vh;
+      background-color: #ebebeb;
+      color: #000;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0);
+    }
+    .chat-bar-collapsible {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0);
 }
-section h1{
-  color: rgb(255, 255, 253, 0.322);
-  text-align: center;
-  width: 100vw;
-  font-size: 50px;
-  margin-bottom: 10px;
+
+.collapsible {
+    background-color: #8900b3;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+font-family: 'Comfortaa', cursive;
 }
-section p{
-  text-align: center;
-  color: rgb(255, 255, 255, 0.322);
-  width: 100vw;
-  margin-bottom: 40px;
+
+#chat-timestamp{
+font-size: 12px;
+margin-bottom: 50px;
+background-color: rgb(224, 224, 224);
+color: rgb(110, 110, 110);
+width: fit-content;
+padding: 5px 10px;
+border-radius: 9px;
 }
-.eva-container{
-  width: 90vw;
-  max-width: 500px;
-margin: 0 auto;
-justify-content: center;
+.content {
+    height: 100vh;
+    overflow: scroll;
+    background-color: #ffffff;
+font-family: 'Comfortaa', cursive;
 }
-.texts p{
-  color: #000;
-  text-align: left;
-  width: 100vw;
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+
+.full-chat-block {
+  width: 100%;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: 90vh;
 }
-.texts p.replay{
-  text-align: right;
+
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
 }
-    .navbar{display: none;}}
+
+.chat-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+  position: fixed;
+  bottom: 0;
+    float: left;
+    font-size: 9px;
+    /* box-sizing: border-box;
+    justify-content: space-between; */
+    width: 100%;
+    align-items: center;
+    background-color: #dfdfdf;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #000;
+    background-color: white;
+    font-family: 'Comfortaa', cursive;
+    outline: none
+}
+
+.userText {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #800080;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    font-family: 'Comfortaa', cursive;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Comfortaa', cursive;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    font-family: 'Comfortaa', cursive;
+    animation: floatup .5s forwards
+}}
     </style>
     <script>
     $(window).load(function() {
@@ -284,17 +543,11 @@ justify-content: center;
        </div>
 
           <div class="container2">
-
-    <div class="header">
-    <p class="title">Tools <br> for daily use...</p>
-    <i class="fa fa-toolbox help-icon"></i>
-    </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#6b006b" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,224C240,192,300,128,360,90.7C420,53,480,43,540,48C600,53,660,75,720,101.3C780,128,840,160,900,197.3C960,235,1020,277,1080,277.3C1140,277,1200,235,1260,234.7C1320,235,1380,277,1410,298.7L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+      <path fill="#800080" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,224C240,192,300,128,360,90.7C420,53,480,43,540,48C600,53,660,75,720,101.3C780,128,840,160,900,197.3C960,235,1020,277,1080,277.3C1140,277,1200,235,1260,234.7C1320,235,1380,277,1410,298.7L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
     </svg>
     <br><br>
 
-<div class="eva">
   <div class="err">
   <center>
 <img class="tool-img"><br>
@@ -302,17 +555,55 @@ Oops! we are currently working on it, please try again later.
     </center>
   </div>
 
-<section>
-<h1>Eva</h1>
-<p>Talk to Eva</p>
-<div class="eva-container">
-<div class="texts"></div>
+<div class="chatbot-container">
+   <!-- CHAT BAR BLOCK -->
+   <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Chat with us!
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <center> <h5 id="chat-timestamp"></h5></center>
+                        <p id="botStarterMessage" class="botText"><span>Type some text...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: purple;" class="fa fa-fw fa-heart"
+                                onclick="heartButton()"></i>
+                            <i id="chat-icon" style="color: #1f1f1f;" class="fa fa-fw fa-paper-plane"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
-</section>
+</div>
 
 
     <br><br><br><br><br><br><br><br>
-</div>
 
             </div>
 
@@ -368,56 +659,140 @@ Oops! we are currently working on it, please try again later.
       </footer>
       <!-- Footer -->
       <script>
-        const texts =document.querySelector(".texts");
+// Collapsible
+// var coll = document.getElementsByClassName("collapsible");
 
-        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// for (let i = 0; i < coll.length; i++) {
+//     coll[i].addEventListener("click", function () {
+//         this.classList.toggle("active");
 
-        const recognition = new SpeechRecognition();
-        recognition.interimResults  = true;
+//         var content = this.nextElementSibling;
 
-        let p =document.createElement("p");
+//         if (content.style.maxHeight) {
+//             content.style.maxHeight = null;
+//         } else {
+//             content.style.maxHeight = content.scrollHeight + "px";
+//         }
 
-        recognition.addEventListener("result", (e) => {
-          texts.appendChild(p);
-          const text = Array.from(e.results)
-          .map((result) => result [0])
-          .map((result) => result.transcript)
-          .join("");
+//     });
+// }
 
-          p.innerText = text;
-          if (e.results[0].isFinal){
-            if(text.includes("how are you")){
-              p = document.createElement("p")
-              p.classList.add("replay");
-              p.innerText = "I am fine";
-              text.appendChild(p);
-            }
-            if (
-              text.includes("what's your name") ||
-              text.includes("what is your name")
-            ){
-              p = document.createElement("p");
-              p.classList.add("replay");
-              p.innerText = "My name is Eva";
-              texts.appendChild(p);
-            }
-            if (text.includes("open my youtube")){
-              p = document.createElement("p");
-              p.classList.add("replay");
-              p.innerText = "opening Youtube";
-              texts.appendChild(p);
-              console.log("Opening Youtube");
-              window.open("https://youtube.com/");
-            }
-            p = document.createElement("p");
-          }
-        });
+function getTime() {
+    let today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
 
-        recognition.addEventListener("ended", () => {
-          recognition.start();
-        });
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
 
-        recognitionstart();
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    let time = hours + ":" + minutes;
+    return time;
+}
+
+// Gets the first message
+function firstBotMessage() {
+    let firstMessage = "How's it going?"
+    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+
+    let time = getTime();
+
+    $("#chat-timestamp").append(time);
+    document.getElementById("userInput").scrollIntoView(false);
+}
+
+firstBotMessage();
+
+// Retrieves the response
+function getHardResponse(userText) {
+    let botResponse = getBotResponse(userText);
+    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+    $("#chatbox").append(botHtml);
+
+    document.getElementById("chat-bar-bottom").scrollIntoView(false);
+}
+
+//Gets the text text from the input box and processes it
+function getResponse() {
+    let userText = $("#textInput").val();
+
+    if (userText == "") {
+        userText = "Cannot find symbol : android.json.input : 4.33";
+    }
+
+    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+    setTimeout(() => {
+        getHardResponse(userText);
+    }, 1000)
+
+}
+
+// Handles sending text via button clicks
+function buttonSendText(sampleText) {
+    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+    //Uncomment this if you want the bot to respond to this buttonSendText event
+    // setTimeout(() => {
+    //     getHardResponse(sampleText);
+    // }, 1000)
+}
+
+function sendButton() {
+    getResponse();
+}
+
+function heartButton() {
+    buttonSendText("I Purple You 💜")
+}
+
+// Press enter to send a message
+$("#textInput").keypress(function (e) {
+    if (e.which == 13) {
+        getResponse();
+    }
+});
+
+
+       function getBotResponse(input) {
+    //rock paper scissors
+    if (input == "when is the next concert") {
+        return "There are no upcoming Concerts from BTS, because recently they finished with their Live Concerts PTDS in Los Angeles";
+    } else if (input == "when is the next stream") {
+        return "We are scheduling our next stream very soon, stay tuned fot it.";
+    }
+    if (input == "who is bts" || input == "Who is BTS" || input == "WHO IS BTS" || input == "who is bts?" || input == "Who is BTS?" || input == "WHO IS BTS?" || input == "who is BTS?") {
+        return "BTS (Korean: 방탄소년단; RR: Bangtan Sonyeondan), also known as the Bangtan Boys, is a South Korean boy band that was formed in 2010 and debuted in 2013 under Big Hit Entertainment. The septet—consisting of members Jin, Suga, J-Hope, RM, Jimin, V, and Jungkook—co-writes and co-produces much of their own output. Originally a hip hop group, their musical style has evolved to include a wide range of genres. Their lyrics, often focused on personal and social commentary, touch on the themes of mental health, troubles of school-age youth and coming of age, loss, the journey towards loving oneself, and individualism. Their work also often references literature and psychological concepts and includes an alternative universe storyline.\
+After debuting in 2013 with their si\ngle album 2 Cool 4 Skool, BTS released their first Korean-language studio album, Dark & Wild, and Japanese-language studio album, Wake Up, in 2014. The group second Korean studio album, Wings (2016), was their first to sell one million copies in South Korea. By 2017, BTS crossed into the global music market, leading the Korean Wave into the United States and breaking numerous sales records. They became the first Korean group to receive a certification from the Recording Industry Association of America (RIAA) for their single Mic Drop, as well as the first Korean act to top the US Billboard 200 with their studio album Love Yourself: Tear (2018). BTS became one of the few groups since the Beatles to earn four US number-one albums in less than two years, and Love Yourself: Answer (2018) was the first Korean album certified platinum by the RIAA. In 2020, BTS became the first all-South Korean act to reach number one on the Billboard Global 200 and US Billboard Hot 100 with their Grammy-nominated single Dynamite. Their follow-up releases Savage Love, Life Goes On, Butter, and Permission to Dance made BTS the fastest act to accumulate five US number-one singles since Michael Jackson.\
+Having sold over 20 million albums on the Gaon Music Chart, BTS is the best-selling artist in South Korean history and holds the best-selling album in South Korea with Map of the Soul: 7. They are the first Asian and non-English speaking act to be named International Federation of the Phonographic Industry (IFPI) Global Recording Artist of the Year (2020), to chart on Billboard Top Touring Artists of the 2010s (placing at number 45), and to headline and sell out Wembley Stadium and Rose Bowl Stadium (Love Yourself World Tour in 2019). Featured on Time international cover as Next Generation Leaders and dubbed Princes of Pop, BTS has also appeared on the magazine lists of the 25 most influential people on the internet (2017–2019) and the 100 most influential people in the world (2019). The groups numerous accolades include six American Music Awards, nine Billboard Music Awards, 24 Golden Disk Awards, and nominations for two Grammy Awards and a Brit Award. Outside of music, they partnered with UNICEF to establish the Love Myself anti-violence campaign, addressed three United Nations General Assemblies, and became the youngest ever recipients of the Order of Cultural Merit from the President of South Korea due to their contributions in spreading Korean culture and language.";
+    } else if (input == "when is the next stream") {
+        return "We are scheduling our next stream very soon, stay tuned fot it.";
+    }
+    if (input == "I Purple You" || input == "i purple you" || input == "I purple you" || input == "I PURPLE YOU") {
+        return "We purple you army 💜";
+    } else if (input == "i purple you") {
+      // innerHTML = '<img class="img" src="../background//b12.jpg" width="10%">';
+        return "We purple you army 💜";
+    }
+    if (input == "who are You") {
+        return "I am a Army just like you";
+    } else if (input == "What is your name") {
+      // innerHTML = '<img class="img" src="../background//b12.jpg" width="10%">';
+        return "My name is Kim Taehyung";
+    }
+}
 
         </script>
 
