@@ -110,6 +110,16 @@ font-family: 'Comfortaa', cursive;
       z-index: -1;
       filter: blur(10px);
     }
+    .notification{
+margin: 10px 10px;
+width: 100%;
+    }
+    .notification-body{
+      font-size: 12px;
+      border-radius: 6px;
+      /* background: #800080; */
+      padding: 10px 10px;
+    }
     .corousel{
       margin: 10px 10px;
     }
@@ -339,12 +349,22 @@ square-unit
 
 <div class="list">
 
+  <div class="notification">
+    <a class="notification-body bg-danger text-white">
+      <i class="fa fa-bell fa-1x" style="margin-right: 5px;"></i> New song just got added!
+    </a>
+  </div>
+<center>
+  <hr width="100%">
+</center>
 <div class="corousel">
-  <h6> <span class="badge badge-warning">NEW</span><br></h6>
+  <!-- <h6> <span class="badge badge-warning">NEW</span><br></h6> -->
   <a href="https://www.youtube.com/watch?v=ABskwwk68FU">
   <img class="corousel-img" src="https://img.youtube.com/vi/cQA7VKSvXFM/maxresdefault.jpg">
 </a>
-  <br><br>
+<center>
+  <hr width="100%">
+</center>
 </div>
 
   <h5 class="artist">♪ BTS (방탄소년단) </h5>
