@@ -84,8 +84,14 @@
         overflow-x: hidden;
 font-family: 'Comfortaa', cursive;
       }
-      .tags{
-      margin-left: 5px;
+      #loading{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      user-select: none;
+      user-zoom: none;
+      z-index: 10;
       }
 
     .container2{
@@ -124,7 +130,6 @@ width: 100%;
       margin: 10px 10px;
     }
     .corousel-img{
-      width: 100%;
       border-radius: 10px;
   box-shadow: 1px 1px 20px #dddddd;
   transition: 0.5s ease;
@@ -292,6 +297,12 @@ $(document).ready(function() {
           <div class="loader-spinner"></div>
         </div> -->
 
+        <div id="loading">
+          <center>
+          <img class="loading-img" src="../loader.gif" draggable="false"><br>
+          <!-- <h5> Loading</h5> -->
+          </center>
+        </div>
         <nav class="navbar fixed-top app-theme navbar-dark navbar-expand-lg scrolling-navbar lighten-5 mb-4">
           <a id="navbar" class="navbar-brand"> ConcertEra Music </a>
         </nav>
@@ -349,19 +360,134 @@ square-unit
 
 <div class="list">
 
-  <div class="notification">
+  <!-- <div class="notification">
     <a class="notification-body bg-danger text-white">
       <i class="fa fa-bell fa-1x" style="margin-right: 5px;"></i> New song just got added!
     </a>
   </div>
 <center>
   <hr width="100%">
-</center>
+</center> -->
 <div class="corousel">
   <!-- <h6> <span class="badge badge-warning">NEW</span><br></h6> -->
-  <a href="https://www.youtube.com/watch?v=ABskwwk68FU">
+  <!-- <a href="https://www.youtube.com/watch?v=ABskwwk68FU">
   <img class="corousel-img" src="https://img.youtube.com/vi/cQA7VKSvXFM/maxresdefault.jpg">
-</a>
+</a> -->
+ <!-- Carousel wrapper -->
+ <div
+ id="carouselBasicExample"
+ class="carousel slide carousel-fade"
+ data-mdb-ride="carousel"
+ >
+ <!-- Indicators -->
+ <div class="carousel-indicators">
+   <a
+     data-mdb-target="#carouselBasicExample"
+     data-mdb-slide-to="0"
+     class="active"
+     aria-current="true"
+     aria-label="Slide 1"
+   ></a>
+   <a
+     data-mdb-target="#carouselBasicExample"
+     data-mdb-slide-to="1"
+     aria-label="Slide 2"
+   ></a>
+   <a
+     data-mdb-target="#carouselBasicExample"
+     data-mdb-slide-to="2"
+     aria-label="Slide 3"
+   ></a>
+ </div>
+
+ <!-- Inner -->
+ <div class="carousel-inner">
+   <!-- Single item -->
+   <div class="carousel-item active">
+     <img
+       src="https://drive.google.com/uc?export=download&id=1_UQyWv2fnlEUeepWHJGgscqF_L70naSG"
+       class="d-block w-100 corousel-img"
+       alt="..."
+     />
+     <div class="carousel-caption d-none d-md-block">
+       <h5>First slide label</h5>
+       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+     </div>
+   </div>
+
+   <!-- Single item -->
+   <div class="carousel-item">
+     <img
+       src="https://drive.google.com/uc?export=download&id=1TkYnEJdSlmA8UP4DdXwnOd3jW754Fj3C"
+       class="d-block w-100 corousel-img"
+       alt="..."
+     />
+     <div class="carousel-caption d-none d-md-block">
+       <h5>Second slide label</h5>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     </div>
+   </div>
+
+   <!-- Single item -->
+   <div class="carousel-item">
+     <img
+       src="https://drive.google.com/uc?export=download&id=1NLe3ObodUVIqFTCoBdR6w2W5_twSIu54"
+       class="d-block w-100 corousel-img"
+       alt="..."
+     />
+     <div class="carousel-caption d-none d-md-block">
+       <h5>Third slide label</h5>
+       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+     </div>
+   </div>
+
+   <!-- Single item -->
+   <div class="carousel-item">
+     <img
+       src="https://drive.google.com/uc?export=download&id=1QSwYzKEbj9FIaZPJhVjXriL9m0GEqNOr"
+       class="d-block w-100 corousel-img"
+       alt="..."
+     />
+     <div class="carousel-caption d-none d-md-block">
+       <h5>Third slide label</h5>
+       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+     </div>
+   </div>
+
+   <!-- Single item -->
+   <div class="carousel-item">
+     <img
+       src="https://drive.google.com/uc?export=download&id=1CGmrEGBgFDnrjKTD_BpyDZZoQjJ0jw3o"
+       class="d-block w-100 corousel-img"
+       alt="..."
+     />
+     <div class="carousel-caption d-none d-md-block">
+       <h5>Third slide label</h5>
+       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+     </div>
+   </div>
+ </div>
+ <!-- Inner -->
+
+ <!-- Controls -->
+ <a
+   class="carousel-control-prev"
+   data-mdb-target="#carouselBasicExample"
+   data-mdb-slide="prev"
+ >
+   <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+   <span class="visually-hidden">Previous</span> -->
+ </a>
+ <a
+   class="carousel-control-next"
+   data-mdb-target="#carouselBasicExample"
+   data-mdb-slide="next"
+ >
+   <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   <span class="visually-hidden">Next</span> -->
+ </a>
+ </div>
+ <!-- Carousel wrapper -->
 <center>
   <hr width="100%">
 </center>
