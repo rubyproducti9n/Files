@@ -215,7 +215,7 @@ h4{
     display: block;
   }
   .container2{
-    margin-top: 30px;
+    margin-top: 00px;
     width: 100vw;
     background: #ffffffa2;
   border: 0px #000 solid;
@@ -293,6 +293,7 @@ display: none;
 }
 
 svg{
+  display: none;
 position: fixed;
 top: 50px;
 left: 0;
@@ -303,6 +304,42 @@ z-index: -1;
       font-size: 13px;
     color: rgb(102, 102, 102);
   }
+
+
+
+#loading{
+padding: 40px 20px;
+}
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 804px;
+  display: inline-block;
+  position: relative;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+  }
+
+box {
+  height: 504px;
+  width: 90vw;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
   }
 </style>
     <script>
@@ -311,11 +348,18 @@ z-index: -1;
     </head>
     <body>
 
-      <!-- <div id="loading">
-        <div class="loader-spinner"></div>
-      </div> -->
 
-      <nav class="navbar fixed-top app-theme navbar-dark navbar-expand-lg scrolling-navbar lighten-5 mb-4">
+      <div id="loading">
+        <!-- <img class="loading-img" src="../loader.gif" draggable="false"><br>
+        <h5> Loading</h5> -->
+
+
+        <box class="shine"></box><br><br>
+        <box class="shine"></box>
+
+      </div>
+
+      <nav class="navbar fixed-top visually-hidden app-theme navbar-dark navbar-expand-lg scrolling-navbar lighten-5 mb-4">
         <a id="navbar" class="navbar-brand"> ConcertEra Posts </a>
       </nav>
 
@@ -668,7 +712,7 @@ z-index: -1;
           <center> <div class="drag"></div> </center></div>
 
 
-          <br><br><br>
+          <br><br>
 
 
           <!-- <h6 style="padding: 0px 5px;"><i class="fa fa-image" style="padding: 0px 5px;"></i> Posts</h6><hr> -->
