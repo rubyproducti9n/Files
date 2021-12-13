@@ -2138,13 +2138,13 @@ transform: rotate(-135deg);
   /* Track */
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
-    border-radius: 10px;
+    border-radius: 0px;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, #5e008a, #ae00ff);
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 0px 0px 0px 0px;
     transition: 0.5s;
   }
 
@@ -2280,6 +2280,13 @@ transform: rotate(-135deg);
       backdrop-filter: blur(5px);
       background-color: #7500be7e;
       color: white;
+    }
+    .drag{
+      display: block;
+      height: 4px;
+      background-color: rgb(112, 112, 112);
+      border-radius: 10px;
+      width: 50px;
     }
     #loading{
       background-color: rgb(255, 255, 255);
