@@ -60,6 +60,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
     @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 
+    body{
+        display: block;
+        color: rgb(54, 54, 54);
+        overflow-x: hidden;
+        user-select: none;
+        user-zoom: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+font-family: 'Comfortaa', cursive;
+      }
     a{
       color: black;
     }
@@ -69,11 +79,170 @@
     a:active{
       color: rgb(66, 66, 66);
     }
-
-
       .container2{
-        display: none;
+        display: block;
+        padding-left: 0px;
+        margin: 50px 340px;
       }
+    svg{
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+    .notification{
+margin: 10px 10px;
+width: 100%;
+    }
+    .notification-body{
+      font-size: 12px;
+      border-radius: 6px;
+      /* background: #800080; */
+      padding: 10px 10px;
+    }
+    .corousel{
+      margin: 5px 5px;
+    }
+    .corousel-img{
+      width: 50%;
+      border-radius: 10px;
+  transition: 0.5s ease;
+    }
+    .corousel-img:active{
+      transform: scale(0.6);
+      transition: 0.5s ease;
+    }
+
+
+.music{
+  color: rgb(43, 43, 43);
+}
+hr{color: #000;}
+.artist{margin-left: 20px;margin-bottom: -20px;}
+.artist-img{
+  border-radius: 10px;
+  margin: 5px 5px;
+  width: 97%;}
+h5, h6{color: rgb(56, 56, 56);}
+h6{
+  font-size: 12px;
+margin-left: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.desc{
+color: #000;
+margin-left: 20px;
+margin-right: 0;
+margin-top: 0;
+font-size: 10px;
+}
+
+.audio{
+margin: 30px 0px;
+padding: 0px 0px;
+padding-top: 20px;
+padding-bottom: 10px;
+background-color: #fff;
+border: 1px #e6e6e6 solid;
+box-shadow: 1px 1px 20px #dddddd;
+border-radius: 16px;
+width: 50vw;
+transition: 0.5s ease;
+}
+.audio-img{
+display: none;
+margin: 0 0px;
+width: 100%;
+}
+.details{
+display: none;
+background-color: #800080;
+margin: 10px 10px;
+padding: 10px 10px;
+}
+#audio{
+width: 100%;
+border-radius: 16px;
+border: 2px #fff solid;
+background: #fff;
+box-shadow:  0px 0px 0px #2e2e2eb7;
+transition: 0.2s;
+}
+      #loading{
+        display: none;
+        background: rgb(255, 255, 255);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      user-select: none;
+      user-zoom: none;
+      padding: 10px 20px;
+      z-index: 10;
+      }
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 804px;
+  display: inline-block;
+  position: relative;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+  }
+
+box {
+  height: 204px;
+  width: 90vw;
+  border-radius: 10px;
+}
+
+/* div {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-top: 15px;
+  vertical-align: top;
+} */
+
+lines {
+  height: 20px;
+  margin-top: 10px;
+  width: 200px;
+}
+
+rectangle {
+  display: block!important;
+  width: 90vw;
+  height: 150px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #5e008a, #ae00ff);
+    border-radius: 5px 0 0 5px;
+    transition: 0.5s;
+  }
 
 
 
@@ -163,21 +332,23 @@ width: 100%;
   margin-top: 0;
   font-size: 10px;
 }
+
 .audio{
   margin: 30px 10px;
-  padding: 0px 10px;
+  padding: 0px 0px;
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: #fff;
   border: 1px #e6e6e6 solid;
   box-shadow: 1px 1px 20px #dddddd;
   border-radius: 16px;
+  width: 95vw;
   transition: 0.5s ease;
 }
 .audio-img{
   display: block;
-  margin: 0 -10px;
-  width: 94vw;
+  margin: 0 0px;
+  width: 100%;
 }
 .details{
   display: none;
@@ -193,7 +364,7 @@ background: #fff;
 box-shadow:  0px 0px 0px #2e2e2eb7;
 transition: 0.2s;
 }
-#audio:hover{
+/* #audio:hover{
 width: 88vw;
 border-radius: 16px;
 border: 2px #fff solid;
@@ -202,7 +373,7 @@ box-shadow:  -5px 0px 0px #fff;
 z-index: -1;
 transition: 0.2s;
 
-            }
+            } */
 .custom-btn{
   position: fixed;
   /* top: 225px;
@@ -438,7 +609,7 @@ square-unit
 <div class="corousel">
   <!-- <h6> <span class="badge badge-warning">NEW</span><br></h6> -->
   <!-- <a href="https://www.youtube.com/watch?v=ABskwwk68FU">
-  <img class="artist-img" src="https://img.youtube.com/vi/cQA7VKSvXFM/maxresdefault.jpg">
+  <img class="artist-img" alt="Unable to load image" src="https://img.youtube.com/vi/cQA7VKSvXFM/maxresdefault.jpg">
 </a> -->
  <!-- Carousel wrapper -->
  <div
@@ -474,12 +645,12 @@ square-unit
      <img
        src="https://drive.google.com/uc?export=download&id=1_UQyWv2fnlEUeepWHJGgscqF_L70naSG"
        class="d-block w-100 corousel-img"
-       alt="..."
+       alt=" Unable to load image"
      />
-     <div class="carousel-caption d-none d-md-block">
+     <!-- <div class="carousel-caption text-white d-none d-md-block">
        <h5>First slide label</h5>
        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-     </div>
+     </div> -->
    </div>
 
    <!-- Single item -->
@@ -487,12 +658,12 @@ square-unit
      <img
        src="https://drive.google.com/uc?export=download&id=1TkYnEJdSlmA8UP4DdXwnOd3jW754Fj3C"
        class="d-block w-100 corousel-img"
-       alt="..."
+       alt=" Unable to load image"
      />
-     <div class="carousel-caption d-none d-md-block">
+     <!-- <div class="carousel-caption d-none d-md-block">
        <h5>Second slide label</h5>
        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-     </div>
+     </div> -->
    </div>
 
    <!-- Single item -->
@@ -500,12 +671,12 @@ square-unit
      <img
        src="https://drive.google.com/uc?export=download&id=1NLe3ObodUVIqFTCoBdR6w2W5_twSIu54"
        class="d-block w-100 corousel-img"
-       alt="..."
+       alt=" Unable to load image"
      />
-     <div class="carousel-caption d-none d-md-block">
+     <!-- <div class="carousel-caption d-none d-md-block">
        <h5>Third slide label</h5>
        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-     </div>
+     </div> -->
    </div>
 
    <!-- Single item -->
@@ -513,12 +684,12 @@ square-unit
      <img
        src="https://drive.google.com/uc?export=download&id=1QSwYzKEbj9FIaZPJhVjXriL9m0GEqNOr"
        class="d-block w-100 corousel-img"
-       alt="..."
+       alt=" Unable to load image"
      />
-     <div class="carousel-caption d-none d-md-block">
+     <!-- <div class="carousel-caption d-none d-md-block">
        <h5>Third slide label</h5>
        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-     </div>
+     </div> -->
    </div>
 
    <!-- Single item -->
@@ -526,12 +697,12 @@ square-unit
      <img
        src="https://drive.google.com/uc?export=download&id=1CGmrEGBgFDnrjKTD_BpyDZZoQjJ0jw3o"
        class="d-block w-100 corousel-img"
-       alt="..."
+       alt=" Unable to load image"
      />
-     <div class="carousel-caption d-none d-md-block">
+     <!-- <div class="carousel-caption d-none d-md-block">
        <h5>Third slide label</h5>
        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-     </div>
+     </div> -->
    </div>
  </div>
  <!-- Inner -->
@@ -681,7 +852,7 @@ square-unit
           Album : BE<br>
           Released : November 20, 2020 <br>
           Music Label : Hybe Label<br>
-          Status : <span class="badge badge-danger">  Unavailable </span></p>
+          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
         <img class="audio-img" src="https://img.youtube.com/vi/-5q5mZbe3V8/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
@@ -1154,7 +1325,7 @@ square-unit
 <center>
 <hr width="90%">
 </center><br>
-<img class="artist-img" src="https://drive.google.com/uc?export=download&id=1ZD1EXVZ_zSJLa7sRTyEBOzDNNDp1C7b1">
+<img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1ZD1EXVZ_zSJLa7sRTyEBOzDNNDp1C7b1">
 <div class="audio">
   <h6>
     ♪ JIMIN (파크 지미) 'FILTER' Audio Song</h6>
@@ -1234,7 +1405,7 @@ square-unit
     <center>
     <hr width="90%">
     </center><br>
-    <img class="artist-img" src="https://drive.google.com/uc?export=download&id=1XBRtavCvIv5jH6gX_mneS6D6ghw0qXjP">
+    <img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1XBRtavCvIv5jH6gX_mneS6D6ghw0qXjP">
 
 <div class="audio">
  <h6>♪ JUNGKOOK (전정국) 'Euphoria' Audio Song</h6>
@@ -1294,7 +1465,7 @@ square-unit
     <center>
     <hr width="90%">
     </center>
-    <img class="artist-img" src="https://drive.google.com/uc?export=download&id=1FqqGS23gz5l-JEotxbWiXYQFbQGiH2V7">
+    <img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1FqqGS23gz5l-JEotxbWiXYQFbQGiH2V7">
 
 <div class="audio">
  <h6>♪ V (김태형) 'Sweet Night' Audio Song</h6>
@@ -1317,7 +1488,7 @@ square-unit
     <center>
     <hr width="90%">
     </center><br>
-    <img class="artist-img" src="https://drive.google.com/uc?export=download&id=1_1JC5k_9AFcyOisP7sJvCYkPjARXkpBl">
+    <img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1_1JC5k_9AFcyOisP7sJvCYkPjARXkpBl">
 
 <div class="audio">
  <h6>♪ Jin (김석진) 'EPIPHANY' Audio Song</h6>
@@ -1340,7 +1511,7 @@ square-unit
     <center>
     <hr width="90%">
     </center><br>
-    <img class="artist-img" src="https://drive.google.com/uc?export=download&id=1zpv5DsFQnWJ23HZTcyIONJwnAkNgUW9o">
+    <img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1zpv5DsFQnWJ23HZTcyIONJwnAkNgUW9o">
 
 <div class="audio">
  <h6>♪ Suga (민윤기) 'People' Audio Song</h6>
@@ -1417,7 +1588,7 @@ square-unit
     <center>
     <hr width="90%">
     </center><br>
-    <img class="artist-img" src="https://drive.google.com/uc?export=download&id=1FCx6KlrWkiFrmYUJoc6ADFrSWLzCZ6z1">
+    <img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1FCx6KlrWkiFrmYUJoc6ADFrSWLzCZ6z1">
 
     <div class="audio">
      <h6>♪ RM (김난존) 'Trivia' Audio Song</h6>
@@ -1440,7 +1611,7 @@ square-unit
     <center>
     <hr width="90%">
     </center><br>
-    <img class="artist-img" src="https://drive.google.com/uc?export=download&id=1YoMgZ7xb4c-Svnu2hU5Odwp112eiBVlJ">
+    <img class="artist-img" alt="Unable to load image" src="https://drive.google.com/uc?export=download&id=1YoMgZ7xb4c-Svnu2hU5Odwp112eiBVlJ">
 
     <div class="audio">
      <h6>♪ J-hope (정호석) 'Unknown' Audio Song</h6>

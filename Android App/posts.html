@@ -88,12 +88,13 @@ font-family: 'Comfortaa', cursive;
   overflow: scroll;
   width: 30vw;
   padding: 10px 0px;
+font-family: 'Comfortaa', cursive;
   transition: 0.5s;
 }
 .img-avatar{
   width: 11%;
   padding: 20x 20px;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 1px rgb(204, 204, 204) solid;
   border-radius: 50px;
 /* box-shadow: 2px 2px 6px #000000a2; */
@@ -101,14 +102,23 @@ font-family: 'Comfortaa', cursive;
 .profile-name{
 color: #282828;
 margin-left: 10px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 16px;
 }
 .location{
 color: #282828;
 margin-left: 10px;
 font-size: 10px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Comfortaa', cursive;
+}
+.caption{
+padding: 5px 10px;
+font-size: 12px;
+}
+.hash{
+color: #800080;
+padding: 0 10px;
+margin-bottom: -20px;
+font-size: 12px;
 }
 .img-post{
 background: #fff;
@@ -212,10 +222,19 @@ h4{
     user-select: none;
   }
   .navbar{
-    display: block;
+    display: none;
+  }
+  a{
+    color: black;
+  }
+  a:hover{
+    color: rgb(34, 34, 34);
+  }
+  a:active{
+    color: rgb(66, 66, 66);
   }
   .container2{
-    margin-top: 00px;
+    margin-top: -20px;
     width: 100vw;
     background: #ffffffa2;
   border: 0px #000 solid;
@@ -226,10 +245,10 @@ h4{
   width: 94vw;
   padding: 10px 0px;
   background: #fff;
-  border: 1px rgb(223, 223, 223) solid;
-  border-radius: 10px;
+  border: 1px #e6e6e6 solid;
+  box-shadow: 1px 1px 20px #dddddd;
+  border-radius: 16px;
   margin: 20px 10px;
-box-shadow: 0px 0px 16px #0000002f;
   transition: 0.5s;
 }
 .btn-download{
@@ -247,14 +266,24 @@ border-radius: 6px;
 .profile-name{
 color: #111;
 margin-left: 10px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 16px;
 }
 .location{
 color: #111;
 margin-left: 10px;
 font-size: 10px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Comfortaa', cursive;
+}
+.caption{
+  color: #000;
+padding: 5px 10px;
+font-size: 12px;
+}
+.hash{
+color: #800080;
+padding: 0 10px;
+margin-bottom: -20px;
+font-size: 12px;
 }
 .img-post{
 width: 100vw;
@@ -307,6 +336,7 @@ z-index: -1;
 
 
 #loading{
+  display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -388,55 +418,21 @@ box {
   <!--No Scheduled post  -->
 </div>
   <div class="posts">
-    <img class="img-avatar float-start" src="../ruby (1).png">
-    <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-    <a class="location" href="#">18 Nov, 2021 • India</a><br>
+    <img class="img-avatar float-start" src="../posts/user_img/_uarmyhope__.jpg">
+    <a class="profile-name" href="../index.html">_uarmyhope__</a><br>
+    <a class="location" href="#">13 Dec, 2021 • India</a><br>
+    <a class="caption">
+      orange juice.. 💜
+      <div class="hash">#bts #rm #kimnamjoon #btsforever</div>
+    </a><br>
     <a download="BTS.jpg" title="bts_image">
-    <img class="img-post downloadable" draggable="false" src="../posts/jhope_2.jpg">
-  </a><br><br>
-  <center>
+    <img class="img-post downloadable" draggable="false" src="../posts/rm1.jpg">
+  </a>
+  <!-- <br><br> -->
+  <!-- <center>
     <a class="btn-download disabled"> <i class="fa fa-download"></i> </a>
-  </center>
+  </center> -->
   <br>
-    <div class="social-count">
-      <i class="fa fa-heart heart"></i> 3
-      <i class="fa fa-download download"></i> 0
-      <i class="fa fa-share-alt share"></i> 0
-    </div><br>
-    <center> <div class="drag"></div> </center></div>
-  <div class="posts">
-    <img class="img-avatar float-start" src="../ruby (1).png">
-    <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-    <a class="location" href="#">18 Nov, 2021 • India</a><br>
-    <a download="BTS.jpg" title="bts_image">
-    <img class="img-post downloadable" draggable="false" src="../posts/suga_6.jpg">
-  </a><br>
-    <div class="social-count">
-      <i class="fa fa-heart heart"></i> 6
-      <i class="fa fa-download download"></i> 0
-      <i class="fa fa-share-alt share"></i> 0
-    </div><br>
-    <center> <div class="drag"></div> </center></div>
-  <div class="posts">
-    <img class="img-avatar float-start" src="../ruby (1).png">
-    <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-    <a class="location" href="#">18 Nov, 2021 • India</a><br>
-    <a download="BTS.jpg" title="bts_image">
-    <img class="img-post downloadable" draggable="false" src="../posts/rm_3.jpg">
-  </a><br>
-    <div class="social-count">
-      <i class="fa fa-heart heart"></i> 11
-      <i class="fa fa-download download"></i> 0
-      <i class="fa fa-share-alt share"></i> 0
-    </div><br>
-    <center> <div class="drag"></div> </center></div>
-  <div class="posts">
-    <img class="img-avatar float-start" src="../ruby (1).png">
-    <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-    <a class="location" href="#">18 Nov, 2021 • India</a><br>
-    <a download="BTS.jpg" title="bts_image">
-    <img class="img-post downloadable" draggable="false" src="../posts/jimin_7.jpg">
-  </a><br>
     <div class="social-count">
       <i class="fa fa-heart heart"></i> 13
       <i class="fa fa-download download"></i> 0
@@ -444,37 +440,76 @@ box {
     </div><br>
     <center> <div class="drag"></div> </center></div>
   <div class="posts">
-    <img class="img-avatar float-start" src="../ruby (1).png">
-    <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-    <a class="location" href="#">17 Nov, 2021 • India</a><br>
+    <img class="img-avatar float-start" src="../posts/user_img/bts_army90_.jpg">
+    <a class="profile-name" href="../index.html">bts_army90_</a><br>
+    <a class="location" href="#">11 Dec, 2021 • India</a><br>
     <a download="BTS.jpg" title="bts_image">
-    <img class="img-post downloadable" draggable="false" src="../posts/jin_5.jpg">
+    <img class="img-post downloadable" draggable="false" src="../posts/suga1.jpg">
   </a><br>
     <div class="social-count">
-      <i class="fa fa-heart heart"></i> 4
+      <i class="fa fa-heart heart"></i> 63
       <i class="fa fa-download download"></i> 0
       <i class="fa fa-share-alt share"></i> 0
     </div><br>
     <center> <div class="drag"></div> </center></div>
   <div class="posts">
-    <img class="img-avatar float-start" src="../ruby (1).png">
-    <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-    <a class="location" href="#">17 Nov, 2021 • India</a><br>
+    <img class="img-avatar float-start" src="../posts/user_img/KimTaehying__.jpg">
+    <a class="profile-name" href="../index.html">Kim Taehyung__</a><br>
+    <a class="location" href="#">03 Dec, 2021 • India</a><br>
     <a download="BTS.jpg" title="bts_image">
-    <img class="img-post downloadable" draggable="false" src="../posts/jimin_6.jpg">
+    <img class="img-post downloadable" draggable="false" src="../posts/v1.jpg">
   </a><br>
     <div class="social-count">
-      <i class="fa fa-heart heart"></i> 8
+      <i class="fa fa-heart heart"></i> 88
+      <i class="fa fa-download download"></i> 0
+      <i class="fa fa-share-alt share"></i> 0
+    </div><br>
+    <center> <div class="drag"></div> </center></div>
+  <div class="posts">
+    <img class="img-avatar float-start" src="../posts/user_img/army_girl_1_.jpg">
+    <a class="profile-name" href="../index.html">__armygirl_1_</a><br>
+    <a class="location" href="#">06 Dec, 2021 • India</a><br>
+    <a download="BTS.jpg" title="bts_image">
+    <img class="img-post downloadable" draggable="false" src="../posts/bts1.jpg">
+  </a><br>
+    <div class="social-count">
+      <i class="fa fa-heart heart"></i> 73
+      <i class="fa fa-download download"></i> 0
+      <i class="fa fa-share-alt share"></i> 0
+    </div><br>
+    <center> <div class="drag"></div> </center></div>
+  <div class="posts">
+    <img class="img-avatar float-start" src="../posts/user_img/_uarmyhope__.jpg">
+    <a class="profile-name" href="../index.html">_uarmyhope__</a><br>
+    <a class="location" href="#">14 Dec, 2021 • India</a><br>
+    <a download="BTS.jpg" title="bts_image">
+    <img class="img-post downloadable" draggable="false" src="../posts/jhpe1.jpg">
+  </a><br>
+    <div class="social-count">
+      <i class="fa fa-heart heart"></i> 43
+      <i class="fa fa-download download"></i> 0
+      <i class="fa fa-share-alt share"></i> 0
+    </div><br>
+    <center> <div class="drag"></div> </center></div>
+  <div class="posts">
+    <img class="img-avatar float-start" src="../posts/user_img/army_girl_1_.jpg">
+    <a class="profile-name" href="../index.html">army_girl_1_</a><br>
+    <a class="location" href="#">12 Dec, 2021 • India</a><br>
+    <a download="BTS.jpg" title="bts_image">
+    <img class="img-post downloadable" draggable="false" src="../posts/jin1.jpg">
+  </a><br>
+    <div class="social-count">
+      <i class="fa fa-heart heart"></i> 81
       <i class="fa fa-download download"></i> 0
       <i class="fa fa-share-alt share"></i> 0
     </div><br>
     <center> <div class="drag"></div> </center></div>
         <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">17 Nov, 2021 • India</a><br>
+          <img class="img-avatar float-start" src="../posts/user_img/army_girl_1_.jpg">
+          <a class="profile-name" href="../index.html">army_girl_1_</a><br>
+          <a class="location" href="#">17 Dec, 2021 • India</a><br>
           <a download="BTS.jpg" title="bts_image">
-          <img class="img-post downloadable" draggable="false" src="../posts/jungkook_3.jpg">
+          <img class="img-post downloadable" draggable="false" src="../posts/jk1.jpg">
         </a><br>
           <div class="social-count">
             <i class="fa fa-heart heart"></i> 12
@@ -483,11 +518,11 @@ box {
           </div><br>
     <center> <div class="drag"></div> </center></div>
         <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">16 Nov, 2021 • India</a><br>
+          <img class="img-avatar float-start" src="../posts/user_img/army_girl_1_.jpg">
+          <a class="profile-name" href="../index.html">army_girl_1_</a><br>
+          <a class="location" href="#">16 Dec, 2021 • India</a><br>
           <a download="BTS.jpg" title="bts_image">
-          <img class="img-post downloadable" draggable="false" src="../posts/gr1.jpg">
+          <img class="img-post downloadable" draggable="false" src="../posts/v2.jpg">
         </a><br>
           <div class="social-count">
             <i class="fa fa-heart heart"></i> 9
@@ -496,227 +531,17 @@ box {
           </div><br>
     <center> <div class="drag"></div> </center></div>
         <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">16 Nov, 2021 • India</a><br>
+          <img class="img-avatar float-start" src="../posts/user_img/army_girl_1_.jpg">
+          <a class="profile-name" href="../index.html">army_girl_1_</a><br>
+          <a class="location" href="#">16 Dec, 2021 • India</a><br>
           <a download="BTS.jpg" title="bts_image">
-          <img class="img-post downloadable" draggable="false" src="../posts/v_3.jpg">
+          <img class="img-post downloadable" draggable="false" src="../posts/v3.jpg">
         </a><br>
           <div class="social-count">
             <i class="fa fa-heart heart"></i> 9
             <i class="fa fa-download download"></i> 0
             <i class="fa fa-share-alt share"></i> 0
           </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">16 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jungkook_2.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 9
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">15 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/suga_5.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 6
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">15 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jin_4.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 9
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">15 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jimin_5.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 8
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">15 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/suga_4.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 11
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">14 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/suga_3.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 6
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">14 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jimin_4.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 10
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-          <div class="posts">
-            <img class="img-avatar float-start" src="../ruby (1).png">
-            <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-            <a class="location" href="#">14 Nov, 2021 • India</a><br>
-            <img class="img-post downloadable" draggable="false" src="../posts/jin_3.jpg"><br>
-            <div class="social-count">
-              <i class="fa fa-heart heart"></i> 9
-              <i class="fa fa-download download"></i> 0
-              <i class="fa fa-share-alt share"></i> 0
-            </div><br>
-    <center> <div class="drag"></div> </center></div>
-          <div class="posts">
-            <img class="img-avatar float-start" src="../ruby (1).png">
-            <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-            <a class="location" href="#">14 Nov, 2021 • India</a><br>
-            <img class="img-post downloadable" draggable="false" src="../posts/jimin_3.jpg"><br>
-            <div class="social-count">
-              <i class="fa fa-heart heart"></i> 9
-              <i class="fa fa-download download"></i> 0
-              <i class="fa fa-share-alt share"></i> 0
-            </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">14 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jungkook_1.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 6
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-          <div class="posts">
-            <img class="img-avatar float-start" src="../ruby (1).png">
-            <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-            <a class="location" href="#">14 Nov, 2021 • India</a><br>
-            <img class="img-post downloadable" draggable="false" src="../posts/v_2.jpg"><br>
-            <div class="social-count">
-              <i class="fa fa-heart heart"></i> 1
-              <i class="fa fa-download download"></i> 0
-              <i class="fa fa-share-alt share"></i> 0
-            </div><br>
-    <center> <div class="drag"></div> </center></div>
-            <div class="posts">
-              <img class="img-avatar float-start" src="../ruby (1).png">
-              <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-              <a class="location" href="#">13 Nov, 2021 • India</a><br>
-              <img class="img-post downloadable" draggable="false" src="../posts/v_1.jpg"><br>
-              <div class="social-count">
-                <i class="fa fa-heart heart"></i> 9
-                <i class="fa fa-download download"></i> 0
-                <i class="fa fa-share-alt share"></i> 0
-              </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">13 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/suga_2.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 3
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">13 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/rm_1.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 8
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-          <div class="posts">
-            <img class="img-avatar float-start" src="../ruby (1).png">
-            <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-            <a class="location" href="#">12 Nov, 2021 • India</a><br>
-            <img class="img-post downloadable" draggable="false" src="../posts/jhope_1.jpg"><br>
-            <div class="social-count">
-              <i class="fa fa-heart heart"></i> 4
-              <i class="fa fa-download download"></i> 0
-              <i class="fa fa-share-alt share"></i> 0
-            </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">12 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jimin_2.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 6
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">12 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jin_2.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 4
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">10 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/suga_1.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 1
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-    <center> <div class="drag"></div> </center></div>
-        <div class="posts">
-          <img class="img-avatar float-start" src="../ruby (1).png">
-          <a class="profile-name" href="../index.html">RUBY PRODUCTION</a><br>
-          <a class="location" href="#">10 Nov, 2021 • India</a><br>
-          <img class="img-post downloadable" draggable="false" src="../posts/jin_1.jpg"><br>
-          <div class="social-count">
-            <i class="fa fa-heart heart"></i> 3
-            <i class="fa fa-download download"></i> 0
-            <i class="fa fa-share-alt share"></i> 0
-          </div><br>
-          <center> <div class="drag"></div> </center></div>
 
 
           <br><br>
