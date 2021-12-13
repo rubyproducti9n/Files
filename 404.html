@@ -36,8 +36,11 @@
     <link rel="icon" href="ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
+      @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
     body{color: rgb(0, 0, 0);
-      background: #ffffff;user-select: none;
+      background: #ffffff;user-select: none;font-family: 'Comfortaa', cursive;
     overflow: hidden;}
     a{color: #ffffff;}
       a:hover{
@@ -54,13 +57,12 @@
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
-    text-shadow: 0 0 2px #3f0069;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* text-shadow: 0 0 2px #3f0069; */
     }
     .header{
       display: none;
     color: #ffffff;
-    background: #6b006b00;
+    background: #18181800;
     padding: 10px 80px;
     }
     .title{
@@ -82,22 +84,37 @@
     z-index: 1;
     }
     .err-pg{
-    color: #3f0069;
+    color: #2c2c2c;
+    font-size: 9px;
     }
     .err-img{
         margin-top: 100px;
     content: url(maintenance/404.png);
-    width: 40%;
+    width: 30%;
     z-index: -1;
     }
+    h2{color: rgb(56, 56, 56);}
+    h6{font-size: 12px;}
     @media screen and (max-width: 768px){
     .container2{
-    color: #000;
+    color: rgb(56, 56, 56);
     display: block;
     margin-top: 0px;
     /* margin: auto; */
     width: 100%;
     padding: 30px 10px;}
+    .err-pg{
+    color: #2c2c2c;
+    font-size: 9px;
+    }
+    .err-img{
+        margin-top: 100px;
+    content: url(maintenance/404.png);
+    width: 80%;
+    z-index: -1;
+    }
+    h2{color: rgb(56, 56, 56);}
+    h6{font-size: 12px;}
     .navbar{display: none;}}
     </style>
     <script>
@@ -207,9 +224,9 @@
     <center>
 
 <img class="err-img"><br>
-<h2>Oops! Page not Found</h2>
-<h6>Requested page was not found</h6>
-<a class="btn btn-secondary text-white" href="RUBY PRODUCTION.html">Take me home</a>
+<h2>Oops! That's an error.</h2>
+<h6>Requested page was not found.</h6>
+<!-- <a class="btn btn-secondary text-white" href="index.html">Take me home</a> -->
 
     </center>
     <br><br><br><br><br><br><br><br>
