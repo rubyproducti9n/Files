@@ -226,14 +226,10 @@ z-index: -1;}
 
 <div class="live">
 <h5 style="margin-bottom: 20px;"> Upcoming</h5>
-<a class="" onclick="error()"> <i class="fa fa-wifi" style="margin-left: 15px;"></i>
-<a class=" align" onclick="error()" style="margin-left: 13px;"> LIVE </a><br>
+<a class="" onclick="bangtan()"> <i class="fa fa-wifi" style="margin-left: 15px;"></i>
+<a class=" align" onclick="bangtan()" style="margin-left: 13px;"> BANGTAN IS LIVE </a><br>
 <a style="display: block; margin-left: 54px; font-size: 10px;">
- LIVE CONCERT • 28 Nov</a></a><hr>
- <a class="" onclick="bangtan()"> <i class="fa fa-wifi" style="margin-left: 15px;"></i>
- <a class=" align" onclick="bangtan()" style="margin-left: 13px;"> BANGTAN IS LIVE </a><br>
- <a style="display: block; margin-left: 54px; font-size: 10px;">
-  Concert Nights • 28 Nov - 07 p.m. onwards</a></a><hr><br></div>
+ V Special • 30 Dec, 12 AM</a></a><hr><br></div>
 
 <!-- <h6>Artists</h6>
 <a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
@@ -319,19 +315,51 @@ Error 404</a></a><hr><br>
         </tr>
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../../alb-png.png" alt="Unavailable" style="width: 250px;">
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../../alb-jpg.png" alt="Unavailable" style="width: 250px;">
+            </a></center></td>
+          <td>
+            <a class="text-black" href="javascript:void(0)"><h6> BANGTAN IS LIVE | V SPECIAL | STREAMING SOON </h6></a>
+            <h5>
+             <small class="text-black">
+               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
+              Announced <time class="timeago text-black" datetime="15 Dec 2021 14:51"></time><br>
+              Artist: BTS<br>
+                Medium: Audio / Video<br>
+                Music Label: Hybe Label<br>
+                <!-- <b class="text-danger">Stream Unavailable</b><br> -->
+           Streaming: 30 Dec, 12 AM<br>
+           <b>Live in:</b><br>
+           <div id="timer"></div>
+
+            </small>
+
+            <b> Tags:</b>
+            <span class="badge bg-secondary">BTS ROOMS</span>
+            <span class="badge bg-secondary">K-POP</span>
+            <span class="badge bg-secondary">V Special</span>
+            <span class="badge bg-secondary">Hybe Label</span>
+            <span class="badge bg-secondary">rubyproducti9n</span>
+            <span class="badge bg-secondary">...</span><br><br>
+
+            <div id="butter-count"></div>
+            </h5> </a>
+          </td>
+        </tr>
+        <tr class="">
+          <td><center>
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
             </a></center></td>
           <td>
             <a class="text-black" href="javascript:void(0)"><h6> BTS LIVE CONCERT | LIVE CONCERT | STREAMING SOON </h6></a>
             <h5>
              <small class="text-black">
                <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="04 Nov 2021 14:51"></time><br>
+              Announced <time class="timeago text-black" datetime="30 Nov 2021 14:51"></time><br>
               Artist: BTS<br>
                 Medium: Audio / Video<br>
                 Music Label: Hybe Label<br>
-                <!-- <b class="text-danger">Stream Unavailable</b><br> -->
-           Streaming: 28 Nov<br>
+                <b class="text-danger">Stream Unavailable</b><br>
+           <!-- Streaming: 01 Dec<br> -->
 
             </small>
 
@@ -349,7 +377,7 @@ Error 404</a></a><hr><br>
         </tr>
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../../alb-jpg.png" alt="Unavailable" style="width: 250px;">
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
             </a></center></td>
           <td>
             <a class="text-black" href="javascript:void(0)"><h6> CONCERT NIGHTS | Room | BANGTAN MIX </h6></a>
@@ -360,9 +388,7 @@ Error 404</a></a><hr><br>
               Artist: BTS<br>
                 Medium: Audio<br>
                 Music Label: Hybe Label<br>
-                <!-- <b class="text-danger">Stream Unavailable</b><br> -->
-            <b>Live in:</b><br>
-            <div id="timer"></div>
+                <b class="text-danger">Stream Unavailable</b><br>
 
 
             </small>
@@ -512,7 +538,9 @@ Error 404</a></a><hr><br>
 function learn(){window.location = "../Help/room.html";}
 function schedule(){window.location = "../schedule.html";}
 function bangtan(){window.location = "bts room.html";}
-function error(){alert("Day 1 Stream Ends, Join us tomorrow at 9:00 AM IST");}
+function error(){alert("No live concerts found");}
+// function error(){window.location = "https://www.youtube.com/watch?v=gfhYyjK2bGY";}
+
 </script>
 <script type="text/javascript" src="../js.js"></script>
 <script type="text/javascript" src="../../mdb/js/jquery.min.js"></script>
