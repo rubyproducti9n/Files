@@ -4,8 +4,8 @@
 window.setInterval(function() {
 var audio = document.getElementById("audio");
 var current = new Date();
-var visible = new Date("Nov 28, 2021 19:00:01")
-var expiry = new Date("Nov 29, 2021 03:00:02")
+var visible = new Date("Dec 30, 2021 24:00:01")
+var expiry = new Date("Dec 30, 2021 03:00:02")
 if (current.getTime() > visible.getTime()) {
 $('.player').hide();
 $('.live').show();
@@ -38,7 +38,7 @@ window.location.href = "select.html";}}, 0);
 // START/END COUNT CONTROL
 // ==============================================================
 // COUNT START CONTROL ==========================================
-var countDownstreaming = new Date("Nov 28, 2021 19:00:00").getTime();
+var countDownstreaming = new Date("Dec 30, 2021 24:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownstreaming - now;
@@ -52,7 +52,7 @@ document.getElementById("timer").innerHTML = days + "d " + hours + "h "
 clearInterval(x);
 document.getElementById("timer").innerHTML = "NOW STREAMING";}}, 1000);
 // COUNT END CONTROL ============================================
-var countDownEnd = new Date("Nov 29, 2021 03:00:00").getTime();
+var countDownEnd = new Date("Dec 30, 2021 03:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownEnd - now;
@@ -200,10 +200,10 @@ let curr_track = document.createElement('audio');
 // Define the list of tracks that have to be played
 let track_list = [
   {
-    name: "Concert Nights",
-    artist: "BTS",
-    image: "../../alb-concert.jpg",
-    path: "https://drive.google.com/uc?export=download&id=1keh5hyj3JbXBePgrXuDgnth0roDNJ-Fn"
+    name: "V Special",
+    artist: "Kim Tae-hyung",
+    image: "../../v-special.jpg",
+    path: ""
   },
 ];
 
