@@ -2281,12 +2281,43 @@ transform: rotate(-135deg);
       background-color: #7500be7e;
       color: white;
     }
-    .drag{
+    .drag-tooltip{
       display: block;
       height: 4px;
       background-color: rgb(112, 112, 112);
       border-radius: 10px;
       width: 50px;
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      transition: 0.5s;
+    }
+    .drag-tooltip .drag-tooltiptext {
+    visibility: visible;
+    width: 200px;
+    height: 180px;
+    background-color: #80008000;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0);
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -240px;
+    bottom: 100%;
+    left: 100px;
+    margin-left: 0px;
+    }
+
+    .drag-tooltip:hover .drag-tooltiptext {
+    overflow: visible;
+    visibility: visible;
+    transition: 0.5s;
+    }
+    .qr-img{
+      width: 100%;
     }
     #loading{
       background-color: rgb(255, 255, 255);
@@ -2351,6 +2382,37 @@ transform: rotate(-135deg);
     background-color: rgb(112, 112, 112);
     border-radius: 10px;
     width: 50px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .drag-tooltip .drag-tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  height: 180px;
+  background-color: #80008000;
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0);
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  top: -160px;
+  bottom: 100%;
+  left: 0px;
+  margin-left: 0px;
+  }
+
+  .drag-tooltip:hover .drag-tooltiptext {
+  overflow: visible;
+  visibility: visible;
+  transition: 0.5s;
+  }
+  .qr-img{
+    width: 80%;
   }
   .more-vid{
   position: absolute;
