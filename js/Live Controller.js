@@ -201,9 +201,9 @@ let curr_track = document.createElement('audio');
 let track_list = [
   {
     name: "V Special",
-    artist: "Kim Tae-hyung",
+    artist: "Kim Tae-hyung (김태형)",
     image: "../../v-special.jpg",
-    path: ""
+    path: "https://drive.google.com/uc?export=download&id=1kd72X2xPFPpO08vSXHIVsVaeG8_hh-YV"
   },
 ];
 
