@@ -71,7 +71,7 @@ document.getElementById("ending").innerHTML = "Loading...";}}, 1000);
 // ================================================================
 var div = document.getElementById("loading-starts");
 div.innerHTML += ' <div class="streaming">\
-<center> <img class="strm-img" src="../../bts-logo.png" draggable="false"></center>\
+<center> <img class="strm-img" src="../bts-logo.png" draggable="false"></center>\
   <p class="expired-text"><center>\
   <h6>STREAMS IN</h6>\
   <h6><div id="timer"></div></h6>\
@@ -81,7 +81,7 @@ div.innerHTML += ' <div class="streaming">\
 {/*  */}
 var div = document.getElementById("loading-ends");
 div.innerHTML += '<div class="expired">\
-<center> <img class="ex-img" src="../../bts-logo.png" draggable="false"></center>\
+<center> <img class="ex-img" src="../bts-logo.png" draggable="false"></center>\
 \
 </div>';
 
@@ -202,7 +202,7 @@ let track_list = [
   {
     name: "V Special",
     artist: "Kim Tae-hyung (김태형)",
-    image: "../../v-special.jpg",
+    image: "../v-special.jpg",
     path: "https://drive.google.com/uc?export=download&id=1kd72X2xPFPpO08vSXHIVsVaeG8_hh-YV"
   },
 ];
