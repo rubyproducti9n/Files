@@ -2317,8 +2317,18 @@ transform: rotate(-135deg);
     transition: 0.5s;
     }
     .qr-img{
-      width: 100%;
+      width: 95%;
     }
+.brand{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: #fff;
+  font-size: 9px;
+}
+.brand-img{
+  width: 4%;
+}
     #loading{
       background-color: rgb(255, 255, 255);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
