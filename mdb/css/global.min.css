@@ -2294,21 +2294,22 @@ transform: rotate(-135deg);
     }
     .drag-tooltip .drag-tooltiptext {
     visibility: visible;
-    width: 200px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     background-color: #80008000;
     box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0);
     color: #fff;
     text-align: center;
     font-size: 13px;
+    border: 1px #d3d3d3 solid;
     border-radius: 4px;
     padding: 10px 10px;
     position: absolute;
-    z-index: 1;
-    top: -240px;
+    top: -230px;
     bottom: 100%;
-    left: 100px;
+    left: 200px;
     margin-left: 0px;
+    z-index: 20;
     }
 
     .drag-tooltip:hover .drag-tooltiptext {
@@ -2317,7 +2318,8 @@ transform: rotate(-135deg);
     transition: 0.5s;
     }
     .qr-img{
-      width: 95%;
+      width: 100%;
+      color: #222;
     }
 .brand{
   position: absolute;
@@ -2398,31 +2400,34 @@ transform: rotate(-135deg);
     transition: 0.5s;
   }
   .drag-tooltip .drag-tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  height: 180px;
-  background-color: #80008000;
+  visibility: visible;
+  width: 150px;
+  height: 150px;
+  background-color: #80008077;
   box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0);
   color: #fff;
   text-align: center;
   font-size: 13px;
   border-radius: 4px;
-  padding: 10px 10px;
+  padding: 3px 3px;
   position: absolute;
   z-index: 1;
-  top: -160px;
+  top: -220px;
   bottom: 100%;
-  left: 0px;
-  margin-left: 0px;
+  left: 530px;
+  transition: 0.5s;
   }
 
   .drag-tooltip:hover .drag-tooltiptext {
   overflow: visible;
   visibility: visible;
+  top: -220px;
+  bottom: 100%;
+  left: 30px;
   transition: 0.5s;
   }
   .qr-img{
-    width: 80%;
+    width: 100%;
   }
   .more-vid{
   position: absolute;
