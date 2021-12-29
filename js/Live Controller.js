@@ -4,7 +4,7 @@
 window.setInterval(function() {
 var audio = document.getElementById("audio");
 var current = new Date();
-var visible = new Date("Dec 30, 2021 24:00:01")
+var visible = new Date("Dec 30, 2021 00:00:01")
 var expiry = new Date("Dec 30, 2021 03:00:02")
 if (current.getTime() > visible.getTime()) {
 $('.player').hide();
@@ -15,7 +15,7 @@ $('.streaming').hide();
 $('.expired').hide();
 $('.join').show();
 } if (current.getTime() > expiry.getTime()) {
-  $('.player').show();
+$('.player').show();
 $('.notice').hide();
 $('.live').hide();
 $('.streaming').hide();
@@ -38,7 +38,7 @@ window.location.href = "select.html";}}, 0);
 // START/END COUNT CONTROL
 // ==============================================================
 // COUNT START CONTROL ==========================================
-var countDownstreaming = new Date("Dec 30, 2021 24:00:00").getTime();
+var countDownstreaming = new Date("Dec 30, 2021 00:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownstreaming - now;
