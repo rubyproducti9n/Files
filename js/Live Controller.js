@@ -4,8 +4,8 @@
 window.setInterval(function() {
 var audio = document.getElementById("audio");
 var current = new Date();
-var visible = new Date("Dec 30, 2021 00:00:01")
-var expiry = new Date("Dec 30, 2021 03:00:02")
+var visible = new Date("Dec 31, 2021 23:44:01")
+var expiry = new Date("Jan 01, 2022 03:00:02")
 if (current.getTime() > visible.getTime()) {
 $('.player').hide();
 $('.live').show();
@@ -38,7 +38,7 @@ window.location.href = "select.html";}}, 0);
 // START/END COUNT CONTROL
 // ==============================================================
 // COUNT START CONTROL ==========================================
-var countDownstreaming = new Date("Dec 30, 2021 00:00:00").getTime();
+var countDownstreaming = new Date("Dec 31, 2021 23:44:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownstreaming - now;
@@ -52,7 +52,7 @@ document.getElementById("timer").innerHTML = days + "d " + hours + "h "
 clearInterval(x);
 document.getElementById("timer").innerHTML = "NOW STREAMING";}}, 1000);
 // COUNT END CONTROL ============================================
-var countDownEnd = new Date("Dec 30, 2021 03:00:00").getTime();
+var countDownEnd = new Date("Jan 01, 2022 03:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownEnd - now;
@@ -200,10 +200,10 @@ let curr_track = document.createElement('audio');
 // Define the list of tracks that have to be played
 let track_list = [
   {
-    name: "V Special",
-    artist: "Kim Tae-hyung (김태형)",
-    image: "../v-special.jpg",
-    path: "https://drive.google.com/uc?export=download&id=1kd72X2xPFPpO08vSXHIVsVaeG8_hh-YV"
+    name: "New Year Special",
+    artist: "BTS & Army",
+    image: "../2022.jpg",
+    path: "https://drive.google.com/uc?export=download&id=1Wp_IJvJlGAkw3BFiDnLXP7gDBaMuWDtl"
   },
 ];
 
