@@ -62,10 +62,11 @@ background-color: #fff;
 /* background: linear-gradient(-180deg, #b800dd, #6b006b); */
 background-size: 100% 300%;
 border-top: 6px #6b006b solid;
+overflow: hidden;
 user-select: none;}
 /* .maintain-container{display: block;} */
 a{color: #464646;}
-a:hover{color: #0099ff;}
+a:hover{color: #800080;}
 a:active{color: #000000;}
 .timeago{color: black;}
 .container2{
@@ -105,18 +106,34 @@ color: #141414;
 }
 .whatsapp-container{
 position: absolute;
-bottom: 20px;
-right: 20px;
-background: #10bd00;
-padding: 20px 30px;
-border-radius: 10px;
-font-family: Arial, Helvetica, sans-serif;
-z-index: 21;
+top: 100px;
+right: -280px;
+background: #710080;
+padding: 30px 60px;
+border-radius: 20px;
+font-family: 'Comfortaa', cursive;
+z-index: 1;
+overflow: hidden;
 transition: 0.5s ease;
 }
 .whatsapp-container:hover{
-background: #0c8b00;
+background: #800080;
+top: 100px;
+right: -10px;
+border-radius: 10px 10px 10px 10px;
+padding: 30px 50px 30px 30px;
 transition: 0.5s ease;
+}
+.navigation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+padding: 10px 20px;
+color: #fff;
+font-family: 'Comfortaa', cursive;
+background-color: #620080;
+box-shadow: 0px 5px 16px #6e6e6e33;
 }
 .settings{
 font-family: 'Comfortaa', cursive;
@@ -125,14 +142,23 @@ scroll-behavior: smooth;
 color: #470047;
 background-color: #fff;
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-border: 1px #eeeeee solid;
-box-shadow: 0px 0px 16px rgba(110, 110, 110, 0.336);
-border-radius: 6px;
-margin: 00px 40px;
+box-shadow: 0px 0px 16px rgba(110, 110, 110, 0);
+border: 2px #e4e4e4 solid;
+border-radius: 0px 16px 16px 0px;
+margin: 0px 30px 30px 0px;
 float: left;
-width: 360px;
+width: 300px;
 height: 80vh;
 padding: 20px 20px;
+animation-name: border-anim;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+transition: 0.5s ease;
+}
+.settings:hover{
+border: 2px #ececec solid;
+/* box-shadow: 4px 3px 16px #6e6e6e1e; */
+transition: 0.5s ease;
 }
 .live{color: #383838;font-size: 15px;}
 .drag{
@@ -141,18 +167,61 @@ padding: 20px 20px;
 .schedule-container{
 display: absolute;
 right: 140px;
-margin: 40px 20px;
+margin: 90px 90px 20px 0;
 padding: 0px 0px;
 color: #470047;
-background-color: #ffffff;
-border: 1px #eeeeee solid;
-box-shadow: 0px 0px 16px rgba(110, 110, 110, 0.336);
-border-radius: 6px;
-width: 64vw;
-height: 80vh;
+background-color: #ffffff;border: 2px #e4e4e4 solid;
+/* box-shadow: 0px 0px 16px #6e6e6e15; */
+border-radius: 12px;
+width: 65.5vw;
+height: 46vh;
 overflow: scroll;
+animation-name: border-anim;
+animation-duration: 10s;
+animation-delay: 2s;
+animation-iteration-count: infinite;
+transition: 0.5s ease;
+}
+.schedule-container:hover{
+width: 65.5vw;
+height: 46vh;
+transition: 0.5s ease;
+}
+.third-container{
+position: absolute;
+right: 120px;
+margin: 10px 20px;
+padding: 20px 20px;
+width: 65.5vw;
+height: 30vh;
+color: #470047;
+background-color: #ffffff;
+border: 2px #e4e4e4 solid;
+border-radius: 12px;
+overflow: scroll;
+z-index: -11;
+animation-name: border-anim;
+animation-duration: 10s;
+animation-delay: 4s;
+animation-iteration-count: infinite;
+transition:0.5s ease;
+}
+.third-container:hover{
+width: 65.5vw;
+z-index: 11;
+transition:0.5s ease;
+}
+@keyframes border-anims {
+  0%{border: 2px #ececec solid;
+box-shadow: 0px 0px 16px #6e6e6e00;}
+  50%{border: 2px #5700803f solid;
+box-shadow: -2px -2px 16px #57008044,
+2px 2px 16px #b600e431;}
+  100%{border: 2px #ececec solid;
+box-shadow: 0px 0px 16px #6e6e6e00;}
 }
 svg{
+  display: none;
 position: absolute;
 top: 0px;
 left: 0;
@@ -256,7 +325,66 @@ z-index: -1;}
 </style>
 </head>
 <body>
-  <div id="loading"></div>
+  <!-- <div id="loading"> <center>
+    <img class="loading-img" src="../loader.gif" draggable="false"><br>
+    </center></div> -->
+
+    <div class="navigation">
+      <a class="navbar-brand text-white" href="../index.html">ConcertEra</a>
+      <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item text-white">
+          <a class="nav-link text-white" aria-current="page" href="javascript:void(0)">HOME</a>
+        </li> -->
+      </ul>
+    </div>
+
+    <nav class="navbar visually-hidden navbar-expand-lg fixed-top navbar-dark navbar-custom">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)">ConcertEra</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="javascript:void(0)">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">SEARCH</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">POSTS</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active disabled" href="rooms/select.html">ROOMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">LIBRARY</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="btn btn-secondary btn-sm disabled" href="javascript:void(0)">Notify Me</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">| </a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="Android App/rooms/select.html">  <i class="fa fa-headphones-alt"></i> </a>
+            </li> -->
+             <!-- <li class="nav-item dropdown me-3 me-lg-1">
+              <a class="nav-link dropdown-toggle hidden-arrow" href="" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                 <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="Android App/rooms/select.html"> Bangtan Is Live | New Year Special | 30th Dec   </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
 <!-- <center> <br>
 <br><br><br><img class="maintenance" src="Maintenance/maintenance.gif" width="30%"></center><br><br>
 <center>Oops! Servers under maintenance, try again later.</center>  -->
@@ -281,9 +409,9 @@ z-index: -1;}
 <div class="live">
 <h5 style="margin-bottom: 20px;"> Upcoming</h5>
  <a class="" onclick="bangtan()"> <i class="fa fa-wifi" style="margin-left: 15px;"></i>
- <a class=" align" onclick="bangtan()" style="margin-left: 13px;"> New Year with BTS </a><br>
+ <a class=" align" onclick="bangtan()" style="margin-left: 13px;"> Hope Day Special </a><br>
  <a style="display: block; margin-left: 54px; font-size: 10px;">
-  New Year Mashups • 31 Dec, 11:44 PM</a></a><hr></div>
+  All Day Long • 18 Feb, 8:00 AM</a></a><hr></div>
 
 <!-- <h6>Artists</h6>
 <a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
@@ -364,12 +492,13 @@ Unavailable</a></a><hr><br>
     <tbody>
 
       <tr>
-        <th> <center> Album Cover </center></th>
-        <th>Details </th>
+        <th> <center> Past streams </center></th>
+        <th> </th>
         </tr>
+
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../2022.jpg" alt="Unavailable" style="width: 250px;">
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
             </a></center></td>
           <td>
             <a class="text-black" href="javascript:void(0)"><h6> BANGTAN IS LIVE | new Year SPECIAL | Welcome 2022 with BTS</a>
@@ -380,10 +509,10 @@ Unavailable</a></a><hr><br>
               Artist: BTS & Army<br>
                 Medium: Audio<br>
                 Music Label: Hybe Label<br>
-                <!-- <b class="text-danger">Stream Unavailable</b><br> -->
-           Streaming: 30 Dec, 11:44 PM<br>
-           <b>Live in:</b><br>
-           <div id="timer"></div>
+                <b class="text-danger">Stream Unavailable</b><br>
+           <!-- Streaming: 30 Dec, 11:44 PM<br> -->
+           <!-- <b>Live in:</b><br>
+           <div id="timer"></div> -->
 
             </small>
 
@@ -615,7 +744,13 @@ Unavailable</a></a><hr><br>
 
 </div>
 
+<div class="third-container">
+Analytics
+</div>
 
+<div class="whatsapp-container">
+  <i class="fa fa-info-circle fa5"></i> Join WhatsApp Group
+  </div>
 </div>
 <script>
 function learn(){window.location = "../Help/room.html";}
