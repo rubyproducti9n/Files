@@ -2344,7 +2344,7 @@ transform: rotate(-135deg);
       z-index: 19;
     }
     .loading-img{
-      width: 10vw;
+      width: 3%;
       margin-top: 20%;
       opacity: .5;
     }
