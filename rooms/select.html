@@ -69,6 +69,62 @@ a{color: #464646;}
 a:hover{color: #800080;}
 a:active{color: #000000;}
 .timeago{color: black;}
+.modern-navigation{
+position: absolute;
+bottom: -70px;
+left: 37vw;
+background: #ffffffe0;
+border-radius: 30px;
+padding: 10px 20px;
+box-shadow: 0px 0px 16px #6e6e6e73;
+z-index: 33;
+transition: 0.5s ease;
+}
+.modern-navigation:hover{
+bottom: 0px;
+border-radius: 30px 30px 0 0;
+padding: 10px 20px 40px 20px;
+transition: 0.5s ease;
+}
+.modern-dash{
+background: rgb(158, 158, 158);
+width: 50px;
+height: 5px;
+border-radius: 20px;
+margin: 3px 0 15px 0;
+}
+.modern-nav-ic{
+color: rgb(70, 70, 70);
+font-size: 18px;
+padding: 13px;
+border-radius: 30px;
+margin: 5px 5px 5px 5px;
+transition: 0.5s ease;
+}
+.modern-nav-ic:hover{
+transform: scale(1.0);
+padding: 13px;
+border-radius: 30px;
+color: rgb(70, 70, 70);
+background: #d1d1d1;
+transition: 0.5s ease;
+}
+.modern-nav-ic:active{
+transform: scale(1.0);
+padding: 13px;
+border-radius: 30px;
+color: rgb(70, 70, 70);
+background: #868686;
+transition: 0.5s ease;
+}
+.modern-nav-active{
+transform: scale(1.2);
+color: #ffffff;
+padding: 13px;
+margin: 0 10px;
+border-radius: 30px;
+background: #800080;
+}
 .container2{
 color: rgb(255, 255, 255);
 background-color: #da000000;
@@ -106,21 +162,23 @@ color: #141414;
 }
 .whatsapp-container{
 position: absolute;
-top: 100px;
-right: -280px;
+top: 50px;
+right: -320px;
 background: #710080;
-padding: 30px 60px;
-border-radius: 20px;
+padding: 30px 90px;
+border-radius: 90px;
 font-family: 'Comfortaa', cursive;
+box-shadow: 0px 0px 16px #6e6e6e73;
 z-index: 1;
 overflow: hidden;
 transition: 0.5s ease;
 }
 .whatsapp-container:hover{
-background: #800080;
-top: 100px;
-right: -10px;
-border-radius: 10px 10px 10px 10px;
+background: #800080e3;
+box-shadow: 0px 0px 16px #8000809d;
+top: 50px;
+right: -30px;
+border-radius: 90px 0px 0px 90px;
 padding: 30px 50px 30px 30px;
 transition: 0.5s ease;
 }
@@ -142,10 +200,10 @@ scroll-behavior: smooth;
 color: #470047;
 background-color: #fff;
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-box-shadow: 0px 0px 16px rgba(110, 110, 110, 0);
-border: 2px #e4e4e4 solid;
-border-radius: 0px 16px 16px 0px;
-margin: 0px 30px 30px 0px;
+box-shadow: 0px 0px 16px #6e6e6e4d;
+border: 1px #ffffff solid;
+border-radius: 16px 16px 16px 16px;
+margin: 0px 30px 30px 30px;
 float: left;
 width: 300px;
 height: 80vh;
@@ -156,8 +214,8 @@ animation-iteration-count: infinite;
 transition: 0.5s ease;
 }
 .settings:hover{
-border: 2px #ececec solid;
-/* box-shadow: 4px 3px 16px #6e6e6e1e; */
+/* border: 1px #ececec solid; */
+box-shadow: 4px 3px 16px #6e6e6e1e;
 transition: 0.5s ease;
 }
 .live{color: #383838;font-size: 15px;}
@@ -167,14 +225,15 @@ transition: 0.5s ease;
 .schedule-container{
 display: absolute;
 right: 140px;
-margin: 90px 90px 20px 0;
+margin: 40px 90px 20px 0;
 padding: 0px 0px;
 color: #470047;
-background-color: #ffffff;border: 2px #e4e4e4 solid;
-/* box-shadow: 0px 0px 16px #6e6e6e15; */
+background-color: #ffffff;
+border: 1px #e4e4e4 solid;
+box-shadow: 0px 0px 16px #6e6e6e4d;
 border-radius: 12px;
 width: 65.5vw;
-height: 46vh;
+height:80vh;
 overflow: scroll;
 animation-name: border-anim;
 animation-duration: 10s;
@@ -184,10 +243,11 @@ transition: 0.5s ease;
 }
 .schedule-container:hover{
 width: 65.5vw;
-height: 46vh;
+height: 80vh;
 transition: 0.5s ease;
 }
 .third-container{
+  display: none;
 position: absolute;
 right: 120px;
 margin: 10px 20px;
@@ -248,10 +308,70 @@ h5{color: #ff0000;}
 @media screen and (max-width: 768px){
 body{
 color: white;
-background: linear-gradient(-180deg, #b800dd, #6b006b);
+background: #fff;
+/* background: linear-gradient(-180deg, #6c0081, #9f00ad); */
 background-size: 100% 200%;
+overflow: hidden;
 user-select: none;
 overflow: scroll;
+}
+.modern-navigation{
+position: fixed;
+bottom: -63px;
+left: 0%;
+width: 100%;
+background: #ffffffe0;
+border-radius: 30px;
+padding: 10px 20px;
+box-shadow: 0px 0px 16px #6e6e6e73;
+overflow: hidden;
+z-index: 33;
+transition: 0.2s ease;
+}
+.modern-navigation:hover{
+bottom: 20px;
+border-radius: 30px 30px 0 0;
+padding: 10px 10px 20px 10px;
+transition: 0.2s ease;
+}
+.modern-dash{
+background: rgb(158, 158, 158);
+width: 50px;
+height: 5px;
+border-radius: 20px;
+margin: 3px 0 15px 0;
+}
+.modern-nav-ic{
+color: rgb(70, 70, 70);
+font-size: 17px;
+padding: 13px;
+border-radius: 30px;
+margin: 5px 5px 5px 5px;
+transition: 0.5s ease;
+}
+.modern-nav-ic:hover{
+transform: scale(1.0);
+padding: 13px;
+border-radius: 30px;
+color: rgb(70, 70, 70);
+background: #d1d1d1;
+transition: 0.5s ease;
+}
+.modern-nav-ic:active{
+transform: scale(1.0);
+padding: 13px;
+border-radius: 30px;
+color: rgb(70, 70, 70);
+background: #868686;
+transition: 0.5s ease;
+}
+.modern-nav-active{
+transform: scale(1.2);
+color: #ffffff;
+padding: 13px;
+margin: 0 10px;
+border-radius: 30px;
+background: #800080;
 }
 .container2{
 color: #ffffff;
@@ -271,18 +391,21 @@ scroll-behavior: smooth;
 color: #464646;
 background-color: #fff;
 border: 0 #2700491e solid;
+box-shadow: 0px 0px 0px #ffffff00;
 margin: 0;
 border-radius: 0px;
 width: 100vw;
-height: 100vh;
+height: 80%;
 padding: 20px 20px;
+overflow: hidden;
 }
 .drag{
-  display: block;
+  display: none;
   margin-top: 25px;
   background-color: #fff;
 }
 .schedule-container{
+  display: none;
   overflow: none;
 float: none;
 margin: 30px 0;
@@ -293,6 +416,13 @@ box-shadow: 10px 10px 20px #3636365b;
 border-radius: 0;
 width: 100vw;
 height: 100vh;
+}
+.whatsapp-container{
+  display: none;
+transition: 0.5s ease;
+}
+.whatsapp-container:hover{
+transition: 0.5s ease;
 }
 .fancy-border-radius {
 position: absolute;
@@ -329,8 +459,8 @@ z-index: -1;}
     <img class="loading-img" src="../loader.gif" draggable="false"><br>
     </center></div> -->
 
-    <div class="navigation">
-      <a class="navbar-brand text-white" href="../index.html">ConcertEra</a>
+    <div class="navigation visually-hidden">
+      <a class="navbar-brand text-white" href="../index.html"></a>
       <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item text-white">
           <a class="nav-link text-white" aria-current="page" href="javascript:void(0)">HOME</a>
@@ -343,7 +473,7 @@ z-index: -1;}
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="javascript:void(0)">ConcertEra</a>
+        <a class="navbar-brand" href="javascript:void(0)"></a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -385,6 +515,22 @@ z-index: -1;}
         </div>
       </div>
     </nav>
+
+    <center>
+<div class="modern-navigation">
+<div class="modern-dash"></div><br>
+
+
+<a class="" href="../index.html">
+<i class="fa fa-home modern-nav-ic"></i></a>
+<i class="fa fa-search modern-nav-ic"></i>
+<i class="fa fa-music modern-nav-ic modern-nav-active"></i>
+<i class="fa fa-cog modern-nav-ic"></i>
+<i class="fa fa-info-circle modern-nav-ic"></i>
+
+</div>
+</center>
+
 <!-- <center> <br>
 <br><br><br><img class="maintenance" src="Maintenance/maintenance.gif" width="30%"></center><br><br>
 <center>Oops! Servers under maintenance, try again later.</center>  -->
@@ -753,6 +899,11 @@ Analytics
   </div>
 </div>
 <script>
+function home(){window.location = "../Help/room.html";}
+function search(){window.location = "../Help/room.html";}
+function settings(){window.location = "../Help/room.html";}
+function about(){window.location = "../Help/room.html";}
+
 function learn(){window.location = "../Help/room.html";}
 function schedule(){window.location = "../schedule.html";}
 function bangtan(){window.location = "bts room.html";}
