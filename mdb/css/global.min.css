@@ -2167,7 +2167,7 @@ transform: rotate(-135deg);
     min-width: 360px; */
   }
   /* Also remove from media queries to display for android devices */
-  .home-container{display: block;}
+  .home-container{display: none;}
   .container2{display: block;}
   .maintain-container{display: none;}
   .home-container{
@@ -2198,6 +2198,62 @@ transform: rotate(-135deg);
   a{
     color: #000;}
   a:hover{ color: #000}
+  .modern-navigation{
+  position: absolute;
+  bottom: -70px;
+  left: 37vw;
+  background: #ffffffe0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 16px #6e6e6e73;
+  z-index: 33;
+  transition: 0.5s ease;
+  }
+  .modern-navigation:hover{
+  bottom: 0px;
+  border-radius: 30px 30px 0 0;
+  padding: 10px 20px 40px 20px;
+  transition: 0.5s ease;
+  }
+  .modern-dash{
+  background: rgb(158, 158, 158);
+  width: 50px;
+  height: 5px;
+  border-radius: 20px;
+  margin: 3px 0 15px 0;
+  }
+  .modern-nav-ic{
+  color: rgb(70, 70, 70);
+  font-size: 18px;
+  padding: 13px;
+  border-radius: 30px;
+  margin: 5px 5px 5px 5px;
+  transition: 0.5s ease;
+  }
+  .modern-nav-ic:hover{
+  transform: scale(1.0);
+  padding: 13px;
+  border-radius: 30px;
+  color: rgb(70, 70, 70);
+  background: #d1d1d1;
+  transition: 0.5s ease;
+  }
+  .modern-nav-ic:active{
+  transform: scale(1.0);
+  padding: 13px;
+  border-radius: 30px;
+  color: rgb(70, 70, 70);
+  background: #868686;
+  transition: 0.5s ease;
+  }
+  .modern-nav-active{
+  transform: scale(1.2);
+  color: #ffffff;
+  padding: 13px;
+  margin: 0 10px;
+  border-radius: 30px;
+  background: #800080;
+  }
   .more-vid{
   position: absolute;
   top: 90px;
@@ -2306,7 +2362,7 @@ transform: rotate(-135deg);
     padding: 10px 10px;
     position: absolute;
     top: -230px;
-    bottom: 100%;
+    bottom: 101%;
     left: 200px;
     margin-left: 0px;
     z-index: 20;
@@ -2428,6 +2484,64 @@ transform: rotate(-135deg);
   }
   .qr-img{
     width: 100%;
+  }
+  .modern-navigation{
+  position: fixed;
+  bottom: -63px;
+  left: 0%;
+  width: 100%;
+  background: #ffffffe0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 16px #6e6e6e4b;
+  overflow: hidden;
+  z-index: 33;
+  transition: 0.2s ease;
+  }
+  .modern-navigation:hover{
+  bottom: 00px;
+  border-radius: 30px 30px 0 0;
+  padding: 10px 10px 20px 10px;
+  transition: 0.2s ease;
+  }
+  .modern-dash{
+  background: rgb(158, 158, 158);
+  width: 50px;
+  height: 5px;
+  border-radius: 20px;
+  margin: 3px 0 15px 0;
+  }
+  .modern-nav-ic{
+  color: rgb(70, 70, 70);
+  font-size: 17px;
+  padding: 13px;
+  border-radius: 30px;
+  margin: 5px 5px 5px 5px;
+  transition: 0.5s ease;
+  }
+  .modern-nav-ic:hover{
+  transform: scale(1.0);
+  padding: 13px;
+  border-radius: 30px;
+  color: rgb(70, 70, 70);
+  background: #d1d1d1;
+  transition: 0.5s ease;
+  }
+  .modern-nav-ic:active{
+  transform: scale(1.0);
+  padding: 13px;
+  border-radius: 30px;
+  color: rgb(70, 70, 70);
+  background: #868686;
+  transition: 0.5s ease;
+  }
+  .modern-nav-active{
+  transform: scale(1.2);
+  color: #ffffff;
+  padding: 13px;
+  margin: 0 10px;
+  border-radius: 30px;
+  background: #800080;
   }
   .more-vid{
   position: absolute;
