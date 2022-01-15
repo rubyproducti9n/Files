@@ -69,62 +69,6 @@ a{color: #464646;}
 a:hover{color: #800080;}
 a:active{color: #000000;}
 .timeago{color: black;}
-.modern-navigation{
-position: absolute;
-bottom: -70px;
-left: 37vw;
-background: #ffffffe0;
-border-radius: 30px;
-padding: 10px 20px;
-box-shadow: 0px 0px 16px #6e6e6e73;
-z-index: 33;
-transition: 0.5s ease;
-}
-.modern-navigation:hover{
-bottom: 0px;
-border-radius: 30px 30px 0 0;
-padding: 10px 20px 40px 20px;
-transition: 0.5s ease;
-}
-.modern-dash{
-background: rgb(158, 158, 158);
-width: 50px;
-height: 5px;
-border-radius: 20px;
-margin: 3px 0 15px 0;
-}
-.modern-nav-ic{
-color: rgb(70, 70, 70);
-font-size: 18px;
-padding: 13px;
-border-radius: 30px;
-margin: 5px 5px 5px 5px;
-transition: 0.5s ease;
-}
-.modern-nav-ic:hover{
-transform: scale(1.0);
-padding: 13px;
-border-radius: 30px;
-color: rgb(70, 70, 70);
-background: #d1d1d1;
-transition: 0.5s ease;
-}
-.modern-nav-ic:active{
-transform: scale(1.0);
-padding: 13px;
-border-radius: 30px;
-color: rgb(70, 70, 70);
-background: #868686;
-transition: 0.5s ease;
-}
-.modern-nav-active{
-transform: scale(1.2);
-color: #ffffff;
-padding: 13px;
-margin: 0 10px;
-border-radius: 30px;
-background: #800080;
-}
 .container2{
 color: rgb(255, 255, 255);
 background-color: #da000000;
@@ -315,64 +259,6 @@ overflow: hidden;
 user-select: none;
 overflow: scroll;
 }
-.modern-navigation{
-position: fixed;
-bottom: -63px;
-left: 0%;
-width: 100%;
-background: #ffffffe0;
-border-radius: 30px;
-padding: 10px 20px;
-box-shadow: 0px 0px 16px #6e6e6e4b;
-overflow: hidden;
-z-index: 33;
-transition: 0.2s ease;
-}
-.modern-navigation:hover{
-bottom: 00px;
-border-radius: 30px 30px 0 0;
-padding: 10px 10px 20px 10px;
-transition: 0.2s ease;
-}
-.modern-dash{
-background: rgb(158, 158, 158);
-width: 50px;
-height: 5px;
-border-radius: 20px;
-margin: 3px 0 15px 0;
-}
-.modern-nav-ic{
-color: rgb(70, 70, 70);
-font-size: 17px;
-padding: 13px;
-border-radius: 30px;
-margin: 5px 5px 5px 5px;
-transition: 0.5s ease;
-}
-.modern-nav-ic:hover{
-transform: scale(1.0);
-padding: 13px;
-border-radius: 30px;
-color: rgb(70, 70, 70);
-background: #d1d1d1;
-transition: 0.5s ease;
-}
-.modern-nav-ic:active{
-transform: scale(1.0);
-padding: 13px;
-border-radius: 30px;
-color: rgb(70, 70, 70);
-background: #868686;
-transition: 0.5s ease;
-}
-.modern-nav-active{
-transform: scale(1.2);
-color: #ffffff;
-padding: 13px;
-margin: 0 10px;
-border-radius: 30px;
-background: #800080;
-}
 .container2{
 color: #ffffff;
 background-color: #e0000000;
@@ -516,20 +402,16 @@ z-index: -1;}
       </div>
     </nav>
 
-    <center>
+ <center>
 <div class="modern-navigation">
 <div class="modern-dash"></div><br>
-
-
-<a class="" href="../index.html">
+<a class="" onclick="home()">
 <i class="fa fa-home modern-nav-ic"></i></a>
 <i class="fa fa-search modern-nav-ic"></i>
 <i class="fa fa-music modern-nav-ic modern-nav-active"></i>
 <i class="fa fa-cog modern-nav-ic"></i>
 <i class="fa fa-info-circle modern-nav-ic"></i>
-
-</div>
-</center>
+</div></center>
 
 <!-- <center> <br>
 <br><br><br><img class="maintenance" src="Maintenance/maintenance.gif" width="30%"></center><br><br>
@@ -899,12 +781,12 @@ Analytics
   </div>
 </div>
 <script>
-function home(){window.location = "../Help/room.html";}
+function home(){window.location = "../index.html";}
 function search(){window.location = "../Help/room.html";}
 function settings(){window.location = "../Help/room.html";}
 function about(){window.location = "../Help/room.html";}
 
-function learn(){window.location = "../Help/room.html";}
+function learn(){window.location = "../Android App/Help/room.html";}
 function schedule(){window.location = "../schedule.html";}
 function bangtan(){window.location = "bts room.html";}
 function error(){alert("Stream in queue");}
