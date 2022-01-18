@@ -2186,13 +2186,13 @@ transform: rotate(-135deg);
     transition: 0.5s;
     }
     .maintain-img{
-    width: 50%;
+    width: 40%;
     margin-top: -50px;
     transition: 0.5s;
     }
     .maintain-text{
     color: #000;
-    font-size: 10px;
+    font-size: 7px;
     transition: 0.5s;
     }
   a{
@@ -2200,20 +2200,20 @@ transform: rotate(-135deg);
   a:hover{ color: #000}
   .modern-navigation{
   position: absolute;
-  bottom: -70px;
+  bottom: -190px;
   left: 37vw;
   background: #ffffffe0;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 10px 20px 40px 20px;
   box-shadow: 0px 0px 16px #6e6e6e73;
-  z-index: 33;
+  z-index: 13;
   transition: 0.5s ease;
   }
   .modern-navigation:hover{
   bottom: 0px;
   border-radius: 30px 30px 0 0;
   padding: 10px 20px 40px 20px;
-  transition: 0.5s ease;
+  transition: 0.6s ease;
   }
   .modern-dash{
   background: rgb(158, 158, 158);
@@ -2225,10 +2225,14 @@ transform: rotate(-135deg);
   .modern-nav-ic{
   color: rgb(70, 70, 70);
   font-size: 18px;
-  padding: 13px;
+  padding: 113px 13px 13px 13px;
   border-radius: 30px;
   margin: 5px 5px 5px 5px;
   transition: 0.5s ease;
+  }
+  .modern-navigation:hover .modern-nav-ic{
+    padding-top: 13px;
+    transition: 0.6s ease;
   }
   .modern-nav-ic:hover{
   transform: scale(1.0);
@@ -2247,11 +2251,11 @@ transform: rotate(-135deg);
   transition: 0.5s ease;
   }
   .modern-nav-active{
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: #ffffff;
   padding: 13px;
-  margin: 0 10px;
-  border-radius: 30px;
+  /* margin: 0 10px; */
+  border-radius: 50px;
   background: #800080;
   }
   .more-vid{
@@ -2495,7 +2499,7 @@ transform: rotate(-135deg);
   padding: 10px 20px;
   box-shadow: 0px 0px 16px #6e6e6e4b;
   overflow: hidden;
-  z-index: 33;
+  z-index: 11;
   transition: 0.2s ease;
   }
   .modern-navigation:hover{
