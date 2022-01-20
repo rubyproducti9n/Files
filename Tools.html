@@ -3,12 +3,12 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RUBY PRODUCTION - Tools</title>
+    <title>Tools - rubyproducti9n</title>
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dark mode/dark-mode.css">
-    <link rel="icon" href="ruby (1).png" type="image/x-icon">
+    <link rel="icon" href="favicon/ruby (1).png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="mdb/css/global.min.css">
@@ -32,8 +32,7 @@
     <script src="test/test_helpers.js" type="text/javascript"></script>
     <script src="jquery.timeago.js" type="text/javascript"></script>
     <script src="timeago/jquery.timeago.js" type="text/javascript"></script>
-    <script src="timeago/test/test_helpers.js" type="text/javascript"></script>
-    <link rel="icon" href="ruby (1).png" sizes="16x16 32x32" type="image/png"><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="timeago/test/test_helpers.js" type="text/javascript"></script><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/RUBY PRODUCTION.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
@@ -44,6 +43,8 @@
 font-family: 'Comfortaa', cursive;
 user-select: none;
 overflow: hidden;}
+.for-pc{display: block;}
+.for-mob{display: none;}
     a{color: #414141;}
       a:hover{
         color: rgb(255, 255, 255);
@@ -63,14 +64,14 @@ font-family: 'Comfortaa', cursive;
     }
     .body{
       overflow: scroll;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0);
       border-radius: 10px;
-      border: 1px rgb(233, 233, 233) solid;
-      box-shadow: 0px 0px 20px #49494921;
+      border: 0px rgb(233, 233, 233) solid;
+      box-shadow: 0px 0px 20px #49494900;
       margin: 20px 20px;
-      padding: 20px 20px;
+      padding: 10px 10px;
       width: 97%;
-      height: 30%;
+      height: 10%;
     }
     .header{
       display: none;
@@ -107,25 +108,28 @@ font-family: 'Comfortaa', cursive;
     }
     .tools-bg{
       margin-top: 40px;
-      color: rgb(255, 255, 255);
-      background: linear-gradient(180deg, #a800a8, #800080);
+      color: rgb(119, 119, 119);
+      background: #ffffff;
+      /* background: linear-gradient(180deg, #a800a8, #800080); */
       padding: 60px 0;
       border-radius: 16px;
-      border: 1px #800080 solid;
-      box-shadow: 0px 0px 6px #49494979;
+      box-shadow: 0px 0px 16px #49494944;
       transform: scale(1.0);
       transition: 0.5s ease;
     }
     .tools-bg:hover{
-      background: linear-gradient(180deg, #7700ff, #5300b3);
-      border: 4px #7700ff, #5300b3 solid;
-      transform: scale(1.2);
-      transition: 0.5s ease;
+      color: #252525;
+      background: rgb(238, 238, 238);
+      box-shadow: 4px 4px 16px #49494933;
+      transform: scale(1.0);
+      transition: 0.4s ease;
     }
     .tools-bg:active{
-      background: linear-gradient(180deg, #7700ff, #5300b3);
       transform: scale(0.5);
       transition: 0.2s ease;
+    }
+    .tool-ic{
+      width: 12%;
     }
     .err{
       display: none;
@@ -133,6 +137,32 @@ font-family: 'Comfortaa', cursive;
 
 
     @media screen and (max-width: 768px){
+.for-pc{display: none;}
+.for-mob{display: block;}
+svg{display: none;}
+.mob-container{
+  padding: 10px 0px;
+background-color: rgba(255, 255, 255, 0.788);
+}
+.list{
+  margin: 5px 0;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: #414141;
+background: #ffffff;
+transition: 0.5s ease;
+}
+.list:hover{
+  margin: 5px 0;
+  padding: 10px 0;
+background: #dfdfdf;
+transition: 0.5s ease;
+}
+.tool-ic{
+width: 8%;
+margin-left: 10px;
+margin-right: 10px;
+}
     .container2{
     color: #000;
     display: block;
@@ -151,8 +181,19 @@ font-family: 'Comfortaa', cursive;
 
             <div id="loading">
             </div>
+            <center>
+              <div class="modern-navigation">
+              <div class="modern-dash"></div><br>
+              <a class="" onclick="home()">
+              <i class="fa fa-home modern-nav-ic"></i></a>
+              <i class="fa fa-search modern-nav-ic"></i>
+              <a class="" onclick="select()">
+              <i class="fa fa-music modern-nav-ic"></i></a>
+              <i class="fa fa-cog modern-nav-ic"></i>
+              <i class="fa fa-info-circle modern-nav-ic"></i>
+              </div></center>
 
-            <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: #41414100;">
               <div class="container-fluid">
                 <button
                   class="navbar-toggler"
@@ -169,48 +210,7 @@ font-family: 'Comfortaa', cursive;
                 <a class="navbar-brand" href="index.html">  <i class="fa fa-arrow-left"></i></a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="javascript:void(0)">SEARCH</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="javascript:void(0)" tabindex="-1" aria-disabled="true">POSTS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="javascript:void(0)">MUSIC</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="javascript:void(0)">LIBRARY</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="javascript:void(0)">| </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="../rooms/select.html">  <i class="fa fa-headphones-alt"></i> </a>
-                    </li>
-                     <li class="nav-item dropdown me-3 me-lg-1">
-                      <a
-                        class="nav-link dropdown-toggle hidden-arrow"
-                        href=""
-                        id="navbarDropdownMenuLink"
-                        role="button"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                      </a>
-                      <ul
-                        class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="navbarDropdownMenuLink"
-                      >
-                        <li>
-                          <a class="dropdown-item" href="../rooms/bts room.html"> • TEA WITH BTS | THIS SUNDAY | Learn More</a>
-                        </li>
-                      </ul>
-                    </li>
+
                   </ul>
 
                 </div>
@@ -226,15 +226,6 @@ font-family: 'Comfortaa', cursive;
       <br><br>
       <center>Oops! we are still working on home page, try again later.</center>  -->
 
-
-
-      <div class="bottom-nav visually-hidden">
-        <a class="nav-tooltip" href="RUBY PRODUCTION.html"> <i class="fa fa-home btm-nav"></i> <span class="nav-tooltiptext">HOME</span> </a>
-        <a class="nav-tooltip disabled" href="#"> <i class="fa fa-search btm-nav"></i> <span class="nav-tooltiptext">SEARCH</span> </a>
-        <a class="nav-tooltip" href="posts.html"> <i class="fa fa-image btm-nav"></i> <span class="nav-tooltiptext">POSTS</span> </a>
-        <a class="nav-tooltip" href="music.html">  <i class="fa fa-music btm-nav"></i> <span class="nav-tooltiptext">MUSIC</span> </a>
-        <a class="nav-tooltip" href="library.html"> <i class="fa fa-book btm-nav"></i> <span class="nav-tooltiptext">LIBRARY</span> </a>
-       </div>
 
           <div class="container2">
 
@@ -256,7 +247,7 @@ Oops! we are currently working on it, please try again later.
   </div>
 
 
-  <div class="body">
+  <div class="body for-pc">
 
     <table class="table text-white table-borderless">
       <tbody>
@@ -265,7 +256,7 @@ Oops! we are currently working on it, please try again later.
           <th>
           <div class="tools-bg" onclick="streams()">
             <center>
-            <i class="fa fa-calculator fa-2x"></i><br>
+              <img class="tool-ic" src="Tools/ic/ic_calci.png"><br>
             Calculator
           </center>
           </div>
@@ -273,7 +264,7 @@ Oops! we are currently working on it, please try again later.
          <th>
          <div class="tools-bg" onclick="rooms()">
            <center>
-           <i class="fa fa-eye fa-2x"></i><br>
+            <img class="tool-ic" src="Tools/ic/ic_assistant.png"><br>
             Eva
          </center>
          </div>
@@ -281,7 +272,7 @@ Oops! we are currently working on it, please try again later.
         <th>
         <div class="tools-bg" onclick="tools()">
           <center>
-          <i class="fa fa-toolbox fa-2x"></i><br>
+            <img class="tool-ic" src="Tools/ic/ic_placeholser.png"><br>
           Tic Tac Toe
         </center>
         </div>
@@ -291,24 +282,24 @@ Oops! we are currently working on it, please try again later.
             <th>
             <div class="tools-bg" onclick="settings()">
               <center>
-              <i class="fa fa-cog fa-2x"></i><br>
+                <img class="tool-ic" src="Tools/ic/ic_note.png"><br>
               To Do List
             </center>
             </div>
            </th>
            <th>
-           <div class="tools-bg" onclick="about()">
+           <div class="tools-bg" onclick="hitCounter()">
              <center>
-             <i class="fa fa-info-circle fa-2x"></i><br>
-             Undefined
+              <img class="tool-ic" src="Tools/ic/ic_keyboard.png"><br>
+             Keyboard H...
            </center>
            </div>
           </th>
           <th>
-          <div class="tools-bg" onclick="logOut()">
+          <div class="tools-bg" onclick="qrCode()">
             <center>
-            <i class="fa fa-sign-out-alt fa-2x"></i><br>
-            Undefined
+            <img class="tool-ic" src="Tools/ic/ic_qr.png"><br>
+            QR Code
           </center>
           </div>
          </th>
@@ -319,64 +310,39 @@ Oops! we are currently working on it, please try again later.
 
   </div>
 
+  <div class="mob-container for-mob">
+<h2 style="padding: 0 10px;"><strong> Tools </strong></h2>
+<div class="list disabled" onclick="qrCode()">
+  <img class="tool-ic" src="Tools/ic/ic_calci.png">  Calculator
+</div>
+<div class="list disabled" onclick="qrCode()">
+  <img class="tool-ic" src="Tools/ic/ic_assistant.png">  Eva
+</div>
+<div class="list disabled" onclick="qrCode()">
+  <img class="tool-ic" src="Tools/ic/ic_placeholser.png">  Tic Tac Toe
+</div>
+<div class="list disabled" onclick="qrCode()">
+  <img class="tool-ic" src="Tools/ic/ic_note.png">  To Do List
+</div>
+    <div class="list" onclick="qrCode()">
+      <img class="tool-ic" src="Tools/ic/ic_qr.png">  QR code
+    </div>
+    <div class="list" onclick="hitCounter()">
+      <img class="tool-ic" src="Tools/ic/ic_keyboard.png">  Keyboard Hit Counter
+    </div>
+
+  </div>
+
 
     <br><br><br><br><br><br><br><br>
 </div>
 
             </div>
 
-    <!-- Footer -->
-    <footer class=" text-center text-white visually-hidden" style="background-color:#7200af;">
-        <!-- Grid container -->
-        <div class="container p-4">
-
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Facebook -->
-            <a class="btn btn-floating m-1 disabled" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-
-            <!-- Twitter -->
-            <a class="btn btn-floating m-1 disabled" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-            <!-- Google -->
-            <a class="btn btn-floating m-1 disabled" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
-
-            <!-- Instagram -->
-            <a class="btn btn-floating m-1 disabled" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-
-            <!-- Linkedin -->
-            <a class="btn btn-floating m-1 disabled" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-            <!-- Github -->
-            <a class="btn btn-floating m-1 disabled" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
-          </section>
-          <!-- Section: Social media -->
-
-
-
-          <!-- Section: Text -->
-          <section class="mb-4">
-            <p>
-                 <!-- <a class="btn btn-secondary text-white ask disabled"> Ask questions</a> -->
-                 <a class="btn btn-secondary text-white back-home disabled"><i class="fas fa-arrow-alt-circle-left"></i> Back to home</a>
-
-            </p>
-          </section>
-          <!-- Section: Text -->
-
-
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-          © 2020 Copyright:
-          <a class="text-white disabled" href="#">rubyproducti9n.com</a>
-        </div>
-        <!-- Copyright -->
-
-      </footer>
-      <!-- Footer -->
       <script>
+        function error(){alert("This tool is not supported in Android Verion.");}
+        function hitCounter(){window.location = "Tools/Keyboard Hit Counter.html";}
+        function qrCode(){window.location = "Tools/qr code generator.html";}
         </script>
 
         <script type="text/javascript" src="../js.js"></script>
