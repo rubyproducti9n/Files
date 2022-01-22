@@ -21,6 +21,9 @@
     <link href="rubyproducti9n pro/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="js/dark-mode.css">
     <link rel="stylesheet" href="design/css/mdb.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
@@ -76,7 +79,7 @@ font-family: 'Comfortaa', cursive;
       border: 0px rgb(233, 233, 233) solid;
       box-shadow: 0px 0px 20px #25252542;
       margin: 0px 20px;
-      padding: 10px 10px;
+      padding: 0px 0px;
       width: 97%;
       height: 70vh;
     }
@@ -108,27 +111,18 @@ font-family: 'Comfortaa', cursive;
       box-shadow: 0px 0px 20px #80008070;
         transition: 0.5s ease;
     }
+    .main-title{
+        display: block;
+        font-size: 12px;
+    }
     .sub-title{
         margin-top: -10px;
         margin-left: 67px;
         font-size: 10px;
     }
-    .header{
-      display: none;
-    color: #444444;
-    background: #6b006b;
-    padding: 130px 80px;
-    }
-    .title{
-    float: left;
-    width: 40%;
-    font-size: 38px;
-    }
-    .help-icon{
-    float: right;
-    width: 5%;
-    font-size: 42px;
-    }
+    .album{font-size: 12px;}
+    .artist{font-size: 12px;}
+    .status{font-size: 12px;}
     svg{
       display: block;
       position: absolute;
@@ -171,14 +165,17 @@ font-size: 14px;
     .sub-title{
         display: none;
     }
+    .table{overflow: hidden;}
     .main-title{
         display: block;
         font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
     }
     .album{display: none;}
     .artist{display: none;}
-    .status{display: none;}
+    .status{display: block;}
     .container2{
     color: #000;
     display: block;
@@ -245,10 +242,6 @@ font-size: 14px;
 
           <div class="container2">
 
-    <div class="header">
-    <p class="title">Tools <br> for daily use...</p>
-    <i class="fa fa-toolbox help-icon"></i>
-    </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#800080" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,224C240,192,300,128,360,90.7C420,53,480,43,540,48C600,53,660,75,720,101.3C780,128,840,160,900,197.3C960,235,1020,277,1080,277.3C1140,277,1200,235,1260,234.7C1320,235,1380,277,1410,298.7L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
     </svg>
@@ -264,40 +257,40 @@ Oops! we are currently working on it, please try again later.
   <input type="text" class="form-control mb-4 search-input" id="tableSearch" placeholder="Search your favourite songs...">
 </center>
   <div class="body">
-    <table class="table table-borderless">
+    <table class="table table-borderless table-hover">
 <tbody id="Table">
- <tr class="">
+ <tr class="" onclick="ptd()">
 <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Permission To Dance' Official Audio Song
 <br><h6 class="sub-title"> Music Label: Hybe Label • Released July 09 2021 </h6></td>
 <td class="album">Butter</td>
 <td class="artist">BTS</td>
-<td class="status"></td>
+<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
 </tr>
 <tr class="">
 <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Butter' Official Audio Song
     <br><h6 class="sub-title"> Music Label: Hybe Label • Released 3 years ago </h6></td>
-<td class="artist">Butter</td>
-<td class="status">BTS</td>
-<td class="album"></td>
+<td class="album">Butter</td>
+<td class="artist">BTS</td>
+<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
  </tr>
  <tr class="">
 <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dynamite' Official Audio Song
     <br><h6 class="sub-title"> Music Label: Hybe Label • Released 3 years ago </h6></td>
 <td class="artist">Unknown</td>
-<td class="status">BTS</td>
-<td class="album"></td>
+<td class="artist">BTS</td>
+<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
  </tr>
  <tr class="">
 <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Life Goes On' Official Audio Song</td>
 <td class="album">B.E</td>
 <td class="artist">BTS</td>
-<td class="status"></td>
+<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
  </tr>
  <tr class="">
 <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dope' Official Audio Song</td>
 <td class="album">The Most Beautiful Moment in Life Pt-1</td>
 <td class="artist">BTS</td>
-<td class="status"></td>
+<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
  </tr>
  <tr class="">
 <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'N.O.' Official Audio Song</td>
@@ -621,7 +614,7 @@ $(document).ready(function(){
 
       <script>
         function error(){alert("This tool is not supported in Android Verion.");}
-        function hitCounter(){window.location = "Tools/Keyboard Hit Counter.html";}
+        function ptd(){window.location = "pages/audio/bts_ptd.html";}
         function qrCode(){window.location = "Tools/qr code generator.html";}
         </script>
 
