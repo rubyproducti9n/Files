@@ -2251,11 +2251,11 @@ transform: rotate(-135deg);
   transition: 0.5s ease;
   }
   .modern-nav-active{
-  transform: scale(1.1);
+  transform: scale(1.0);
   color: #ffffff;
   padding: 13px;
   /* margin: 0 10px; */
-  border-radius: 50px;
+  border-radius: 100%;
   background: #800080;
   }
   .more-vid{
@@ -2491,7 +2491,7 @@ transform: rotate(-135deg);
   }
   .modern-navigation{
   position: fixed;
-  bottom: -170px;
+  bottom: -65px;
   left: 0%;
   width: 100%;
   background: #ffffffe0;
@@ -2518,14 +2518,10 @@ transform: rotate(-135deg);
   .modern-nav-ic{
   color: rgb(70, 70, 70);
   font-size: 17px;
-  padding: 113px 13px 13px 13px;
+  padding: 13px 13px 13px 13px;
   border-radius: 30px;
   margin: 5px 5px 5px 5px;
   transition: 0.3s ease;
-  }
-  .modern-navigation:hover .modern-nav-ic{
-    padding-top: 13px;
-    transition: 0.6s ease;
   }
   .modern-nav-ic:hover{
   transform: scale(1.0);
@@ -2533,7 +2529,7 @@ transform: rotate(-135deg);
   border-radius: 30px;
   color: rgb(70, 70, 70);
   background: #d1d1d1;
-  transition: 0.5s ease;
+  transition: 0.6s ease;
   }
   .modern-nav-ic:active{
   transform: scale(1.0);
@@ -2548,7 +2544,7 @@ transform: rotate(-135deg);
   color: #ffffff;
   padding: 13px;
   margin: 0 10px;
-  border-radius: 30px;
+  border-radius: 50px;
   background: #800080;
   }
   .more-vid{
