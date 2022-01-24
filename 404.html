@@ -50,82 +50,54 @@
          }
 
          a {
-          color: #ffffff;
+          color: #0061f1;
          }
 
          a:hover {
-          color: rgb(255, 255, 255);
-         }
-
-         a:active {
-          color: #ffffff;
-         }
-
-         .navbar {
-          display: block;
-         }
-
-         .timeago {
-          color: black;
+          color: #0048b4;
+          text-decoration: underline;
          }
 
          .container2 {
           color: rgb(255, 255, 255);
           display: block;
-          margin-top: -20px;
-          width: 100%;
-          padding-top: 0px;
-          padding-left: 0px;
           /* text-shadow: 0 0 2px #3f0069; */
          }
 
-         .header {
-          display: none;
-          color: #ffffff;
-          background: #18181800;
-          padding: 10px 80px;
-         }
-
-         .title {
-          float: left;
-          width: 40%;
-          font-size: 38px;
-         }
-
-         .help-icon {
-          float: right;
-          width: 5%;
-          font-size: 42px;
-         }
 
          svg {
           display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 1;
+          width: 10%;
+          filter: drop-shadow(0px 30px 10px rgba(233, 233, 233, 0.349));
+          z-index: 21;
          }
 
          .err-pg {
+          margin-top: 9%;
+          width: 50vw;
+          padding: 40px 20px;
+          border-radius: 20px;
           color: #2c2c2c;
+          background: rgb(245, 245, 245);
           font-size: 9px;
          }
 
          .err-img {
-          margin-top: 100px;
+             mix-blend-mode: multiply;
           /* content: url(maintenance/404.png); */
-          width: 30%;
+          width: 60%;
           z-index: -1;
          }
 
-         h2 {
+         h5 {
+          font-size: 15px;
           color: rgb(90, 90, 90);
           font-family: 'Comfortaa', cursive;
          }
 
          h6 {
-          font-size: 12px;
+          font-size: 13px;
+          font-style: none;
           color: rgb(102, 102, 102);
          }
          @media screen and (max-width: 768px) {
@@ -168,13 +140,17 @@
 <body>
     <!-- <div id="loading"></div> -->
     <div class="container2">
-        <div class="header"></div>
+        <center>
         <div class="err-pg">
-            <center> <img class="err-img" draggable="false" src="maintenance/404.png"><br>
-                <h2>Oops! That's an error.</h2>
-                <h6>Requested page was not found.</h6> <!-- <a class="btn btn-secondary text-white" href="index.html">Take me home</a> -->
-            </center>
+                <img class="err-img" draggable="false" src="maintenance/404.png"><br>
+                <h5>The link you clicked may be broken or the <br> page may have removed.</h5>
+                <!-- <h6>Requested page was not found.</h6> <a class="btn btn-secondary text-white" href="index.html">Take me home</a> -->
+                <br><br>
+                <h6>
+               Visit the <a draggable="false" href="index.html">home page</a> or <a href="javascript:void(0)">contact us</a>
+            </h6>
         </div>
+         </center>
         <script type="text/javascript" src="../js.js"></script>
         <script type="text/javascript" src="mdb/js/jquery.min.js"></script>
         <script type="text/javascript" src="mdb/js/popper.min.js"></script>
