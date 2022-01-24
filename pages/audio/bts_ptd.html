@@ -56,16 +56,18 @@ overflow: hidden;}
 .for-mob{display: none;}
     a{color: #414141;}
       a:hover{
-        color: rgb(255, 255, 255);
+        color: rgb(140, 0, 255);
       }
-    a:active{color: #ffffff;}
+      a:active{
+        background: #57008023;
+      }
     .navbar{display: block;}
     .timeago{color: black;}
 
     .container2{
     color: rgb(94, 94, 94);
     display: block;
-    margin-top: 0%;
+    margin-top: 8%;
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
@@ -73,16 +75,44 @@ font-family: 'Comfortaa', cursive;
     }
     .audio-container{
         margin: auto;
-        width: 30%;
-        padding: 20px 0px;
-        border: 1px rgb(224, 224, 224) solid;
+        width: 65%;
+        padding: 30px 40px;
+        border: 1px rgba(224, 224, 224, 0.205) solid;
         border-radius: 20px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.178);
+        backdrop-filter: blur(14px);
         box-shadow: 0 0 20px rgba(43, 43, 43, 0.219);
     }
-    .title{padding: 5px 10px; color: #000; font-size: 14px;font-weight: 900;}
-    .desc{padding: 5px 10px; font-size: 9px;line-height: 20px;}
-    .audio-img{display: block;width: 100%;}
+    .profile{
+      width: 6%;
+      margin-top: 20px;
+      margin-left: 30px;
+      margin-right: 6px;
+      border-radius: 200px;
+    }
+    .title{padding: 5px 10px; color: #000; font-size: 14px;font-weight: 900;overflow: hidden;text-overflow: ellipsis;}
+    .desc{margin-left: 90px;margin-top: -38px; padding: 5px 10px; font-size: 11px;line-height: 20px;}
+    .audio-img{display: none;width: 100%;}
+    .btn-modern-fill{
+      color: #fff;
+      background: #510080;
+      padding: 13px 30px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      margin-left: 50px;
+    }
+    .btn-modern-outline{
+      color: #800080;
+      background: #ffffff00;
+      padding: 13px 30px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-left: 20px;
+    }
     svg{
       display: block;
       position: absolute;
@@ -114,9 +144,35 @@ svg{display: none;}
         background-color: #fff;
         box-shadow: 0 0 20px rgba(43, 43, 43, 0);
     }
-    .title{padding: 5px 10px; color: #000; font-size: 16px;font-weight: 900;}
-    .desc{padding: 0px 10px; font-size: 9px;line-height: 20px;}
+    .profile{
+      width: 8%;
+      margin-right: 6px;
+      border-radius: 200px;
+    }
+    .title{padding: 5px 10px; color: #000; font-size: 13px;font-weight: 900;}
+    .desc{margin-left: 38px;margin-top: -10px; padding: 0px 10px; font-size: 9px;line-height: 20px;}
     .audio-img{display: block;width: 100%;}
+    .btn-modern-fill{
+      color: #fff;
+      background: #510080;
+      padding: 9px 25px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 10px;
+      margin-left: 20px;
+    }
+    .btn-modern-outline{
+      color: #800080;
+      background: #ffffff00;
+      padding: 9px 25px;
+      border-radius: 6px;
+      text-align: start;
+      font-size: 10px;
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-left: 20px;
+    }
     .navbar{display: none;}}
     </style>
     <script>
@@ -147,19 +203,19 @@ svg{display: none;}
     <br><br>
 
     <div class="audio-container">
-        <h6 class="title">♪ BTS (방탄소년단) 'PTD' Full Audio Song</h6>
-        <h6 class="desc"> Producer : Steve Mac, Jenna Andrews, Stephen Kirk<br>
-            Lyrics : Ed Sheeran, Johnny McDaid, Steve Mac, Jenna Andrews<br>
-          Artist : BTS<br>
-          Album : Butter / Permission To Dance<br>
-          Released : 	July 9, 2021 <br>
-          Music Label : Hybe Label<br>
-          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></h6>
+        <h6 class="title"> <img class="profile" src="../../album-cover/bts.jpg"> BTS (방탄소년단) 'PTD' Full Audio Song</h6>
+        <h6 class="desc">
+         ▶ BTS • Butter <br>
+         <i class="fa fa-globe"></i> Public • July 9, 2021 <br></h6>
           <img class="audio-img" draggable="false" src="https://img.youtube.com/vi/CuklIb9d3fI/maxresdefault.jpg">
            <center>
           <audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
           <source src="https://drive.google.com/uc?export=download&id=1Dz8iINU_3AeU6lZwpBncNMyK-pbYIlBH"type="audio/mpeg">
           </audio></center>
+          <br>
+          <a class="btn-modern-fill text-white disabled">I Purple You</a>
+          <a class="btn-modern-outline" href="../../search.html">Back to Search</a>
+          <br><br>
     </div>
   </div>
 
