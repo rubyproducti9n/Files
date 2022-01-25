@@ -126,22 +126,27 @@ hr{color: #000;}
   width: 97%;}
 h5, h6{color: rgb(56, 56, 56);}
 h6{
-  font-size: 12px;
+  font-size: 15px;
 margin-left: 10px;
   font-weight: 900;
   white-space: nowrap;
 }
 .desc{
 color: #000;
-margin-left: 20px;
+margin-left: 58px;
 margin-right: 0;
-margin-top: 0;
+margin-top: -13px;
 font-size: 10px;
 }
 
+.profile{
+      width: 6%;
+      margin-right: 6px;
+      border-radius: 200px;
+    }
 .audio{
 margin: 30px 0px;
-padding: 0px 0px;
+padding: 10px 20px;
 padding-top: 20px;
 padding-bottom: 10px;
 background-color: #fff;
@@ -324,21 +329,31 @@ width: 95%;
       width: 97%;}
     h5, h6{color: rgb(56, 56, 56);}
     h6{
-      font-size: 12px;
+      font-size: 2px;
   margin-left: 10px;
       font-weight: 900;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+    .title{
+      font-size: 11px;
+    }
+
 .desc{
   color: #000;
-  margin-left: 20px;
+  margin-left: 17%;
   margin-right: 0;
-  margin-top: 0;
-  font-size: 10px;
+  margin-top: -13px;
+  font-size: 8px;
 }
-
+.profile{
+      width: 10%;
+      margin-right: 6px;
+      border-radius: 200px;
+    }
 .audio{
   margin: 30px 10px;
-  padding: 0px 0px;
+  padding: 20px 20px;
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: #fff;
@@ -350,7 +365,7 @@ width: 95%;
   transition: 0.5s ease;
 }
 .audio-img{
-  display: block;
+  display: none;
   margin: 0 0px;
   width: 100%;
 }
@@ -361,7 +376,7 @@ width: 95%;
   padding: 10px 10px;
 }
 #audio{
-width: 90%;
+width: 100%;
 border-radius: 16px;
 border: 2px #fff solid;
 background: #fff;
@@ -780,7 +795,7 @@ square-unit
              <img class="qr-img" src="../maintenance/.jpg" alt="unable to load" draggable="false">
             </span>
           </div></center></div>
-<div class="audio">
+<div class="audio visually-hidden">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' (SU.. .</h6>
           <p class="desc">
@@ -804,7 +819,7 @@ square-unit
             </span>
           </div></center></div>
 
-<div class="audio">
+<div class="audio visually-hidden">
         <h6>
           ♪ Coldplay x BTS (방탄소년단) 'My Universe' Au...</h6>
           <p class="desc">
@@ -828,67 +843,55 @@ square-unit
           </div></center></div>
 
 <div class="audio">
-        <h6>
-          ♪ BTS (방탄소년단) 'Permission to Dance' Audi...</h6>
+        <h6 class="title">
+          <img class="profile" draggable="false" src="../album-cover/bts.jpg"> BTS (방탄소년단) 'Permission to Dance' Audio Song</h6>
           <p class="desc">
-             Producer : Steve Mac, Jenna Andrews, Stephen Kirk<br>
-            Lyrics : Ed Sheeran, Johnny McDaid, Steve Mac, Jenna Andrews<br>
-          Artist : BTS<br>
-          Album : Butter / Permission To Dance<br>
-          Released : 	July 9, 2021 <br>
-          Music Label : Hybe Label<br>
-          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
+            BTS • Butter <br></p>
         <img class="audio-img" src="https://img.youtube.com/vi/CuklIb9d3fI/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-permission" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1Dz8iINU_3AeU6lZwpBncNMyK-pbYIlBH"type="audio/mpeg">
         </audio></center>
         <center>
-          <div class="drag-tooltip" href="#">
+          <a class="btn-modern-fill text-white disabled visually-hidden">I Purple You</a>
+          <a class="btn-modern-outline" href="audio/bts_ptd.html">Details</a><br>
+          <div class="drag-tooltip visually-hidden" href="#">
             <span class="drag-tooltiptext" style="text-align: left;">
              <img class="qr-img" src="../maintenance/.jpg" alt="unable to load" draggable="false">
             </span>
           </div></center></div>
 
 <div class="audio">
-        <h6>
-          ♪ BTS (방탄소년단) 'Butter' Audio Song</h6>
+        <h6 class="title">
+          <img class="profile" draggable="false" src="../album-cover/bts.jpg">  BTS (방탄소년단) 'Butter' Audio Song</h6>
           <p class="desc">
-             Producer : Grimaldi, Kirk, Perry<br>
-            Lyrics : RM and more<br>
-          Artist : BTS<br>
-          Album : Butter<br>
-          Released : May 21, 2021 <br>
-          Music Label : Hybe Label<br>
-          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
+            BTS • Butter <br></p>
         <img class="audio-img" src="https://img.youtube.com/vi/WMweEpGlu_U/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1mnLcDk0f2Dmw36awVjOMoBr6lpdjBGz7"type="audio/mpeg">
         </audio></center>
+        <a class="btn-modern-fill text-white disabled visually-hidden">I Purple You</a>
+        <a class="btn-modern-outline" href="audio/bts_ptd.html">Details</a><br>
         <center>
-          <div class="drag-tooltip" href="#">
+          <div class="drag-tooltip visually-hidden" href="#">
             <span class="drag-tooltiptext" style="text-align: left;">
              <img class="qr-img" src="../maintenance/.jpg" alt="unable to load" draggable="false">
             </span>
           </div></center></div>
 
 <div class="audio">
-        <h6>
-          ♪ BTS (방탄소년단) 'Dynamite' Audio Song</h6>
+        <h6 class="title">
+          <img class="profile" draggable="false" src="../album-cover/bts.jpg">  BTS (방탄소년단) 'Dynamite' Audio Song</h6>
           <p class="desc">
-             Producer : David Stewart<br>
-            Lyrics : David Stewart, Jessica Agombar<br>
-          Artist : BTS<br>
-          Album : Dynamite<br>
-          Released : August 21, 2020 <br>
-          Music Label : Hybe Label<br>
-          Status : <span class="badge badge-success">  Available <i class="fa fa-check-circle fa-1x"></i> </span></p>
+            Artist: BTS <br> Album: Unknown</p>
         <img class="audio-img" src="https://img.youtube.com/vi/gdZLi9oWNZg/maxresdefault.jpg">
          <center>
         <audio id="audio" controlslist="nodownload" class="audio-butter" controls preload="none">
         <source src="https://drive.google.com/uc?export=download&id=1DtyRWHH6LxFvc-BR3WJOkmmGRYofBUeg"type="audio/mpeg">
         </audio></center>
+        <a class="btn-modern-fill text-white disabled visually-hidden">I Purple You</a>
+        <a class="btn-modern-outline" href="audio/bts_ptd.html">Details</a><br>
         <center>
           <div class="drag-tooltip" href="#">
             <span class="drag-tooltiptext" style="text-align: left;">
