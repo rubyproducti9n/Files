@@ -2258,6 +2258,26 @@ transform: rotate(-135deg);
   border-radius: 100%;
   background: #800080;
   }
+  .btn-modern-fill{
+    color: #fff;
+    background: #510080;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin-left: 50px;
+  }
+  .btn-modern-outline{
+    color: #800080;
+    background: #ffffff00;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+  }
   .more-vid{
   position: absolute;
   top: 90px;
@@ -2546,6 +2566,31 @@ transform: rotate(-135deg);
   margin: 0 10px;
   border-radius: 50px;
   background: #800080;
+  }
+  .btn-modern-fill{
+    display: none;
+    color: #fff;
+    background: #510080;
+    padding: 9px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    margin-left: 20px;
+  }
+  .btn-modern-outline{
+    color: #800080;
+    background: #ffffff00;
+    padding: 9px 25px;
+    border-radius: 6px;
+    text-align: start;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+  }
+  .btn-modern-outline:active{
+    background: #57008023;
   }
   .more-vid{
   position: absolute;
