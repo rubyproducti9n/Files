@@ -144,13 +144,26 @@ svg{display: none;}
             <center>
               <div class="modern-navigation">
               <div class="modern-dash"></div><br>
-              <a class="" onclick="home()">
-                <i class="material-icons modern-nav-ic">home</i></a>
+              <div class="menu-tooltip">
+                <span class="menu-tooltiptext">Back</span>
+              <i class="material-icons modern-nav-ic">arrow_back</i>
+            </div>
+              <div class="menu-tooltip" onclick="home()">
+                <span class="menu-tooltiptext">Home</span>
+                <i class="material-icons modern-nav-ic">home</i>
+              </div>
+              <div class="menu-tooltip">
+                <span class="menu-tooltiptext">Search</span>
                 <i class="material-icons modern-nav-ic">search</i>
-              <a class="" onclick="select()">
-                <i class="material-icons modern-nav-ic">headphones</i></a>
-                <i class="material-icons modern-nav-ic">settings</i>
-                <i class="material-icons modern-nav-ic">info</i></i>
+              </div>
+              <div class="menu-tooltip" onclick="select()">
+                <span class="menu-tooltiptext">Rooms</span>
+                <i class="material-icons modern-nav-ic">headphones</i>
+              </div>
+              <div class="menu-tooltip" onclick="info()">
+                <span class="menu-tooltiptext">Info</span>
+                <i class="material-icons modern-nav-ic">info</i>
+              </div>
               </div></center>
 
           <div class="container2">
@@ -176,7 +189,7 @@ svg{display: none;}
           </audio></center>
           <br>
           <a class="btn-modern-fill text-white disabled">I Purple You</a>
-          <a class="btn-modern-outline" href="../../search.html">Back to Search</a>
+          <a draggable="false" class="btn-modern-outline" href="../../search.html">Back to Search</a>
           <br><br>
     </div>
   </div>
