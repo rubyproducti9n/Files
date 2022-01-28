@@ -142,10 +142,10 @@ font-family: 'Comfortaa', cursive;
 overflow: scroll;
 scroll-behavior: smooth;
 color: #470047;
-background-color: #fff;
+background-color: rgb(255, 255, 255);
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-box-shadow: 0px 0px 16px #6e6e6e4d;
-border: 1px #ffffff solid;
+box-shadow: 0 0 20px rgba(43, 43, 43, 0.219);
+border: 0px #ffffff solid;
 border-radius: 16px 16px 16px 16px;
 margin: 0px 30px 30px 30px;
 float: left;
@@ -155,11 +155,6 @@ padding: 20px 20px;
 animation-name: border-anim;
 animation-duration: 10s;
 animation-iteration-count: infinite;
-transition: 0.5s ease;
-}
-.settings:hover{
-/* border: 1px #ececec solid; */
-box-shadow: 4px 3px 16px #6e6e6e1e;
 transition: 0.5s ease;
 }
 .live{color: #383838;font-size: 15px;}
@@ -173,8 +168,8 @@ margin: 40px 90px 20px 0;
 padding: 0px 0px;
 color: #470047;
 background-color: #ffffff;
-border: 1px #e4e4e4 solid;
-box-shadow: 0px 0px 16px #6e6e6e4d;
+border: 0px #e4e4e4 solid;
+box-shadow: 0px 0px 16px #a0a0a04d;
 border-radius: 12px;
 width: 65.5vw;
 height:80vh;
@@ -225,7 +220,7 @@ box-shadow: -2px -2px 16px #57008044,
 box-shadow: 0px 0px 16px #6e6e6e00;}
 }
 svg{
-  display: none;
+  display: block;
 position: absolute;
 top: 0px;
 left: 0;
@@ -402,16 +397,30 @@ z-index: -1;}
       </div>
     </nav>
 
- <center>
-<div class="modern-navigation">
-<div class="modern-dash"></div><br>
-<a class="" onclick="home()">
-<i class="fa fa-home modern-nav-ic"></i></a>
-<i class="fa fa-search modern-nav-ic"></i>
-<i class="fa fa-music modern-nav-ic modern-nav-active"></i>
-<i class="fa fa-cog modern-nav-ic"></i>
-<i class="fa fa-info-circle modern-nav-ic"></i>
-</div></center>
+    <center>
+      <div class="modern-navigation">
+      <div class="modern-dash"></div><br>
+      <div class="menu-tooltip">
+        <span class="menu-tooltiptext">Back</span>
+      <i class="material-icons modern-nav-ic">arrow_back</i>
+    </div>
+      <div class="menu-tooltip" onclick="home()">
+        <span class="menu-tooltiptext">Home</span>
+        <i class="material-icons modern-nav-ic">home</i>
+      </div>
+      <div class="menu-tooltip" onclick="search()">
+        <span class="menu-tooltiptext">Search</span>
+        <i class="material-icons modern-nav-ic">search</i>
+      </div>
+      <div class="menu-tooltip disabled" onclick="select()">
+        <span class="menu-tooltiptext">Rooms</span>
+        <i class="material-icons modern-nav-ic modern-nav-active">headphones</i>
+      </div>
+      <div class="menu-tooltip" onclick="info()">
+        <span class="menu-tooltiptext">Info</span>
+        <i class="material-icons modern-nav-ic">info</i>
+      </div>
+      </div></center>
 
 <!-- <center> <br>
 <br><br><br><img class="maintenance" src="Maintenance/maintenance.gif" width="30%"></center><br><br>
@@ -781,8 +790,9 @@ Analytics
   </div>
 </div>
 <script>
+function back(){window.location = "../index.html";}
 function home(){window.location = "../index.html";}
-function search(){window.location = "../Help/room.html";}
+function search(){window.location = "../search.html";}
 function settings(){window.location = "../Help/room.html";}
 function about(){window.location = "../Help/room.html";}
 
@@ -793,7 +803,7 @@ function error(){alert("Stream in queue");}
 // function error(){window.location = "https://www.youtube.com/watch?v=gfhYyjK2bGY";}
 
 </script>
-<script type="text/javascript" src="../Android App/js.js"></script>
+<script type="text/javascript" src="../js/Live Controller.js"></script>
 <script type="text/javascript" src="../mdb/js/jquery.min.js"></script>
 <script type="text/javascript" src="../mdb/js/popper.min.js"></script>
 <script type="text/javascript" src="../mdb/js/global.min.js"></script>
