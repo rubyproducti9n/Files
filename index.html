@@ -380,25 +380,44 @@ function learn(){window.location.href = "Android App/Help/room.html";}
 </script>
 </head>
 <body>
-<div id="loading"></div>
+<div id="loading">
+  <center>
+  <img class="loading-img" src="loader.gif" draggable="false"><br>
+  </center>
+</div>
+
 
 <center>
   <div class="modern-navigation">
   <div class="modern-dash"></div><br>
-  <a class="disabled" onclick="home()">
-  <i class="fa fa-home modern-nav-ic modern-nav-active"></i></a>
-  <i class="fa fa-search modern-nav-ic" onclick="search()"></i>
-  <a class="" onclick="select()">
-  <i class="fa fa-music modern-nav-ic"></i></a>
-  <i class="fa fa-wrench modern-nav-ic" onclick="tools()"></i>
-  <i class="fa fa-info-circle modern-nav-ic"></i>
+  <div class="menu-tooltip disabled" onclick="back()">
+    <span class="menu-tooltiptext">Back</span>
+  <i class="material-icons modern-nav-ic">arrow_back</i>
+</div>
+  <div class="menu-tooltip disabled" onclick="home()">
+    <span class="menu-tooltiptext">Home</span>
+    <i class="material-icons modern-nav-ic modern-nav-active">home</i>
+  </div>
+  <div class="menu-tooltip">
+    <span class="menu-tooltiptext">Search</span>
+    <i class="material-icons modern-nav-ic">search</i>
+  </div>
+  <div class="menu-tooltip" onclick="select()">
+    <span class="menu-tooltiptext">Rooms</span>
+    <i class="material-icons modern-nav-ic">headphones</i>
+  </div>
+  <div class="menu-tooltip" onclick="info()">
+    <span class="menu-tooltiptext">Info</span>
+    <i class="material-icons modern-nav-ic">info</i>
+  </div>
   </div></center>
   <script>
-function home(){window.location = "../index.html";}
-function search(){window.location = "../Help/room.html";}
+function back(){window.location = "index.html";}
+function home(){window.location = "index.html";}
+function search(){window.location = "search.html";}
 function select(){window.location = "rooms/select.html";}
-function settings(){window.location = "../Help/room.html";}
-function about(){window.location = "../Help/room.html";}
+function tools(){window.location = "Tools.html";}
+function info(){window.location = "../Help/room.html";}
   </script>
 
  <nav class="navbar visually-hidden navbar-expand-lg fixed-top navbar-dark navbar-custom">
@@ -452,8 +471,8 @@ function about(){window.location = "../Help/room.html";}
 <div class="maintain-container">
 <center><br><br><br><br><img class="maintain-img" draggable="false" src="maintenance/music.png"></center>
 <center><p class="maintain-text">
-<h6>Oops! Server under maintenance, try again later.</h6>
-<h6>Open up the menu to explore more.</h6>
+<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Oops! Server under maintenance, try again later.</h6>
+<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Open up the menu to explore more.</h6>
 <br>
 </p></center></div>
 <div class="home-container">

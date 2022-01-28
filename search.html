@@ -49,11 +49,11 @@
       @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
     body{color: rgb(0, 0, 0);
       background: #ffffff;
-/* font-family: 'Comfortaa', cursive; */
-user-select: none;
-overflow: hidden;}
-.for-pc{display: block;}
-.for-mob{display: none;}
+  /* font-family: 'Comfortaa', cursive; */
+  user-select: none;
+  overflow: hidden;}
+  .for-pc{display: block;}
+  .for-mob{display: none;}
     a{color: #414141;}
       a:hover{
         color: rgb(255, 255, 255);
@@ -69,7 +69,7 @@ overflow: hidden;}
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
-font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive;
     }
     .body{
       overflow: scroll;
@@ -83,22 +83,51 @@ font-family: 'Comfortaa', cursive;
       width: 97%;
       height: 70vh;
     }
+    .search{
+      width: 90%;
+    }
+    .search-ic{
+      background-color: #ffffff;
+      padding: 16px;
+      margin-right: -4px;
+      border-radius: 6px 0px 0px 6px;
+      /* box-shadow: 0px 0px 20px #2525252c; */
+      z-index: 3;
+    }
     .search-input{
-        width: 50%;
+        width: 40%;
         height: 50px;
-        border: 1px #f2f2f2 solid;
-        border-radius: 10px;
-      box-shadow: 0px 0px 20px #2525252c;
+        border: 0px #f2f2f2 solid;
+      border-radius: 0px 6px 6px 0px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* box-shadow: 0px 0px 20px #2525252c; */
       transition: 0.5s ease;
     }
     .search-input:focus{
         height: 50px;
-        border: 1px #f2f2f2 solid;
-        border-radius: 10px;
-      box-shadow: 0px 0px 20px #25252542;
+        outline: none;
+        border: 0px #f2f2f2 solid;
+      /* box-shadow: 0px 0px 20px #25252542; */
       transition: 0.5s ease;
     }
+    tr{
+      background: #ffffff;
+      transition: 0.5s ease;
+    }
+    tr:hover{
+      transform: scale(0.98);
+      background-color: rgb(218, 218, 218);
+      color: rgb(34, 34, 34);
+      transition: 0.2s ease;
+    }
+    tr:active{
+      transform: scale(0.95);
+      background-color: #800080;
+      color: #fff;
+      transition: 0.2s ease;
+    }
     .cover-art{
+      display: none;
         width: 6%;
         padding: 2px 2px;
         border-radius: 30px;
@@ -116,8 +145,8 @@ font-family: 'Comfortaa', cursive;
         font-size: 12px;
     }
     .sub-title{
-        margin-top: -10px;
-        margin-left: 67px;
+        /* margin-top: -10px;
+        margin-left: 67px; */
         font-size: 10px;
     }
     .album{font-size: 12px;}
@@ -135,10 +164,10 @@ font-family: 'Comfortaa', cursive;
 
 
     @media screen and (max-width: 768px){
-.for-pc{display: none;}
-.for-mob{display: block;}
-svg{display: none;}
-.body{
+  .for-pc{display: none;}
+  .for-mob{display: block;}
+  svg{display: none;}
+  .body{
     overflow: scroll;
       color: #000;
       background-color: rgb(255, 255, 255);
@@ -149,11 +178,11 @@ svg{display: none;}
       padding: 10px 10px;
       width: 100%;
       height: 70vh;
-}
-.search-input{
-width: 100%;
-font-size: 14px;
-}
+  }
+  .search-input{
+  width: 100%;
+  font-size: 14px;
+  }
     .cover-art{
         width: 10%;
         padding: 2px 2px;
@@ -191,22 +220,37 @@ font-size: 14px;
     });
     </script></head>
           <body>
-
-            <div id="loading">
-            </div>
+            <!-- <div id="loading">
+              <center>
+              <img class="loading-img" src="loader.gif" draggable="false"><br>
+              </center>
+            </div> -->
             <center>
               <div class="modern-navigation">
               <div class="modern-dash"></div><br>
-              <a class="" onclick="home()">
-                <i class="material-icons modern-nav-ic">home</i></a>
-                <i class="material-icons modern-nav-ic">search</i>
-              <a class="" onclick="select()">
-                <i class="material-icons modern-nav-ic">headphones</i></a>
-                <i class="material-icons modern-nav-ic">settings</i>
-                <i class="material-icons modern-nav-ic">info</i></i>
+              <div class="menu-tooltip">
+                <span class="menu-tooltiptext">Back</span>
+              <i class="material-icons modern-nav-ic">arrow_back</i>
+            </div>
+              <div class="menu-tooltip" onclick="home()">
+                <span class="menu-tooltiptext">Home</span>
+                <i class="material-icons modern-nav-ic">home</i>
+              </div>
+              <div class="menu-tooltip disabled">
+                <span class="menu-tooltiptext">Search</span>
+                <i class="material-icons modern-nav-ic modern-nav-active">search</i>
+              </div>
+              <div class="menu-tooltip" onclick="select()">
+                <span class="menu-tooltiptext">Rooms</span>
+                <i class="material-icons modern-nav-ic">headphones</i>
+              </div>
+              <div class="menu-tooltip" onclick="info()">
+                <span class="menu-tooltiptext">Info</span>
+                <i class="material-icons modern-nav-ic">info</i>
+              </div>
               </div></center>
 
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: #41414100;">
+            <nav class="navbar visually-hidden navbar-expand-lg navbar-dark fixed-top" style="background: #41414100;">
               <div class="container-fluid">
                 <button
                   class="navbar-toggler"
@@ -249,361 +293,366 @@ font-size: 14px;
 
   <!-- <div class="err">
   <center>
-<img class="tool-img"><br>
-Oops! we are currently working on it, please try again later.
+  <img class="tool-img"><br>
+  Oops! we are currently working on it, please try again later.
     </center>
   </div> -->
-<center>
-  <input type="text" class="form-control mb-4 search-input" id="tableSearch" placeholder="Search your favourite songs...">
-</center>
+  <center>
+    <div class="search">
+  <i class="fa fa-search search-ic"></i>
+  <input type="text" class="search-input" id="tableSearch" placeholder="Search your favourite songs...">
+</div><br>
+  </center>
   <div class="body">
-    <table class="table table-borderless table-hover">
-<tbody id="Table">
- <tr class="" onclick="ptd()">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Permission To Dance' Official Audio Song
-<br><h6 class="sub-title"> Music Label: Hybe Label • Released July 09 2021 </h6></td>
-<td class="album">Butter</td>
-<td class="artist">BTS</td>
-<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
-</tr>
-<tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Butter' Official Audio Song
+    <table class="table table-borderless">
+  <tbody id="Table">
+  <tr class="" onclick="ptd()">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Permission To Dance' Official Audio Song
+  <br><h6 class="sub-title"> Music Label: Hybe Label • Released July 09 2021
+
+  </h6></td>
+  <td class="album">Butter</td>
+  <td class="artist">BTS</td>
+  <td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Butter' Official Audio Song
     <br><h6 class="sub-title"> Music Label: Hybe Label • Released 3 years ago </h6></td>
-<td class="album">Butter</td>
-<td class="artist">BTS</td>
-<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dynamite' Official Audio Song
+  <td class="album">Butter</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dynamite' Official Audio Song
     <br><h6 class="sub-title"> Music Label: Hybe Label • Released 3 years ago </h6></td>
-<td class="artist">Unknown</td>
-<td class="artist">BTS</td>
-<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Life Goes On' Official Audio Song</td>
-<td class="album">B.E</td>
-<td class="artist">BTS</td>
-<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dope' Official Audio Song</td>
-<td class="album">The Most Beautiful Moment in Life Pt-1</td>
-<td class="artist">BTS</td>
-<td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'N.O.' Official Audio Song</td>
-<td class="album">O!RUL8.1?</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Run' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Black Swan' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'DNA' Official Audio Song</td>
-<td class="album">Love Yourself:Her</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Fake Love' Official Audio Song</td>
-<td class="album">Love Yourself:Tears</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Idol' Official Audio Song</td>
-<td class="album">LoveYourself:Answer</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Louder Than Bombs' Official Audio Song</td>
-<td class="album">Map Of The Soul:7</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Make It Right' Official Audio Song</td>
-<td class="album">Map Of The Soul:Pesona</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'MiIC Drop' Official Audio Song</td>
-<td class="album">Love Yourself:Her</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Not Today' Official Audio Song</td>
-<td class="album">You Never Walk Alone</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'ON' Official Audio Song</td>
-<td class="album">Map Of The Soul:7</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Save Me' Official Audio Song</td>
-<td class="album">The Most Beautiful Moment in Life: Young Forever </td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Spring Day' Official Audio Song</td>
-<td class="album">You Never Walk Alone</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Boy With LUV' Official Audio Song</td>
-<td class="album">Map Of The Soul:Persona</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Blood Sweat & Tears' Official Audio Song</td>
-<td class="album">Wings</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'I Need U' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Fire' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Savage Love' Official Audio Song</td>
-<td class="album">Map Of The Soul</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Mikrokosmos' Official Audio Song</td>
-<td class="album">Map Of The Soul:Persona</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Magic Shop' Official Audio Song</td>
-<td class="album">Love Yourself:Tears</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Coffee' Official Audio Song</td>
-<td class="album">O!RUL8,2?</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Zero O'clock' Official Audio Song</td>
-<td class="album">Map Of The Soul:7</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'The Truth Untold' Official Audio Song</td>
-<td class="album">Love Yourself:Tear</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Best Of Me' Official Audio Song</td>
-<td class="album">Love Yourself:Her</td>
-<td class="artist">BTS</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title">#</td>
-<td class="album">#</td>
-<td class="artist">#</td>
-<td class="status">#</td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Filter' Official Audio Song</td>
-<td class="album">Map Of The Soul:7</td>
-<td class="artist">Park Jimin</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Lie' Official Audio Song</td>
-<td class="album">Wings</td>
-<td class="artist">Park Jimin</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Serendipity' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Park Jimin</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Lie' Official Audio Song</td>
-<td class="album">Wings</td>
-<td class="artist">Park Jimin</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Promise' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Park Jimin</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title">#</td>
-<td class="album">#</td>
-<td class="artist">#</td>
-<td class="status">#</td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jk.jpg" class="cover-art"> Jungkook (#) 'Euphoria' Official Audio Song</td>
-<td class="album">Love Yourself:Answer</td>
-<td class="artist">Jeon Jungkook</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jk.jpg" class="cover-art"> Jungkook (#) 'Begin' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Jeon Jungkook</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jk.jpg" class="cover-art"> Jungkook (#) 'Still With You' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Jeon Jungkook</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title">#</td>
-<td class="album">#</td>
-<td class="artist">#</td>
-<td class="status">#</td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Christmas Tree' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Tae-hyung</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Sweet Night' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Tae-hyung</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Scenery' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Tae-hyung</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Winter Bear' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Tae-hyung</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Hug Me' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Tae-hyung</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Inner Child' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Tae-hyung</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title">#</td>
-<td class="album">#</td>
-<td class="artist">#</td>
-<td class="status">#</td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/jin.jpg" class="cover-art"> Jin (#) 'Epiphany' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Seok-jin</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title">#</td>
-<td class="album">#</td>
-<td class="artist">#</td>
-<td class="status">#</td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'People' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Min Yoon-gi</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'Interlude:Shadow' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Min Yoon-gi</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'First Love' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Min Yoon-gi</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'Give it to Me' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Min Yoon-gi</td>
-<td class="status"></td>
- </tr>
- <tr class="">
-<td class="main-title">#</td>
-<td class="album">#</td>
-<td class="artist">#</td>
-<td class="status">#</td>
- </tr>
- <tr class="">
-<td class="main-title"><img src="album-cover/rm.jpg" class="cover-art"> RM (#) 'Trivia' Official Audio Song</td>
-<td class="album">Unknown</td>
-<td class="artist">Kim Nam-joon</td>
-<td class="status"></td>
- </tr>
-</tbody>
-</table>
-<script>
-$(document).ready(function(){
+  <td class="artist">Unknown</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Life Goes On' Official Audio Song</td>
+  <td class="album">B.E</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dope' Official Audio Song</td>
+  <td class="album">The Most Beautiful Moment in Life Pt-1</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'N.O.' Official Audio Song</td>
+  <td class="album">O!RUL8.1?</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Run' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Black Swan' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'DNA' Official Audio Song</td>
+  <td class="album">Love Yourself:Her</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Fake Love' Official Audio Song</td>
+  <td class="album">Love Yourself:Tears</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Idol' Official Audio Song</td>
+  <td class="album">LoveYourself:Answer</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Louder Than Bombs' Official Audio Song</td>
+  <td class="album">Map Of The Soul:7</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Make It Right' Official Audio Song</td>
+  <td class="album">Map Of The Soul:Pesona</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'MiIC Drop' Official Audio Song</td>
+  <td class="album">Love Yourself:Her</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Not Today' Official Audio Song</td>
+  <td class="album">You Never Walk Alone</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'ON' Official Audio Song</td>
+  <td class="album">Map Of The Soul:7</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Save Me' Official Audio Song</td>
+  <td class="album">The Most Beautiful Moment in Life: Young Forever </td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Spring Day' Official Audio Song</td>
+  <td class="album">You Never Walk Alone</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Boy With LUV' Official Audio Song</td>
+  <td class="album">Map Of The Soul:Persona</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Blood Sweat & Tears' Official Audio Song</td>
+  <td class="album">Wings</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'I Need U' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Fire' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Savage Love' Official Audio Song</td>
+  <td class="album">Map Of The Soul</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Mikrokosmos' Official Audio Song</td>
+  <td class="album">Map Of The Soul:Persona</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Magic Shop' Official Audio Song</td>
+  <td class="album">Love Yourself:Tears</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Coffee' Official Audio Song</td>
+  <td class="album">O!RUL8,2?</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Zero O'clock' Official Audio Song</td>
+  <td class="album">Map Of The Soul:7</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'The Truth Untold' Official Audio Song</td>
+  <td class="album">Love Yourself:Tear</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Best Of Me' Official Audio Song</td>
+  <td class="album">Love Yourself:Her</td>
+  <td class="artist">BTS</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title">#</td>
+  <td class="album">#</td>
+  <td class="artist">#</td>
+  <td class="status">#</td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Filter' Official Audio Song</td>
+  <td class="album">Map Of The Soul:7</td>
+  <td class="artist">Park Jimin</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Lie' Official Audio Song</td>
+  <td class="album">Wings</td>
+  <td class="artist">Park Jimin</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Serendipity' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Park Jimin</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Lie' Official Audio Song</td>
+  <td class="album">Wings</td>
+  <td class="artist">Park Jimin</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jimin.jpg" class="cover-art"> Jimin (#) 'Promise' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Park Jimin</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title">#</td>
+  <td class="album">#</td>
+  <td class="artist">#</td>
+  <td class="status">#</td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jk.jpg" class="cover-art"> Jungkook (#) 'Euphoria' Official Audio Song</td>
+  <td class="album">Love Yourself:Answer</td>
+  <td class="artist">Jeon Jungkook</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jk.jpg" class="cover-art"> Jungkook (#) 'Begin' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Jeon Jungkook</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jk.jpg" class="cover-art"> Jungkook (#) 'Still With You' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Jeon Jungkook</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title">#</td>
+  <td class="album">#</td>
+  <td class="artist">#</td>
+  <td class="status">#</td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Christmas Tree' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Tae-hyung</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Sweet Night' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Tae-hyung</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Scenery' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Tae-hyung</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Winter Bear' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Tae-hyung</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Hug Me' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Tae-hyung</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/v.jpg" class="cover-art"> V (#) 'Inner Child' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Tae-hyung</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title">#</td>
+  <td class="album">#</td>
+  <td class="artist">#</td>
+  <td class="status">#</td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/jin.jpg" class="cover-art"> Jin (#) 'Epiphany' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Seok-jin</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title">#</td>
+  <td class="album">#</td>
+  <td class="artist">#</td>
+  <td class="status">#</td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'People' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Min Yoon-gi</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'Interlude:Shadow' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Min Yoon-gi</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'First Love' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Min Yoon-gi</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/suga.jpg" class="cover-art"> Suga (#) 'Give it to Me' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Min Yoon-gi</td>
+  <td class="status"></td>
+  </tr>
+  <tr class="">
+  <td class="main-title">#</td>
+  <td class="album">#</td>
+  <td class="artist">#</td>
+  <td class="status">#</td>
+  </tr>
+  <tr class="">
+  <td class="main-title"><img src="album-cover/rm.jpg" class="cover-art"> RM (#) 'Trivia' Official Audio Song</td>
+  <td class="album">Unknown</td>
+  <td class="artist">Kim Nam-joon</td>
+  <td class="status"></td>
+  </tr>
+  </tbody>
+  </table>
+  <script>
+  $(document).ready(function(){
     $("#tableSearch").on("keyup", function(){
         var value = $(this).val().toLowerCase();
         $("#Table tr").filter(function(){
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
-});
-</script>
+  });
+  </script>
   </div>
 
 
@@ -613,7 +662,13 @@ $(document).ready(function(){
             </div>
 
       <script>
-        function error(){alert("This tool is not supported in Android Verion.");}
+        function error(){alert("Something went wrong, please try again later.");}
+        function back(){window.location = "index.html";}
+        function home(){window.location = "index.html";}
+        function search(){window.location = "search.html";}
+        function select(){window.location = "rooms/select.html";}
+        function tools(){window.location = "Tools.html";}
+        function info(){window.location = "../Help/room.html";}
         function ptd(){window.location = "pages/audio/bts_ptd.html";}
         function qrCode(){window.location = "Tools/qr code generator.html";}
         </script>
@@ -634,14 +689,6 @@ $(document).ready(function(){
            <script type="text/javascript" src="rubyproducti9n pro/js/popper.min.js"></script>
            <script type="text/javascript" src="rubyproducti9n pro/js/bootstrap.min.js"></script>
            <script type="text/javascript" src="rubyproducti9n pro/js/mdb.min.js"></script>
-
-
-
-      <script type="text/javascript" src="views/Seventeen FEAR Status Video.js"></script>
-      <script type="text/javascript" src="views/ONEUS LIT Status Video.js"></script>
-      <script type="text/javascript" src="views/BTS BUTTER Status Video.js"></script>
-      <script type="text/javascript" src="views/Agust D Status Video.js"></script>
-      <script type="text/javascript" src="views/Shanti Status Video.js"></script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="js/dark-mode-switch.min.js"></script>
