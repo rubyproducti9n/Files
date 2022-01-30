@@ -2131,7 +2131,7 @@ transform: rotate(-135deg);
     }
       /* width */
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 20px;
     transition: 0.5s;
   }
 
@@ -2143,15 +2143,22 @@ transform: rotate(-135deg);
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #5e008a, #ae00ff);
-    border-radius: 0px 0px 0px 0px;
+    background-color: #9800c7;
+    /* background: linear-gradient(45deg, #5e008a, #ae00ff); */
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 10px #ffffff00;
+    scroll-behavior: smooth;
     transition: 0.5s;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #ae00ff, #5e008a);
+    background-color: #8900b3;
+    box-shadow: inset 0px 0px 10px #800080;
     transition: 0.5s;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: #80008000;
   }
 
 
@@ -2202,7 +2209,8 @@ transform: rotate(-135deg);
   position: fixed;
   bottom: -190px;
   left: 37vw;
-  background: #ffffffe0;
+  background: #ffffff44;
+  backdrop-filter: blur(14px);
   border-radius: 30px;
   padding: 10px 20px 40px 20px;
   box-shadow: 0px 0px 16px #6e6e6e3b;
@@ -2397,6 +2405,35 @@ transform: rotate(-135deg);
     visibility: visible;
     transition: 0.5s;
     }
+    .menu-tooltip {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;}
+    .menu-tooltip .menu-tooltiptext {
+    visibility: hidden;
+    height: min-content;
+    background-color: #363636dc;
+    /* box-shadow: 10px 10px 20px #3636365b; */
+    color: #fff;
+    border: 0px #800080 solid;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    top: -30px;
+    bottom: 100%;
+    left: 78px;
+    margin-left: -70px;
+    z-index: 1;
+    }
+    .menu-tooltip:hover .menu-tooltiptext {
+    overflow: visible;
+    visibility: visible;
+    transition: 0.5s ease;
+    }
     .qr-img{
       width: 100%;
       color: #222;
@@ -2424,7 +2461,7 @@ transform: rotate(-135deg);
       z-index: 19;
     }
     .loading-img{
-      width: 3%;
+      width: 13%;
       margin-top: 20%;
       opacity: .5;
     }
@@ -2506,17 +2543,46 @@ transform: rotate(-135deg);
   left: 30px;
   transition: 0.5s;
   }
+  .menu-tooltip {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;}
+  .menu-tooltip .menu-tooltiptext {
+  visibility: hidden;
+  height: min-content;
+  background-color: #363636dc;
+  /* box-shadow: 10px 10px 20px #3636365b; */
+  color: #fff;
+  border: 0px #800080 solid;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  top: -30px;
+  bottom: 100%;
+  left: 78px;
+  margin-left: -70px;
+  z-index: 1;
+  }
+  .menu-tooltip:hover .menu-tooltiptext {
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.5s ease;
+  }
   .qr-img{
     width: 100%;
   }
   .modern-navigation{
   position: fixed;
-  bottom: -65px;
+  bottom: -85px;
   left: 0%;
   width: 100%;
   background: #ffffffe0;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 10px 10px 20px 10px;
   box-shadow: 0px 0px 16px #6e6e6e4b;
   overflow: hidden;
   z-index: 11;
@@ -2537,7 +2603,7 @@ transform: rotate(-135deg);
   }
   .modern-nav-ic{
   color: rgb(70, 70, 70);
-  font-size: 17px;
+  font-size: 5px;
   padding: 13px 13px 13px 13px;
   border-radius: 30px;
   margin: 5px 5px 5px 5px;
@@ -2546,7 +2612,7 @@ transform: rotate(-135deg);
   .modern-nav-ic:hover{
   transform: scale(1.0);
   padding: 13px;
-  border-radius: 30px;
+  border-radius: 100%;
   color: rgb(70, 70, 70);
   background: #d1d1d1;
   transition: 0.6s ease;
@@ -2554,17 +2620,17 @@ transform: rotate(-135deg);
   .modern-nav-ic:active{
   transform: scale(1.0);
   padding: 13px;
-  border-radius: 30px;
+  border-radius: 100%;
   color: rgb(70, 70, 70);
   background: #868686;
   transition: 0.5s ease;
   }
   .modern-nav-active{
-  transform: scale(1.2);
+  transform: scale(1.0);
   color: #ffffff;
   padding: 13px;
   margin: 0 10px;
-  border-radius: 50px;
+  border-radius: 50%;
   background: #800080;
   }
   .btn-modern-fill{
@@ -2734,6 +2800,3 @@ transform: rotate(-135deg);
     /* | */
     /* ========================================================= */
   }
-
-
-
