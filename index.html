@@ -65,15 +65,15 @@ body{
 color: rgb(255, 255, 255);
 background: #fff;
 background-size: 100% 300%;
-font-family: 'Comfortaa', cursive;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 user-select: none;
 overflow-x: hidden;
 }
 /* .home-container{display: block;} */
 .navbar-custom{display: block;}
 footer{display: block;}
-.home-container{display: none;}
-.maintain-container{display: block;}
+.home-container{display: block;}
+.maintain-container{display: none;}
 /* a{color: #fff;}
 a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);} */
@@ -83,129 +83,84 @@ a:active{color: rgb(255, 255, 255);} */
 .desktop{
   display: block;
 }
-.img-feed{
-width: 450px;
-border-radius: 16px;
-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.541);
-transition: 0.5s ease;
+.comfortaa{
+  font-family: 'Comfortaa', cursive;
 }
-.img-feed:hover{
-border-radius: 16px;
-box-shadow: 2px 2px 18px #8000807a;
-transform: scale(0.9);
-transition: 0.5s ease;
+.btn-custom{
+  background: #370057;
 }
-.img-feed:active{
-border-radius: 16px;
-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.541);
-transform: scale(0.7);
-transition: 0.5s ease;
+.background{
+  display: none;
+  position: fixed;
+  background: url(background/bg2.jpg);
+  z-index: -10;
 }
-.horizontal_feed{
-  line-break: auto;
-overflow-x: scroll;
-overflow-y: hidden;
-}
-.live-container{
-margin: 0;
-border: 2px rgba(0, 0, 0, 0) solid;
-color: #2b002b;
-background: #fff;
-}
-.upcoming{
-margin-top: 40px;
-margin-left: 120px;
-margin-bottom: -20px;
-padding-left: 10px;
-  transition: 0.2s ease;
-}
-.external::after{
-  font-family: "Font Awesome 5 Free";
-  content: "\f35d";
-  font-weight: 900;
-  opacity: 0;
-  transition: 0.2s ease;
-}
-.external:hover::after{
-  font-family: "Font Awesome 5 Free";
-  content: "\f35d";
-  font-weight: 900;
-  opacity: 1;
-  transition: 0.2s ease;
-}
-.live-img{
-content: url(album-cover.jpg);
-width: 300px;
-border-radius: 6px;
-}
-.dashboard{
-border-radius: 800px 0 0 0;
-background: #800080;
-}
-.dashboard-bg{
-color: #800080;
-background: #fff;
-border-radius: 20px;
-padding: 50px 0;
-cursor: pointer;
-font-size: 20px;
-border: 2px #fff solid;
-box-shadow: -5px -5px 10px #92929221,
-            5px 5px 10px #2e002e7e;
-transform: scale(1.0);
-transition: 0.5s ease;
-}
-.dashboard-bg:hover{
-transform: scale(1.1);
-transition: 0.5s ease;
-}
-.dashboard-bg:active{
-transform: scale(0.6);
-transition: 0.2s ease;
-}
-.dashboard-clr{color: #800080;}
 .svg{margin-top: -20px;}
-.info-tooltip {
-color: #fff;
-position: relative;
-display: inline-block;
-z-index: 1;
-transition: 0.5s;}
-.info-tooltip .info-tooltiptext {
-visibility: hidden;
-width: 240px;
-height: 140px;
-background-color: #580058dc;
-backdrop-filter: blur(5px);
-box-shadow: 10px 10px 20px #3636365b;
-color: #fff;
-border: 2px #800080 solid;
-text-align: center;
-font-size: 13px;
-border-radius: 4px;
-padding: 10px 10px;
-position: absolute;
-z-index: 1;
-top: -5px;
-bottom: 100%;
-left: 680px;
-line-height: 20px;
-margin-left: -60px;
+.section-title{
+  color: rgb(51, 51, 51);
+  margin: 10px 40px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.info-tooltip:hover .info-tooltiptext {
-overflow: visible;
-visibility: visible;
-transition: 0.5s;
+.ic-more{
+  float: right;
+  margin-right: 60px;
 }
-small{color: white;font-size: 12px;}
-.btn-custom{background: #7100bd;}
-.live{
-background-color: #800080;
-width: 25%;
-padding: 1px 1px;
-color: white;
-border: 2px #c4c4c4 solid;
-border-radius: 0px;}
+.custom-card{
+  background: rgba(255, 255, 255, 0);
+  border: 1px rgba(0, 0, 0, 0) solid;
+  border-radius: 20px;
+  padding: 10px 0px;
+  margin: 10px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card{
+  display: inline-block;
+  margin: 0 18px;
+  width: 22%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  /* backdrop-filter: blur(14px); */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.card:hover{
+  background: rgba(189, 189, 189, 0.288);
+  transition: 0.5s ease;
+}
+.card-img{
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.308);
+}
+.dr-title{
+  margin: 20px 0;
+  padding: 0 10px;
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  color: #000;
+}
+.dr-details{
+  overflow: scroll;
+  text-overflow: ellipsis;
+  line-height: 15px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 20vh;
+}
+.rating{
+  margin: 10px 20px;
+  cursor: default;
+  z-index: 13;
+}
 .third-section{background: #800080;}
 .subscribe{
 background: #800080;
@@ -290,38 +245,74 @@ body{font-size: 2vh; overflow-y: scroll; overflow-x: hidden;}
 .navbar-custom{display: none;}
 .svg{margin-top: -20px;}
 svg:nth-child(1){margin-top: -10px;}
-.dashboard{border-radius: 200px 0 0 0;}
-.desktop{
+.section-title{
+  margin: 0px 10px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ic-more{
   display: none;
 }
-.img-feed{
-width: 100px;
-border-radius: 6px;
-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.541);
-transition: 0.5s ease;
+.custom-card{
+  background: rgba(255, 255, 255, 0);
+  border: 1px rgba(0, 0, 0, 0) solid;
+  border-radius: 20px;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.img-feed::-webkit-scrollbar{
-  display: none;
+.card{
+  display: inline-block;
+  margin: 20px 4px;
+  width: 47%;
+  height: 67vh;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
-.upcoming{
-  content: '';
-margin-top: 40px;
-margin-left: 20px;
-margin-bottom: -20px;
+.card:hover{
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5s ease;
 }
-.dashboard-bg{
-color: #800080;
-background: #fff;
-border-radius: 6px;
-font-size: 12px;
-padding: 10px;
-box-shadow: 2px 2px 20px #363636a2;}
+.card-img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.308);
+}
+.dr-title{
+  margin: 20px 0;
+  padding: 0 10px;
+  font-size: 11px;
+  font-family: 'Comfortaa', cursive;
+  color: #000;
+}
+.dr-details{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 10vh;
+}
+.rating{
+  margin: 10px 5px;
+  cursor: default;
+  z-index: 3;
+}
 .maintain-container{
 width: 100vw;
 background-color: rgba(255, 0, 0, 0);
 padding: 10px 10px;
 transition: 0.5s;}
-.maintain-img{width: 70%;margin-top: 0px;transition: 0.5s;}
+.maintain-img{width: 95%;margin-top: 0px;transition: 0.5s;}
 .subscribe, h1{
 font-size: 23px;
 }
@@ -406,6 +397,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
   <img class="loading-img" src="loader.gif" draggable="false"><br>
   </center>
 </div>
+<div class="background"></div>
 
 
 <center>
@@ -419,7 +411,7 @@ function learn(){window.location.href = "Android App/Help/room.html";}
     <span class="menu-tooltiptext">Home</span>
     <i class="material-icons modern-nav-ic modern-nav-active">home</i>
   </span>
-  <span class="menu-tooltip">
+  <span class="menu-tooltip" onclick="search()">
     <span class="menu-tooltiptext">Search</span>
     <i class="material-icons modern-nav-ic">search</i>
   </span>
@@ -492,13 +484,13 @@ function info(){window.location = "../Help/room.html";}
 <div class="maintain-container">
 <center><br><br><br><br><img class="maintain-img" draggable="false" src="maintenance/music.png"></center>
 <center><p class="maintain-text">
-<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Oops! Server under maintenance, try again later.</h6>
+<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">We're redesigning our home page, check again later.</h6>
 <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Open up the menu to explore more.</h6>
 <br>
 </p></center></div>
 <div class="home-container">
   <div class="heading">
-    <div class="view jarallax" data-jarallax='{"speed": 0.1}' style="background-image: url('background/bg2.jpg');">
+    <div class="view jarallax" data-jarallax='{"speed": 0.1}' style="background-image: url('background/b11.png');">
       <div class="mask rgba-indigo-light">
         <div class="container h-100 d-flex justify-content-center align-items-center">
           <div class="row pt-5 mt-3">
@@ -508,7 +500,7 @@ function info(){window.location = "../Help/room.html";}
                   <li>
                     <h1 class="display-4 mt-md-5 mt-lg-0 mb-5 white-text wow fadeIn"
                       data-wow-delay="0.3s">
-                      <strong>RUBY PRODUCTION</strong>
+                      <strong class="comfortaa">ConcertEra</strong>
                     </h1>
                   </li>
                   <li>
@@ -568,243 +560,91 @@ aria-hidden="true"
 </div>
 
 
+<h2 class="">
+  <a class="section-title" href="pages/dramas.html#">
+  Best dramas to watch in 2022
+<i class="fa fa-chevron-right ic-more"></i>
+</a>
+</h2>
+<div class="custom-card" onclick="vincenzoNetflix()">
+  <div class="card">
+  <img class="card-img" src="https://imagecdn.me/cover/vincenzo.png">
+  <h3 class="dr-title">Vincenzo (빈첸조) | Netflix Originals </h3>
+  <h6 class="dr-details">
+    At the age of 8, Park Ju Hyeong is adopted and sent off to Italy. Now an adult, he is known as Vincenzo Casano.
 
-<div
-class="modal fade"
-id="download-modal"
-tabindex="-1"
-aria-labelledby="exampleModalLabel"
-aria-hidden="true"
->
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header btn-custom">
-      <h5 class="modal-title text-white" id="exampleModalLabel">Download ConcertEra</h5>
-      <button
-        type="button"
-        class="btn-close"
-        data-mdb-dismiss="modal"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="modal-body text-black-50">
-      <center>
-      <img class="premium-img" src="maintenance/teaser.jpg"><br>
-    </center>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-custom btn-floating text-white disabled"> <i class="fas fa-download"></i> </button>
-      <button type="button" class="btn btn-custom btn-floating text-white disabled"> <i class="fas fa-star"></i> </button>
-      <a href="Android App/about.html" class="btn btn-custom btn-floating text-white"><i class="fas fa-info-circle"></i></a>
-    </div>
-  </div>
+    He is a Mafia lawyer and consigliere. ( Advisor and dispute reconciliation expert.) Warring factions within the Mafia force him to flee to South Korea. There he falls in love with Hong Cha Young. a lawyer who will do anything to win a case. Vincenzo manages to achieve some social justice there, and in his own way.
+
+    Jang Jun Woo is an intelligent and hardworking first-year law intern at the firm, who is polite and sincere. Despite his boyish charm and good looks, Jun Woo can come a cross as awkward and naive. Prone to making mistakes, he is often trouble at work.
+  </h6>
+  <span class="rating" onclick="vincenzoDramacool()">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+  </span>
+  <br><br>
+</div>
+<div class="card" onclick="penthouseNetflix()">
+<img class="card-img" src="https://imagecdn.me/cover/the-penthouse-season-3.png">
+<h3 class="dr-title">Penthouse (옥상 창고) | Netflix</h3>
+<h6 class="dr-details">
+  The residents of Hera Palace, a luxury penthouse apartment with 100 floors, have many secrets and hidden ambitions. Sim Su Ryeon, who was born into wealth, is the queen of the penthouse apartment. Cheon Seo Jin, the prima donna of the residence, does all she can to give everything to her daughter. Oh Yoon Hee comes from a poor family background, but she strives to enter high society by becoming the queen of the penthouse, the pinnacle of success in her eyes. A battle for wealth, power, and prestige at Seoul’s most coveted penthouse begins
+</h6>
+<span class="rating" onclick="penthouseDramacool()">
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+</span>
+<br><br>
+</div>
+<div class="card" onclick="strongwomanNetflix()">
+<img class="card-img" src="https://imagecdn.me/cover/strong-woman-do-bong-soon.png">
+<h3 class="dr-title">Strong Women Do Bong Soon (강한여자 도봉순) | Netflix</h3>
+<h6 class="dr-details">
+  Do Bong Soon is a petite, unemployed woman who is honest and kind. She appears little and sweet on the outside, but she is in fact very, very strong. In her family, for generations the women have been gifted Herculean strength to use for the greater good. If abused, however, their power will be taken away. Whilst standing up for herself after gang members bully her, she finds herself approached by Ahn Min Hyuk, the handsome and somewhat childish CEO of Ainsoft, a gaming company. Ahn Min Hyuk, who holds a great distrust towards the police, witnessed the whole exchange of Bong Soon's superhuman strength, and now wants to employ her as a bodyguard after being threatened by an unknown enemy. Min Hyuk falls in love with super-strong Bong Soon at first sight, but there's a catch. Bong Soon has eyes for someone else; police officer and childhood friend, In Guk Doo, whom she has known since high school. When chaos ensues after a series of kidnappings in Do Bong Soon's hometown of Dobong-dong, Dobong-gu, Bong Soon must decide whether to use her strength and stand up to evil, or play it safe and keep her powers hidden from the world. Combined with the love triangle she faces between In Guk Doo and Ahn Min Hyuk, as well as having to keep Min Hyuk safe, Bong Soon's life is thrown into turmoil. Can she use her strength for the greater good, or will it prove in the end to be too much?
+</h6>
+<span class="rating" onclick="strongwomanDramacool()">
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+</span>
+<br><br>
+</div>
+<div class="card" onclick="hometownNetflix()">
+<img class="card-img" src="https://imagecdn.me/cover/mr-hong.png">
+<h3 class="dr-title">Hometown Cha Cha (아버지의 고향 차차) | Netflix Originals</h3>
+<h6 class="dr-details">
+  A love story set in the seaside village of Gongjin.
+
+Yoon Hye Jin, who works as a dentist, is a woman who has both beauty and brains. However, her life plan falls apart because of the tiny bit of righteousness in her heart, and after various obstacles, she moves to the seashore village Gongjin and meets Hong Doo Shik. She becomes curious about him. Hong Doo Shik is called Chief Hong by the local residents. He is officially unemployed, but he is a master of odd jobs who appears to help everyone in Gongjin with any situation they run into.
+</h6>
+<span class="rating" onclick="hometowDramacool()">
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+  <i class="fa fa-star"></i>
+</span>
+<br><br>
 </div>
 </div>
+<script>
+        function vincenzoNetflix(){window.location = "https://www.netflix.com/title/81365087";}
+        function penthouseNetflix(){window.location = "https://www.netflix.com/ph/title/81552562";}
+        function strongwomanNetflix(){window.location = "https://www.netflix.com/in/title/80198001";}
+        function hometownNetflix(){window.location = "https://www.netflix.com/title/81473182";}
+
+        function vincenzoDramacool(){window.location = "https://dramacool.news/asian-wiki/vincenzo.html";}
+        function penthouseDramacool(){window.location = "https://dramacool.news/search?type=movies&keyword=penthouse";}
+        function strongwomanDramacool(){window.location = "https://dramacool.news/asian-wiki/strong-woman-do-bong-soon.html";}
+        function hometownDramacool(){window.location = "https://dramacool.news/asian-wiki/mr-hong.html";}
+</script>
 
 
-
-
-<div class="modal fade"id="stream-modal"tabindex="-1"aria-labelledby="exampleModalLabel"aria-hidden="true">
-<div class="modal-dialog modal-lg">
-  <div class="modal-content">
-    <div class="modal-header btn-custom">
-      <h5 class="modal-title text-white" id="exampleModalLabel">Stream Details</h5>
-      <!-- <a class="btn-close text-white"
-        data-mdb-dismiss="modal"
-        aria-label="Close"></a> -->
-    </div>
-    <div class="modal-body text-black-50">
-      <center>
-        <table class="table text-black table-borderless">
-          <tbody>
-            <tr>
-              <th> <center>  </center></th>
-              <th> </th>
-              </tr>
-              <tr class="">
-                <td>
-                  <a class="text-black user-select-none" style="font-family: 'Comfortaa', cursive;">
-                    <h5>  Bangtan Is Live | New Year Special | Welcome 2022 with BTS </h5></a>
-                  <h6>
-                   <small class="text-black" style="font-family: 'Baloo 2', cursive;" translate="yes">
-
-                    Artist: BTS & Army<br>
-                    Albums: Multiple<br>
-                    Medium: Audio (MP3) <br>
-                    Supported Devices: Smartphone, Tablet, Laptops<br>
-                    Streaming: 11:44 P.M. IST <br>
-                    Music Label: Hybe Label<br>
-                    Presented by RUBY PRODUCTION<br>
-                    Announced <time class="timeago text-black" datetime="30 Dec 2021 14:51"></time><br>
-                    <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
-                    <br>
-                  <h5> Streaming 30 Dec onwards
-                    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-                    <lord-icon
-                        src="https://cdn.lordicon.com/tclnsjgx.json"
-                        trigger="loop"
-                        colors="primary:#4f1091,secondary:#8930e8"
-                        style="width:50px;height:50px">
-                    </lord-icon>
-                  </h5>
-                  <hr class="text-black-50" width="70%">
-                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Join Stream" href="rooms/bts room.html"><i class="fas fa-rss modal-icon"></i> </a>
-                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Select Room" style="margin-left: 5px;" href="rooms/select.html"> <i class="fas fa-check-circle"></i> </a>
-                  <a class="btn btn-custom btn-floating text-white modal-icon" title="Close" style="margin-left: 5px;" href="javascript:void(0)" data-mdb-dismiss="modal"><i class="fas fa-times modal-icon"></i> </a>
-                  </small>
-                  </h6> </a>
-                </td>
-                <td class="desktop"><center>
-                  <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" draggable="false" src= "2022.jpg" alt="Unavailable" style="width: 250px;">
-                  </a></center></td>
-              </tr>
-          </tbody>
-        </table>
-      </center>
-    </div>
-    <!-- <div class="modal-footer">
-      <a class="btn btn-custom text-white">JOIN STREAM </a>
-      <a class="btn btn-custom"> Browse </a>
-    </div> -->
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="container-main feed wow fadeIn" data-wow-delay="0.3s">
-<div class="tags float-end visually-hidden">
-<a href="javascript:(0)"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-home"></i> Home</span></a>
-<a href="Search.html"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-search"></i> </span></a>
-<a href="Audio.html"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-music"></i> </span></a>
-<a href="javasccript:void(0)"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-play-circle"></i> </span></a>
-<a href="javasccript:void(0)"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-film"></i> </span></a>
-<a href="javasccript:void(0)"> <span class="badge badge-dark badge-sm rounded-pill"><i class="fa fa-image"></i> </span></a>
-</div>
-<div class="dashboard">
-  <table class="table text-white table-borderless">
-    <tbody>
-      <tr>
-        <th>
-          <div class="dashboard-bg" onclick="streams()">
-              <center> <i class="fa fa-rss"></i><br> Streams </center>
-          </div>
-      </th>
-      <th>
-        <div class="dashboard-bg" onclick="rooms()">
-            <center> <i class="fa fa-music"></i><br> Rooms </center>
-        </div>
-    </th>
-    <th>
-      <div class="dashboard-bg" onclick="tools()">
-          <center> <i class="fa fa-toolbox"></i><br> Tools </center>
-      </div>
-    </th>
-        </tr>
-        <tr class="">
-          <th>
-            <div class="dashboard-bg" onclick="settings()">
-                <center> <i class="fa fa-cog"></i><br> Settings </center>
-            </div>
-        </th>
-        <th>
-          <div class="dashboard-bg" onclick="about()">
-              <center> <i class="fa fa-info-circle"></i><br> About </center>
-          </div>
-      </th>
-      <th>
-        <div class="dashboard-bg" onclick="logOut()">
-            <center> <i class="fa fa-sign-out-alt"></i><br> Log Out </center>
-        </div>
-    </th>
-        </tr>
-    </tbody>
-  </table>
-</div>
-<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-<path fill="#800080" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,224C240,192,300,128,360,90.7C420,53,480,43,540,48C600,53,660,75,720,101.3C780,128,840,160,900,197.3C960,235,1020,277,1080,277.3C1140,277,1200,235,1260,234.7C1320,235,1380,277,1410,298.7L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
-</svg>
-<div class="live-container">
-  <h1 class="upcoming"><a class="text-black">
-    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-<lord-icon
-src="https://cdn.lordicon.com/vieswnpa.json"
-    trigger="hover"
-    colors="primary:#4f1091,secondary:#8930e8"
-    style="width:80px;height:100px;">
-</lord-icon>Latest from Bangtan</a> </h1>
-  <!--  href="https://bit.ly/3jhs5m0" -->
-  <br>
-  <table class="table text-black table-borderless visually-hidden">
-    <tbody>
-      <tr>
-        <th> <center>  </center></th>
-        <th> </th>
-        </tr>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "maintenance/app_icon.jpg" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h4> Stay Tuned for our upcoming app for army.  </h4></a>
-            <h6>
-             <small class="text-black">
-            <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-
-              Dev: Om Lokhande<br>
-              Produced by - RUBY PRODUCTION<br>
-              Releasing date: Unknown<br><br>
-              <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
-              <a class="btn btn-custom btn-sm disabled" data-mdb-toggle="modal" data-mdb-target="#stream-modal"> More Details <i class="fa fa-chevron-right"></i> </a>
-            </h6> </a>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-  <div class="horizontal_feed">
-  <table class="table text-black table-borderless">
-    <tbody>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-feed toggle-disable" src= "https://img.youtube.com/vi/hhXBDXE4ITk/maxresdefault.jpg" draggable="false" alt="Unavailable">
-            </a></center></td>
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-feed toggle-disable" src= "https://img.youtube.com/vi/A8KQhwmdZIw/maxresdefault.jpg" draggable="false" alt="Unavailable">
-            </a></center>
-          </td>
-        </tr>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-feed toggle-disable" src= "https://img.youtube.com/vi/S50SYJbyXY4/maxresdefault.jpg" draggable="false" alt="Unavailable">
-            </a></center></td>
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-feed toggle-disable" src= "https://img.youtube.com/vi/xXjX-FYG3IQ/maxresdefault.jpg" draggable="false" alt="Unavailable">
-            </a></center>
-          </td>
-        </tr>
-        <tr class="visually-hidden">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "2022.jpg" draggable="false" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h4>Bangtan Is Live | New Year Special | Streaming 30th Dec </h4></a>
-            <h6>
-             <small class="text-black">
-            <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-
-              Artist: BTS & Army<br>
-              Medium: Audio (mp3)<br>
-              Music Label: Hybe Label<br><br>
-              <!-- <b> Stream has ended, join us in the next stream.</b> <br> -->
-              <a class="btn btn-custom btn-sm" data-mdb-toggle="modal" data-mdb-target="#stream-modal"> More Details <i class="fa fa-chevron-right"></i> </a>
-            </h6> </a>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-</div>
-</div>
+<br><br>
 <div class="third-section">
 <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
   <path fill="#ffffff" fill-opacity="1" d="M0,128L30,149.3C60,171,120,213,180,192C240,171,300,85,360,53.3C420,21,480,43,540,85.3C600,128,660,192,720,234.7C780,277,840,299,900,256C960,213,1020,107,1080,74.7C1140,43,1200,85,1260,106.7C1320,128,1380,128,1410,128L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
@@ -909,52 +749,6 @@ src="https://cdn.lordicon.com/vieswnpa.json"
 </div>
 
 
-
-
-
-
-<footer class=" text-center text-white" style="background-color:#7200af;">
-  <div class="container p-4">
-<br>
-Follow Us
-<br>
-<!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-floating m-1 text-white" style="background-color: #970000" href="javascript:void(0)" role="button"><i class="fab fa-youtube"></i></a>
-
-      <!-- Instagram -->
-      <a class="btn btn-floating m-1 text-white" style="background-color: #ac2bac" href="javascript:void(0)" role="button"><i class="fab fa-instagram"></i></a>
-
-      <!-- Github -->
-      <a class="btn btn-floating m-1 text-white" style="background-color: #333333" href="javascript:void(0)" role="button"><i class="fab fa-github"></i></a>
-    </section>
-
-
-
-    <section class="mb-4">
-      <p>
-<!-- Website for relaxing especially for Army. If you're looking
-for relaxing in the night or for energatic music in the morning, you are in the right place. We offer users rooms (Only for Bangtan)
-to come together for relaxing and deep sleep. And listen to you favourite mood and with unlimited time, with
-absolutely free service and no ads.
-Share this stream to all your friendly army to stick together with everyone.
-All Copyright to Hybe Label. To know more visit our
-YT channel (about sec.) or scheduled streams page. -->
-
-<center> Updated 26 Dec, 2021 </center>
-<!-- <time class="timeago text-white" datetime="29 October 2021 15:00"></time> -->
-      </p>
-    </section>
-
-
-  </div>
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2021 Copyright:
-    <a class="text-white">rubyproducti9n.github.io</a>
-  </div>
-</footer>
-    </div>
 
 <script>
 function streams(){window.location.href = "rooms/bts room.html";}
