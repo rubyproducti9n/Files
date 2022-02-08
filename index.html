@@ -69,6 +69,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 user-select: none;
 overflow-x: hidden;
 }
+a{color: rgb(48, 48, 48);}
 /* .home-container{display: block;} */
 .navbar-custom{display: block;}
 footer{display: block;}
@@ -98,10 +99,18 @@ a:active{color: rgb(255, 255, 255);} */
 .svg{margin-top: -20px;}
 .section-title{
   color: rgb(51, 51, 51);
-  margin: 10px 40px;
+  background: #fff;
+  margin: 0px 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
   font-size: 32px;
   font-weight: 500;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Comfrotaa', cursive;
+  transition: 0.5s ease;
+}
+.section-title:hover{
+  background: rgb(216, 216, 216);
+  transition: 0.5s ease;
 }
 .ic-more{
   float: right;
@@ -113,7 +122,7 @@ a:active{color: rgb(255, 255, 255);} */
   border-radius: 20px;
   padding: 10px 0px;
   margin: 10px 20px;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
 }
 .card{
@@ -131,8 +140,10 @@ a:active{color: rgb(255, 255, 255);} */
   transition: 0.5s ease;
 }
 .card:hover{
+  transform: scale(1.03);
   background: rgba(189, 189, 189, 0.288);
-  transition: 0.5s ease;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.274);
+  transition: 0.3s ease;
 }
 .card-img{
   width: 100%;
@@ -160,6 +171,29 @@ a:active{color: rgb(255, 255, 255);} */
   margin: 10px 20px;
   cursor: default;
   z-index: 13;
+}
+.card-room{
+  display: inline-block;
+  margin: 0 18px;
+  width: 22%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  /* backdrop-filter: blur(14px); */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  transition: 0.5s ease;
+}
+.card-room:hover{
+  transform: scale(1.05);
+  background: rgba(189, 189, 189, 0.288);
+  transition: 0.5s ease;
+}
+.btn-room{
+  color: #fff;
+  width: 45%;
 }
 .third-section{background: #800080;}
 .subscribe{
@@ -306,6 +340,30 @@ svg:nth-child(1){margin-top: -10px;}
   margin: 10px 5px;
   cursor: default;
   z-index: 3;
+}
+.card-room{
+  display: inline-block;
+  margin: 10px 18px;
+  width: 90%;
+  height: 100%;
+  background: #f5f5f500;
+  /* backdrop-filter: blur(14px); */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+  border: 1px rgb(228, 228, 228) solid;
+  border-radius: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  transition: 0.5s ease;
+}
+.card-room:hover{
+  transform: scale(1.05);
+  background: #4e004e;
+  transition: 0.5s ease;
+}
+.btn-room{
+  color: #fff;
+  width: 25%;
 }
 .maintain-container{
 width: 100vw;
@@ -568,14 +626,10 @@ aria-hidden="true"
 </h2>
 <div class="custom-card" onclick="vincenzoNetflix()">
   <div class="card">
-  <img class="card-img" src="https://imagecdn.me/cover/vincenzo.png">
-  <h3 class="dr-title">Vincenzo (빈첸조) | Netflix Originals </h3>
+  <img class="card-img" src="https://imagecdn.me/cover/the-silent-sea.png">
+  <h3 class="dr-title">The Silent Sea | Netflix Originals </h3>
   <h6 class="dr-details">
-    At the age of 8, Park Ju Hyeong is adopted and sent off to Italy. Now an adult, he is known as Vincenzo Casano.
-
-    He is a Mafia lawyer and consigliere. ( Advisor and dispute reconciliation expert.) Warring factions within the Mafia force him to flee to South Korea. There he falls in love with Hong Cha Young. a lawyer who will do anything to win a case. Vincenzo manages to achieve some social justice there, and in his own way.
-
-    Jang Jun Woo is an intelligent and hardworking first-year law intern at the firm, who is polite and sincere. Despite his boyish charm and good looks, Jun Woo can come a cross as awkward and naive. Prone to making mistakes, he is often trouble at work.
+    Set in the future, when the planet suffers from a lack of water and food caused by desertification. Yoon Jae is a soldier for the space agency. He is selected for a team, including Ji An, to travel to the moon. Their mission is to retrieve a mysterious sample from an abandoned research station.
   </h6>
   <span class="rating" onclick="vincenzoDramacool()">
     <i class="fa fa-star"></i>
@@ -587,7 +641,7 @@ aria-hidden="true"
 </div>
 <div class="card" onclick="penthouseNetflix()">
 <img class="card-img" src="https://imagecdn.me/cover/the-penthouse-season-3.png">
-<h3 class="dr-title">Penthouse (옥상 창고) - War in Life | Netflix</h3>
+<h3 class="dr-title">Penthouse - War in Life | Netflix</h3>
 <h6 class="dr-details">
   The residents of Hera Palace, a luxury penthouse apartment with 100 floors, have many secrets and hidden ambitions. Sim Su Ryeon, who was born into wealth, is the queen of the penthouse apartment. Cheon Seo Jin, the prima donna of the residence, does all she can to give everything to her daughter. Oh Yoon Hee comes from a poor family background, but she strives to enter high society by becoming the queen of the penthouse, the pinnacle of success in her eyes. A battle for wealth, power, and prestige at Seoul’s most coveted penthouse begins
 </h6>
@@ -601,10 +655,12 @@ aria-hidden="true"
 <br><br>
 </div>
 <div class="card" onclick="strongwomanNetflix()">
-<img class="card-img" src="https://imagecdn.me/cover/strong-woman-do-bong-soon.png">
-<h3 class="dr-title">Strong Women Do Bong Soon (강한여자 도봉순) | Netflix</h3>
+<img class="card-img" src="https://imagecdn.me/cover/sweet-home.png">
+<h3 class="dr-title">Sweet Home | Netflix</h3>
 <h6 class="dr-details">
-  Do Bong Soon is a petite, unemployed woman who is honest and kind. She appears little and sweet on the outside, but she is in fact very, very strong. In her family, for generations the women have been gifted Herculean strength to use for the greater good. If abused, however, their power will be taken away. Whilst standing up for herself after gang members bully her, she finds herself approached by Ahn Min Hyuk, the handsome and somewhat childish CEO of Ainsoft, a gaming company. Ahn Min Hyuk, who holds a great distrust towards the police, witnessed the whole exchange of Bong Soon's superhuman strength, and now wants to employ her as a bodyguard after being threatened by an unknown enemy. Min Hyuk falls in love with super-strong Bong Soon at first sight, but there's a catch. Bong Soon has eyes for someone else; police officer and childhood friend, In Guk Doo, whom she has known since high school. When chaos ensues after a series of kidnappings in Do Bong Soon's hometown of Dobong-dong, Dobong-gu, Bong Soon must decide whether to use her strength and stand up to evil, or play it safe and keep her powers hidden from the world. Combined with the love triangle she faces between In Guk Doo and Ahn Min Hyuk, as well as having to keep Min Hyuk safe, Bong Soon's life is thrown into turmoil. Can she use her strength for the greater good, or will it prove in the end to be too much?
+  Hyun Soo, a loner high school student who lost his entire family in a terrible accident, moves to an old apartment complex called Green Home. Driven by despair, he gradually realizes the secret of the Green home. The fact that a monster trying to drive humanity out of various forms of distorted human desires surrounds the Green home, including himself, and that the residents of Green Homes are trapped in them.
+
+  Adapted from a webtoon of the same name by Kim Kan Bi and Hwang Young Chan.
 </h6>
 <span class="rating" onclick="strongwomanDramacool()">
   <i class="fa fa-star"></i>
@@ -615,12 +671,12 @@ aria-hidden="true"
 <br><br>
 </div>
 <div class="card" onclick="hometownNetflix()">
-<img class="card-img" src="https://imagecdn.me/cover/mr-hong.png">
-<h3 class="dr-title">Hometown Cha Cha Cha (아버지의 고향 차차) | Netflix Originals</h3>
+<img class="card-img" src="https://imagecdn.me/cover/memorist.png">
+<h3 class="dr-title">Memorist | Netflix</h3>
 <h6 class="dr-details">
-  A love story set in the seaside village of Gongjin.
+  Dong Baek has an extraordinary ability. He can peer into the memories of whoever he touches. With his supernatural power, get it done attitude, and eye-pleasing looks, he is fervently revered worldwide as a superstar detective. However, when his punches meet with suspects before words, he can be a bit of a headache to his comrades. Starting from the age of twenty, Han Sun Mi is the youngest to have passed the bar exam, obtain a doctorate in criminal psychology, and become a senior superintendent in the police force. Having solved five cold cases that even a detective with supernatural powers couldn't do, she is a genius profiler. She has a secret that drives her to do what she does. These two highly-skilled professionals meet their match—a serial killer with abilities that transcend theirs combined. It's going to be a fight worth watching.
 
-Yoon Hye Jin, who works as a dentist, is a woman who has both beauty and brains. However, her life plan falls apart because of the tiny bit of righteousness in her heart, and after various obstacles, she moves to the seashore village Gongjin and meets Hong Doo Shik. She becomes curious about him. Hong Doo Shik is called Chief Hong by the local residents. He is officially unemployed, but he is a master of odd jobs who appears to help everyone in Gongjin with any situation they run into.
+Adapted from the webtoon of the same name by Jae Hoo.
 </h6>
 <span class="rating" onclick="hometowDramacool()">
   <i class="fa fa-star"></i>
@@ -630,6 +686,71 @@ Yoon Hye Jin, who works as a dentist, is a woman who has both beauty and brains.
 </span>
 <br><br>
 </div>
+</div>
+
+<h2 class="section-title">
+  <a class="" href="pages/dramas.html#">
+  Available Rooms
+<i class="fa fa-chevron-right ic-more"></i>
+</a>
+</h2><br>
+<div class="room-card">
+<div class="card-room" onclick="">
+  <img class="card-img" src="img/bts-portrait.jpg">
+  <h3 class="dr-title">BTS ROOM | Available Now</h3>
+  <h6 class="dr-details">
+  Join the BTS Room created specially army to regain their lost hopes.
+  And to enjoy every single moment of their lives, so just forget about
+  everything and enjoy!<br><br>
+  <center>
+    <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
+    <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+  </center><br><br>
+  </h6>
+  <br><br>
+  </div>
+  <div class="card-room" onclick="">
+    <img class="card-img" src="img/v-portrait.jpg">
+    <h3 class="dr-title">BTS ROOM | Available Now</h3>
+    <h6 class="dr-details">
+    Join the BTS Room created specially army to regain their lost hopes.
+    And to enjoy every single moment of their lives, so just forget about
+    everything and enjoy!<br><br>
+    <center>
+      <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
+      <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+    </center><br><br>
+    </h6>
+    <br><br>
+    </div>
+    <div class="card-room" onclick="">
+      <img class="card-img" src="img/jungkook-portrait.jpg">
+      <h3 class="dr-title">BTS ROOM | Available Now</h3>
+      <h6 class="dr-details">
+      Join the BTS Room created specially army to regain their lost hopes.
+      And to enjoy every single moment of their lives, so just forget about
+      everything and enjoy!<br><br>
+      <center>
+        <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
+        <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+      </center><br><br>
+      </h6>
+      <br><br>
+      </div>
+      <div class="card-room" onclick="">
+        <img class="card-img" src="img/jimin-portrait.jpg">
+        <h3 class="dr-title">BTS ROOM | Available Now</h3>
+        <h6 class="dr-details">
+        Join the BTS Room created specially army to regain their lost hopes.
+        And to enjoy every single moment of their lives, so just forget about
+        everything and enjoy!<br><br>
+        <center>
+          <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
+          <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+        </center><br><br>
+        </h6>
+        <br><br>
+        </div>
 </div>
 <script>
         function vincenzoNetflix(){window.location = "https://www.netflix.com/title/81365087";}
