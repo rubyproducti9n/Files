@@ -66,19 +66,21 @@ background-color: #fff;
 /* background: linear-gradient(-180deg, #0099ff, #0072be); */
 /* background: linear-gradient(-180deg, #b800dd, #6b006b); */
 background-size: 100% 300%;
-border-top: 6px #6b006b solid;
+border-top: 0px #6b006b00 solid;
 overflow: hidden;
-user-select: none;}
+user-select: none;
+}
 /* .maintain-container{display: block;} */
-a{color: #464646;}
-a:hover{color: #800080;}
+a{color: #0048b4;}
+a:hover{
+          color: #0048b4;
+          text-decoration: underline;}
 a:active{color: #000000;}
 .timeago{color: black;}
 .container2{
 color: rgb(255, 255, 255);
 background-color: #da000000;
 font-family: 'Comfortaa', cursive;
-text-transform: uppercase;
 /* margin-top: 100px; */
 width: 97vw;
 }
@@ -149,18 +151,76 @@ scroll-behavior: smooth;
 color: #470047;
 background-color: rgb(255, 255, 255);
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-box-shadow: 0 0 20px rgba(43, 43, 43, 0.219);
+box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.315);
 border: 0px #ffffff solid;
 border-radius: 16px 16px 16px 16px;
 margin: 0px 30px 30px 30px;
 float: left;
 width: 300px;
 height: 80vh;
-padding: 20px 20px;
+padding: 20px 0px;
 animation-name: border-anim;
 animation-duration: 10s;
 animation-iteration-count: infinite;
 transition: 0.5s ease;
+}
+.live-room{
+  color: #c20000;
+padding: 0 10px;
+}
+.room-category{
+  color: #000000;
+padding: 0 10px;
+}
+.sector{
+  color: #4d4d4d;
+  padding: 10px 20px;
+  background: #c5000000;
+  border-bottom: 1px rgba(100, 100, 100, 0.288) solid;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.sector:hover{
+  background: rgba(190, 190, 190, 0.315);
+}
+.ic-more{
+  position: relative;
+  left: 50px;
+  font-size: 12px;
+  padding: 10px 20px;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+ .sector:hover .ic-more{
+  left: 70px;
+  opacity: 1;
+  border-bottom: 0px rgba(100, 100, 100, 0) solid;
+  transition: 0.3s ease;
+}
+/* .sector:active{
+  transform: scale(0.90);
+  color: #fff;
+  background: #800080;
+  transition: 0.1s ease;
+} */
+.ic-avatar{
+  width: 14%;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.ic-room{
+  margin-right: 5px;
+}
+.room-title{
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.room-status{
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: -41%;
+  margin-left: 11%;
 }
 .live{color: #383838;font-size: 15px;}
 .drag{
@@ -174,9 +234,9 @@ padding: 0px 0px;
 color: #470047;
 background-color: #ffffff;
 border: 0px #e4e4e4 solid;
-box-shadow: 0px 0px 16px #a0a0a04d;
+box-shadow: 0px 0px 16px hsla(0, 0%, 13%, 0.315);
 border-radius: 12px;
-width: 65.5vw;
+width: 67.9vw;
 height:80vh;
 overflow: scroll;
 animation-name: border-anim;
@@ -186,9 +246,94 @@ animation-iteration-count: infinite;
 transition: 0.5s ease;
 }
 .schedule-container:hover{
-width: 65.5vw;
 height: 80vh;
 transition: 0.5s ease;
+}
+.main-title{
+  color: #666666;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-brand-avatar{
+  width: 4%;
+  margin-right: 5px;
+}
+.brand-name{
+  color: #636363;
+  font-size: 11px;
+  /* font-style: italic; */
+font-family: 'Comfortaa', cursive;
+}
+small, .timeago{
+  color: #000000;
+font-size: 12px;
+font-family: 'Comfortaa', cursive;
+}
+.badge-custom{
+  color: #fff;
+  background: #5c0080;
+  padding: 5px 12px;
+  border-radius: 24px;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-thumbnail{
+  border: 3px #ff002b solid;
+  border-radius: 13px;
+}
+.img-thumbnail-found{
+  border: 3px #2ef72e solid;
+  border-radius: 25px;
+}
+.ic-stream-found{
+  margin-right: 5px;
+}
+.stream-found{
+  position: relative;
+  top: -35px;
+  color: rgb(255, 255, 255);
+  background: #2ef72e;
+  font-weight: 500;
+  font-size: 11px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 7px 17px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 10px #55021021;
+}
+.ic-stream-not-found{
+  font-size: 12px;
+  margin-right: 5px;
+}
+.stream-not-found{
+  position: relative;
+  top: -24px;
+  color: #fff;
+  background: #ff002b;
+  font-weight: 500;
+  font-size: 11px;
+font-family: 'Comfortaa', cursive;
+  padding: 7px 17px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 4px 4px 10px #55021021;
+}
+.ic-social{
+  font-size: 15px;
+}
+.social-link{
+  background: rgba(211, 0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.social-title{
+  padding: 10px 10px;
+  color: #006eff;
+  background: rgba(211, 0, 0, 0);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.social-title:hover{
+  color: #004196;
+  text-decoration: underline;
 }
 .third-container{
   display: none;
@@ -232,9 +377,6 @@ left: 0;
 right: 0;
 z-index: -1;
 }
-small{
-font-size: 12px;
-}
 .btn-custom{
 color: white;
 background-color: #c20000;
@@ -243,7 +385,6 @@ padding: 12px 120px;
 border-radius: 6px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size:11px;
-text-transform: uppercase;
 transform: scale(1.0);
 transition: 0.5s ease;
 }
@@ -281,8 +422,8 @@ box-shadow: 0px 0px 0px #ffffff00;
 margin: 0;
 border-radius: 0px;
 width: 100vw;
-height: 80%;
-padding: 20px 20px;
+height: 60%;
+padding: 20px 0px 0px 70px;
 overflow: hidden;
 }
 .drag{
@@ -341,9 +482,9 @@ z-index: -1;}
 </style>
 </head>
 <body>
-  <!-- <div id="loading"> <center>
+  <div id="loading"> <center>
     <img class="loading-img" src="../loader.gif" draggable="false"><br>
-    </center></div> -->
+    </center></div>
 
     <div class="navigation visually-hidden">
       <a class="navbar-brand text-white" href="../index.html"></a>
@@ -409,17 +550,17 @@ z-index: -1;}
         <span class="menu-tooltiptext">Back</span>
       <i class="material-icons modern-nav-ic">arrow_back</i>
     </span>
-      <span class="menu-tooltip disabled" onclick="home()">
+      <span class="menu-tooltip" onclick="home()">
         <span class="menu-tooltiptext">Home</span>
-        <i class="material-icons modern-nav-ic modern-nav-active">home</i>
+        <i class="material-icons modern-nav-ic">home</i>
       </span>
       <span class="menu-tooltip">
-        <span class="menu-tooltiptext">Search</span>
+        <span class="menu-tooltiptext" onclick="search()">Search</span>
         <i class="material-icons modern-nav-ic">search</i>
       </span>
       <span class="menu-tooltip" onclick="select()">
         <span class="menu-tooltiptext">Rooms</span>
-        <i class="material-icons modern-nav-ic">headphones</i>
+        <i class="material-icons modern-nav-ic modern-nav-active">headphones</i>
       </span>
       <span class="menu-tooltip" onclick="info()">
         <span class="menu-tooltiptext">Info</span>
@@ -449,75 +590,70 @@ z-index: -1;}
 
 
 <div class="live">
-<h5 style="margin-bottom: 20px;"> Upcoming</h5>
- <a class="" onclick="bangtan()"> <i class="fa fa-wifi" style="margin-left: 15px;"></i>
- <a class=" align" onclick="bangtan()" style="margin-left: 13px;"> Hope Day Special </a><br>
- <a style="display: block; margin-left: 54px; font-size: 10px;">
-  All Day Long • 18 Feb, 8:00 AM</a></a><hr></div>
+  <h6 class="live-room">Upcoming stream</h6>
+    <div class="sector" onclick="bangtan()">
+      <i class="fa fa-wifi ic-room"></i>
+      <a class="room-title">Hope Day Special</a><br>
+      <a class="room-status"> <i class="fa fa-chevron-right"></i> All day long • 18th Feb</a>
+    </div></div><br>
+    <h6 class="room-category">Bangtan World</h6>
+    <div class="sector" onclick="error()">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">BTS Nonstop songs</a><br>
+    </div><br>
 
-<!-- <h6>Artists</h6>
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> BTS</a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Taylor Swift</a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
+    <h6 class="room-category">Artists</h6>
+    <div class="sector" onclick="">
+      <img class="ic-avatar" src="../album-cover/rm.jpg">
+      <a class="room-title">Kim Nam-joon</a>
+      <i class="fa fa-chevron-right ic-more"></i><br>
+    </div>
+    <div class="sector" onclick="">
+      <img class="ic-avatar" src="../album-cover/suga.jpg">
+      <a class="room-title">Min Yoon-gi</a>
+      <i class="fa fa-chevron-right ic-more"></i><br>
+    </div>
+    <div class="sector" onclick="">
+      <img class="ic-avatar" src="../album-cover/v.jpg">
+      <a class="room-title">Kim Tae-hyung</a>
+      <i class="fa fa-chevron-right ic-more"></i><br>
+    </div>
+      <div class="sector" onclick="">
+        <img class="ic-avatar" src="../album-cover/jk.jpg">
+        <a class="room-title">Jeon Jungkook</a>
+      <i class="fa fa-chevron-right ic-more"></i><br>
+      </div>
+      <div class="sector" onclick="">
+        <img class="ic-avatar" src="../album-cover/jimin.jpg">
+        <a class="room-title">Park Jimin</a>
+      <i class="fa fa-chevron-right ic-more"></i><br>
+      </div>
+      <div class="sector" onclick="">
+        <img class="ic-avatar" src="../album-cover/jhope.jpg">
+        <a class="room-title">Jung Ho-seok</a>
+      <i class="fa fa-chevron-right ic-more"></i><br>
+      </div>
+    <br>
 
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Katty Perry </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404 </a></a><hr>
-
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Neha Kakkar</a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
-
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Badshah</a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
-
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Guru Randhawa </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
+<h6 class="room-category">Mood Changer</h6>
+  <div class="sector" onclick="">
+    <i class="fa fa-headphones-alt ic-room"></i>
+    <a class="room-title">Intimate</a><br>
+    <a class="room-status"> <i class="fa fa-exclamation-circle"></i> Unavailable</a>
+  </div>
+  <div class="sector" onclick="">
+    <i class="fa fa-headphones-alt ic-room"></i>
+    <a class="room-title">Passive</a><br>
+    <a class="room-status"> <i class="fa fa-exclamation-circle"></i> Unavailable</a>
+  </div>
 <br>
-
-<h6>Country</h6>
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Korean Mix </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
-
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> United Mashup </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr>
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Indian Hits </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Error 404</a></a><hr><br> -->
-
-<h6>MOOD CHANGER</h6>
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Intimate </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Unavailable</a></a><hr>
-
-<a class="" href="javascript:void(0)"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="javascript:void(0)" style="margin-left: 13px;"> Passive </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
-Unavailable</a></a><hr><br>
-
-<h6>CUSTOMIZED</h6>
-<a class="" href="Custom Room.html"> <i class="fa fa-headphones" style="margin-left: 15px;"></i>
-<a class="align" href="Custom Room.html" style="margin-left: 13px;"> CUSTOM ROOM </a><br>
-<a style="display: block; margin-left: 50px; font-size: 10px;">
- 24/7</a></a><hr>
-</h6>
+  <h6 class="room-category">Custom Room</h6>
+    <div class="sector" onclick="">
+      <i class="fa fa-headphones-alt ic-room"></i>
+      <a class="room-title">Customized Room</a><br>
+      <a class="room-status"> <i class="fa fa-chevron-right"></i> Add your own music and listen</a>
+    </div>
+<br>
 <center>
  <!-- <a class="btn btn-sm text-white" style="background-color:#0099ff" onclick="schedule()"> Scheduled Streams <i class="fa fa-angle-right"></i></a> -->
 <a class="btn btn-sm text-white" style="background-color:#800080" onclick="learn()">Learn more <i class="fa fa-angle-right"></i></a><br>
@@ -540,120 +676,105 @@ Unavailable</a></a><hr><br>
 
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 350px;">
+            </a>
+            <br><br>
+            <b class="stream-not-found"><i class="fa fa-info-circle ic-stream-not-found"></i> Stream Unavailable</b></center></td>
           <td>
-            <a class="text-black" href="javascript:void(0)"><h6> BANGTAN IS LIVE | new Year SPECIAL | Welcome 2022 with BTS</a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="15 Dec 2021 14:51"></time><br>
+            <a class="main-title" href="javascript:void(0)"><h6> BANGTAN IS LIVE | New Year Special | ConcertEra</a><br>
+              <br>
+              <a class="brand-name" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">
+                <img class="img-brand-avatar" src="../favicon/ruby (1).png">
+                rubyproducti9n <i class="fa fa-check-circle"></i></a><br>
+             <br>
+              <small class="description">
+              Announced 15 Dec 2021<br>
               Artist: BTS & Army<br>
                 Medium: Audio<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
+                Supported Devices: PC<br>
+                All copyrights to their respected owner Hybe Label Co.<br>
            <!-- Streaming: 30 Dec, 11:44 PM<br> -->
            <!-- <b>Live in:</b><br>
            <div id="timer"></div> -->
 
             </small>
-
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">New Year Special</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-
-            <div id="butter-count"></div>
+            <br>
+            <h6> Tags:</h6>
+            <span class="badge-custom">BTS ROOMS</span>
+            <span class="badge-custom">K-POP</span>
+            <span class="badge-custom">New Year Special</span>
+            <span class="badge-custom">Bangtan World</span>
+            <span class="badge-custom">ConcertEra</span>
+            <span class="badge-custom">...</span><br><br>
             </h5> </a>
           </td>
         </tr>
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 350px;">
+            </a>
+            <br><br>
+            <b class="stream-not-found"><i class="fa fa-info-circle ic-stream-not-found"></i> Stream Unavailable</b></center></td>
           <td>
-            <a class="text-black" href="javascript:void(0)"><h6> BANGTAN IS LIVE | V SPECIAL | STREAMING SOON</a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="15 Dec 2021 14:51"></time><br>
-              Artist: BTS<br>
-                Medium: Audio / Video<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
-
-            </small>
-
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">V Special</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-
-            <div id="butter-count"></div>
-            </h5> </a>
-          </td>
-        </tr>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h6> BTS LIVE CONCERT | LIVE CONCERT | STREAMING SOON </h6></a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="30 Nov 2021 14:51"></time><br>
-              Artist: BTS<br>
-                Medium: Audio / Video<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
-           <!-- Streaming: 01 Dec<br> -->
-
-            </small>
-
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">Live Concert</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-
-            <div id="butter-count"></div>
-            </h5> </a>
-          </td>
-        </tr>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h6> CONCERT NIGHTS | Room | BANGTAN MIX </h6></a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="04 Nov 2021 14:51"></time><br>
-              Artist: BTS<br>
+            <a class="main-title" href="javascript:void(0)"><h6> BANGTAN IS LIVE | V Special | ConcertEra </a><br>
+              <br>
+              <a class="brand-name" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">
+                <img class="img-brand-avatar" src="../favicon/ruby (1).png">
+                rubyproducti9n <i class="fa fa-check-circle"></i></a><br>
+             <br>
+              <small class="description">
+              Announced 27 Dec 2021<br>
+              Artist: Kim Tae-hyung<br>
                 Medium: Audio<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
-
+                All copyrights to their respected owner Hybe Label Co.<br>
+           <!-- Streaming: 30 Dec, 11:44 PM<br> -->
+           <!-- <b>Live in:</b><br>
+           <div id="timer"></div> -->
 
             </small>
+            <br>
+            <h6> Tags:</h6>
+            <span class="badge-custom">BTS ROOMS</span>
+            <span class="badge-custom">K-POP</span>
+            <span class="badge-custom">V Special</span>
+            <span class="badge-custom">Hybe Label</span>
+            <span class="badge-custom">rubyproducti9n</span>
+            <span class="badge-custom">...</span><br><br>
+            </h5> </a>
+          </td>
+        </tr>
+        <tr class="">
+          <td><center>
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 350px;">
+            </a>
+            <br><br>
+            <b class="stream-not-found"><i class="fa fa-info-circle ic-stream-not-found"></i> Stream Unavailable</b></center></td>
+          <td>
+            <a class="main-title" href="javascript:void(0)"><h6> BTS Live Concert | Live Concert</a><br>
+              <br>
+              <a class="brand-name" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">
+                <img class="img-brand-avatar" src="../favicon/ruby (1).png">
+                rubyproducti9n <i class="fa fa-check-circle"></i></a><br>
+             <br>
+              <small class="description">
+              Announced 25 Nov 2021<br>
+              Artist: BTSy<br>
+                Medium: Video / Audio<br>
+                Supported Devices: PC / Mobile<br>
+                All copyrights to their respected owner Hybe Label Co.<br>
+           <!-- Streaming: 30 Dec, 11:44 PM<br> -->
+           <!-- <b>Live in:</b><br>
+           <div id="timer"></div> -->
 
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">Concert Nights</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
+            </small>
+            <br>
+            <h6> Tags:</h6>
+            <span class="badge-custom">BTS ROOMS</span>
+            <span class="badge-custom">K-POP</span>
+            <span class="badge-custom">Live Concert</span>
+            <span class="badge-custom">Hybe Label</span>
+            <span class="badge-custom">rubyproducti9n</span>
+            <span class="badge-custom">...</span><br><br>
 
             <div id="butter-count"></div>
             </h5> </a>
@@ -661,126 +782,15 @@ Unavailable</a></a><hr><br>
         </tr>
         <tr class="">
           <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h6> BANGTAN NIGHTS | Room | Silent Nights </h6></a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="29 Oct 2021 14:51"></time><br>
-              Artist: BTS<br>
-                Medium: Audio<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
-            <!-- <b>Live in:</b><br>
-            <div id="timer"></div> -->
-
-
-            </small>
-
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">Silent Nights</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-
-            <div id="butter-count"></div>
+            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 350px;">
+            </a>
+            <br><br>
+            <b class="stream-not-found"><i class="fa fa-exclamation-triangle ic-stream-not-found"></i> End of search</b></center></td>
+          <td><br>
+            <a class="main-title" href="javascript:void(0)"><h6> No more live streams found!</a><br>
             </h5> </a>
           </td>
         </tr>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h6> BANGTAN NIGHTS | Test Stream | Energatic Morning </h6></a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="19 Oct 2021 12:37"></time><br>
-              Artist: BTS<br>
-                Medium: Audio<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
-
-
-            </small>
-
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">Energetic Mornings</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-
-            <div id="butter-count"></div>
-            </h5> </a>
-          </td>
-        </tr>
-        <tr class="">
-          <td><center>
-            <a href="javascript:void(0)"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="javascript:void(0)"><h6> Tea with BTS | Past Stream | Energatic Morning </h6></a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Announced <time class="timeago text-black" datetime="15 Oct 2021 11:00"></time><br>
-              Artist: BTS<br>
-                Medium: Audio<br>
-                Music Label: Hybe Label<br>
-                <b class="text-danger">Stream Unavailable</b><br>
-            <!-- <b>Live in:</b><br>
-            <div id="timer"></div> -->
-
-
-            </small>
-
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">K-POP</span>
-            <span class="badge bg-secondary">Energetic Morning</span>
-            <span class="badge bg-secondary">Hybe Label</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-
-            <div id="butter-count"></div>
-            </h5> </a>
-          </td>
-        </tr>
-        <tr class="">
-          <td><center>
-            <a href="bts room.html"> <img class="card-img-top img-thumbnail toggle-disable" src= "../maintenance/listening.png" alt="Unavailable" style="width: 250px;">
-            </a></center></td>
-          <td>
-            <a class="text-black" href="Android App/rooms/bts room.html"><h6> RELAX WITH BTS | Past Stream | Silent Nights </h6></a>
-            <h5>
-             <small class="text-black">
-               <a class="text-black" href="https://www.youtube.com/channel/UC98V-NGgUc9Px9Xe5klei4w">RUBY PRODUCTIONS <i class="fa fa-check-circle"></i></a></h6>
-              Streamed <time class="timeago text-black" datetime="02 Oct 2021 23:00"></time><br>
-              Artist: BTS<br>
-                Medium: Audio<br>
-                Music Label: Hybe Label<br>
-            <b class="text-danger">Stream Unavailable</b><br>
-            <!-- <div id="timer"></div> -->
-
-
-            </small>
-            <b> Tags:</b>
-            <span class="badge bg-secondary">BTS ROOMS</span>
-            <span class="badge bg-secondary">Silent Nights</span>
-            <span class="badge bg-secondary">rubyproducti9n</span>
-            <span class="badge bg-secondary">...</span><br><br>
-            <div id="butter-count"></div>
-            </h5> </a>
-          </td>
-        </tr>
-
     </tbody>
   </table>
 
@@ -791,7 +801,7 @@ Analytics
 </div>
 
 <div class="whatsapp-container">
-  <i class="fa fa-info-circle fa5"></i> Join WhatsApp Group
+  <i class="fab fa-whatsapp"></i> Join WhatsApp Group
   </div>
 </div>
 <script>
@@ -804,10 +814,11 @@ function about(){window.location = "../Help/room.html";}
 function learn(){window.location = "../Android App/Help/room.html";}
 function schedule(){window.location = "../schedule.html";}
 function bangtan(){window.location = "bts room.html";}
-function error(){alert("Stream in queue");}
+function error(){alert("Coming soon, stay tuned!");}
 // function error(){window.location = "https://www.youtube.com/watch?v=gfhYyjK2bGY";}
 
 </script>
+<script type="text/javascript" src="../Android App/js.js"></script>
 <script type="text/javascript" src="../js/Live Controller.js"></script>
 <script type="text/javascript" src="../mdb/js/jquery.min.js"></script>
 <script type="text/javascript" src="../mdb/js/popper.min.js"></script>
