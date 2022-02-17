@@ -423,7 +423,7 @@ margin: 0;
 border-radius: 0px;
 width: 100vw;
 height: 60%;
-padding: 20px 0px 0px 70px;
+padding: 20px 0px 0px 0px;
 overflow: hidden;
 }
 .drag{
@@ -591,13 +591,13 @@ z-index: -1;}
 
 <div class="live">
   <h6 class="live-room">Upcoming stream</h6>
-    <div class="sector" onclick="bangtan()">
+    <div class="sector" onclick="error()">
       <i class="fa fa-wifi ic-room"></i>
       <a class="room-title">Hope Day Special</a><br>
-      <a class="room-status"> <i class="fa fa-chevron-right"></i> All day long • 18th Feb</a>
-    </div></div><br>
+      <a class="room-status"> <i class="fa fa-exclamation-triangle"></i> Unable to connect</a>
+    </div><br></div>
     <h6 class="room-category">Bangtan World</h6>
-    <div class="sector" onclick="error()">
+    <div class="sector" onclick="soon()">
       <img class="ic-avatar" src="../album-cover/bts.jpg">
       <a class="room-title">BTS Nonstop songs</a><br>
     </div><br>
@@ -814,7 +814,8 @@ function about(){window.location = "../Help/room.html";}
 function learn(){window.location = "../Android App/Help/room.html";}
 function schedule(){window.location = "../schedule.html";}
 function bangtan(){window.location = "bts room.html";}
-function error(){alert("Coming soon, stay tuned!");}
+function soon(){alert("Coming Soon, Stay Tuned!");}
+function error(){alert("Something went wrong, please try again later.");}
 // function error(){window.location = "https://www.youtube.com/watch?v=gfhYyjK2bGY";}
 
 </script>
