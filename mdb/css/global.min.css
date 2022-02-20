@@ -2494,8 +2494,7 @@ transform: rotate(-135deg);
   @media screen and (max-width: 768px)
   {
   body{
-    color: black;
-    background-color: #000;
+    background-color: rgb(255, 255, 255);
     /* background: linear-gradient(180deg, #363636, #000000); */
     /* background-size: 100% 400%; */
   }
