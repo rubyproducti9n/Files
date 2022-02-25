@@ -158,10 +158,36 @@ margin: 0px 30px 30px 30px;
 float: left;
 width: 300px;
 height: 80vh;
-padding: 20px 0px;
+padding: 0px 0px;
 animation-name: border-anim;
 animation-duration: 10s;
 animation-iteration-count: infinite;
+transition: 0.5s ease;
+}
+.status-bar{
+  position: sticky;
+  top: 0;
+  padding: 5px 10px;
+  color: #fff;
+background: #000000f3;
+width: 100%;
+height: 30px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navigation-bar{
+  position: sticky;
+  bottom: 0;
+color: #fff;
+background: rgba(0, 0, 0, 0.822);
+padding: 5px 10px;
+width: 100%;
+height: 40px;
+}
+.nav-btn{
+padding: 0 9%;
+margin: 0 10px;
+width: 100%;
+height: 10px;
 transition: 0.5s ease;
 }
 .live-room{
@@ -185,14 +211,14 @@ padding: 0 10px;
 }
 .ic-more{
   position: relative;
-  left: 50px;
+  left: 0px;
   font-size: 12px;
-  padding: 10px 20px;
+  padding: 10px 5px;
   opacity: 0;
   transition: 0.1s ease;
 }
  .sector:hover .ic-more{
-  left: 70px;
+  left: 0px;
   opacity: 1;
   border-bottom: 0px rgba(100, 100, 100, 0) solid;
   transition: 0.3s ease;
@@ -212,7 +238,7 @@ padding: 0 10px;
   margin-right: 5px;
 }
 .room-title{
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -586,7 +612,13 @@ z-index: -1;}
   </div>
 <!-- <center><h4>Select your room</h4></center> -->
 <div class="settings"><h6>
-
+<div class="status-bar">
+  <span class="time">11:00</span>
+  <div class="float-end">
+    <span> <i class="fa fa-wifi"></i> </span>
+    <span> <i class="fa fa-battery-full"></i> </span>
+  </div>
+</div>
 
 
 <div class="live">
@@ -597,43 +629,60 @@ z-index: -1;}
       <a class="room-status"> <i class="fa fa-exclamation-triangle"></i> Unable to connect</a>
     </div><br></div>
     <h6 class="room-category">Bangtan World</h6>
+    <div class="sector" onclick="descentMix()">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">Descent Mix • Bangtan Group</a><br>
+    </div>
     <div class="sector" onclick="soon()">
       <img class="ic-avatar" src="../album-cover/bts.jpg">
-      <a class="room-title">BTS Nonstop songs</a><br>
+      <a class="room-title">Piano Mix • Made by Armies</a><br>
+    </div>
+    <div class="sector" onclick="soon()">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">Army Cover • Made by Armies</a><br>
     </div><br>
 
     <h6 class="room-category">Artists</h6>
     <div class="sector" onclick="">
       <img class="ic-avatar" src="../album-cover/rm.jpg">
       <a class="room-title">Kim Nam-joon</a>
-      <i class="fa fa-chevron-right ic-more"></i><br>
+      <i class="fa fa- ic-more">💜</i><br>
     </div>
     <div class="sector" onclick="">
       <img class="ic-avatar" src="../album-cover/suga.jpg">
       <a class="room-title">Min Yoon-gi</a>
-      <i class="fa fa-chevron-right ic-more"></i><br>
+      <i class="fa fa- ic-more">💜</i><br>
     </div>
     <div class="sector" onclick="">
       <img class="ic-avatar" src="../album-cover/v.jpg">
       <a class="room-title">Kim Tae-hyung</a>
-      <i class="fa fa-chevron-right ic-more"></i><br>
+      <i class="fa fa- ic-more">💜</i><br>
     </div>
       <div class="sector" onclick="">
         <img class="ic-avatar" src="../album-cover/jk.jpg">
         <a class="room-title">Jeon Jungkook</a>
-      <i class="fa fa-chevron-right ic-more"></i><br>
+      <i class="fa fa- ic-more">💜</i><br>
       </div>
       <div class="sector" onclick="">
         <img class="ic-avatar" src="../album-cover/jimin.jpg">
         <a class="room-title">Park Jimin</a>
-      <i class="fa fa-chevron-right ic-more"></i><br>
+      <i class="fa fa- ic-more">💜</i><br>
       </div>
       <div class="sector" onclick="">
         <img class="ic-avatar" src="../album-cover/jhope.jpg">
         <a class="room-title">Jung Ho-seok</a>
-      <i class="fa fa-chevron-right ic-more"></i><br>
+      <i class="fa fa- ic-more">💜</i><br>
       </div>
     <br>
+    <h6 class="room-category">Armies Choice</h6>
+    <div class="sector" onclick="soon()">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">Steal Nights • V, Jungkook, ...</a><br>
+    </div>
+    <div class="sector" onclick="soon()">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">Energatic • Unavailable</a><br>
+    </div><br>
 
 <h6 class="room-category">Mood Changer</h6>
   <div class="sector" onclick="">
@@ -658,7 +707,14 @@ z-index: -1;}
  <!-- <a class="btn btn-sm text-white" style="background-color:#0099ff" onclick="schedule()"> Scheduled Streams <i class="fa fa-angle-right"></i></a> -->
 <a class="btn btn-sm text-white" style="background-color:#800080" onclick="learn()">Learn more <i class="fa fa-angle-right"></i></a><br>
 </center>
+
+<div class="navigation-bar">
+  <span class="nav-btn"> <i class="fa fa-arrow-left"></i> </span>
+  <span class="nav-btn"> <i class="fa fa-circle"></i> </span>
+  <span class="nav-btn"> <i class="fa fa-square"></i> </span>
+</div>
   </div>
+
 <center>
 <div class="drag"></div>
 </center>
@@ -794,6 +850,7 @@ z-index: -1;}
     </tbody>
   </table>
 
+
 </div>
 
 <div class="third-container">
@@ -805,6 +862,8 @@ Analytics
   </div>
 </div>
 <script>
+function descentMix(){window.location = "Bangtan World/Descent Mix.html";}
+
 function back(){window.location = "../index.html";}
 function home(){window.location = "../index.html";}
 function search(){window.location = "../search.html";}
