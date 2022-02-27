@@ -151,7 +151,7 @@ scroll-behavior: smooth;
 color: #470047;
 background-color: rgb(255, 255, 255);
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.315);
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.205);
 border: 0px #ffffff solid;
 border-radius: 16px 16px 16px 16px;
 margin: 0px 30px 30px 30px;
@@ -162,33 +162,20 @@ padding: 0px 0px;
 animation-name: border-anim;
 animation-duration: 10s;
 animation-iteration-count: infinite;
-transition: 0.5s ease;
+transition: 0.3s ease;
 }
-.status-bar{
+.select-room{
   position: sticky;
   top: 0;
-  padding: 5px 10px;
+  content: 'Select';
   color: #fff;
-background: #000000f3;
-width: 100%;
-height: 30px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.navigation-bar{
-  position: sticky;
-  bottom: 0;
-color: #fff;
-background: rgba(0, 0, 0, 0.822);
-padding: 5px 10px;
-width: 100%;
-height: 40px;
-}
-.nav-btn{
-padding: 0 9%;
-margin: 0 10px;
-width: 100%;
-height: 10px;
-transition: 0.5s ease;
+  background: #800080;
+  border: 0px #000 solid;
+  border-radius: 0px;
+  text-align: center;
+  padding: 19px 0;
+  width: 100%;
+box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.315);
 }
 .live-room{
   color: #c20000;
@@ -196,10 +183,12 @@ padding: 0 10px;
 }
 .room-category{
   color: #000000;
-padding: 0 10px;
+  border-left: 5px #800080 solid;
+  border-radius:  0 10px 10px 0;
+padding: 10px 10px;
 }
 .sector{
-  color: #4d4d4d;
+  color: #181818;
   padding: 10px 20px;
   background: #c5000000;
   border-bottom: 1px rgba(100, 100, 100, 0.288) solid;
@@ -207,7 +196,9 @@ padding: 0 10px;
   transition: 0.3s ease;
 }
 .sector:hover{
-  background: rgba(190, 190, 190, 0.315);
+  padding: 10px 15px;
+  background: #dbdbdb;
+  transition: 0.2s ease;
 }
 .ic-more{
   position: relative;
@@ -241,6 +232,7 @@ padding: 0 10px;
   font-weight: 500;
   font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s ease;
 }
 .room-status{
   font-size: 12px;
@@ -443,14 +435,27 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 scroll-behavior: smooth;
 color: #464646;
 background-color: #fff;
-border: 0 #2700491e solid;
+border-bottom: 3px #270049 solid;
 box-shadow: 0px 0px 0px #ffffff00;
 margin: 0;
 border-radius: 0px;
 width: 100vw;
-height: 60%;
-padding: 20px 0px 0px 0px;
-overflow: hidden;
+height: 88vh;
+padding: 0px 0px 0px 0px;
+overflow: scroll;
+}
+.select-room{
+  position: sticky;
+  top: 0;
+  color: #fff;
+  background: #6700867e;
+  backdrop-filter: blur(14px);
+  border: 0px #000 solid;
+  border-radius: 0px;
+  text-align: center;
+  padding: 19px 0;
+  width: 100%;
+box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.315);
 }
 .drag{
   display: none;
@@ -611,15 +616,10 @@ z-index: -1;}
     </a>
   </div>
 <!-- <center><h4>Select your room</h4></center> -->
-<div class="settings"><h6>
-<div class="status-bar">
-  <span class="time">11:00</span>
-  <div class="float-end">
-    <span> <i class="fa fa-wifi"></i> </span>
-    <span> <i class="fa fa-battery-full"></i> </span>
-  </div>
-</div>
+<div class="settings">
 
+  <h5 class="select-room">Select Room</h5>
+<br>
 
 <div class="live">
   <h6 class="live-room">Upcoming stream</h6>
@@ -708,11 +708,6 @@ z-index: -1;}
 <a class="btn btn-sm text-white" style="background-color:#800080" onclick="learn()">Learn more <i class="fa fa-angle-right"></i></a><br>
 </center>
 
-<div class="navigation-bar">
-  <span class="nav-btn"> <i class="fa fa-arrow-left"></i> </span>
-  <span class="nav-btn"> <i class="fa fa-circle"></i> </span>
-  <span class="nav-btn"> <i class="fa fa-square"></i> </span>
-</div>
   </div>
 
 <center>
