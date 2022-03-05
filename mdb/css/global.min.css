@@ -2192,8 +2192,8 @@ transform: rotate(-135deg);
     transition: 0.5s;
     }
     .maintain-img{
-    width: 40%;
-    margin-top: -50px;
+    width: 30%;
+    margin-top: -110px;
     transition: 0.5s;
     }
     .maintain-text{
@@ -2206,13 +2206,13 @@ transform: rotate(-135deg);
   a:hover{ color: #000}
   .modern-navigation{
   position: fixed;
-  bottom: -190px;
+  bottom: -220px;
   left: 37vw;
-  background: #ffffff44;
-  backdrop-filter: blur(14px);
+  background: #1d1d1d;
+  backdrop-filter: blur(0px);
   border-radius: 30px;
   padding: 10px 20px 40px 20px;
-  box-shadow: 0px 0px 16px hsla(0, 0%, 43%, 0.315);
+  box-shadow: 0px -5px 16px hsla(0, 0%, 0%, 0.315);
   z-index: 13;
   transition: 0.5s ease;
   }
@@ -2223,14 +2223,14 @@ transform: rotate(-135deg);
   transition: 0.6s ease;
   }
   .modern-dash{
-  background: rgb(158, 158, 158);
+  background: rgb(59, 59, 59);
   width: 50px;
   height: 5px;
   border-radius: 20px;
   margin: 3px 0 15px 0;
   }
   .modern-nav-ic{
-  color: rgb(70, 70, 70);
+  color: rgb(255, 255, 255);
   font-size: 21px;
   padding: 113px 13px 13px 13px;
   border-radius: 30px;
@@ -2245,16 +2245,16 @@ transform: rotate(-135deg);
   transform: scale(1.0);
   padding: 13px;
   border-radius: 30px;
-  color: rgb(70, 70, 70);
-  background: #d1d1d1;
+  color: rgb(182, 182, 182);
+  background: #414141;
   transition: 0.5s ease;
   }
   .modern-nav-ic:active{
   transform: scale(1.0);
   padding: 13px;
   border-radius: 30px;
-  color: rgb(70, 70, 70);
-  background: #868686;
+  color: rgb(255, 255, 255);
+  background: #000000;
   transition: 0.5s ease;
   }
   .modern-nav-active{
@@ -2578,11 +2578,11 @@ transform: rotate(-135deg);
   bottom: -85px;
   left: 0%;
   width: 100%;
-  background: #ffffff4b;
-  backdrop-filter: blur(14px);
+  background: #1a1a1a;
+  backdrop-filter: blur(0px);
   border-radius: 30px;
   padding: 10px 10px 20px 10px;
-  box-shadow: 0px 0px 16px hsla(0, 0%, 43%, 0.315);
+  box-shadow: 0px -4px 16px hsla(0, 0%, 0%, 0.315);
   overflow: hidden;
   z-index: 11;
   transition: 0.2s ease;
@@ -2594,14 +2594,14 @@ transform: rotate(-135deg);
   transition: 0.2s ease;
   }
   .modern-dash{
-  background: rgb(158, 158, 158);
+  background: rgb(58, 58, 58);
   width: 50px;
   height: 5px;
   border-radius: 20px;
   margin: 3px 0 15px 0;
   }
   .modern-nav-ic{
-  color: rgb(70, 70, 70);
+  color: rgb(255, 255, 255);
   font-size: 5px;
   padding: 13px 13px 13px 13px;
   border-radius: 30px;
@@ -2612,16 +2612,16 @@ transform: rotate(-135deg);
   transform: scale(1.0);
   padding: 13px;
   border-radius: 100%;
-  color: rgb(70, 70, 70);
-  background: #d1d1d1;
+  color: rgb(197, 197, 197);
+  background: #424242;
   transition: 0.6s ease;
   }
   .modern-nav-ic:active{
   transform: scale(1.0);
   padding: 13px;
   border-radius: 100%;
-  color: rgb(70, 70, 70);
-  background: #868686;
+  color: rgb(255, 255, 255);
+  background: #000000;
   transition: 0.5s ease;
   }
   .modern-nav-active{
@@ -2762,7 +2762,7 @@ transform: rotate(-135deg);
       background-color: rgb(255, 255, 255);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
       display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
