@@ -62,7 +62,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
   @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 body{
-background-color: #fff;
+background-color: #000000;
 /* background: linear-gradient(-180deg, #0099ff, #0072be); */
 /* background: linear-gradient(-180deg, #b800dd, #6b006b); */
 background-size: 100% 300%;
@@ -149,10 +149,10 @@ font-family: 'Comfortaa', cursive;
 overflow: scroll;
 scroll-behavior: smooth;
 color: #470047;
-background-color: rgb(255, 255, 255);
+background-color: #1a1a1a;
 /* background: linear-gradient(45deg, #50009686, #8a2cdc86); */
-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.205);
-border: 0px #ffffff solid;
+box-shadow: 0px 0px 0px rgb(0, 0, 0);
+border: 0px #353535 solid;
 border-radius: 16px 16px 16px 16px;
 margin: 0px 30px 30px 30px;
 float: left;
@@ -164,40 +164,51 @@ animation-duration: 10s;
 animation-iteration-count: infinite;
 transition: 0.3s ease;
 }
+.settings:hover{
+box-shadow: 0px 0px 00px#8300c0;
+transition: 0.5s ease;
+}
 .select-room{
   position: sticky;
   top: 0;
   content: 'Select';
   color: #fff;
-  background: #800080;
+  background: #1a1a1a;
   border: 0px #000 solid;
   border-radius: 0px;
   text-align: center;
   padding: 19px 0;
   width: 100%;
-box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.315);
+box-shadow: 0px 10px 20px rgba(43, 43, 43, 0.315);
 }
 .live-room{
-  color: #c20000;
+  color: #ff0080;
 padding: 0 10px;
 }
 .room-category{
-  color: #000000;
-  border-left: 5px #800080 solid;
+  color: #ffffff;
+  border-left: 5px #ffffff solid;
   border-radius:  0 10px 10px 0;
 padding: 10px 10px;
 }
 .sector{
-  color: #181818;
-  padding: 10px 20px;
-  background: #c5000000;
-  border-bottom: 1px rgba(100, 100, 100, 0.288) solid;
+  color: hsl(0, 0%, 100%);
+  padding: 10px 10px;
+  margin: 20px 10px;
+  background: #7200a7;
+  border-radius: 10px;
+  border-bottom: 0px rgba(255, 255, 255, 0.568) solid;
   cursor: pointer;
+box-shadow: 3px 3px 00px rgba(43, 43, 43, 0.315);
   transition: 0.3s ease;
 }
 .sector:hover{
-  padding: 10px 15px;
-  background: #dbdbdb;
+  background: #7200a7;
+box-shadow: 0px 0px 20px #7200a7;
+  transition: 0.3s ease;
+}
+.sector:active{
+  transform: scale(0.98);
   transition: 0.2s ease;
 }
 .ic-more{
@@ -230,7 +241,7 @@ padding: 10px 10px;
 }
 .room-title{
   font-weight: 500;
-  font-size: 15px;
+  font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: 0.3s ease;
 }
@@ -411,7 +422,7 @@ h5{color: #ff0000;}
 @media screen and (max-width: 768px){
 body{
 color: white;
-background: #fff;
+background: #1a1a1a;
 /* background: linear-gradient(-180deg, #6c0081, #9f00ad); */
 background-size: 100% 200%;
 overflow: hidden;
@@ -434,8 +445,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 /* overflow: scroll; */
 scroll-behavior: smooth;
 color: #464646;
-background-color: #fff;
-border-bottom: 3px #270049 solid;
+background-color: #1a1a1a;
+border-bottom: 3px #ae00ff solid;
 box-shadow: 0px 0px 0px #ffffff00;
 margin: 0;
 border-radius: 0px;
@@ -447,15 +458,13 @@ overflow: scroll;
 .select-room{
   position: sticky;
   top: 0;
-  color: #fff;
-  background: #6700867e;
+background-color: #8300c096;
   backdrop-filter: blur(14px);
   border: 0px #000 solid;
   border-radius: 0px;
   text-align: center;
   padding: 19px 0;
   width: 100%;
-box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.315);
 }
 .drag{
   display: none;
@@ -513,9 +522,9 @@ z-index: -1;}
 </style>
 </head>
 <body>
-  <div id="loading"> <center>
+  <!-- <div id="loading"> <center>
     <img class="loading-img" src="../loader.gif" draggable="false"><br>
-    </center></div>
+    </center></div> -->
 
     <div class="navigation visually-hidden">
       <a class="navbar-brand text-white" href="../index.html"></a>
@@ -577,7 +586,7 @@ z-index: -1;}
     <center>
       <div class="modern-navigation">
       <div class="modern-dash"></div><br>
-      <span class="menu-tooltip disabled" onclick="back()">
+      <span class="menu-tooltip" onclick="back()">
         <span class="menu-tooltiptext">Back</span>
       <i class="material-icons modern-nav-ic">arrow_back</i>
     </span>
@@ -589,11 +598,11 @@ z-index: -1;}
         <span class="menu-tooltiptext" onclick="search()">Search</span>
         <i class="material-icons modern-nav-ic">search</i>
       </span>
-      <span class="menu-tooltip" onclick="select()">
+      <span class="menu-tooltip disabled" onclick="select()">
         <span class="menu-tooltiptext">Rooms</span>
         <i class="material-icons modern-nav-ic modern-nav-active">headphones</i>
       </span>
-      <span class="menu-tooltip" onclick="info()">
+      <span class="menu-tooltip disabled" onclick="info()">
         <span class="menu-tooltiptext">Info</span>
         <i class="material-icons modern-nav-ic">info</i>
       </span>
@@ -605,7 +614,7 @@ z-index: -1;}
 <div id="2asg8s5d"></div>
 <div class="container2">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#800080" fill-opacity="1" d="M0,192L26.7,186.7C53.3,181,107,171,160,149.3C213.3,128,267,96,320,101.3C373.3,107,427,149,480,144C533.3,139,587,85,640,90.7C693.3,96,747,160,800,186.7C853.3,213,907,203,960,186.7C1013.3,171,1067,149,1120,165.3C1173.3,181,1227,235,1280,261.3C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
+    <path fill="#6a009b" fill-opacity="1" d="M0,192L26.7,186.7C53.3,181,107,171,160,149.3C213.3,128,267,96,320,101.3C373.3,107,427,149,480,144C533.3,139,587,85,640,90.7C693.3,96,747,160,800,186.7C853.3,213,907,203,960,186.7C1013.3,171,1067,149,1120,165.3C1173.3,181,1227,235,1280,261.3C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
   </svg>
 
   <div class="navigation-container">
@@ -622,67 +631,66 @@ z-index: -1;}
 <br>
 
 <div class="live">
-  <h6 class="live-room">Upcoming stream</h6>
-    <div class="sector" onclick="error()">
+  <h6 class="room-category">Upcoming stream</h6>
+    <div class="sector" onclick="bangtan()">
       <i class="fa fa-wifi ic-room"></i>
-      <a class="room-title">Hope Day Special</a><br>
-      <a class="room-status"> <i class="fa fa-exclamation-triangle"></i> Unable to connect</a>
+      <a class="room-title">Savage Day Special</a><br>
+      <a class="room-status">  All Day Long</a>
     </div><br></div>
     <h6 class="room-category">Bangtan World</h6>
     <div class="sector" onclick="descentMix()">
       <img class="ic-avatar" src="../album-cover/bts.jpg">
       <a class="room-title">Descent Mix • Bangtan Group</a><br>
     </div>
-    <div class="sector" onclick="soon()">
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
       <img class="ic-avatar" src="../album-cover/bts.jpg">
       <a class="room-title">Piano Mix • Made by Armies</a><br>
     </div>
-    <div class="sector" onclick="soon()">
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
       <img class="ic-avatar" src="../album-cover/bts.jpg">
-      <a class="room-title">Army Cover • Made by Armies</a><br>
+      <a class="room-title">Empty Arena • Special</a><br>
+    </div>
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">Army Covers • Made by Armies</a><br>
     </div><br>
-
+    <h6 class="room-category">Armies Choice</h6>
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
+      <img class="ic-avatar" src="../album-cover/bts.jpg">
+      <a class="room-title">Solo Nights</a><br>
+    </div><br>
     <h6 class="room-category">Artists</h6>
-    <div class="sector" onclick="">
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
       <img class="ic-avatar" src="../album-cover/rm.jpg">
       <a class="room-title">Kim Nam-joon</a>
       <i class="fa fa- ic-more">💜</i><br>
     </div>
-    <div class="sector" onclick="">
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
       <img class="ic-avatar" src="../album-cover/suga.jpg">
       <a class="room-title">Min Yoon-gi</a>
       <i class="fa fa- ic-more">💜</i><br>
     </div>
-    <div class="sector" onclick="">
+    <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
       <img class="ic-avatar" src="../album-cover/v.jpg">
       <a class="room-title">Kim Tae-hyung</a>
       <i class="fa fa- ic-more">💜</i><br>
     </div>
-      <div class="sector" onclick="">
+      <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
         <img class="ic-avatar" src="../album-cover/jk.jpg">
         <a class="room-title">Jeon Jungkook</a>
       <i class="fa fa- ic-more">💜</i><br>
       </div>
-      <div class="sector" onclick="">
+      <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
         <img class="ic-avatar" src="../album-cover/jimin.jpg">
         <a class="room-title">Park Jimin</a>
       <i class="fa fa- ic-more">💜</i><br>
       </div>
-      <div class="sector" onclick="">
+      <div class="sector" data-mdb-toggle="modal" data-mdb-target="#comingsoon">
         <img class="ic-avatar" src="../album-cover/jhope.jpg">
         <a class="room-title">Jung Ho-seok</a>
       <i class="fa fa- ic-more">💜</i><br>
       </div>
     <br>
-    <h6 class="room-category">Armies Choice</h6>
-    <div class="sector" onclick="soon()">
-      <img class="ic-avatar" src="../album-cover/bts.jpg">
-      <a class="room-title">Steal Nights • V, Jungkook, ...</a><br>
-    </div>
-    <div class="sector" onclick="soon()">
-      <img class="ic-avatar" src="../album-cover/bts.jpg">
-      <a class="room-title">Energatic • Unavailable</a><br>
-    </div><br>
 
 <h6 class="room-category">Mood Changer</h6>
   <div class="sector" onclick="">
@@ -852,10 +860,28 @@ z-index: -1;}
 Analytics
 </div>
 
-<div class="whatsapp-container">
+<!-- <div class="whatsapp-container">
   <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+  </div> -->
+
+<div class="modal fade" id="comingsoon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-black">Coming Soon</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-black">
+        <p>This feature is in development, stay connected to know more.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
+</div>
+
 <script>
 function descentMix(){window.location = "Bangtan World/Descent Mix.html";}
 

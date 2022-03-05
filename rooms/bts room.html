@@ -79,8 +79,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
 @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 body{overflow: hidden;font-family: 'Comfortaa', cursive;}
-.streaming{display: block;}
-.expired{display: block;}
+.streaming{display: none;}
+.expired{display: none;}
 .menu-container{display: block;}
 .counter-container{display: block;}
 a{color: white;}
@@ -418,15 +418,15 @@ setTimeout(function() { window.location.reload(true); }, refreshTime);}
 <center>
   <div class="modern-navigation">
   <div class="modern-dash"></div><br>
-  <span class="menu-tooltip disabled" onclick="back()">
+  <span class="menu-tooltip" onclick="back()">
     <span class="menu-tooltiptext">Back</span>
   <i class="material-icons modern-nav-ic">arrow_back</i>
 </span>
-  <span class="menu-tooltip disabled" onclick="home()">
+  <span class="menu-tooltip" onclick="home()">
     <span class="menu-tooltiptext">Home</span>
-    <i class="material-icons modern-nav-ic modern-nav-active">home</i>
+    <i class="material-icons modern-nav-ic">home</i>
   </span>
-  <span class="menu-tooltip">
+  <span class="menu-tooltip" onclick="search()">
     <span class="menu-tooltiptext">Search</span>
     <i class="material-icons modern-nav-ic">search</i>
   </span>
@@ -434,7 +434,7 @@ setTimeout(function() { window.location.reload(true); }, refreshTime);}
     <span class="menu-tooltiptext">Rooms</span>
     <i class="material-icons modern-nav-ic">headphones</i>
   </span>
-  <span class="menu-tooltip" onclick="info()">
+  <span class="menu-tooltip disabled" onclick="info()">
     <span class="menu-tooltiptext">Info</span>
     <i class="material-icons modern-nav-ic">info</i>
   </span>
@@ -640,7 +640,7 @@ e.addEventListener('click', function() {
 this.style.color = "#ce004f";
 this.style.textShadow = "0 0 6px #ce004f";})});
 
-function back(){window.location = "../index.html";}
+function back(){window.location = "select.html";}
 function home(){window.location = "../index.html";}
 function search(){window.location = "../search.html";}
 function settings(){window.location = "../Help/room.html";}
