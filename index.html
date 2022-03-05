@@ -63,29 +63,91 @@
   @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 body{
 color: rgb(255, 255, 255);
-background: #fff;
+background: #000;
 background-size: 100% 300%;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 user-select: none;
 overflow-x: hidden;
 }
-a{color: rgb(48, 48, 48);}
+a{color: rgb(255, 255, 255);}
 /* .home-container{display: block;} */
 .navbar-custom{display: block;}
 footer{display: block;}
-.home-container{display: none;}
-.maintain-container{display: block;}
+.home-container{display: block;}
+.maintain-container{display: none;}
 /* a{color: #fff;}
 a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);} */
 .container-main{margin: 0px;}
 .container{display: block;}
 .modal-icon{margin-right: 5px;}
+.nav-bar{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 15%;
+  padding: 10px 20px;
+  background: #2e2e2e91;
+  backdrop-filter: blur(14px);
+  border: 2px #2e2e2e00 solid;
+  border-radius: 20px;
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px #2a0035ab;
+  z-index: 12;
+  transition: 0.5s ease;
+}
+.nav-bar:hover{
+  background: #800080;
+  border: 2px #800080 solid;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px #800080;
+  transition: 0.5s ease;
+}
+.brand-lg{
+  width: 30%;
+  margin-right: 5px;
+}
+.brand-name{
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 600;
+}
 .desktop{
   display: block;
 }
 .comfortaa{
+  text-shadow: 0 0 10px #fff;
   font-family: 'Comfortaa', cursive;
+}
+.mini-menu-container{
+  float: right;
+  margin-top: -70px;
+  margin-right: 30px;
+  background: rgba(255, 0, 0, 0);
+}
+.mini-menu{
+  display: inline-block;
+  background: #2c2c2caf;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: 2px #80008000 solid;
+  border-radius: 30px;
+  box-shadow: 0 0 0px #800080;
+  transition: 0.5s ease;
+}
+.mini-menu:hover{
+  display: inline-block;
+  background: #800080;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: 2px #800080 solid;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #800080;
+  transition: 0.5s ease;
+}
+.mini-ic{
+  margin-right: 5px;
 }
 .btn-custom{
   background: #370057;
@@ -98,8 +160,8 @@ a:active{color: rgb(255, 255, 255);} */
 }
 .svg{margin-top: -20px;}
 .section-title{
-  color: rgb(51, 51, 51);
-  background: #fff;
+  color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0);
   margin: 0px 20px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -109,7 +171,7 @@ a:active{color: rgb(255, 255, 255);} */
   transition: 0.5s ease;
 }
 .section-title:hover{
-  background: rgb(216, 216, 216);
+  background: rgba(216, 216, 216, 0);
   transition: 0.5s ease;
 }
 .ic-more{
@@ -130,9 +192,11 @@ a:active{color: rgb(255, 255, 255);} */
   margin: 0 18px;
   width: 22%;
   height: 100vh;
+  color: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0);
+  border: 4px #80008000 solid;
   /* backdrop-filter: blur(14px); */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
   border-radius: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -141,8 +205,10 @@ a:active{color: rgb(255, 255, 255);} */
 }
 .card:hover{
   transform: scale(1.03);
-  background: rgba(189, 189, 189, 0.288);
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.274);
+  color: #fff;
+  background: #800080;
+  border: 4px #800080 solid;
+  box-shadow: 0px 0px 20px #800080;
   transition: 0.3s ease;
 }
 .card-img{
@@ -155,11 +221,11 @@ a:active{color: rgb(255, 255, 255);} */
   padding: 0 10px;
   font-size: 15px;
   font-family: 'Comfortaa', cursive;
-  color: #000;
 }
 .dr-details{
-  overflow: scroll;
+  overflow: hidden;
   text-overflow: ellipsis;
+  color: rgb(194, 194, 194);
   line-height: 15px;
   padding: 0 10px;
   font-size: 12px;
@@ -172,23 +238,29 @@ a:active{color: rgb(255, 255, 255);} */
   cursor: default;
   z-index: 13;
 }
+.room-card{
+  margin: 0 40px;
+}
 .card-room{
   display: inline-block;
-  margin: 0 18px;
-  width: 22%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0);
+  margin: 0 16px;
+  width: 21.5%;
+  height: 103%;
+  background: #1a1a1a;
+  border: 4px #1a1a1a solid;
   /* backdrop-filter: blur(14px); */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
   border-radius: 20px;
-  overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
   cursor: default;
   transition: 0.5s ease;
 }
 .card-room:hover{
   transform: scale(1.05);
-  background: rgba(189, 189, 189, 0.288);
+  background: #ae00ff;
+  border: 4px #ae00ff solid;
+  box-shadow: 0px 0px 20px #ae00ffb7;
   transition: 0.5s ease;
 }
 .btn-room{
@@ -277,6 +349,66 @@ width: 80%;
 @media screen and (max-width: 768px) {
 body{font-size: 2vh; overflow-y: scroll; overflow-x: hidden;}
 .navbar-custom{display: none;}
+.nav-bar{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 17%;
+  padding: 10px 10px;
+  background: #2e2e2e91;
+  backdrop-filter: blur(14px);
+  border: 2px #2e2e2e00 solid;
+  border-radius: 20px;
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px #2a0035ab;
+  z-index: 12;
+  transition: 0.5s ease;
+}
+.nav-bar:hover{
+  background: #2e2e2e91;
+  border: 2px #2e2e2e00 solid;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0px 0px 0px #2a0035ab;
+  transition: 0.5s ease;
+}
+.brand-lg{
+  width: 100%;
+  margin-right: 10px;
+}
+.brand-name{
+  display: none;
+  font-size: 12px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 600;
+}
+.mini-menu-container{
+  float: right;
+  margin-top: -50px;
+  margin-right: 13px;
+  background: rgba(255, 0, 0, 0);
+  overflow: hidden;
+}
+.mini-menu{
+  display: inline-block;
+  background: #2c2c2caf;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  border: 2px #80008000 solid;
+  border-radius: 30px;
+  box-shadow: 0 0 0px #800080;
+  font-size: 12px;
+  transition: 0.5s ease;
+}
+.mini-menu:hover{
+  background: #800080;
+  padding: 10px 15px;
+  border: 2px #800080 solid;
+  box-shadow: 0 0 20px #800080;
+  transition: 0.5s ease;
+}
+.mini-ic{
+  margin-right: 5px;
+}
 .svg{margin-top: -20px;}
 svg:nth-child(1){margin-top: -10px;}
 .section-title{
@@ -299,12 +431,13 @@ svg:nth-child(1){margin-top: -10px;}
 }
 .card{
   display: inline-block;
-  margin: 20px 4px;
-  width: 47%;
-  height: 67vh;
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-  border-radius: 10px;
+  margin: 10px 9%;
+  width: 80%;
+  height: 100%;
+  background: rgb(24, 24, 24);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  border: 2px #1b1b1b solid;
+  border-radius: 20px;
   overflow: hidden;
   word-wrap: break-word;
   text-overflow: ellipsis;
@@ -312,12 +445,15 @@ svg:nth-child(1){margin-top: -10px;}
   transition: 0.5s ease;
 }
 .card:hover{
-  background: rgba(0, 0, 0, 0);
+  transform: scale(1.0);
+  background: #303030;
+  border: 2px #303030 solid;
+  box-shadow: 0 0 20px #303030;
   transition: 0.5s ease;
 }
 .card-img{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.308);
 }
 .dr-title{
@@ -325,7 +461,7 @@ svg:nth-child(1){margin-top: -10px;}
   padding: 0 10px;
   font-size: 11px;
   font-family: 'Comfortaa', cursive;
-  color: #000;
+  color: #fff;
 }
 .dr-details{
   overflow: hidden;
@@ -343,13 +479,13 @@ svg:nth-child(1){margin-top: -10px;}
 }
 .card-room{
   display: inline-block;
-  margin: 10px 18px;
-  width: 90%;
+  margin: 10px 9%;
+  width: 80%;
   height: 100%;
-  background: #f5f5f500;
+  background: #111111;
   /* backdrop-filter: blur(14px); */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
-  border: 1px rgb(228, 228, 228) solid;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.164);
+  border: 2px #80008000 solid;
   border-radius: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -357,8 +493,10 @@ svg:nth-child(1){margin-top: -10px;}
   transition: 0.5s ease;
 }
 .card-room:hover{
-  transform: scale(1.05);
-  background: #4e004e;
+  transform: scale(1.0);
+  background: #1a1a1a;
+  border: 2px #1a1a1a solid;
+  box-shadow: 0 0 20px #1a1a1a;
   transition: 0.5s ease;
 }
 .btn-room{
@@ -491,56 +629,16 @@ function tools(){window.location = "Tools.html";}
 function info(){window.location = "../Help/room.html";}
   </script>
 
- <nav class="navbar visually-hidden navbar-expand-lg fixed-top navbar-dark navbar-custom">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <a class="navbar-brand" href="javascript:void(0)">RUBY PRODUCTION</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active disabled" aria-current="page" href="javascript:void(0)">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">SEARCH</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">POSTS</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="rooms/select.html">ROOMS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">LIBRARY</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="btn btn-secondary btn-sm disabled" href="javascript:void(0)">Notify Me</a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">| </a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="Android App/rooms/select.html">  <i class="fa fa-headphones-alt"></i> </a>
-            </li> -->
-             <!-- <li class="nav-item dropdown me-3 me-lg-1">
-              <a class="nav-link dropdown-toggle hidden-arrow" href="" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-bell"></i>
-                 <span class="badge rounded-pill badge-notification bg-danger">1</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                <li>
-                  <a class="dropdown-item" href="Android App/rooms/select.html"> Bangtan Is Live | New Year Special | 30th Dec   </a>
-                </li>
-              </ul>
-            </li> -->
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+<div class="nav-bar">
+  <a class="link" onclick="home()">
+  <img class="brand-lg" src="favicon/favicon.png">
+  <p class="brand-name">ConcertEra</p>
+  </a>
+</div>
 
 <div class="maintain-container">
-<center><br><br><br><br><img class="maintain-img" draggable="false" src="maintenance/music.png"></center>
+<center><br><br><img class="maintain-img" draggable="false" src="maintenance/music.png"></center>
 <center><p class="maintain-text">
 <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">We're redesigning our home page, check again later.</h6>
 <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Open up the menu to explore more.</h6>
@@ -548,7 +646,7 @@ function info(){window.location = "../Help/room.html";}
 </p></center></div>
 <div class="home-container">
   <div class="heading">
-    <div class="view jarallax" data-jarallax='{"speed": 0.1}' style="background-image: url('background/b11.png');">
+    <div class="view jarallax" data-jarallax='{"speed": 0.1}' style="background-image: url('background/army-ocean.jpg');">
       <div class="mask rgba-indigo-light">
         <div class="container h-100 d-flex justify-content-center align-items-center">
           <div class="row pt-5 mt-3">
@@ -617,6 +715,21 @@ aria-hidden="true"
 </div>
 </div>
 
+<div class="mini-menu-container">
+<div class="mini-menu">
+  <i class="fa fa-home mini-ic"></i> Home
+</div>
+<div class="mini-menu">
+  <i class="fa fa-search mini-ic"></i> Search
+</div>
+<div class="mini-menu">
+  <i class="fa fa-headphones mini-ic"></i> Rooms
+</div>
+<div class="mini-menu">
+  <i class="fa fa-info-circle mini-ic"></i> Info
+</div>
+
+</div><br><br>
 
 <h2 class="">
   <a class="section-title" href="pages/dramas.html#">
@@ -697,21 +810,21 @@ Adapted from the webtoon of the same name by Jae Hoo.
 <div class="room-card">
 <div class="card-room" onclick="">
   <img class="card-img" src="img/bts-portrait.jpg">
-  <h3 class="dr-title">BTS ROOM | Available Now</h3>
+  <h3 class="dr-title">Descent Mix | Available Now</h3>
   <h6 class="dr-details">
   Join the BTS Room created specially army to regain their lost hopes.
   And to enjoy every single moment of their lives, so just forget about
   everything and enjoy!<br><br>
   <center>
-    <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
+    <a class="btn btn-room btn-sm" onclick="descentMix()" style="background: #800080;">Select</a>
     <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
   </center><br><br>
   </h6>
   <br><br>
   </div>
   <div class="card-room" onclick="">
-    <img class="card-img" src="img/v-portrait.jpg">
-    <h3 class="dr-title">BTS ROOM | Available Now</h3>
+    <img class="card-img" src="album-cover/bts.jpg">
+    <h3 class="dr-title">Piano Mix | Coming Soon</h3>
     <h6 class="dr-details">
     Join the BTS Room created specially army to regain their lost hopes.
     And to enjoy every single moment of their lives, so just forget about
@@ -724,8 +837,8 @@ Adapted from the webtoon of the same name by Jae Hoo.
     <br><br>
     </div>
     <div class="card-room" onclick="">
-      <img class="card-img" src="img/jungkook-portrait.jpg">
-      <h3 class="dr-title">BTS ROOM | Available Now</h3>
+      <img class="card-img" src="album-cover/bts.jpg">
+      <h3 class="dr-title">Solo Nights | Available Now</h3>
       <h6 class="dr-details">
       Join the BTS Room created specially army to regain their lost hopes.
       And to enjoy every single moment of their lives, so just forget about
@@ -738,14 +851,14 @@ Adapted from the webtoon of the same name by Jae Hoo.
       <br><br>
       </div>
       <div class="card-room" onclick="">
-        <img class="card-img" src="img/jimin-portrait.jpg">
-        <h3 class="dr-title">BTS ROOM | Available Now</h3>
+        <img class="card-img" src="album-cover/bts.jpg">
+        <h3 class="dr-title">Other rooms | Available Now</h3>
         <h6 class="dr-details">
         Join the BTS Room created specially army to regain their lost hopes.
         And to enjoy every single moment of their lives, so just forget about
         everything and enjoy!<br><br>
         <center>
-          <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
+          <a class="btn btn-room btn-sm" onclick="select()" style="background: #800080;">Select</a>
           <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
         </center><br><br>
         </h6>
@@ -768,7 +881,7 @@ Adapted from the webtoon of the same name by Jae Hoo.
 <br><br>
 <div class="third-section">
 <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#ffffff" fill-opacity="1" d="M0,128L30,149.3C60,171,120,213,180,192C240,171,300,85,360,53.3C420,21,480,43,540,85.3C600,128,660,192,720,234.7C780,277,840,299,900,256C960,213,1020,107,1080,74.7C1140,43,1200,85,1260,106.7C1320,128,1380,128,1410,128L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+  <path fill="#000" fill-opacity="1" d="M0,128L30,149.3C60,171,120,213,180,192C240,171,300,85,360,53.3C420,21,480,43,540,85.3C600,128,660,192,720,234.7C780,277,840,299,900,256C960,213,1020,107,1080,74.7C1140,43,1200,85,1260,106.7C1320,128,1380,128,1410,128L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
 </svg><br><br>
 <div class="subscribe float-end">
 <div class="">
@@ -874,6 +987,8 @@ Adapted from the webtoon of the same name by Jae Hoo.
 <script>
 function streams(){window.location.href = "rooms/bts room.html";}
 function rooms(){window.location.href = "rooms/select.html";}
+function select(){window.location.href = "rooms/select.html";}
+function descentMix(){window.location.href = "rooms/Bangtan World/Descent Mix.html";}
 function tools(){window.location.href = "Tools.html";}
 function search(){window.location.href = "search.html";}
 function about(){window.location.href = "Android App/Help/room.html";}
