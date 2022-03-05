@@ -1,8 +1,8 @@
 window.setInterval(function() {
   var audio = document.getElementById("audio");
   var current = new Date();
-  var visibleStream = new Date("Feb 18, 2022 08:00:01")
-  var expiryStream = new Date("Feb 18, 2022 23:59:56")
+  var visibleStream = new Date("Mar 09, 2022 08:00:01")
+  var expiryStream = new Date("Mar 09, 2022 23:59:56")
   if (current.getTime() > visibleStream.getTime()) {
   $('.Stream-ad').hide();
   } if (current.getTime() > expiryStream.getTime()) {
@@ -13,8 +13,8 @@ window.setInterval(function() {
 window.setInterval(function() {
   var audio = document.getElementById("audio");
   var current = new Date();
-  var visible = new Date("Feb 16, 2022 08:00:01")
-  var expiry = new Date("Feb 16, 2022 23:59:56")
+  var visible = new Date("Mar 09, 2022 08:00:01")
+  var expiry = new Date("Mar 09, 2022 23:59:56")
   if (current.getTime() > visible.getTime()) {
   $('.player').hide();
   $('.live').show();
@@ -48,7 +48,7 @@ window.setInterval(function() {
   // START/END COUNT CONTROL
   // ==============================================================
   // COUNT START CONTROL ==========================================
-  var countDownstreaming = new Date("Feb 17, 2022 08:00:00").getTime();
+  var countDownstreaming = new Date("Mar 09, 2022 08:00:00").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownstreaming - now;
@@ -62,7 +62,7 @@ window.setInterval(function() {
   clearInterval(x);
   document.getElementById("timer").innerHTML = "NOW STREAMING";}}, 1000);
   // COUNT END CONTROL ============================================
-  var countDownEnd = new Date("Feb 17, 2022 23:59:50").getTime();
+  var countDownEnd = new Date("Mar 09, 2022 23:59:50").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownEnd - now;
@@ -210,9 +210,9 @@ window.setInterval(function() {
   // Define the list of tracks that have to be played
   let track_list = [
     {
-      name: "New Year Special",
-      artist: "BTS & Army",
-      image: "../2022.jpg",
+      name: "Savage Day Special",
+      artist: "Min Yoongi",
+      image: "../img/cover.jpg",
       path: "https://drive.google.com/uc?export=download&id=1Wp_IJvJlGAkw3BFiDnLXP7gDBaMuWDtl"
     },
   ];
