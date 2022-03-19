@@ -2430,7 +2430,7 @@ transform: rotate(-135deg);
     }
     .menu-tooltip:hover .menu-tooltiptext {
     overflow: visible;
-    visibility: visible;
+    visibility: hidden;
     transition: 0.5s ease;
     }
     .qr-img{
@@ -2448,7 +2448,7 @@ transform: rotate(-135deg);
   width: 4%;
 }
     #loading{
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
       display: block;
       position: fixed;
@@ -2464,6 +2464,26 @@ transform: rotate(-135deg);
       margin-top: 20%;
       opacity: .5;
     }
+.spinner {
+   width: 56px;
+   height: 56px;
+   margin-top: 20%;
+   border-radius: 100%;
+   border: 6px solid;
+   border-color: #a200ff;
+   border-right-color: #410066;
+   border-left-color: #410066;
+   border-top-color: #410066;
+   box-shadow: 0 0 54px #410066,
+              inset 0 0 10px #410066;
+   animation: spinner-d3wgkg .3s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+   to {
+      transform: rotate(1turn);
+   }
+}
     /* ========================================================= */
     /* | */ .error404{display: none; margin: 0px 200px;}
     /* | */
@@ -2759,7 +2779,7 @@ transform: rotate(-135deg);
     /* margin-left: -5px; */
     }
     #loading{
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
       display: block;
       position: fixed;
@@ -2769,6 +2789,27 @@ transform: rotate(-135deg);
       bottom: 0;
       width: 100%;
       z-index: 19;
+    }
+    .spinner {
+       width: 56px;
+       height: 56px;
+       margin-top: 40vh;
+       border-radius: 50%;
+       border: 4px solid;
+       border-color: #a200ff;
+       border-right-color: #3f0064;
+       border-left-color: #3f0064;
+       border-top-color: #3f0064;
+       box-shadow: 0 0 54px #a200ff,
+                  inset 0 0 0px #e700e7;
+       animation: spinner-d3wgkg .4s infinite linear;
+       transition: 0.5s ease;
+    }
+    @keyframes spinner-d3wgkg {
+       to {
+          transform: rotate(1turn);
+          transition: 0.5s ease;
+       }
     }
     .loading-img{
       width: 35vw;
