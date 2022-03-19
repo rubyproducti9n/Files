@@ -1,8 +1,4 @@
-// var div = document.getElementById('notification');
-// div.innerHTML += ' <a class="nav-link navbar-icon" href="notifications.html" aria-expanded="false">\
-// <i class="fas fa-bell"></i>\
-// <span class="badge rounded-pill badge-notification bg-danger">1</span>\
-// </a>';
+
 
 // -----------------------------------------------------------
 // Rrandomization Function Below
@@ -25,5 +21,5 @@ $('.random').hide().eq(random).show();
 // });
 
 $(window).load(function() {
-  $('#loading').delay(2625).fadeOut(100);
+  $('#loading').delay(2625).fadeOut(200);
 });
