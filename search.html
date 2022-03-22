@@ -47,14 +47,20 @@
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@700&display=swap');
       @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
-    body{color: rgb(255, 255, 255);
+    body{
       background: #000000;
   /* font-family: 'Comfortaa', cursive; */
   user-select: none;
   overflow: hidden;}
   .for-pc{display: block;}
   .for-mob{display: none;}
-    a{color: #414141;}
+  .agust-ol{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 15%;
+  }
+    a{color: #41414100;}
       a:hover{
         color: rgb(255, 255, 255);
       }
@@ -63,7 +69,6 @@
     .timeago{color: black;}
 
     .container2{
-    color: rgb(255, 255, 255);
     display: block;
     margin-top: 0px;
     width: 100%;
@@ -71,6 +76,69 @@
     padding-left: 0px;
   font-family: 'Comfortaa', cursive;
     }
+    .search-result{
+      cursor: pointer;
+      padding: 10px 30px;
+      color: rgb(163, 163, 163);
+      background: #1a1a1a;
+      transition: 0.5s ease;
+    }
+    .search-result:hover{
+      padding: 10px 20px;
+      /* transform: scale(0.98); */
+      background-color: rgb(63, 63, 63);
+      color: rgb(255, 255, 255);
+      transition: 0.2s ease;
+    }
+    .search-result:active{
+      /* transform: scale(0.95); */
+      background-color: #800080;
+      color: #fff;
+      box-shadow: inset 0px 0px 10px #3a003a;
+      transition: 0.2s ease;
+    }
+    .ext-links{
+      float: right;
+      margin-top: -30px;
+
+    }
+    #filter-container{
+      background: rgba(255, 0, 0, 0);
+      padding: 10px 20px;
+      margin: 10px 0;
+      /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    }
+    .ce-btn{
+      color: rgb(92, 92, 92);
+      background: #aa08aa00;
+      margin-top: 0px;
+      padding: 10px 20px;
+      border: 2px #242424 solid;
+      border-radius: 50px;
+      font-size: 13px;
+      box-shadow: 0px 0px 0px #800080;
+    }
+    .ce-btn:hover{
+      margin-top: 0px;
+      color: rgb(255, 255, 255);
+      background: #800080;
+      padding: 10px 20px;
+      border: 2px #800080 solid;
+      border-radius: 50px;
+      font-size: 13px;
+      text-shadow: 0px 0px 10px 2px #ffffff;
+      box-shadow: 0px 0px 20px 2px #800080;
+    }
+    .active{
+      background: #7f00b9;
+      border: 2px #9100d4 solid;
+    }
+    .filterDiv{
+      display: none;
+    }
+.show {
+  display: block;
+}
     .body{
       overflow: scroll;
       color: rgb(255, 255, 255);
@@ -301,6 +369,7 @@
       <path fill="#800080" fill-opacity="1" d="M0,256L30,256C60,256,120,256,180,224C240,192,300,128,360,90.7C420,53,480,43,540,48C600,53,660,75,720,101.3C780,128,840,160,900,197.3C960,235,1020,277,1080,277.3C1140,277,1200,235,1260,234.7C1320,235,1380,277,1410,298.7L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
     </svg>
     <br><br>
+    <img class="agust-ol" src="img/agust-d.png">
 
   <!-- <div class="err">
   <center>
@@ -315,10 +384,82 @@
 </div><br>
   </center>
   <div class="body">
-    <table class="table table-borderless">
+    <div id="filter-container">
+      <!-- <h6>Filter by mood</h6> -->
+      <a class="ce-btn active" onclick="filterSelection('all')"> Show all</a>
+      <a class="ce-btn" onclick="filterSelection('concert')"> Concert</a>
+      <a class="ce-btn" onclick="filterSelection('energatic')"> Energatic</a>
+      <a class="ce-btn" onclick="filterSelection('sad')"> Sad</a>
+    </div>
+
+    <div class="search-result filterDiv concert">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> Empty Arena Nonstop </h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Unknown • March 21 2022</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv energatic">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Permission To Dance' Official Audio Song </h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv energatic">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Butter' Official A_S </h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단)</h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단)</h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단)</h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단)</h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단)</h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    <div class="search-result filterDiv">
+      <h5 class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단)</h5>
+      <h6 class="sub-title"> <i class="fa fa-copyright"></i> Hybe Label • Released July 09 2021</h6>
+      <span class="ext-links">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+
+  <table class="table table-borderless">
   <tbody id="Table">
-  <tr class="" onclick="ptd()">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Permission To Dance' Official Audio Song
+  <tr class="filterDiv energatic" onclick="ptd()">
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Permission To Dance' Official Audio Song
   <br><h6 class="sub-title"> Music Label: Hybe Label • Released July 09 2021
 
   </h6></td>
@@ -326,172 +467,172 @@
   <td class="artist">BTS</td>
   <td class="status"><a class="external-link" href="#"><i class="material-icons">launch</i></a></td>
   </tr>
-  <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Butter' Official Audio Song
+  <tr class="filterDiv energatic">
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Butter' Official Audio Song
     <br><h6 class="sub-title"> Music Label: Hybe Label • Released 3 years ago </h6></td>
   <td class="album">Butter</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
-  <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dynamite' Official Audio Song
+  <tr class="filterDiv sad">
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Dynamite' Official Audio Song
     <br><h6 class="sub-title"> Music Label: Hybe Label • Released 3 years ago </h6></td>
   <td class="artist">Unknown</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Life Goes On' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Life Goes On' Official Audio Song</td>
   <td class="album">B.E</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Dope' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Dope' Official Audio Song</td>
   <td class="album">The Most Beautiful Moment in Life Pt-1</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'N.O.' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'N.O.' Official Audio Song</td>
   <td class="album">O!RUL8.1?</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Run' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Run' Official Audio Song</td>
   <td class="album">Unknown</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Black Swan' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Black Swan' Official Audio Song</td>
   <td class="album">Unknown</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'DNA' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'DNA' Official Audio Song</td>
   <td class="album">Love Yourself:Her</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Fake Love' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Fake Love' Official Audio Song</td>
   <td class="album">Love Yourself:Tears</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Idol' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Idol' Official Audio Song</td>
   <td class="album">LoveYourself:Answer</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Louder Than Bombs' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Louder Than Bombs' Official Audio Song</td>
   <td class="album">Map Of The Soul:7</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Make It Right' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Make It Right' Official Audio Song</td>
   <td class="album">Map Of The Soul:Pesona</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'MiIC Drop' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'MiIC Drop' Official Audio Song</td>
   <td class="album">Love Yourself:Her</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Not Today' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Not Today' Official Audio Song</td>
   <td class="album">You Never Walk Alone</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'ON' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'ON' Official Audio Song</td>
   <td class="album">Map Of The Soul:7</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Save Me' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Save Me' Official Audio Song</td>
   <td class="album">The Most Beautiful Moment in Life: Young Forever </td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Spring Day' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Spring Day' Official Audio Song</td>
   <td class="album">You Never Walk Alone</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Boy With LUV' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Boy With LUV' Official Audio Song</td>
   <td class="album">Map Of The Soul:Persona</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Blood Sweat & Tears' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Blood Sweat & Tears' Official Audio Song</td>
   <td class="album">Wings</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'I Need U' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'I Need U' Official Audio Song</td>
   <td class="album">Unknown</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Fire' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Fire' Official Audio Song</td>
   <td class="album">Unknown</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Savage Love' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Savage Love' Official Audio Song</td>
   <td class="album">Map Of The Soul</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Mikrokosmos' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Mikrokosmos' Official Audio Song</td>
   <td class="album">Map Of The Soul:Persona</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Magic Shop' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Magic Shop' Official Audio Song</td>
   <td class="album">Love Yourself:Tears</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Coffee' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Coffee' Official Audio Song</td>
   <td class="album">O!RUL8,2?</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Zero O'clock' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Zero O'clock' Official Audio Song</td>
   <td class="album">Map Of The Soul:7</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'The Truth Untold' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'The Truth Untold' Official Audio Song</td>
   <td class="album">Love Yourself:Tear</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
   </tr>
   <tr class="">
-  <td class="main-title"><img src="album-cover/bts.jpg" class="cover-art"> BTS (방탄소년단) 'Best Of Me' Official Audio Song</td>
+  <td class="main-title"><img src="bts-logo.png" class="cover-art"> BTS (방탄소년단) 'Best Of Me' Official Audio Song</td>
   <td class="album">Love Yourself:Her</td>
   <td class="artist">BTS</td>
   <td class="status"></td>
@@ -664,6 +805,56 @@
         });
     });
   });
+
+
+
+  filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("filter-container");
+var btns = btnContainer.getElementsByClassName("ce-btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
   </script>
   </div>
 

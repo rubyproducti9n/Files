@@ -70,6 +70,8 @@ user-select: none;
 overflow-x: hidden;
 }
 a{color: rgb(255, 255, 255);}
+a:hover{color: rgb(255, 255, 255);}
+a:active{color: rgb(255, 255, 255);}
 /* .home-container{display: block;} */
 .navbar-custom{display: block;}
 footer{display: block;}
@@ -85,22 +87,23 @@ a:active{color: rgb(255, 255, 255);} */
   position: fixed;
   top: 20px;
   left: 20px;
-  width: 15%;
-  padding: 10px 20px;
-  background: #2e2e2e91;
+  width: 14%;
+  padding: 10px 10px;
+  background: #b700ff6e;
   backdrop-filter: blur(14px);
   border: 2px #2e2e2e00 solid;
-  border-radius: 20px;
+  border-radius: 50px;
   text-shadow: 0 0 0px rgba(255, 255, 255, 0);
   box-shadow: 0px 0px 0px #2a0035ab;
   z-index: 12;
+  overflow: hidden;
   transition: 0.5s ease;
 }
 .nav-bar:hover{
-  background: #800080;
-  border: 2px #800080 solid;
+  background: #b700ff;
+  border: 2px #b700ff solid;
   text-shadow: 0 0 20px rgb(255, 255, 255);
-  box-shadow: 0px 0px 20px #800080;
+  box-shadow: 0px 0px 20px 2px #b700ff;
   transition: 0.5s ease;
 }
 .brand-lg{
@@ -138,12 +141,12 @@ a:active{color: rgb(255, 255, 255);} */
 }
 .mini-menu:hover{
   display: inline-block;
-  background: #800080;
+  background: #a300cc;
   padding: 10px 20px;
   margin: 10px 5px;
-  border: 2px #800080 solid;
+  border: 2px #a300cc solid;
   border-radius: 30px;
-  box-shadow: 0 0 20px #800080;
+  box-shadow: 0 0 20px #a300cc;
   transition: 0.5s ease;
 }
 .mini-ic{
@@ -191,7 +194,6 @@ a:active{color: rgb(255, 255, 255);} */
   display: inline-block;
   margin: 0 18px;
   width: 22%;
-  height: 100vh;
   color: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0);
   border: 4px #80008000 solid;
@@ -206,9 +208,9 @@ a:active{color: rgb(255, 255, 255);} */
 .card:hover{
   transform: scale(1.03);
   color: #fff;
-  background: #800080;
-  border: 4px #800080 solid;
-  box-shadow: 0px 0px 20px #800080;
+  background: #141414;
+  border: 4px #141414 solid;
+  box-shadow: 0px 0px 20px #80008000;
   transition: 0.3s ease;
 }
 .card-img{
@@ -244,10 +246,9 @@ a:active{color: rgb(255, 255, 255);} */
 .card-room{
   display: inline-block;
   margin: 0 16px;
-  width: 21.5%;
-  height: 103%;
+  width: 21.9%;
   background: #1a1a1a;
-  border: 4px #1a1a1a solid;
+  border: 2px #1a1a1a solid;
   /* backdrop-filter: blur(14px); */
   box-shadow: 0 0 0px rgba(0, 0, 0, 0);
   border-radius: 20px;
@@ -257,15 +258,15 @@ a:active{color: rgb(255, 255, 255);} */
   transition: 0.5s ease;
 }
 .card-room:hover{
-  transform: scale(1.05);
-  background: #ae00ff;
-  border: 4px #ae00ff solid;
-  box-shadow: 0px 0px 20px #ae00ffb7;
+  /* transform: scale(1.05); */
+  background: #2c2c2c;
+  border: 2px #1a1a1a solid;
+  box-shadow: 0px 0px 20px #ae00ff00;
   transition: 0.5s ease;
 }
 .btn-room{
   color: #fff;
-  width: 45%;
+  width: 43%;
 }
 .third-section{background: #800080;}
 .subscribe{
@@ -318,7 +319,7 @@ padding: 10px 0;
 }
 .submit2{
 color: #ffffff;
-background: #2b002b;
+background: #222222;
 border: none;
 outline: none;
 border-radius: 6px;
@@ -326,8 +327,13 @@ width: 10vw;
 padding: 10px 0;
 }
 .contact{
-  color: #2b002b;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 0, 0, 0);
   font-size: 23px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.email{
+  font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .notification-svg{
@@ -660,7 +666,7 @@ function info(){window.location = "../Help/room.html";}
                     </h1>
                   </li>
                   <li>
-                    <h4 class="white-text description mb-5 wow fadeIn" data-wow-delay="0.4s"><strong> Welcome!</strong>
+                    <h4 class="white-text description mb-5 wow fadeIn" data-wow-delay="0.4s"><strong> Welcome <br> Download the beta version now!</strong>
                     </h4>
                   </li>
                   <li class="wow fadeIn" data-wow-delay="0.4s">
@@ -717,16 +723,20 @@ aria-hidden="true"
 
 <div class="mini-menu-container">
 <div class="mini-menu">
-  <i class="fa fa-home mini-ic"></i> Home
+  <a class="" href="#!kdpUidksDd/watch?wep">
+  <i class="fa fa-home mini-ic"></i> Home</a>
 </div>
 <div class="mini-menu">
-  <i class="fa fa-search mini-ic"></i> Search
+  <a class="" href="search.html">
+  <i class="fa fa-search mini-ic"></i> Search</a>
 </div>
 <div class="mini-menu">
-  <i class="fa fa-headphones mini-ic"></i> Rooms
+  <a class="" href="rooms/select.html">
+  <i class="fa fa-headphones mini-ic"></i> Rooms</a>
 </div>
 <div class="mini-menu">
-  <i class="fa fa-info-circle mini-ic"></i> Info
+  <a class="" href="#!">
+  <i class="fa fa-info-circle mini-ic"></i> Info</a>
 </div>
 
 </div><br><br>
@@ -815,9 +825,15 @@ Adapted from the webtoon of the same name by Jae Hoo.
   Join the BTS Room created specially army to regain their lost hopes.
   And to enjoy every single moment of their lives, so just forget about
   everything and enjoy!<br><br>
+  <span class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+  </span>
+  <br><br>
   <center>
     <a class="btn btn-room btn-sm" onclick="descentMix()" style="background: #800080;">Select</a>
-    <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+    <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Details <i class="fa fa-chevron-right"></i> </a>
   </center><br><br>
   </h6>
   <br><br>
@@ -829,9 +845,13 @@ Adapted from the webtoon of the same name by Jae Hoo.
     Join the BTS Room created specially army to regain their lost hopes.
     And to enjoy every single moment of their lives, so just forget about
     everything and enjoy!<br><br>
+    <span class="rating">
+      <i class="fa fa-star"></i>
+    </span>
+    <br><br>
     <center>
       <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
-      <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+      <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Details <i class="fa fa-chevron-right"></i> </a>
     </center><br><br>
     </h6>
     <br><br>
@@ -843,23 +863,32 @@ Adapted from the webtoon of the same name by Jae Hoo.
       Join the BTS Room created specially army to regain their lost hopes.
       And to enjoy every single moment of their lives, so just forget about
       everything and enjoy!<br><br>
+      <span class="rating">
+        <i class="fa fa-star"></i>
+      </span>
+      <br><br>
       <center>
         <a class="btn btn-room btn-sm disabled" style="background: #800080;">Select</a>
-        <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+        <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Details <i class="fa fa-chevron-right"></i> </a>
       </center><br><br>
       </h6>
       <br><br>
       </div>
       <div class="card-room" onclick="">
         <img class="card-img" src="album-cover/bts.jpg">
-        <h3 class="dr-title">Other rooms | Available Now</h3>
+        <h3 class="dr-title">Browse more | Available Now</h3>
         <h6 class="dr-details">
         Join the BTS Room created specially army to regain their lost hopes.
         And to enjoy every single moment of their lives, so just forget about
         everything and enjoy!<br><br>
+        <span class="rating">
+          <i class="fa fa-star"></i>
+        </span>
+        <br><br>
+
         <center>
           <a class="btn btn-room btn-sm" onclick="select()" style="background: #800080;">Select</a>
-          <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Learn More <i class="fa fa-chevron-right"></i> </a>
+          <a class="btn btn-room btn-sm disabled" style="color: rgb(49, 49, 49); background: #ffffff;">Details <i class="fa fa-chevron-right"></i> </a>
         </center><br><br>
         </h6>
         <br><br>
@@ -904,7 +933,7 @@ Adapted from the webtoon of the same name by Jae Hoo.
 
 <div class="contact">
   <center>
-<h1 style="border-left: 2px #800080 solid;">Contact Us</h1>
+<h1 style="border-left: 0px #800080 solid;">Contact Us</h1>
 <form action="" method="POST">
 <i class="fa fa-user"></i> Name : <input type="text" name="name" class="input2"><br>
 <i class="fa fa-envelope"></i> Email : <input type="email" name="email" class="input2"><br><br>
@@ -913,7 +942,8 @@ Adapted from the webtoon of the same name by Jae Hoo.
 <br><hr width="30%">
 <h2>OR</h2>
 <hr width="30%"><br>
-  Email us at rubyofficial275@gmail.com
+<p class="email">
+  Email us at rubyofficial275@gmail.com</p>
 </center><br><br><br>
 <!-- <center>
   <h1>Thank You </h1>
