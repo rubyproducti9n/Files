@@ -2447,6 +2447,9 @@ transform: rotate(-135deg);
 .brand-img{
   width: 4%;
 }
+.glow{
+  box-shadow: 0 0 20px 1px #410066;
+}
     #loading{
       background-color: rgb(0, 0, 0);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
@@ -2476,7 +2479,7 @@ transform: rotate(-135deg);
    border-top-color: #410066;
    box-shadow: 0 0 54px #410066,
               inset 0 0 10px #410066;
-   animation: spinner-d3wgkg .3s infinite linear;
+   animation: spinner-d3wgkg .2s infinite linear;
 }
 
 @keyframes spinner-d3wgkg {
