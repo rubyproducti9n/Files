@@ -13,8 +13,8 @@ window.setInterval(function() {
 window.setInterval(function() {
   var audio = document.getElementById("audio");
   var current = new Date();
-  var visible = new Date("Mar 09, 2022 08:00:01")
-  var expiry = new Date("Mar 09, 2022 23:59:56")
+  var visible = new Date("Mar 24, 2022 08:00:01")
+  var expiry = new Date("Mar 24, 2022 23:59:56")
   if (current.getTime() > visible.getTime()) {
   $('.player').hide();
   $('.live').show();
@@ -31,7 +31,8 @@ window.setInterval(function() {
   $('.expired').show();
   $('.join').hide();
   audio.pause();
-  window.location.href = "select.html";}}, 0);
+  // window.location.href = "select.html";
+}}, 0);
 
 
 
@@ -48,7 +49,7 @@ window.setInterval(function() {
   // START/END COUNT CONTROL
   // ==============================================================
   // COUNT START CONTROL ==========================================
-  var countDownstreaming = new Date("Mar 09, 2022 08:00:00").getTime();
+  var countDownstreaming = new Date("April 06, 2022 00:00:00").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownstreaming - now;
@@ -60,9 +61,9 @@ window.setInterval(function() {
     + minutes + "m " + seconds + "s ";
     if (distance < 0) {
   clearInterval(x);
-  document.getElementById("timer").innerHTML = "NOW STREAMING";}}, 1000);
+  document.getElementById("timer").innerHTML = "Waiting for admin...";}}, 1000);
   // COUNT END CONTROL ============================================
-  var countDownEnd = new Date("Mar 09, 2022 23:59:50").getTime();
+  var countDownEnd = new Date("Mar 24, 2022 23:59:50").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownEnd - now;
