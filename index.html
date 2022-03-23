@@ -75,8 +75,8 @@ a:active{color: rgb(255, 255, 255);}
 /* .home-container{display: block;} */
 .navbar-custom{display: block;}
 footer{display: block;}
-.home-container{display: block;}
-.maintain-container{display: none;}
+.home-container{display: none;}
+.maintain-container{display: block;}
 /* a{color: #fff;}
 a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);} */
@@ -84,6 +84,7 @@ a:active{color: rgb(255, 255, 255);} */
 .container{display: block;}
 .modal-icon{margin-right: 5px;}
 .nav-bar{
+  display: none;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -131,10 +132,10 @@ a:active{color: rgb(255, 255, 255);} */
 }
 .mini-menu{
   display: inline-block;
-  background: #2c2c2caf;
+  background: #2c2c2c00;
   padding: 10px 20px;
   margin: 10px 5px;
-  border: 2px #80008000 solid;
+  border: 2px #363636 solid;
   border-radius: 30px;
   box-shadow: 0 0 0px #800080;
   transition: 0.5s ease;
@@ -646,8 +647,8 @@ function info(){window.location = "../Help/room.html";}
 <div class="maintain-container">
 <center><br><br><img class="maintain-img" draggable="false" src="maintenance/music.png"></center>
 <center><p class="maintain-text">
-<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">We're redesigning our home page, check again later.</h6>
-<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Open up the menu to explore more.</h6>
+<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">This site is temprorily closed</h6>
+<h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> <div id="timer"></div> </h6>
 <br>
 </p></center></div>
 <div class="home-container">
@@ -1025,6 +1026,7 @@ function about(){window.location.href = "Android App/Help/room.html";}
 function logOut(){alert ("Unable to logout");}
 </script>
 
+<script type="text/javascript" src="js/Live Controller.js"></script>
      <script type="text/javascript" src="mdb/js/jquery.min.js"></script>
      <script type="text/javascript" src="mdb/js/popper.min.js"></script>
      <script type="text/javascript" src="mdb/js/global.min.js"></script>
