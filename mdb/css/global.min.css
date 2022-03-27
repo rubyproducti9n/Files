@@ -2205,6 +2205,7 @@ transform: rotate(-135deg);
     color: #000;}
   a:hover{ color: #000}
   .modern-navigation{
+  display: none;
   position: fixed;
   bottom: -220px;
   left: 37vw;
