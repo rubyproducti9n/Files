@@ -1,8 +1,7 @@
 window.setInterval(function() {
-  var audio = document.getElementById("audio");
   var current = new Date();
-  var visibleStream = new Date("Mar 09, 2022 08:00:01")
-  var expiryStream = new Date("Mar 09, 2022 23:59:56")
+  var visibleStream = new Date("April 01, 2022 17:56:01")
+  var expiryStream = new Date("April 01, 2022 18:02:40")
   if (current.getTime() > visibleStream.getTime()) {
   $('.Stream-ad').hide();
   } if (current.getTime() > expiryStream.getTime()) {
@@ -13,8 +12,8 @@ window.setInterval(function() {
 window.setInterval(function() {
   var audio = document.getElementById("audio");
   var current = new Date();
-  var visible = new Date("Mar 24, 2022 08:00:01")
-  var expiry = new Date("Mar 24, 2022 23:59:56")
+  var visible = new Date("April 01, 2022 00:00:00")
+  var expiry = new Date("April 10, 2022 23:59:50")
   if (current.getTime() > visible.getTime()) {
   $('.player').hide();
   $('.live').show();
@@ -49,7 +48,7 @@ window.setInterval(function() {
   // START/END COUNT CONTROL
   // ==============================================================
   // COUNT START CONTROL ==========================================
-  var countDownstreaming = new Date("April 06, 2022 00:00:00").getTime();
+  var countDownstreaming = new Date("April 01, 2022 00:00:00").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownstreaming - now;
@@ -61,9 +60,9 @@ window.setInterval(function() {
     + minutes + "m " + seconds + "s ";
     if (distance < 0) {
   clearInterval(x);
-  document.getElementById("timer").innerHTML = "Waiting for admin...";}}, 1000);
+  document.getElementById("timer").innerHTML = "Now Streaming";}}, 1000);
   // COUNT END CONTROL ============================================
-  var countDownEnd = new Date("Mar 24, 2022 23:59:50").getTime();
+  var countDownEnd = new Date("April 10, 2022 23:59:50").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownEnd - now;
@@ -76,7 +75,32 @@ window.setInterval(function() {
   clearInterval(x);
   document.getElementById("ending").innerHTML = "Loading...";}}, 1000);
 
-
+  // var div = document.getElementById("loading-starts");
+  // div.innerHTML += ' <div class="streaming">\
+  // <center> <img class="strm-img" src="../bts-logo.png" draggable="false"></center>\
+  //   <p class="expired-text"><center>\
+  //   <h6>STREAMS IN</h6>\
+  //   <h6><div id="timer"></div></h6>\
+  //     <br><br><br>\
+  //   </center>\
+  // </div>';
+  var div = document.getElementById("stream-details");
+  div.innerHTML += ' <div class="live-title">\
+  BTS Concert Arena | Feel It | Purple Arena\
+ </div>\
+ <div class="live-description">\
+   Title: BTS Concert Arena | Virtual Rooms | Feel It<br>\
+   Description: Experience as if you are present in concert itself. We recommend you to close your eye and feel the music.<br>\
+   Albums: 2013 - 2022<br>\
+   Artists: Bantan Sonyeodan<br>\
+   Music Label: Hybe Label<br>\
+   Streams: 1st April onwards<br>\
+   About: This stream is for test purpose only. Subscribe to get notifies, its free <br>\
+\
+   <br><br>\
+   <a class="btn text-white btn-sm" style="background: #800080;" href="rooms/bts room.html">Join</a>\
+   <a class="btn text-white btn-sm" style="background: #800080;" href="!#eosPoskdMskd/watchlLkskoslHsoaP">Leran More</a>\
+ </div> ';
   // ================================================================
   // START/END AND WIDGET LOADING CONTROL
   // ================================================================
@@ -211,10 +235,10 @@ window.setInterval(function() {
   // Define the list of tracks that have to be played
   let track_list = [
     {
-      name: "Savage Day Special",
-      artist: "Min Yoongi",
-      image: "../img/cover.jpg",
-      path: "https://drive.google.com/uc?export=download&id=1Wp_IJvJlGAkw3BFiDnLXP7gDBaMuWDtl"
+      name: "Concert Arena",
+      artist: "BTS",
+      image: "../album-cover/concert.jpg",
+      path: "https://drive.google.com/uc?export=download&id=1T0FJoWtf9YpsGaDWlQ6xvXmJH8HTRM-l"
     },
   ];
 
