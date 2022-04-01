@@ -2455,7 +2455,7 @@ transform: rotate(-135deg);
 /* index.html starts*/
 
 .nav-bar{
-  display: block;
+  display: none;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -2680,7 +2680,7 @@ transform: rotate(-135deg);
     #loading{
       background-color: rgb(0, 0, 0);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
-      display: none;
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
@@ -3010,7 +3010,6 @@ transform: rotate(-135deg);
     }
 
     /* index.html starts */
-
     .navbar-custom{display: none;}
     .nav-bar{
       position: fixed;
