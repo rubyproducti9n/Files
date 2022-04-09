@@ -74,10 +74,10 @@ a{color: rgb(255, 255, 255);}
 a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);}
 /* .home-container{display: block;} */
-.navbar-custom{display: none;}
+.navbar-custom{display: block;}
 footer{display: block;}
-.home-container{display: none;}
-.maintain-container{display: block;}
+.home-container{display: block;}
+.maintain-container{display: none;}
 /* a{color: #fff;}
 a:hover{color: rgb(255, 255, 255);}
 a:active{color: rgb(255, 255, 255);} */
@@ -91,7 +91,7 @@ background: #a200ff;
 display: block;
 }
 .comfortaa{
-text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+text-shadow: 0 0 10px #ffffff00;
 font-family: 'Comfortaa', cursive;
 }
 .background{
@@ -100,6 +100,83 @@ position: fixed;
 background: url(background/bg2.jpg);
 z-index: -10;
 }
+
+.wide-container{
+  display: none;
+  border: 2px rgb(36, 36, 36) solid;
+  border-radius: 20px;
+  margin: 20px 40px;
+  padding: 20px;
+  height: 43vh;
+  overflow: hidden;
+}
+.details-container{
+  float: left;
+  border: 2px rgba(36, 36, 36, 0) solid;
+}
+.search-img{
+  float: right;
+  border: 2px rgba(36, 36, 36, 0) solid;
+  width: 20%;
+  backdrop-filter:drop-shadow(0 0 20px #ffffff);
+  transition: 0.5s ease;
+}
+.wide-container:hover .search-img{
+  transition: 0.5s ease;
+}
+
+.drama-container{
+  margin: 20px 40px;
+  padding: 20px 20px;
+  border: 2px rgb(26, 26, 26) solid;
+  border-radius: 20px;
+  box-shadow: 0 0 0px #a200ff;
+  font-family: 'Comfortaa', cursive;
+  overflow: hidden;
+}
+.drama-list{
+  transition: 0.2s ease;
+}
+.drama-list .info{
+width: 78%;
+line-height: 2;
+border: 2px rgba(26, 26, 26, 0) solid;
+font-size: 10px;
+text-overflow: ellipsis;
+word-wrap: break-word;
+overflow: hidden;
+}
+.drama-img{
+  float: right;
+  height: 55vh;
+  border: 2px rgba(20, 20, 20, 0) solid;
+  border-radius: 20px;
+  /* box-shadow: 0 0 10px #ffffff75,
+              inset 0 0 20px #a200ff; */
+}
+.episode{
+  display: inline-block;
+  margin: 10px 3px;
+  padding: 10px 20px;
+  border: 2px rgb(26, 26, 26) solid;
+  border-radius: 50px;
+  font-size: 11px;
+  transition: 0.2s ease;
+}
+.episode:hover{
+  background: #a200ff;
+  border: 2px #a200ff solid;
+  box-shadow: 0 0 10px 1px #a200ff,
+              inset 0 0 10px #a200ff;
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+.total-ep{
+  font-size: 10px;
+  padding: 10px 20px;
+}
+
 .svg{margin-top: -20px;}
 .section-title{
 color: rgb(255, 255, 255);
@@ -208,6 +285,64 @@ width: 80%;
 body{font-size: 2vh; overflow-y: scroll; overflow-x: hidden;}
 .svg{margin-top: -20px;}
 svg:nth-child(1){margin-top: -10px;}
+
+
+.drama-container{
+  margin: 20px 20px;
+  padding: 0px 0px;
+  border: 2px rgb(26, 26, 26) solid;
+  border-radius: 20px;
+  box-shadow: 0 0 0px #a200ff;
+  font-family: 'Comfortaa', cursive;
+  overflow: hidden;
+}
+.drama-list{
+  padding: 20px 6px;
+  transition: 0.2s ease;
+}
+.drama-list .info{
+width: 100%;
+line-height: 2;
+border: 2px rgba(20, 20, 20, 0) solid;
+font-size: 10px;
+text-overflow: ellipsis;
+word-wrap: break-word;
+overflow: hidden;
+}
+.drama-img{
+  /* float: right; */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+  border: 2px rgba(20, 20, 20, 0) solid;
+  border-radius: 20px 20px 0 0px;
+  /* box-shadow: 0 0 10px #ffffff75,
+              inset 0 0 20px #a200ff; */
+}
+.episode{
+  display: inline-block;
+  margin: 10px 3px;
+  padding: 10px 20px;
+  border: 2px rgb(26, 26, 26) solid;
+  border-radius: 50px;
+  font-size: 09px;
+  transition: 0.2s ease;
+}
+.episode:hover{
+  background: #a200ff;
+  border: 2px #a200ff solid;
+  box-shadow: 0 0 10px 1px #a200ff,
+              inset 0 0 10px #a200ff;
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+.total-ep{
+  font-size: 10px;
+  padding: 10px 20px;
+}
+
 .section-title{
 margin: 0px 10px;
 font-size: 17px;
@@ -304,11 +439,11 @@ display: none;
 
 <center>
   <div class="modern-navigation">
-  <div class="modern-dash"></div><br>
-  <span class="menu-tooltip disabled" onclick="back()">
+  <!-- <div class="modern-dash"></div><br> -->
+  <!-- <span class="menu-tooltip disabled" onclick="back()">
     <span class="menu-tooltiptext">Back</span>
   <i class="material-icons modern-nav-ic">arrow_back</i>
-</span>
+</span> -->
   <span class="menu-tooltip disabled" onclick="home()">
     <span class="menu-tooltiptext">Home</span>
     <i class="material-icons modern-nav-ic modern-nav-active">home</i>
@@ -326,7 +461,6 @@ display: none;
     <i class="material-icons modern-nav-ic">info</i>
   </span>
   </div></center>
-
 
 <div class="nav-bar">
   <a class="link" onclick="home()">
@@ -425,8 +559,15 @@ aria-hidden="true"
   <a class="" href="#!">
   <i class="fa fa-info-circle mini-ic"></i> Info</a>
 </div>
-</div><br><br>
+</div><br>
 
+<div class="Stream-ads">
+  <div class="live-container comfortaa">
+<img class="live-img" src="album-cover/jimin.jpg">
+<div id="stream-details" class="details-cont"></div>
+</div>
+</div>
+<br><br>
 <h2 class="">
   <a class="section-title" href="pages/dramas.html#">
   Best dramas to watch in 2022
@@ -504,6 +645,33 @@ Adapted from the webtoon of the same name by Jae Hoo.
 <br><br>
 </div>
 </div>
+
+<div class="drama-container">
+  <img id="drama-img" class="drama-img" draggable="false">
+  <div class="a-business-proposal drama-list">
+  <h4 id="drama-title"></h4>
+    <div id="drama-detail" class="info"></div>
+  </div>
+  <div class="episodes">
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 01</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 02</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 03</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 04</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 05</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 06</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 07</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 08</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 09</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 10</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 11</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 12</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 13</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 14</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 15</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 16</div>
+  </div>
+  <div class="total-ep"><div id="a-business-proposal-output"></div></div>
+  </div>
 
 <h2 class="section-title">
   <a class="" href="pages/dramas.html#">
@@ -590,17 +758,23 @@ Adapted from the webtoon of the same name by Jae Hoo.
         </div>
 </div>
 
-<br><br>
-<div class="Stream-ads">
-  <div class="live-container comfortaa">
-<img class="live-img" src="album-cover/jimin.jpg">
-<div id="stream-details" class="details-cont"></div>
-</div>
-</div>
 
 
 <br><br>
+<div class="wide-container">
+  <div class="details-container">
+    <h3>Coming Soon</h3>
+    <h6>Something big is really coming soon, subscribe to stay tuned!</h6>
+    <a class="btn btn-sm" style="background-color: #800080;">Know more</a>
+  </div>
+  <img class="search-img" src="maintenance/google.png">
+</div>
 <br><br>
+<br><br>
+<!-- <br><br>
+<br><br>
+<br><br>
+<br><br> -->
 <div class="third-section">
 <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
   <path fill="#000" fill-opacity="1" d="M0,128L30,149.3C60,171,120,213,180,192C240,171,300,85,360,53.3C420,21,480,43,540,85.3C600,128,660,192,720,234.7C780,277,840,299,900,256C960,213,1020,107,1080,74.7C1140,43,1200,85,1260,106.7C1320,128,1380,128,1410,128L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
