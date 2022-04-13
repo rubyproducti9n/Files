@@ -86,7 +86,7 @@ window.setInterval(function() {
   // </div>';
   var div = document.getElementById("stream-details");
   div.innerHTML += ' <div class="live-title">\
-  BTS Concert Arena | Feel It | Purple Arena\
+  <span class="badge badge-warning">AD</span> BTS Concert Arena | Feel It | Purple Arena  \
  </div>\
  <div class="live-description">\
    Title: BTS Concert Arena | Virtual Rooms | Feel It<br>\
@@ -97,9 +97,9 @@ window.setInterval(function() {
    Streams: 1st April onwards<br>\
    About: This stream is for test purpose only. Subscribe to get notifies, its free <br>\
 \
-   <br><br>\
-   <a class="btn text-white btn-sm" style="background: #800080;" href="rooms/bts room.html">Join</a>\
-   <a class="btn text-white btn-sm" style="background: #800080;" href="!#eosPoskdMskd/watchlLkskoslHsoaP">Leran More</a>\
+   <br>\
+   <a class="btn text-white btn-custom btn-sm" href="rooms/bts room.html">Join</a>\
+   <a class="btn text-white btn-custom btn-sm" href="!#eosPoskdMskd/watchlLkskoslHsoaP">Leran More</a>\
  </div> ';
   // ================================================================
   // START/END AND WIDGET LOADING CONTROL
