@@ -177,8 +177,8 @@ text-shadow: 0 0 10px #810585;
 .streaming{background: rgb(0, 0, 0);height: 100%; font-weight: 500; font-family: 'Comfortaa', cursive;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;}
 .strm-img{margin-top: 20vh;opacity:.4; width: 22%; filter: drop-shadow(0 0 0px #b103ff); transition: 0.3s ease;}
 .strm-img:hover{opacity:.8; backdrop-filter: drop-shadow(0 0 20px 1px #af03ffcb); transition: 0.1s ease;}
-h6{color: #e2e2e2;text-shadow: 0 0 10px #810585; font-size: 9px; font-weight: unset;font-family: 'Comfortaa', cursive;}
-h2{color: #ffffff;text-shadow: 0 0 10px #810585; font-weight: unset;font-family: 'Comfortaa', cursive;}
+h6{color: #e2e2e2;text-shadow: 0 0 10px #81058500; font-size: 9px; font-weight: unset;font-family: 'Comfortaa', cursive;}
+h2{color: #ffffff;text-shadow: 0 0 10px #81058500; font-weight: unset;font-family: 'Comfortaa', cursive;}
 #timer{color: #ffffff;text-shadow: 0 0 10px #810585; font-size: 14px;font-family: 'Comfortaa', cursive;}
 .expired{background: rgb(0, 0, 0);font-family: 'Comfortaa', cursive;color: #000000;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 9;}
 .ex-img{margin-top: 35vh;opacity: .5; width: 10%;}
