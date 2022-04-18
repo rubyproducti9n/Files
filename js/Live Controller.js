@@ -12,8 +12,8 @@ window.setInterval(function() {
 window.setInterval(function() {
   var audio = document.getElementById("audio");
   var current = new Date();
-  var visible = new Date("April 01, 2022 00:00:00")
-  var expiry = new Date("April 10, 2022 23:59:50")
+  var visible = new Date("June 10, 2022 00:00:00")
+  var expiry = new Date("Jun 11, 2022 23:59:50")
   if (current.getTime() > visible.getTime()) {
   $('.player').hide();
   $('.live').show();
@@ -48,7 +48,7 @@ window.setInterval(function() {
   // START/END COUNT CONTROL
   // ==============================================================
   // COUNT START CONTROL ==========================================
-  var countDownstreaming = new Date("April 01, 2022 00:00:00").getTime();
+  var countDownstreaming = new Date("June 10, 2022 00:00:00").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownstreaming - now;
@@ -62,7 +62,7 @@ window.setInterval(function() {
   clearInterval(x);
   document.getElementById("timer").innerHTML = "Now Streaming";}}, 1000);
   // COUNT END CONTROL ============================================
-  var countDownEnd = new Date("April 10, 2022 23:59:50").getTime();
+  var countDownEnd = new Date("June 11, 2022 23:59:50").getTime();
   var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownEnd - now;
@@ -86,15 +86,15 @@ window.setInterval(function() {
   // </div>';
   var div = document.getElementById("stream-details");
   div.innerHTML += ' <div class="live-title">\
-  <span class="badge badge-warning">AD</span> BTS Concert Arena | Feel It | Purple Arena  \
+  <span class="badge badge-warning">AD</span> Bangtan Day | BTS | Purple Arena  \
  </div>\
  <div class="live-description">\
-   Title: BTS Concert Arena | Virtual Rooms | Feel It<br>\
-   Description: Experience as if you are present in concert itself. We recommend you to close your eye and feel the music.<br>\
+   Title: BTS Concert Arena | Virtual Rooms | BTS<br>\
+   Description: Not enough money! Celebrate the Bangtan Day in a virtual way absolutely free.<br>\
    Albums: 2013 - 2022<br>\
    Artists: Bantan Sonyeodan<br>\
    Music Label: Hybe Label<br>\
-   Streams: 1st April onwards<br>\
+   Streams: 10th June onwards<br>\
    About: This stream is for test purpose only. Subscribe to get notifies, its free <br>\
 \
    <br>\
