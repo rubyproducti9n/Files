@@ -145,13 +145,48 @@ z-index: -10;
   margin-right: 5px;
 }
 
+.custom-link{
+  color: rgb(255, 255, 255);
+}
+.custom-link:hover{
+  color: rgb(0, 153, 255);
+}
+.ad-container{
+  color: rgb(255, 255, 255);
+  background: rgb(22, 22, 22);
+  margin: 20px 50px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  height: 32vh;
+}
+.ad-details{
+  display: block;
+  float: left;
+}
+.ad-title{
+  padding: 5px 0px;
+  font-size: 19px;
+}
+.ad-content{
+  padding: 5px 0px;
+  font-size: 12px;
+}
+.ad-img{
+  display: block;
+  float: right;
+  border-radius: 100px;
+  background: #fff;
+  margin: 15px;
+  width: 11%;
+}
+
 .wide-container{
   color: #000;
   background-color: #fff;
   border: 4px rgb(255, 255, 255) solid;
   border-radius: 20px;
   margin: 20px 50px;
-  height: 20vh;
+  height: 22vh;
   overflow: hidden;
 }
 .details-container{
@@ -851,7 +886,7 @@ aria-hidden="true"
 
 <div class="Stream-ads">
   <div class="live-container comfortaa">
-<img class="live-img" src="album-cover/jimin.jpg">
+<img class="live-img" src="album-cover/mos7.jpg">
 <div id="stream-details" class="details-cont"></div>
 </div>
 </div>
@@ -862,17 +897,22 @@ aria-hidden="true"
 <i class="fa fa-chevron-right ic-more"></i>
 </a>
 </h2>
-<div class="custom-card" onclick="vincenzoNetflix()">
+<div class="custom-card" onclick="error()">
   <div class="ce-card">
   <img class="card-img" src="https://imagecdn.me/cover/the-silent-sea.png">
-  <h3 class="dr-title">The Silent Sea | Netflix Originals </h3>
+  <h3 class="dr-title">The Silent Sea (2021) | Netflix Originals </h3>
   <h6 class="dr-details">
     Set in the future, when the planet suffers from a lack of water and food caused by desertification.
     Yoon Jae is a soldier for the space agency.
     He is selected for a team, including Ji An, to travel to the moon.
     Their mission is to retrieve a mysterious sample from an abandoned research station.
+    <br><br>
+    Director: Choi Hang Yong [최항용]<br>
+Original Network: Netflix;<br>
+Genres: Drama; Horror; Mystery; Sci-fi; Thriller<br>
+Airs: 2021<br>
   </h6>
-  <span class="rating" onclick="vincenzoDramacool()">
+  <span class="rating">
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
@@ -880,16 +920,19 @@ aria-hidden="true"
   </span>
   <br><br>
 </div>
-<div class="ce-card" onclick="penthouseNetflix()">
+<div class="ce-card" onclick="error()">
 <img class="card-img" src="https://imagecdn.me/cover/the-penthouse-season-3.png">
 <h3 class="dr-title">Penthouse - War in Life | Netflix</h3>
 <h6 class="dr-details">
   The residents of Hera Palace, a luxury penthouse apartment with 100 floors, have many secrets and hidden ambitions.
   Sim Su Ryeon, who was born into wealth, is the queen of the penthouse apartment.
   Cheon Seo Jin, the prima donna of the residence, does all she can to give everything to her daughter.
+  <br><br>
+  Director: Joo Dong Min [주동민]<br>
+  Genres: Drama; Family; Mature; Mystery; Revenge; School; Thriller;<br>
+  Airs: 2020<br>
 </h6>
-<span class="rating" onclick="penthouseDramacool()">
-  <i class="fa fa-star"></i>
+<span class="rating">
   <i class="fa fa-star"></i>
   <i class="fa fa-star"></i>
   <i class="fa fa-star"></i>
@@ -897,15 +940,19 @@ aria-hidden="true"
 </span>
 <br><br>
 </div>
-<div class="ce-card" onclick="strongwomanNetflix()">
+<div class="ce-card" onclick="error()">
 <img class="card-img" src="https://imagecdn.me/cover/sweet-home.png">
 <h3 class="dr-title">Sweet Home | Netflix</h3>
 <h6 class="dr-details">
   Hyun Soo, a loner high school student who lost his entire family in a terrible accident, moves to an old apartment complex called Green Home.
   Driven by despair, he gradually realizes the secret of the Green home.
-  The fact that a monster trying to drive humanity out of various forms of distorted human desires surrounds the Green home, including himself, and that the residents of Green Homes are trapped in them.
+  <br><br>
+  Director: Lee Eung Bok [이응복]<br>
+  Genres: Horror; Mystery; Psychological; Survival; Suspense; Thriller; Trauma;<br>
+  Airs: 2020<br>
 </h6>
-<span class="rating" onclick="strongwomanDramacool()">
+
+<span class="rating">
   <i class="fa fa-star"></i>
   <i class="fa fa-star"></i>
   <i class="fa fa-star"></i>
@@ -913,18 +960,19 @@ aria-hidden="true"
 </span>
 <br><br>
 </div>
-<div class="ce-card" onclick="hometownNetflix()">
-<img class="card-img" src="https://imagecdn.me/cover/memorist.png">
-<h3 class="dr-title">Memorist | Netflix</h3>
+<div class="ce-card" onclick="error()">
+<img class="card-img" src="https://imagecdn.me/cover/all-of-us-are-dead.png">
+<h3 class="dr-title">All Of Us Are Dead | Netflix Originals</h3>
 <h6 class="dr-details">
-  Dong Baek has an extraordinary ability.
-  Starting from the age of twenty, Han Sun Mi is the youngest to have passed the bar exam, obtain a doctorate in criminal psychology, and become a senior superintendent in the police force. Having solved five cold cases that even a detective with supernatural powers couldn't do, she is a genius profiler.
-  She has a secret that drives her to do what she does.
-  It's going to be a fight worth watching.
+  All of Us Are Dead is about a group of high school students who are faced with an extreme crisis situation when they become trapped in their school, while a zombie virus spreads like a wildfire.
 
-Adapted from the webtoon of the same name by Jae Hoo.
+  Adapted from the Korean webtoon called Now at Our School.<br><br>
+  Director: Lee Jae Kyoo [이재규]<br>
+Original Network: Netflix;<br>
+Genres: Drama; Horror; Suspense; Youth; Zombie;<br>
+Airs: 2022<br>
 </h6>
-<span class="rating" onclick="hometowDramacool()">
+<span class="rating">
   <i class="fa fa-star"></i>
   <i class="fa fa-star"></i>
   <i class="fa fa-star"></i>
@@ -957,10 +1005,14 @@ Adapted from the webtoon of the same name by Jae Hoo.
     <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 14</div>
     <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 15</div>
     <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 16</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 17</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 18</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 19</div>
+    <div class="a-business-proposal-ep episode" onclick="aBusinessProposal()">Episode 20</div>
   </div>
   <div class="total-ep"><div id="a-business-proposal-output"></div></div>
   </div>
-
+  <div id="8JpU6DdA"></div>
 <h2 class="section-title">
   <a class="" href="pages/dramas.html#">
   Available Rooms
@@ -1028,12 +1080,11 @@ Adapted from the webtoon of the same name by Jae Hoo.
         <br><br>
         </div>
 </div>
-
 <div class="wide-container">
   <div class="details-container">
     <h3 class="comfortaa">ConcertEra </h3>
     <h6 style="color: #000; font-size: 10px;">We are now on google. Search us on Google and BTS will give you the best recommendation
-    fot you.
+    for you.
     </h6>
     <a class="btn text-white btn-sm btn-custom" target="_blank" href="https://cse.google.com/cse?cx=e809c8c5d5297d33c">Search</a>
   </div>
@@ -1244,15 +1295,7 @@ function about(){window.location.href = "Android App/Help/room.html";}
 function logOut(){alert ("Unable to logout");}
 
 
-function vincenzoNetflix(){window.location = "https://www.netflix.com/title/81365087";}
-function penthouseNetflix(){window.location = "https://www.netflix.com/ph/title/81552562";}
-function strongwomanNetflix(){window.location = "https://www.netflix.com/in/title/80198001";}
-function hometownNetflix(){window.location = "https://www.netflix.com/title/81473182";}
-
-function vincenzoDramacool(){window.location = "https://dramacool.news/asian-wiki/vincenzo.html";}
-function penthouseDramacool(){window.location = "https://dramacool.news/search?type=movies&keyword=penthouse";}
-function strongwomanDramacool(){window.location = "https://dramacool.news/asian-wiki/strong-woman-do-bong-soon.html";}
-function hometownDramacool(){window.location = "https://dramacool.news/asian-wiki/mr-hong.html";}
+function error(){window.location = "https://rubyproducti9n.github.io/concertera/404.html";}
 </script>
 <script type="module">
   // Import the functions you need from the SDKs you need
