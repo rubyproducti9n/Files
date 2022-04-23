@@ -67,7 +67,8 @@ background-color: #000000;
 /* background: linear-gradient(-180deg, #b800dd, #6b006b); */
 background-size: 100% 300%;
 border-top: 0px #6b006b00 solid;
-overflow: hidden;
+font-family: 'Comfortaa', cursive;
+/* overflow: hidden; */
 user-select: none;
 }
 /* .maintain-container{display: block;} */
@@ -77,7 +78,54 @@ a:hover{
           text-decoration: underline;}
 a:active{color: #000000;}
 .timeago{color: black;}
+
+.rm-card{
+  padding: 20px;
+  border: 2px rgba(54, 54, 54, 0) solid;
+}
+.rm-card h5{
+  font-size: larger;
+}
+.rm-card .card{
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px #1a1a1a solid;
+  border-radius: 20px;
+  /* padding: 10px 20px 00px 20px; */
+  margin: 10px 10px;
+  width: 23%;
+  overflow: hidden;
+}
+.card .img-card{
+  width: 100%;
+}
+.card .rm-title{
+  color: #fff;
+  margin: 10px 10px;
+  padding-left: 10px;
+  border-left: 4px #8f8f8f solid;
+  font-size: 14px;
+}
+.card .rm-description{
+  color: rgb(196, 196, 196);
+  padding: 5px 20px;
+  border-bottom: 2px #14141400 solid;
+  font-size: 12px;
+}
+.card .rm-details{
+  float: right;
+  /* border-top: 2px #141414 solid; */
+  background: #141414;
+  border: 2px #141414 solid;
+  border-radius: 20px;
+  color: rgb(174, 174, 174);
+  margin: 10px 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+}
+
 .container2{
+  display: none;
 color: rgb(255, 255, 255);
 background-color: #da000000;
 font-family: 'Comfortaa', cursive;
@@ -407,32 +455,67 @@ right: 0;
 z-index: -1;
 }
 .btn-custom{
-color: white;
-background-color: #c20000;
-box-shadow: 10px 10px 20px #3636365b;
-padding: 12px 120px;
-border-radius: 6px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size:11px;
-transform: scale(1.0);
-transition: 0.5s ease;
+background: #a200ff;
 }
-h5{color: #ff0000;}
-.btn-custom:active{font-size: 8px;transition: 0.5s ease;}
 @media screen and (max-width: 768px){
 body{
 color: white;
-background: #1a1a1a;
+background: #000000;
 /* background: linear-gradient(-180deg, #6c0081, #9f00ad); */
 background-size: 100% 200%;
 overflow: hidden;
 user-select: none;
 overflow: scroll;
 }
+.ad1, .ad2{display: none;}
+.rm-card{
+  padding: 20px;
+  border: 2px rgba(54, 54, 54, 0) solid;
+}
+.rm-card h5{
+  font-size: larger;
+}
+.rm-card .card{
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px #1a1a1a solid;
+  border-radius: 20px;
+  /* padding: 10px 20px 00px 20px; */
+  margin: 10px 10px;
+  width: 93%;
+  overflow: hidden;
+}
+.card .img-card{
+  width: 100%;
+}
+.card .rm-title{
+  color: #fff;
+  margin: 10px 10px;
+  padding-left: 10px;
+  border-left: 4px #8f8f8f solid;
+  font-size: 14px;
+}
+.card .rm-description{
+  color: rgb(196, 196, 196);
+  padding: 5px 20px;
+  border-bottom: 2px #14141400 solid;
+  font-size: 12px;
+}
+.card .rm-details{
+  float: right;
+  /* border-top: 2px #141414 solid; */
+  background: #141414;
+  border: 2px #141414 solid;
+  border-radius: 20px;
+  color: rgb(174, 174, 174);
+  margin: 10px 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+}
 .container2{
 color: #ffffff;
 background-color: #e0000000;
-display: block;
+display: none;
 width: 100vw;
 padding-top: 0;
 }
@@ -608,23 +691,134 @@ z-index: -1;}
       </span>
       </div></center>
 
+      <div class="Stream-ads ad1">
+        <div class="live-container comfortaa">
+      <img class="live-img" draggable="false" src="../album-cover/mos7.jpg">
+      <div id="stream-details" class="details-cont"></div>
+      </div>
+      </div>
+
+<div class="rm-card">
+  <h2>Bangtan World</h2>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Descent Mix</p>
+    <p class="rm-description">Neutral songs from BTS with other armies.</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> 4 views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Piano Mix</p>
+    <p class="rm-description">Hit BTS songs now in Piano Version</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Empty Arena</p>
+    <p class="rm-description">Feel the songs in an empty stadium.</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Concert Arena</p>
+    <p class="rm-description">Enjoy with other armies in the concert.</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+</div>
+<div class="rm-card">
+  <h2>Armies Choice</h2>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Army Cover</p>
+    <p class="rm-description">BTS cover songs by Armies</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> 1 view • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Solo Nights</p>
+    <p class="rm-description">Enjoy the night along with BTS</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+</div>
+<div id="8JpU6DdA" class="ad2"></div>
+<div class="rm-card">
+  <h2>Artists</h2>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/rm.jpg">
+    <p class="rm-title">Kim Nam-Joon</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/suga.jpg">
+    <p class="rm-title">Min Yoon-Gi</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/v.jpg">
+    <p class="rm-title">Kim Tae-Hyung</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/jk.jpg">
+    <p class="rm-title">Jeon Jungkook</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/jimin.jpg">
+    <p class="rm-title">Park Jimin</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/jhope.jpg">
+    <p class="rm-title">Jung Ho-Seok</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../album-cover/jin.jpg">
+    <p class="rm-title">Kim Seok-Jin</p>
+    <p class="rm-description">Coming Soon</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+</div>
+<div class="rm-card">
+  <h2>Mood Changer</h2>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Intimate</p>
+    <p class="rm-description">Unavailable</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">Passive</p>
+    <p class="rm-description">Unavailable</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> No views • 0 Listening</p>
+  </div>
+</div>
+<div class="rm-card">
+  <h2>Custom</h2>
+  <div class="card">
+    <img class="img-card" draggable="false" src="../bts-logo2.png">
+    <p class="rm-title">24/7 (beta) </p>
+    <p class="rm-description">Unstable</p>
+    <p class="rm-details"> <i class="fa fa-eye"></i> 2 views • 0 Listening</p>
+  </div>
+</div>
+
 <!-- <center> <br>
 <br><br><br><img class="maintenance" src="Maintenance/maintenance.gif" width="30%"></center><br><br>
 <center>Oops! Servers under maintenance, try again later.</center>  -->
 <div id="2asg8s5d"></div>
 <div class="container2">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#6a009b" fill-opacity="1" d="M0,192L26.7,186.7C53.3,181,107,171,160,149.3C213.3,128,267,96,320,101.3C373.3,107,427,149,480,144C533.3,139,587,85,640,90.7C693.3,96,747,160,800,186.7C853.3,213,907,203,960,186.7C1013.3,171,1067,149,1120,165.3C1173.3,181,1227,235,1280,261.3C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
-  </svg>
-
-  <div class="navigation-container">
-    <a class="nav-link" href="javascript:void(0)"> <img class="brand-img" draggable="false" src="../favicon/favicon.png">   </a>
-    <a class="btn btn-live disabled" style="color: #fff;">
-      <h6>STREAMS IN</h6>
-      <!-- <div id="timer"></div> -->
-    </a>
-  </div>
-<!-- <center><h4>Select your room</h4></center> -->
+  </svg> -->
 <div class="settings">
 
   <h5 class="select-room">Select Room</h5>
