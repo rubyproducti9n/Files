@@ -2702,12 +2702,43 @@ transform: rotate(-135deg);
   /* box-shadow: 0px 0px 20px #ae00ff79; */
   font-size: 10px;
 }
+.ad-container{
+  color: rgb(255, 255, 255);
+  background: rgb(22, 22, 22);
+  margin: 20px 50px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  height: 32vh;
+}
+.ad-details{
+  display: block;
+  float: left;
+}
+.ad-title{
+  padding: 5px 0px;
+  font-size: 19px;
+}
+.ad-content{
+  padding: 5px 0px;
+  font-size: 12px;
+}
+.ad-img{
+  display: block;
+  float: right;
+  border-radius: 100px;
+  background: #fff;
+  margin: 15px;
+  width: 11%;
+}
+.btn-custom{
+background: #a200ff;
+}
 /* index.html ends */
 
     #loading{
       background-color: rgb(0, 0, 0);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
-      display: block;
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -3168,7 +3199,7 @@ transform: rotate(-135deg);
       /* backdrop-filter: blur(14px); */
       box-shadow: 0 0 0px rgba(0, 0, 0, 0.164);
       border: 2px #141414 solid;
-      border-radius: 30px;
+      border-radius: 10px;
       overflow: hidden;
       text-overflow: ellipsis;
       cursor: default;
@@ -3177,9 +3208,9 @@ transform: rotate(-135deg);
     .card-room:hover{
       transform: scale(1.0);
       background: #000;
-      border: 2px #ae00ff solid;
-      box-shadow: 0 0 20px #ae00ff79,
-      inset 0 0 20px #ae00ff79;
+      border: 2px #141414 solid;
+      box-shadow: 0 0 20px #ae00ff00,
+      inset 0 0 20px #ae00ff00;
       transition: 0.2s ease;
     }
     .btn-room{
@@ -3262,7 +3293,7 @@ transform: rotate(-135deg);
     #loading{
       background-color: rgb(0, 0, 0);
       /* background: linear-gradient(180deg, #c200c2, #c200c2); */
-      display: block;
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
