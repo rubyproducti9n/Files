@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project B</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alata&family=Cinzel&family=Comfortaa:wght@700&family=Josefin+Sans&family=Jost&family=Outfit:wght@600&family=Roboto:wght@400;700&family=Spline+Sans:wght@300&display=swap');
+        body{
+            display: none;
+        }
+@media screen and (max-width: 768px){
+    body{
+        display: block;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .card-img{
+        width: 95%;
+        align-items: center;
+        padding: 10px;
+        border-radius: 28px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .txt::after{
+        content: 'Urban Designs';
+        position: relative;
+        top: -60px;
+        left: 20px;
+        padding: 18px;
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+        backdrop-filter: blur(12px);
+        border: 0px #000 solid;
+        border-radius: 28px;
+        opacity: .3;
+
+    }
+}
+    </style>
 </head>
 <body>
 
-<h4>Project B</h4>
+    <center>
+        <h3>Our work</h3>
+    </center>
+
+    <img class="card-img" src="img/int_1.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_2.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_3.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_4.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_5.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_6.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_7.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_8.jpg"><div class="txt"></div>
+    <img class="card-img" src="img/int_9.jpg"><div class="txt"></div>
 
 </body>
 </html>
